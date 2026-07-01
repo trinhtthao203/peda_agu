@@ -14,10 +14,12 @@ class FileController extends Controller
     	if(!empty($files)):
     		foreach($files as $file):
           $extension = $file->getClientOriginalExtension();
+          if (empty($extension)) continue;
           $realname = $file->getClientOriginalName();
           $filename = date("YmdHis") . '_' . strtolower(uniqid()) . '.' . $extension;
-          Storage::put('public/files/'.$filename, file_get_contents($file), 'public');
-          $size = Storage::size('public/files/'.$filename);
+          $storagePath = 'public/files/' . $filename;
+          Storage::put($storagePath, file_get_contents($file), 'public');
+          $size = Storage::exists($storagePath) ? Storage::size($storagePath) : $file->getSize();
           echo '<div class="form-group row items draggable-element">
             <div class="col-12 col-md-12">
               <div class="input-group">

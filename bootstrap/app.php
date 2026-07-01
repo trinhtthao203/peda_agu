@@ -18,7 +18,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->validateCsrfTokens(except: [
             'stripe/*',
-            env('APP_URL') . '/admin/login',
+            '*/auth/login',
         ]);
         $middleware->alias([
             'checkauth' => CheckAuth::class,

@@ -33,6 +33,15 @@ class UserController extends Controller {
     //
     function list(){
       $users = User::orderBy('updated_at','desc')->get()->toArray();
+      // Normalize _id: MongoDB ObjectId may not serialize as '_id' key in array
+      $users = array_map(function($user) {
+        if (!isset($user['_id']) && isset($user['id'])) {
+          $user['_id'] = is_object($user['id']) ? (string) $user['id'] : $user['id'];
+        } elseif (isset($user['_id']) && is_object($user['_id'])) {
+          $user['_id'] = (string) $user['_id'];
+        }
+        return $user;
+      }, $users);
       return view('Admin.User.list', ['users' => $users, 'roles' => self::$roles]);
     }
 

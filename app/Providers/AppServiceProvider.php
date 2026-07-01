@@ -20,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        ini_set('memory_limit', '512M');
         $locale = app()->getLocale();
         $arr_lang = Config::get('app.arr_language');
         view()->share('arr_lang', $arr_lang);
