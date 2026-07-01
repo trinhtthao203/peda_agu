@@ -1,0 +1,7779 @@
+[{
+  "_id": {
+    "$oid": "626a0e75f5660000d5003235"
+  },
+  "id_vi": {
+    "$oid": "626a0e75f5660000d5003234"
+  },
+  "slug_vi": "thong-bao",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-05-11T02:31:02.809Z"
+  },
+  "created_at": {
+    "$date": "2022-04-28T03:48:05.490Z"
+  },
+  "id_en": {
+    "$oid": "626a0ed1f5660000d500323c"
+  },
+  "slug_en": "annoucement"
+},{
+  "_id": {
+    "$oid": "626b40eef5660000d50032ca"
+  },
+  "id_vi": {
+    "$oid": "626b40eef5660000d50032c9"
+  },
+  "slug_vi": "tuyen-sinh",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-07-15T01:46:32.930Z"
+  },
+  "created_at": {
+    "$date": "2022-04-29T01:35:42.558Z"
+  },
+  "id_en": {
+    "$oid": "627b2025d82f00000f00132e"
+  },
+  "slug_en": "entrance-examination"
+},{
+  "_id": {
+    "$oid": "626b4104f5660000d50032cf"
+  },
+  "id_vi": {
+    "$oid": "626b4104f5660000d50032ce"
+  },
+  "slug_vi": "hoat-dong-dao-tao",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-05-11T02:32:32.148Z"
+  },
+  "created_at": {
+    "$date": "2022-04-29T01:36:04.080Z"
+  },
+  "id_en": {
+    "$oid": "627b2040d82f00000f001332"
+  },
+  "slug_en": "education-activity"
+},{
+  "_id": {
+    "$oid": "626b4112f5660000d50032d4"
+  },
+  "id_vi": {
+    "$oid": "626b4112f5660000d50032d3"
+  },
+  "slug_vi": "hop-tac-quoc-te",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-05-11T02:09:53.950Z"
+  },
+  "created_at": {
+    "$date": "2022-04-29T01:36:18.463Z"
+  },
+  "id_en": {
+    "$oid": "627b1af1d82f00000f00131b"
+  },
+  "slug_en": "international-relations"
+},{
+  "_id": {
+    "$oid": "626b412df5660000d50032df"
+  },
+  "id_vi": {
+    "$oid": "626b412df5660000d50032de"
+  },
+  "slug_vi": "nghien-cuu-khoa-hoc",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-05-11T02:11:10.281Z"
+  },
+  "created_at": {
+    "$date": "2022-04-29T01:36:45.035Z"
+  },
+  "id_en": {
+    "$oid": "627b1b3ed82f00000f001323"
+  },
+  "slug_en": "research-activity"
+},{
+  "_id": {
+    "$oid": "626b4136f5660000d50032e4"
+  },
+  "id_vi": {
+    "$oid": "626b4136f5660000d50032e3"
+  },
+  "slug_vi": "tuyen-dung",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-07-21T01:30:55.856Z"
+  },
+  "created_at": {
+    "$date": "2022-04-29T01:36:54.380Z"
+  },
+  "id_en": {
+    "$oid": "627b20a8d82f00000f001341"
+  },
+  "slug_en": "recruitment"
+},{
+  "_id": {
+    "$oid": "626b42e4f5660000d50032ea"
+  },
+  "id_vi": {
+    "$oid": "626b42e4f5660000d50032e9"
+  },
+  "slug_vi": "tiep-va-lam-viec-voi-ban-khoa-hoc-va-cong-nghe-dhqg-hcm",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-11T07:37:36.507Z"
+  },
+  "created_at": {
+    "$date": "2022-04-29T01:44:04.826Z"
+  }
+},{
+  "_id": {
+    "$oid": "626b4331f5660000d50032f1"
+  },
+  "id_vi": {
+    "$oid": "626b4331f5660000d50032f0"
+  },
+  "slug_vi": "tin-tuc-su-kien",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-05-04T01:45:45.104Z"
+  },
+  "created_at": {
+    "$date": "2022-04-29T01:45:21.908Z"
+  },
+  "id_en": {
+    "$oid": "6271dac9f5660000d500335c"
+  },
+  "slug_en": "news-and-events"
+},{
+  "_id": {
+    "$oid": "626b44c5f5660000d500330a"
+  },
+  "id_vi": {
+    "$oid": "626b44c5f5660000d5003309"
+  },
+  "slug_vi": "de-an-mo-nganh",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-05-11T02:04:08.188Z"
+  },
+  "created_at": {
+    "$date": "2022-04-29T01:52:05.684Z"
+  },
+  "id_en": {
+    "$oid": "627b1998d82f00000f001307"
+  },
+  "slug_en": "programs-in-approval-process"
+},{
+  "_id": {
+    "$oid": "626b44def5660000d5003312"
+  },
+  "id_vi": {
+    "$oid": "626b44def5660000d5003311"
+  },
+  "slug_vi": "quy-che-cong-khai",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-05-11T02:12:08.614Z"
+  },
+  "created_at": {
+    "$date": "2022-04-29T01:52:30.634Z"
+  },
+  "id_en": {
+    "$oid": "627b1b78d82f00000f001327"
+  },
+  "slug_en": "publicity"
+},{
+  "_id": {
+    "$oid": "626b44f5f5660000d5003317"
+  },
+  "id_vi": {
+    "$oid": "626b44f5f5660000d5003316"
+  },
+  "slug_vi": "cuoc-thi-viet-truong-dai-hoc-an-giang-trong-toi",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-04-29T01:52:53.185Z"
+  },
+  "created_at": {
+    "$date": "2022-04-29T01:52:53.185Z"
+  }
+},{
+  "_id": {
+    "$oid": "626b4798f5660000d500332e"
+  },
+  "id_vi": {
+    "$oid": "626b4798f5660000d500332d"
+  },
+  "slug_vi": "chuong-trinh-giao-luu-lam-the-nao-de-an-toan-khi-online",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-04-29T02:04:08.228Z"
+  },
+  "created_at": {
+    "$date": "2022-04-29T02:04:08.228Z"
+  }
+},{
+  "_id": {
+    "$oid": "626b530ef5660000d5003334"
+  },
+  "id_vi": {
+    "$oid": "626b530ef5660000d5003333"
+  },
+  "slug_vi": "chuong-trinh-trao-hoc-bong-khuyen-hoc-khuyen-tai-ho-duong",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-04T02:59:18.951Z"
+  },
+  "created_at": {
+    "$date": "2022-04-29T02:53:02.377Z"
+  }
+},{
+  "_id": {
+    "$oid": "627b12bfd82f00000f0012b8"
+  },
+  "id_vi": {
+    "$oid": "627b12bfd82f00000f0012b7"
+  },
+  "slug_vi": "doi-tac-ban-ghi-nho",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-05-11T02:10:26.800Z"
+  },
+  "created_at": {
+    "$date": "2022-05-11T01:34:55.834Z"
+  },
+  "id_en": {
+    "$oid": "627b1b12d82f00000f00131f"
+  },
+  "slug_en": "memorandum-of-understanding"
+},{
+  "_id": {
+    "$oid": "627b1457d82f00000f0012c3"
+  },
+  "id_vi": {
+    "$oid": "627b1457d82f00000f0012c2"
+  },
+  "slug_vi": "tu-danh-gia-co-so-giao-duc",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-05-11T02:07:38.428Z"
+  },
+  "created_at": {
+    "$date": "2022-05-11T01:41:43.521Z"
+  },
+  "id_en": {
+    "$oid": "627b1a6ad82f00000f00130b"
+  },
+  "slug_en": "self-evaluation-report"
+},{
+  "_id": {
+    "$oid": "627b151bd82f00000f0012d9"
+  },
+  "id_vi": {
+    "$oid": "627b151bd82f00000f0012d8"
+  },
+  "slug_vi": "tai-lieu-trien-khai-cong-tac-dam-bao-chat-luong",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-05-11T02:08:47.542Z"
+  },
+  "created_at": {
+    "$date": "2022-05-11T01:44:59.491Z"
+  },
+  "id_en": {
+    "$oid": "627b1aafd82f00000f001313"
+  },
+  "slug_en": "quality-assurance-documentation"
+},{
+  "_id": {
+    "$oid": "627b1538d82f00000f0012de"
+  },
+  "id_vi": {
+    "$oid": "627b1538d82f00000f0012dd"
+  },
+  "slug_vi": "so-tay-dam-bao-chat-luong",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-05-11T02:09:15.865Z"
+  },
+  "created_at": {
+    "$date": "2022-05-11T01:45:28.685Z"
+  },
+  "id_en": {
+    "$oid": "627b1acbd82f00000f001317"
+  },
+  "slug_en": "quality-assurance-manual"
+},{
+  "_id": {
+    "$oid": "627b14f3d82f00000f0012d4"
+  },
+  "id_vi": {
+    "$oid": "627b14f3d82f00000f0012d3"
+  },
+  "slug_vi": "tu-danh-gia-chuong-trinh-dao-tao",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-05-11T02:08:25.078Z"
+  },
+  "created_at": {
+    "$date": "2022-05-11T01:44:19.313Z"
+  },
+  "id_en": {
+    "$oid": "627b1a99d82f00000f00130f"
+  },
+  "slug_en": "training-program-quality-assurement"
+},{
+  "_id": {
+    "$oid": "627b15ead82f00000f0012e6"
+  },
+  "id_vi": {
+    "$oid": "627b15ead82f00000f0012e5"
+  },
+  "slug_vi": "cam-nang-tuyen-sinh",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-05-11T02:03:01.691Z"
+  },
+  "created_at": {
+    "$date": "2022-05-11T01:48:26.615Z"
+  },
+  "id_en": {
+    "$oid": "627b1955d82f00000f001301"
+  },
+  "slug_en": "enrollment-guides"
+},{
+  "_id": {
+    "$oid": "627b6c3fd82f00000f001400"
+  },
+  "id_vi": "",
+  "id_en": "",
+  "collection": "page",
+  "slug_vi": "gioi-thieu/tong-quan-ve-truong-dai-hoc-an-giang",
+  "slug_en": "about/overview",
+  "updated_at": {
+    "$date": "2022-05-11T07:56:47.715Z"
+  },
+  "created_at": {
+    "$date": "2022-05-11T07:56:47.715Z"
+  }
+},{
+  "_id": {
+    "$oid": "627b7658d82f00000f001407"
+  },
+  "id_vi": "",
+  "id_en": "",
+  "collection": "page",
+  "slug_vi": "gioi-thieu/su-mang-tam-nhin-gia-tri-cot-loi",
+  "slug_en": "about/mission-vision-core-value",
+  "updated_at": {
+    "$date": "2022-05-11T08:39:52.132Z"
+  },
+  "created_at": {
+    "$date": "2022-05-11T08:39:52.132Z"
+  }
+},{
+  "_id": {
+    "$oid": "627b161fd82f00000f0012ec"
+  },
+  "id_vi": {
+    "$oid": "627b161fd82f00000f0012eb"
+  },
+  "slug_vi": "cam-nang-tuyen-sinh-nam-2021",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T07:17:25.289Z"
+  },
+  "created_at": {
+    "$date": "2022-05-11T01:49:19.935Z"
+  }
+},{
+  "_id": {
+    "$oid": "627b7be7d82f00000f00142b"
+  },
+  "id_vi": "",
+  "id_en": "",
+  "collection": "page",
+  "slug_vi": "gioi-thieu/chinh-sach-dam-bao-chat-luong",
+  "slug_en": "about/quality-asssurance-policy",
+  "updated_at": {
+    "$date": "2022-05-11T09:03:35.031Z"
+  },
+  "created_at": {
+    "$date": "2022-05-11T09:03:35.031Z"
+  }
+},{
+  "_id": {
+    "$oid": "627b761fd82f00000f001403"
+  },
+  "id_vi": "",
+  "id_en": "",
+  "collection": "page",
+  "slug_vi": "gioi-thieu/so-do-to-chuc",
+  "slug_en": "about/structure-and-organization",
+  "updated_at": {
+    "$date": "2022-05-11T08:38:55.025Z"
+  },
+  "created_at": {
+    "$date": "2022-05-11T08:38:55.025Z"
+  }
+},{
+  "_id": {
+    "$oid": "627b7c0dd82f00000f00142f"
+  },
+  "id_vi": "",
+  "id_en": "",
+  "collection": "page",
+  "slug_vi": "gioi-thieu/chien-luoc-phat-trien",
+  "slug_en": "about/development-strategies",
+  "updated_at": {
+    "$date": "2022-05-11T09:04:13.710Z"
+  },
+  "created_at": {
+    "$date": "2022-05-11T09:04:13.710Z"
+  }
+},{
+  "_id": {
+    "$oid": "627b7c2dd82f00000f001433"
+  },
+  "id_vi": "",
+  "id_en": "",
+  "collection": "page",
+  "slug_vi": "gioi-thieu/bao-cao-thuong-nien",
+  "slug_en": "about/annual-report",
+  "updated_at": {
+    "$date": "2022-05-11T09:04:45.999Z"
+  },
+  "created_at": {
+    "$date": "2022-05-11T09:04:45.999Z"
+  }
+},{
+  "_id": {
+    "$oid": "627b7c72d82f00000f00143b"
+  },
+  "id_vi": "",
+  "id_en": "",
+  "collection": "page",
+  "slug_vi": "gioi-thieu/lien-he",
+  "slug_en": "about/contacts",
+  "updated_at": {
+    "$date": "2022-05-11T09:05:54.437Z"
+  },
+  "created_at": {
+    "$date": "2022-05-11T09:05:54.437Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c6340ec7d0000a1004be0"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T01:53:52.603Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T01:30:40.966Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c6beaec7d0000a1004bf5"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T02:07:38.294Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T02:07:38.294Z"
+  }
+},{
+  "_id": {
+    "$oid": "627b7ce2d82f00000f001441"
+  },
+  "id_vi": {
+    "$oid": "627b7ce2d82f00000f001440"
+  },
+  "slug_vi": "hinh-anh-hoat-dong",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-05-11T09:08:00.309Z"
+  },
+  "created_at": {
+    "$date": "2022-05-11T09:07:46.582Z"
+  },
+  "id_en": {
+    "$oid": "627b7cf0d82f00000f001445"
+  },
+  "slug_en": "gallery"
+},{
+  "_id": {
+    "$oid": "627b7c4bd82f00000f001437"
+  },
+  "id_vi": "",
+  "id_en": "",
+  "collection": "page",
+  "slug_vi": "gioi-thieu/video-gioi-thieu",
+  "slug_en": "about/video",
+  "updated_at": {
+    "$date": "2022-05-11T09:05:15.453Z"
+  },
+  "created_at": {
+    "$date": "2022-05-11T09:05:15.453Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c6a38ec7d0000a1004bed"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T02:00:24.519Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T02:00:24.519Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c6c69ec7d0000a1004bfb"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T02:09:45.405Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T02:09:45.405Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c6ce7ec7d0000a1004c09"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T02:11:51.958Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T02:11:51.958Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c7173ec7d0000a1004c0f"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T02:31:15.031Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T02:31:15.031Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c71e5ec7d0000a1004c14"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T02:33:09.821Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T02:33:09.821Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c7288ec7d0000a1004c19"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T02:35:52.743Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T02:35:52.743Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c72d6ec7d0000a1004c1e"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T02:37:10.254Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T02:37:10.254Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c741dec7d0000a1004c2a"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T02:42:37.807Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T02:42:37.807Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c74d2ec7d0000a1004c34"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T02:45:38.395Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T02:45:38.395Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c750dec7d0000a1004c39"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T02:46:37.091Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T02:46:37.091Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c748fec7d0000a1004c2f"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T02:44:31.696Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T02:44:31.696Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c7551ec7d0000a1004c3e"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T02:47:45.229Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T02:47:45.229Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c75a4ec7d0000a1004c43"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T02:49:08.591Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T02:49:08.591Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c76d6ec7d0000a1004c4d"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T02:54:14.985Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T02:54:14.985Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c760aec7d0000a1004c48"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T02:50:50.115Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T02:50:50.115Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c7815ec7d0000a1004c5c"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T02:59:33.792Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T02:59:33.792Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c7886ec7d0000a1004c61"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T03:01:26.650Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T03:01:26.650Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c77d1ec7d0000a1004c57"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T02:58:25.785Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T02:58:25.785Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c7ba4d20300005f005b86"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T03:14:44.248Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T03:14:44.248Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c778bec7d0000a1004c52"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T02:57:15.238Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T02:57:15.238Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c810c7d46000053006c6d"
+  },
+  "id_vi": {
+    "$oid": "627c810c7d46000053006c6c"
+  },
+  "slug_vi": "hoi-thao-chuyen-de-kinh-nghiem-to-chuc-hoi-thao-de-xuat-ban-tren-co-so-du-lieu-scopus",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T03:39:42.662Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T03:37:48.223Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c82107d46000053006c80"
+  },
+  "id_vi": {
+    "$oid": "627c82107d46000053006c7f"
+  },
+  "slug_vi": "sinh-vien-agu-tranh-tai-tai-hoi-thao-sinh-vien-dhqg-hcm-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T03:42:08.386Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T03:42:08.386Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c7fe47d46000053006c65"
+  },
+  "id_vi": {
+    "$oid": "627c7fe47d46000053006c64"
+  },
+  "slug_vi": "84-suat-hoc-bong-liet-si-huynh-thien-nghe-trao-tang-giao-vien-hoc-sinh-sinh-vien",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-18T02:28:55.610Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T03:32:52.656Z"
+  },
+  "id_en": {
+    "$oid": "6285bc8c87510723ea74ab32"
+  },
+  "slug_en": "huynh-thien-nghe-scholarship"
+},{
+  "_id": {
+    "$oid": "627c78d0ec7d0000a1004c66"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T03:02:40.623Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T03:02:40.623Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c85d17d46000053006cc0"
+  },
+  "id_vi": {
+    "$oid": "627c85d17d46000053006cbf"
+  },
+  "slug_vi": "hoi-nghi-quy-hoach-nguon-nhan-su-cap-uy-nhiem-ky-2025-2030",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T03:58:09.196Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T03:58:09.196Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c85137d46000053006cb6"
+  },
+  "id_vi": {
+    "$oid": "627c85137d46000053006cb5"
+  },
+  "slug_vi": "khai-giang-lop-boi-duong-nhan-thuc-ve-dang-khoa-i-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T03:54:59.047Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T03:54:59.047Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c87447d46000053006cd2"
+  },
+  "id_vi": {
+    "$oid": "627c87447d46000053006cd1"
+  },
+  "slug_vi": "hoi-cho-viec-lam-truong-dai-hoc-an-giang-dhqg-hcm",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T04:04:20.209Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T04:04:20.209Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c84597d46000053006ca2"
+  },
+  "id_vi": {
+    "$oid": "627c84597d46000053006ca1"
+  },
+  "slug_vi": "thong-bao-ve-viec-nop-ho-so-dang-ky-xet-tuyen-thang-vao-dai-hoc-dua-tren-cac-chung-chi-ngoai-ngu-quoc-te-trong-dot-tuyen-sinh-dai-hoc-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T03:51:53.295Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T03:51:53.295Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c87dd7d46000053006ce2"
+  },
+  "id_vi": {
+    "$oid": "627c87dd7d46000053006ce1"
+  },
+  "slug_vi": "truong-dhag-dhqg-hcm-duoc-ket-nap-vao-cau-lac-bo-khoi-dao-tao-giao-vien-nghe-thuat",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T04:06:53.900Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T04:06:53.900Z"
+  }
+},{
+  "_id": {
+    "$oid": "627c88767d46000053006cf4"
+  },
+  "id_vi": {
+    "$oid": "627c88767d46000053006cf3"
+  },
+  "slug_vi": "xet-duyet-de-cuong-chi-tiet-02-de-tai-nghien-cuu-khoa-hoc-cap-truong",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-12T04:09:26.715Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T04:09:26.715Z"
+  }
+},{
+  "_id": {
+    "$oid": "627caf627d46000053006d22"
+  },
+  "id_vi": {
+    "$oid": "627caf627d46000053006d21"
+  },
+  "slug_vi": "tiep-va-lam-viec-voi-cong-ty-tnhh-cj-vina-agri",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-16T01:49:43.794Z"
+  },
+  "created_at": {
+    "$date": "2022-05-12T06:55:30.151Z"
+  }
+},{
+  "_id": {
+    "$oid": "6281ad84befa2500693ab9c3"
+  },
+  "id_vi": {
+    "$oid": "6281ad84befa2500693ab9c2"
+  },
+  "slug_vi": "hoi-thao-nang-cao-nang-luc-cong-bo-quoc-te",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-16T01:48:52.609Z"
+  },
+  "created_at": {
+    "$date": "2022-05-16T01:48:52.609Z"
+  }
+},{
+  "_id": {
+    "$oid": "6281aecc5e509710e95df9a7"
+  },
+  "id_vi": {
+    "$oid": "6281aecc5e509710e95df9a6"
+  },
+  "slug_vi": "toa-dam-khoa-hoc-va-giao-luu-voi-giao-su-detlef-briessen",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-17T08:52:58.248Z"
+  },
+  "created_at": {
+    "$date": "2022-05-16T01:54:20.163Z"
+  }
+},{
+  "_id": {
+    "$oid": "6281b0c419487555c2558d45"
+  },
+  "id_vi": {
+    "$oid": "6281b0c419487555c2558d44"
+  },
+  "slug_vi": "chuong-trinh-kham-tam-soat-benh-ly-ve-mat-va-phat-thuoc-mien-phi-cho-hoc-sinh-sinh-vien",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-16T02:02:44.227Z"
+  },
+  "created_at": {
+    "$date": "2022-05-16T02:02:44.227Z"
+  }
+},{
+  "_id": {
+    "$oid": "6281b16df359c455f81de8b3"
+  },
+  "id_vi": {
+    "$oid": "6281b16df359c455f81de8b2"
+  },
+  "slug_vi": "sinh-vien-truong-dhag-dhqg-hcm-tham-gia-ky-thi-olympic-toan-hoc-sinh-vien-toan-quoc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-16T02:05:33.452Z"
+  },
+  "created_at": {
+    "$date": "2022-05-16T02:05:33.452Z"
+  }
+},{
+  "_id": {
+    "$oid": "6281b20966d06129521046a3"
+  },
+  "id_vi": {
+    "$oid": "6281b20966d06129521046a2"
+  },
+  "slug_vi": "thu-moi-giao-luu-voi-giang-vien-cua-truong-dai-hoc-khoa-hoc-ung-dung-jade-cong-hoa-lien-bang-duc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-16T02:10:35.827Z"
+  },
+  "created_at": {
+    "$date": "2022-05-16T02:08:09.740Z"
+  }
+},{
+  "_id": {
+    "$oid": "6281b28e2a82ea25a2281ae3"
+  },
+  "id_vi": {
+    "$oid": "6281b28e2a82ea25a2281ae2"
+  },
+  "slug_vi": "thong-bao-ve-ve-viec-bo-nhiem-chuc-danh-pho-giao-su-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-16T02:10:22.173Z"
+  },
+  "created_at": {
+    "$date": "2022-05-16T02:10:22.173Z"
+  }
+},{
+  "_id": {
+    "$oid": "6281b842d2baa4677051ed53"
+  },
+  "id_vi": {
+    "$oid": "6281b842d2baa4677051ed52"
+  },
+  "slug_vi": "sinh-vien-nhan-hoc-bong-vu-a-dinh-nam-hoc-2021-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-16T02:37:34.654Z"
+  },
+  "created_at": {
+    "$date": "2022-05-16T02:34:42.366Z"
+  }
+},{
+  "_id": {
+    "$oid": "6281b99fea621a13b57bb5e3"
+  },
+  "id_vi": {
+    "$oid": "6281b99fea621a13b57bb5e2"
+  },
+  "slug_vi": "tap-huan-ky-nang-thuyet-trinh-cho-sinh-vien-trong-chuong-trinh-hoc-bong-stem",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-16T02:40:31.688Z"
+  },
+  "created_at": {
+    "$date": "2022-05-16T02:40:31.688Z"
+  }
+},{
+  "_id": {
+    "$oid": "6281bb152a82ea25a2281ae7"
+  },
+  "id_vi": {
+    "$oid": "6281bb152a82ea25a2281ae6"
+  },
+  "slug_vi": "quyet-dinh-ve-viec-cong-bo-cong-khai-du-toan-ngan-sach-nam-2022-cua-truong-dai-hoc-an-giang-dot-3",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T01:09:14.841Z"
+  },
+  "created_at": {
+    "$date": "2022-05-16T02:46:45.620Z"
+  }
+},{
+  "_id": {
+    "$oid": "6281bc015a597b5b302703f9"
+  },
+  "id_vi": {
+    "$oid": "6281bc015a597b5b302703f8"
+  },
+  "slug_vi": "le-cong-bo-quyet-dinh-thanh-lap-vien-bien-doi-khi-hau-truc-thuoc-truong-dai-hoc-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-18T03:07:54.307Z"
+  },
+  "created_at": {
+    "$date": "2022-05-16T02:50:41.008Z"
+  },
+  "id_en": {
+    "$oid": "628839f5aacccc1235277fc8"
+  },
+  "slug_en": "the-announcement-ceremony-of-the-decision-to-establish-the-institute-of-climate-change"
+},{
+  "_id": {
+    "$oid": "6281bcb6b6393c3415573183"
+  },
+  "id_vi": {
+    "$oid": "6281bcb6b6393c3415573182"
+  },
+  "slug_vi": "le-trao-hoc-bong-aba",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-18T03:16:53.081Z"
+  },
+  "created_at": {
+    "$date": "2022-05-16T02:53:42.669Z"
+  },
+  "id_en": {
+    "$oid": "6285ce719d39e81b534c8953"
+  },
+  "slug_en": "aba-scholarship-awarding-ceremony"
+},{
+  "_id": {
+    "$oid": "6281bd82a79fd25823510934"
+  },
+  "id_vi": {
+    "$oid": "6281bd82a79fd25823510933"
+  },
+  "slug_vi": "tiep-doan-tong-lanh-su-indonesia-tai-tp-ho-chi-minh",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-18T03:36:50.810Z"
+  },
+  "created_at": {
+    "$date": "2022-05-16T02:57:06.885Z"
+  },
+  "id_en": {
+    "$oid": "6285d11caacccc1235277fc1"
+  },
+  "slug_en": "welcoming-the-delegation-of-the-indonesia-general-consulate-in-ho-chi-minh-city"
+},{
+  "_id": {
+    "$oid": "6281c007388e883c1a380a76"
+  },
+  "id_vi": {
+    "$oid": "6281c007388e883c1a380a75"
+  },
+  "slug_vi": "tiep-phong-giao-duc-van-phong-kinh-te-va-van-hoa-dai-bac-tai-tphcm",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-18T06:43:53.480Z"
+  },
+  "created_at": {
+    "$date": "2022-05-16T03:07:51.770Z"
+  },
+  "id_en": {
+    "$oid": "6285ccf7aacccc1235277fbc"
+  },
+  "slug_en": "welcoming-the-education-department-taipei-economic-and-cultural-office-teaco-in-ho-chi-minh-city"
+},{
+  "_id": {
+    "$oid": "6281c08c6fe42e499c02c8b9"
+  },
+  "id_vi": {
+    "$oid": "6281c08c6fe42e499c02c8b8"
+  },
+  "slug_vi": "hop-trien-khai-du-an-tang-cuong-giao-duc-dai-hoc-trong-linh-vuc-nong-nghiep-tai-dhqg-hcm",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-18T03:27:56.170Z"
+  },
+  "created_at": {
+    "$date": "2022-05-16T03:10:04.461Z"
+  },
+  "id_en": {
+    "$oid": "6285ca7de69e0d7cd22f7b5c"
+  },
+  "slug_en": "meeting-of-project-deployment-strengthen-higher-education-in-the-agriculture-sector-at-the-vietnam-national-university-ho-chi-minh-city"
+},{
+  "_id": {
+    "$oid": "6281c1504f267a44370c71e3"
+  },
+  "id_vi": {
+    "$oid": "6281c1504f267a44370c71e2"
+  },
+  "slug_vi": "thong-bao-ve-viec-nhan-bai-luan-va-ho-so-xet-tuyen-theo-ket-qua-hoc-tap-thpt-trong-dot-tuyen-sinh-dai-hoc-nam-2022-dot-1",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-16T03:13:20.297Z"
+  },
+  "created_at": {
+    "$date": "2022-05-16T03:13:20.297Z"
+  }
+},{
+  "_id": {
+    "$oid": "6281c28ca79fd25823510939"
+  },
+  "id_vi": {
+    "$oid": "6281c28ca79fd25823510938"
+  },
+  "slug_vi": "trien-lam-sach-nhan-ngay-sach-va-van-hoa-doc-viet-nam",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-16T03:18:36.696Z"
+  },
+  "created_at": {
+    "$date": "2022-05-16T03:18:36.696Z"
+  }
+},{
+  "_id": {
+    "$oid": "6281c34737311d10f66da3c3"
+  },
+  "id_vi": {
+    "$oid": "6281c34737311d10f66da3c2"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-dhqg-hcm-nghiem-thu-02-de-tai-nghien-cuu-khoa-hoc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-16T03:21:43.501Z"
+  },
+  "created_at": {
+    "$date": "2022-05-16T03:21:43.501Z"
+  }
+},{
+  "_id": {
+    "$oid": "6281c471124fe050ad55b144"
+  },
+  "id_vi": {
+    "$oid": "6281c471124fe050ad55b143"
+  },
+  "slug_vi": "them-02-de-cuong-chi-tiet-giao-trinh-cua-truong-dhag-dhqg-hcm-duoc-xet-duyet",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-15T08:18:39.501Z"
+  },
+  "created_at": {
+    "$date": "2022-05-16T03:26:41.146Z"
+  }
+},{
+  "_id": {
+    "$oid": "6281c5db37311d10f66da3c7"
+  },
+  "id_vi": {
+    "$oid": "6281c5db37311d10f66da3c6"
+  },
+  "slug_vi": "xet-duyet-de-cuong-chi-tiet-giao-trinh",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-16T03:32:43.630Z"
+  },
+  "created_at": {
+    "$date": "2022-05-16T03:32:43.630Z"
+  }
+},{
+  "_id": {
+    "$oid": "6281c683a79fd2582351093d"
+  },
+  "id_vi": {
+    "$oid": "6281c683a79fd2582351093c"
+  },
+  "slug_vi": "vui-don-tet-chol-chnam-thmay",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-16T03:35:31.831Z"
+  },
+  "created_at": {
+    "$date": "2022-05-16T03:35:31.831Z"
+  }
+},{
+  "_id": {
+    "$oid": "6282f1433ae8ff7f277bb603"
+  },
+  "id_vi": {
+    "$oid": "6282f1433ae8ff7f277bb602"
+  },
+  "slug_vi": "them-4-de-cuong-giao-trinh-duoc-xet-duyet",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-17T00:50:11.833Z"
+  },
+  "created_at": {
+    "$date": "2022-05-17T00:50:11.833Z"
+  }
+},{
+  "_id": {
+    "$oid": "6282f1c2c238cd5cc9706294"
+  },
+  "id_vi": {
+    "$oid": "6282f1c2c238cd5cc9706293"
+  },
+  "slug_vi": "hoi-nghi-can-bo-chu-chot-truong-dai-hoc-an-giang-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-17T00:52:18.404Z"
+  },
+  "created_at": {
+    "$date": "2022-05-17T00:52:18.404Z"
+  }
+},{
+  "_id": {
+    "$oid": "6282f273195d826ae14ceb6c"
+  },
+  "id_vi": {
+    "$oid": "6282f273195d826ae14ceb6b"
+  },
+  "slug_vi": "giang-vien-bo-mon-dia-ly-khoa-su-pham-nhan-hoc-bong-cua-dhqg-hcm",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-17T00:55:15.774Z"
+  },
+  "created_at": {
+    "$date": "2022-05-17T00:55:15.774Z"
+  }
+},{
+  "_id": {
+    "$oid": "6282f2f9bfded07bc96b0122"
+  },
+  "id_vi": {
+    "$oid": "6282f2f9bfded07bc96b0121"
+  },
+  "slug_vi": "khai-giang-lop-boi-duong-ly-luan-chinh-tri-cho-dang-vien-moi",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-17T00:57:29.846Z"
+  },
+  "created_at": {
+    "$date": "2022-05-17T00:57:29.846Z"
+  }
+},{
+  "_id": {
+    "$oid": "6282f38ac238cd5cc9706299"
+  },
+  "id_vi": {
+    "$oid": "6282f38ac238cd5cc9706298"
+  },
+  "slug_vi": "tiep-va-lam-viec-voi-ban-dan-toc-tinh-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-17T00:59:54.409Z"
+  },
+  "created_at": {
+    "$date": "2022-05-17T00:59:54.409Z"
+  }
+},{
+  "_id": {
+    "$oid": "6282f42348a65606794c32f3"
+  },
+  "id_vi": {
+    "$oid": "6282f42348a65606794c32f2"
+  },
+  "slug_vi": "them-3-de-cuong-giao-trinh-thuoc-khoa-nong-nghiep-tai-nguyen-thien-nhien-duoc-xet-duyet",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-17T01:02:27.351Z"
+  },
+  "created_at": {
+    "$date": "2022-05-17T01:02:27.351Z"
+  }
+},{
+  "_id": {
+    "$oid": "6282f4a648a65606794c32f7"
+  },
+  "id_vi": {
+    "$oid": "6282f4a648a65606794c32f6"
+  },
+  "slug_vi": "tham-dinh-03-de-cuong-chi-tiet-giao-trinh",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-18T08:20:26.888Z"
+  },
+  "created_at": {
+    "$date": "2022-05-17T01:04:38.151Z"
+  }
+},{
+  "_id": {
+    "$oid": "6282f5b14d792941c26c9cb3"
+  },
+  "id_vi": {
+    "$oid": "6282f5b14d792941c26c9cb2"
+  },
+  "slug_vi": "phien-hop-hoi-dong-truong-lan-thu-vi-nhiem-ky-2020-2025",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-17T01:09:05.111Z"
+  },
+  "created_at": {
+    "$date": "2022-05-17T01:09:05.111Z"
+  }
+},{
+  "_id": {
+    "$oid": "6282f61cc238cd5cc970629e"
+  },
+  "id_vi": {
+    "$oid": "6282f61cc238cd5cc970629d"
+  },
+  "slug_vi": "hop-chuan-bi-trien-khai-danh-gia-ngoai-04-chuong-trinh-dao-tao-theo-bo-tieu-chuan-aun-qa-30",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-17T01:10:52.849Z"
+  },
+  "created_at": {
+    "$date": "2022-05-17T01:10:52.849Z"
+  }
+},{
+  "_id": {
+    "$oid": "6282f6c3c238cd5cc97062a2"
+  },
+  "id_vi": {
+    "$oid": "6282f6c3c238cd5cc97062a1"
+  },
+  "slug_vi": "hoi-nghi-trien-khai-ke-hoach-hoat-dong-khoi-thi-dua-6-va-ky-ket-giao-uoc-thi-dua-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-17T01:13:39.823Z"
+  },
+  "created_at": {
+    "$date": "2022-05-17T01:13:39.823Z"
+  }
+},{
+  "_id": {
+    "$oid": "6282ff5bbfded07bc96b0126"
+  },
+  "id_vi": {
+    "$oid": "6282ff5bbfded07bc96b0125"
+  },
+  "slug_vi": "hop-trao-doi-noi-dung-ky-ket-mou-voi-dhqg-kaohsiung-cao-hung-dai-loan",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-17T01:50:19.414Z"
+  },
+  "created_at": {
+    "$date": "2022-05-17T01:50:19.414Z"
+  }
+},{
+  "_id": {
+    "$oid": "6283028afebbcd6ed2191fc3"
+  },
+  "id_vi": {
+    "$oid": "6283028afebbcd6ed2191fc2"
+  },
+  "slug_vi": "hoi-nghi-ban-chap-hanh-dang-bo-lan-thu-15",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-17T02:03:54.411Z"
+  },
+  "created_at": {
+    "$date": "2022-05-17T02:03:54.411Z"
+  }
+},{
+  "_id": {
+    "$oid": "628303a8febbcd6ed2191fc7"
+  },
+  "id_vi": {
+    "$oid": "628303a8febbcd6ed2191fc6"
+  },
+  "slug_vi": "tiep-va-lam-viec-voi-doan-kiem-tra-cua-bo-giao-duc-va-dao-tao",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-17T02:08:40.138Z"
+  },
+  "created_at": {
+    "$date": "2022-05-17T02:08:40.138Z"
+  }
+},{
+  "_id": {
+    "$oid": "628304404d792941c26c9cb7"
+  },
+  "id_vi": {
+    "$oid": "6283043f4d792941c26c9cb6"
+  },
+  "slug_vi": "tham-dinh-chuong-trinh-dao-tao-nganh-thu-y-trinh-do-dai-hoc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-17T02:11:12.002Z"
+  },
+  "created_at": {
+    "$date": "2022-05-17T02:11:12.002Z"
+  }
+},{
+  "_id": {
+    "$oid": "6283060d8de64f67393fc700"
+  },
+  "id_vi": {
+    "$oid": "6283060d8de64f67393fc6ff"
+  },
+  "slug_vi": "buoi-thong-tin-ve-ke-hoach-du-hoc-va-hoc-bong-cua-dai-hoc-quoc-lap-kim-mon",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-17T02:18:53.361Z"
+  },
+  "created_at": {
+    "$date": "2022-05-17T02:18:53.361Z"
+  }
+},{
+  "_id": {
+    "$oid": "6283077caa5b3527ee0203f3"
+  },
+  "id_vi": {
+    "$oid": "6283077caa5b3527ee0203f2"
+  },
+  "slug_vi": "xet-duyet-de-cuong-01-sach-chuyen-khao-va-02-giao-trinh",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-17T02:25:00.409Z"
+  },
+  "created_at": {
+    "$date": "2022-05-17T02:25:00.409Z"
+  }
+},{
+  "_id": {
+    "$oid": "6283655a82ae1f6112032ddd"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-18T02:53:03.882Z"
+  },
+  "created_at": {
+    "$date": "2022-05-17T09:05:30.799Z"
+  }
+},{
+  "_id": {
+    "$oid": "62836e3af81add03c2536027"
+  },
+  "id_vi": {
+    "$oid": "62836e3af81add03c2536026"
+  },
+  "slug_vi": "tong-lanh-su-quan-nhat-ban-tai-tphcm-den-tham-va-trao-tang-sach-cua-du-an-read-japan-project-cho-truong-dhag",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-18T02:00:20.660Z"
+  },
+  "created_at": {
+    "$date": "2022-05-17T09:43:22.378Z"
+  },
+  "id_en": {
+    "$oid": "6284a7cb18e47539876670d6"
+  },
+  "slug_en": "consulate-general-of-japan-in-ho-chi-minh-visited-agu-and-donated-150-books-from-read-japan-project"
+},{
+  "_id": {
+    "$oid": "628444ff532d2e40d934bd35"
+  },
+  "id_vi": {
+    "$oid": "628444ff532d2e40d934bd34"
+  },
+  "slug_vi": "le-tot-nghiep-va-trao-bang-thac-si-khoa-27-2018-2020",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-18T02:10:50.256Z"
+  },
+  "created_at": {
+    "$date": "2022-05-18T00:59:43.030Z"
+  },
+  "id_en": {
+    "$oid": "6285c7458ede912ce758b266"
+  },
+  "slug_en": "the-graduation-ceremony-of-master-programs"
+},{
+  "_id": {
+    "$oid": "6284492e9bd05a6a304bcfa6"
+  },
+  "id_vi": {
+    "$oid": "6284492e9bd05a6a304bcfa5"
+  },
+  "slug_vi": "khai-giang-chuong-trinh-trao-doi-sinh-vien-truc-tuyen-voi-truong-dh-medan-area-indonesia",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-18T03:43:56.636Z"
+  },
+  "created_at": {
+    "$date": "2022-05-18T01:17:34.265Z"
+  },
+  "id_en": {
+    "$oid": "6285c91e8ede912ce758b269"
+  },
+  "slug_en": "opening-ceremony-of-the-online-based-student-exchange-program-with-medan-area-university-indonesia"
+},{
+  "_id": {
+    "$oid": "628494ba8a2a06379102d87b"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-18T06:40:57.622Z"
+  },
+  "created_at": {
+    "$date": "2022-05-18T06:39:54.188Z"
+  }
+},{
+  "_id": {
+    "$oid": "6284980e8a2a06379102d881"
+  },
+  "id_vi": {
+    "$oid": "6284980e8a2a06379102d880"
+  },
+  "slug_vi": "thong-bao-ket-qua-xet-bo-nhiem-chuc-danh-pho-giao-su-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-21T00:39:26.545Z"
+  },
+  "created_at": {
+    "$date": "2022-05-18T06:54:06.099Z"
+  }
+},{
+  "_id": {
+    "$oid": "62849e1654a3dc01bd797c80"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-18T07:21:01.873Z"
+  },
+  "created_at": {
+    "$date": "2022-05-18T07:19:50.489Z"
+  }
+},{
+  "_id": {
+    "$oid": "6284aebe18e47539876670da"
+  },
+  "id_vi": {
+    "$oid": "6284aebe18e47539876670d9"
+  },
+  "slug_vi": "khoi-thi-dua-6-giao-luu-the-thao-van-nghe-va-trao-qua-cho-doan-vien-cong-doan-tieu-bieu",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-18T08:30:54.452Z"
+  },
+  "created_at": {
+    "$date": "2022-05-18T08:30:54.452Z"
+  }
+},{
+  "_id": {
+    "$oid": "6284afd8877ed1789036c925"
+  },
+  "id_vi": {
+    "$oid": "6284afd8877ed1789036c924"
+  },
+  "slug_vi": "26-sinh-vien-agu-doat-chung-chi-mos-tai-vong-loai-quoc-gia-cuoc-thi-vo-dich-tin-hoc-van-phong-the-gioi-moswc-viettel-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-18T08:35:36.909Z"
+  },
+  "created_at": {
+    "$date": "2022-05-18T08:35:36.909Z"
+  }
+},{
+  "_id": {
+    "$oid": "6284b9b5399c4e575e67282a"
+  },
+  "id_vi": {
+    "$oid": "6284b9b5399c4e575e672829"
+  },
+  "slug_vi": "pgsts-vo-van-thang-nhac-si-vo-thang-dat-giai-thuong-am-nhac-viet-nam-nam-2021",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-21T01:11:41.578Z"
+  },
+  "created_at": {
+    "$date": "2022-05-18T09:17:41.692Z"
+  },
+  "id_en": {
+    "$oid": "62883c4de69e0d7cd22f7b69"
+  },
+  "slug_en": "assoc-prof-dr-vo-van-thang-won-the-vietnam-music-award-in-2021"
+},{
+  "_id": {
+    "$oid": "6284bc4cdd9e8539cd0c1693"
+  },
+  "id_vi": {
+    "$oid": "6284bc4cdd9e8539cd0c1692"
+  },
+  "slug_vi": "le-be-giang-chuong-trinh-trao-doi-sinh-vien-cong-nhan-tin-chi-quoc-te",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-18T03:22:20.990Z"
+  },
+  "created_at": {
+    "$date": "2022-05-18T09:28:44.417Z"
+  },
+  "id_en": {
+    "$oid": "62883dfb226e181781611a98"
+  },
+  "slug_en": "closing-ceremony-of-the-international-transfer-credit-program-2021"
+},{
+  "_id": {
+    "$oid": "62858caaab260174cf12d895"
+  },
+  "id_vi": {
+    "$oid": "62858caaab260174cf12d894"
+  },
+  "slug_vi": "le-trao-giai-cuoc-thi-dai-su-van-hoa-doc-nam-2021",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-18T06:54:34.088Z"
+  },
+  "created_at": {
+    "$date": "2022-05-19T00:17:46.285Z"
+  },
+  "id_en": {
+    "$oid": "628840640f8fa71da0417442"
+  },
+  "slug_en": "the-awards-ceremony-of-the-reading-culture-ambassador-contest-2021"
+},{
+  "_id": {
+    "$oid": "62858e1a80017e6e30428333"
+  },
+  "id_vi": {
+    "$oid": "62858e1a80017e6e30428332"
+  },
+  "slug_vi": "hoi-thao-giua-ky-du-an-risawa",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-18T07:03:26.717Z"
+  },
+  "created_at": {
+    "$date": "2022-05-19T00:23:54.453Z"
+  },
+  "id_en": {
+    "$oid": "6288423c5af94e2631573392"
+  },
+  "slug_en": "risawa-mid-term-workshop"
+},{
+  "_id": {
+    "$oid": "62858f1980017e6e30428337"
+  },
+  "id_vi": {
+    "$oid": "62858f1980017e6e30428336"
+  },
+  "slug_vi": "be-mac-dot-danh-gia-ngoai-4-chuong-trinh-dao-tao-theo-aun-qa",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-18T07:20:40.994Z"
+  },
+  "created_at": {
+    "$date": "2022-05-19T00:28:09.848Z"
+  },
+  "id_en": {
+    "$oid": "62884590aacccc1235277fcc"
+  },
+  "slug_en": "the-closing-session-for-the-external-assessment-of-the-four-study-programs-according-to-aun-qa-standards"
+},{
+  "_id": {
+    "$oid": "6285905054380f547a3f12dd"
+  },
+  "id_vi": {
+    "$oid": "6285905054380f547a3f12dc"
+  },
+  "slug_vi": "khai-mac-danh-gia-ngoai-4-chuong-trinh-dao-tao-theo-bo-tieu-chuan-aun-qa",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-18T07:42:31.818Z"
+  },
+  "created_at": {
+    "$date": "2022-05-19T00:33:20.761Z"
+  },
+  "id_en": {
+    "$oid": "6288473077cc124059618762"
+  },
+  "slug_en": "the-opening-session-for-the-external-assessment-of-the-four-study-programs-according-to-aun-qa-standards"
+},{
+  "_id": {
+    "$oid": "6285914380017e6e3042833b"
+  },
+  "id_vi": {
+    "$oid": "6285914380017e6e3042833a"
+  },
+  "slug_vi": "hieu-truong-truong-dhag-chuc-mung-68-nam-quoc-khanh-vuong-quoc-campuchia",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T00:48:35.390Z"
+  },
+  "created_at": {
+    "$date": "2022-05-19T00:37:23.209Z"
+  },
+  "id_en": {
+    "$oid": "628848a3391057583f519df2"
+  },
+  "slug_en": "the-president-of-an-giang-university-congratulated-the-68th-anniversary-of-the-national-day-of-the-kingdom-of-cambodia"
+},{
+  "_id": {
+    "$oid": "6285930ae09c54683238f613"
+  },
+  "id_vi": {
+    "$oid": "6285930ae09c54683238f612"
+  },
+  "slug_vi": "chao-don-tan-sinh-vien-nam-hoc-2021-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T00:51:53.390Z"
+  },
+  "created_at": {
+    "$date": "2022-05-19T00:44:58.255Z"
+  },
+  "id_en": {
+    "$oid": "628849f2ed407067d328bf42"
+  },
+  "slug_en": "welcoming-new-students-for-the-academic-year-2021-2022"
+},{
+  "_id": {
+    "$oid": "6285944b54380f547a3f12e1"
+  },
+  "id_vi": {
+    "$oid": "6285944b54380f547a3f12e0"
+  },
+  "slug_vi": "le-trao-giay-chung-nhan-tot-nghiep-dai-hoc-cho-luu-hoc-sinh-campuchia",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T01:03:14.349Z"
+  },
+  "created_at": {
+    "$date": "2022-05-19T00:50:19.695Z"
+  },
+  "id_en": {
+    "$oid": "62884b6ced407067d328bf45"
+  },
+  "slug_en": "the-ceremony-of-awarding-university-graduation-certificates-to-cambodian-students"
+},{
+  "_id": {
+    "$oid": "6285956afcea4d5b266f54c5"
+  },
+  "id_vi": {
+    "$oid": "6285956afcea4d5b266f54c4"
+  },
+  "slug_vi": "bao-cao-chuyen-de-khoa-hoc-vai-tro-va-trach-nhiem-cua-ban-trong-tang-truong-kinh-te-o-viet-nam",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T00:44:33.418Z"
+  },
+  "created_at": {
+    "$date": "2022-05-19T00:55:06.684Z"
+  },
+  "id_en": {
+    "$oid": "62884caefdce8214d745f7f0"
+  },
+  "slug_en": "seminar-on-your-role-and-responsibility-in-the-growth-of-vietnam"
+},{
+  "_id": {
+    "$oid": "6285969c8884b6760f468773"
+  },
+  "id_vi": {
+    "$oid": "6285969c8884b6760f468772"
+  },
+  "slug_vi": "le-trao-tang-sach-tieng-anh-thuoc-du-an-read-japan-project",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T00:38:53.638Z"
+  },
+  "created_at": {
+    "$date": "2022-05-19T01:00:12.663Z"
+  },
+  "id_en": {
+    "$oid": "62884e9b0f8fa71da041744b"
+  },
+  "slug_en": "read-japan-project-book-hand-over-ceremony"
+},{
+  "_id": {
+    "$oid": "628599440a79ea14f512c573"
+  },
+  "id_vi": {
+    "$oid": "628599440a79ea14f512c572"
+  },
+  "slug_vi": "chuong-trinh-trao-doi-sinh-vien-truc-tuyen-voi-truong-dai-hoc-khu-vuc-medan-indonesia",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T00:55:43.371Z"
+  },
+  "created_at": {
+    "$date": "2022-05-19T01:11:32.444Z"
+  },
+  "id_en": {
+    "$oid": "62884fc2474e2b757005b372"
+  },
+  "slug_en": "online-based-student-exchange-program-with-medan-area-university-indonesia"
+},{
+  "_id": {
+    "$oid": "6285adc8e69e0d7cd22f7b54"
+  },
+  "id_vi": {
+    "$oid": "6285adc8e69e0d7cd22f7b53"
+  },
+  "slug_vi": "hoi-thao-truc-tuyen-ky-nang-lua-chon-va-dang-bai-tren-cac-tap-chi-quoc-te-uy-tin",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-02T08:33:32.793Z"
+  },
+  "created_at": {
+    "$date": "2022-05-19T02:39:04.088Z"
+  },
+  "id_en": {
+    "$oid": "6389b85cce419537ab5a1a12"
+  },
+  "slug_en": "online-seminar-of-choosing-and-publishing-articles-on-prestigious-international-journals"
+},{
+  "_id": {
+    "$oid": "6285ba7daacccc1235277fb7"
+  },
+  "id_vi": {
+    "$oid": "6285ba7daacccc1235277fb6"
+  },
+  "slug_vi": "tap-huan-cong-tac-to-chuc-thi-danh-gia-nang-luc-dhqg-hcm-dot-2-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-19T03:48:55.221Z"
+  },
+  "created_at": {
+    "$date": "2022-05-19T03:33:17.077Z"
+  }
+},{
+  "_id": {
+    "$oid": "62883463e69e0d7cd22f7b65"
+  },
+  "id_vi": {
+    "$oid": "62883463e69e0d7cd22f7b64"
+  },
+  "slug_vi": "sinh-vien-agu-gat-hai-thanh-cong-tai-hoi-thao-sinh-vien-dhqg-hcm-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-21T00:37:55.697Z"
+  },
+  "created_at": {
+    "$date": "2022-05-21T00:37:55.697Z"
+  }
+},{
+  "_id": {
+    "$oid": "628837a8fdce8214d745f7eb"
+  },
+  "id_vi": {
+    "$oid": "628837a8fdce8214d745f7ea"
+  },
+  "slug_vi": "hoi-thao-tap-huan-cong-tac-xa-hoi-va-suc-khoe-cong-dong-nam-2022-lan-thu-16",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-21T00:51:52.337Z"
+  },
+  "created_at": {
+    "$date": "2022-05-21T00:51:52.337Z"
+  }
+},{
+  "_id": {
+    "$oid": "628851517d1ce14e88566ff3"
+  },
+  "id_vi": {
+    "$oid": "628851517d1ce14e88566ff2"
+  },
+  "slug_vi": "nghiem-thu-de-tai-nghien-cuu-khoa-hoc-cap-truong",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T01:14:43.744Z"
+  },
+  "created_at": {
+    "$date": "2022-05-21T02:41:21.386Z"
+  },
+  "id_en": {
+    "$oid": "628852d1fdce8214d745f7f5"
+  },
+  "slug_en": "acceptance-of-school-level-scientific-research-topics"
+},{
+  "_id": {
+    "$oid": "628855be6e984c60b8569404"
+  },
+  "id_vi": {
+    "$oid": "628855be6e984c60b8569403"
+  },
+  "slug_vi": "le-ky-ket-thoa-thuan-hop-tac-giua-dhqg-hcm-voi-co-quan-hop-tac-quoc-te-han-quoc-koica",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T01:10:20.007Z"
+  },
+  "created_at": {
+    "$date": "2022-05-21T03:00:14.256Z"
+  },
+  "id_en": {
+    "$oid": "62885701b912eb2dcc7df602"
+  },
+  "slug_en": "the-signing-ceremony-of-a-cooperation-agreement-between-vnu-hcm-and-korea-international-cooperation-agency-koica"
+},{
+  "_id": {
+    "$oid": "628b26447511e47877050894"
+  },
+  "id_vi": {
+    "$oid": "628b26447511e47877050893"
+  },
+  "slug_vi": "1703-thi-sinh-tham-gia-ky-thi-danh-gia-nang-luc-cua-dhqg-hcm-tai-cum-thi-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-23T06:14:28.409Z"
+  },
+  "created_at": {
+    "$date": "2022-05-23T06:14:28.409Z"
+  }
+},{
+  "_id": {
+    "$oid": "628b2701fa30d330ff715f54"
+  },
+  "id_vi": {
+    "$oid": "628b2701fa30d330ff715f53"
+  },
+  "slug_vi": "tap-huan-cong-tac-thi-dua-khen-thuong-truong-dhag-dhqg-hcm-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-23T06:17:37.086Z"
+  },
+  "created_at": {
+    "$date": "2022-05-23T06:17:37.086Z"
+  }
+},{
+  "_id": {
+    "$oid": "628c2687c643bd1cb35ff513"
+  },
+  "id_vi": {
+    "$oid": "628c2687c643bd1cb35ff512"
+  },
+  "slug_vi": "hoi-thao-truc-tuyen-ve-cong-tac-xa-hoi-va-suc-khoe-cong-dong-nam-2021-lan-thu-15",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T01:20:15.601Z"
+  },
+  "created_at": {
+    "$date": "2022-05-24T00:27:51.408Z"
+  },
+  "id_en": {
+    "$oid": "628dca15a86cb03c48525408"
+  },
+  "slug_en": "online-workshop-on-social-work-and-community-health-services-in-2021-15th"
+},{
+  "_id": {
+    "$oid": "628dc79b425bca34bc0bd983"
+  },
+  "id_vi": {
+    "$oid": "628dc79b425bca34bc0bd982"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-giao-luu-voi-nha-van-nguyen-tan-phat",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-25T06:07:23.463Z"
+  },
+  "created_at": {
+    "$date": "2022-05-25T06:07:23.463Z"
+  }
+},{
+  "_id": {
+    "$oid": "628dc8814ee1750188315d1d"
+  },
+  "id_vi": {
+    "$oid": "628dc8814ee1750188315d1c"
+  },
+  "slug_vi": "hop-ra-soat-cong-tac-chuan-bi-danh-gia-ngoai-04-chuong-trinh-dao-tao-theo-bo-tieu-chuan-aun-qa",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-25T06:11:13.023Z"
+  },
+  "created_at": {
+    "$date": "2022-05-25T06:11:13.023Z"
+  }
+},{
+  "_id": {
+    "$oid": "628ec630cbfc4e3352225bb8"
+  },
+  "id_vi": {
+    "$oid": "628ec630cbfc4e3352225bb7"
+  },
+  "slug_vi": "hoi-thao-tap-huan-dieu-chinh-chuan-dau-ra-va-chuong-trinh-dao-tao",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-26T00:13:36.628Z"
+  },
+  "created_at": {
+    "$date": "2022-05-26T00:13:36.628Z"
+  }
+},{
+  "_id": {
+    "$oid": "628f1c1b4c712e611f313ec6"
+  },
+  "id_vi": {
+    "$oid": "628f1c1b4c712e611f313ec5"
+  },
+  "slug_vi": "nghiem-thu-co-so-de-tai-nghien-cuu-khoa-hoc-cap-tinh",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T01:24:49.863Z"
+  },
+  "created_at": {
+    "$date": "2022-05-26T06:20:11.384Z"
+  },
+  "id_en": {
+    "$oid": "628f1d6841d89256f2397fcb"
+  },
+  "slug_en": "acceptance-of-provincial-scientific-research-projects"
+},{
+  "_id": {
+    "$oid": "629034354c712e611f313ecf"
+  },
+  "id_vi": {
+    "$oid": "629034354c712e611f313ece"
+  },
+  "slug_vi": "le-vinh-danh-huan-luyen-vien-van-dong-vien-tham-gia-hoi-thao-sinh-vien-dhqg-hcm-va-hs-sv-dat-thanh-tich-cao-trong-cac-cuoc-thi-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-27T02:15:17.813Z"
+  },
+  "created_at": {
+    "$date": "2022-05-27T02:15:17.813Z"
+  }
+},{
+  "_id": {
+    "$oid": "62903646d68afc48d0691e91"
+  },
+  "id_vi": {
+    "$oid": "62903646d68afc48d0691e90"
+  },
+  "slug_vi": "hoi-thao-gioi-thieu-ngon-ngu-va-van-hoa-phap",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-05T15:05:14.600Z"
+  },
+  "created_at": {
+    "$date": "2022-05-27T02:24:06.169Z"
+  },
+  "id_en": {
+    "$oid": "63667baa3063ad7a64439585"
+  },
+  "slug_en": "introduction-of-french-language-culture-workshop"
+},{
+  "_id": {
+    "$oid": "62916ec7ef51a35537027876"
+  },
+  "id_vi": {
+    "$oid": "62916ec7ef51a35537027875"
+  },
+  "slug_vi": "buoi-don-tiep-doan-hiep-hoi-phat-trien-kinh-te-van-hoa-giao-duc-dai-viet",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T09:00:17.009Z"
+  },
+  "created_at": {
+    "$date": "2022-05-28T00:37:27.270Z"
+  },
+  "id_en": {
+    "$oid": "62917019ef51a35537027879"
+  },
+  "slug_en": "welcoming-the-delegation-of-the-taiwan-vietnam-economic-cultural-educational-development-association"
+},{
+  "_id": {
+    "$oid": "62917d44835eaf29ea266a33"
+  },
+  "id_vi": {
+    "$oid": "62917d44835eaf29ea266a32"
+  },
+  "slug_vi": "pho-hieu-truong-tran-van-dat-tiep-va-lam-viec-voi-dai-dien-dh-salem-state-hoa-ky",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T07:19:17.303Z"
+  },
+  "created_at": {
+    "$date": "2022-05-28T01:39:16.193Z"
+  },
+  "id_en": {
+    "$oid": "62917ee99dbb7e6ed10b7d18"
+  },
+  "slug_en": "vice-president-tran-van-dat-worked-with-the-representatives-of-salem-state-university-usa"
+},{
+  "_id": {
+    "$oid": "629180f9f8246f203f431b63"
+  },
+  "id_vi": {
+    "$oid": "629180f9f8246f203f431b62"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-tiep-ts-aaron-loh-dai-hoc-assumption-thai-lan",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T07:08:20.109Z"
+  },
+  "created_at": {
+    "$date": "2022-05-28T01:55:05.485Z"
+  },
+  "id_en": {
+    "$oid": "6291823b9dbb7e6ed10b7d1b"
+  },
+  "slug_en": "welcoming-dr-aaron-loh-from-assumption-university"
+},{
+  "_id": {
+    "$oid": "629183d5a657a74aea26e684"
+  },
+  "id_vi": {
+    "$oid": "629183d5a657a74aea26e683"
+  },
+  "slug_vi": "hoi-thao-gioi-thieu-chuong-trinh-thac-si-quan-tri-kinh-doanh-cua-truong-dai-hoc-horizon-paris-phap",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T07:03:10.073Z"
+  },
+  "created_at": {
+    "$date": "2022-05-28T02:07:17.166Z"
+  },
+  "id_en": {
+    "$oid": "629186003efa7d1ad024d822"
+  },
+  "slug_en": "the-workshop-on-the-master-of-business-administration-program-of-horizon-university-paris-in-france"
+},{
+  "_id": {
+    "$oid": "629187c99dbb7e6ed10b7d1f"
+  },
+  "id_vi": {
+    "$oid": "629187c99dbb7e6ed10b7d1e"
+  },
+  "slug_vi": "nghiem-thu-de-tai-nghien-cuu-khoa-hoc-xay-dung-quy-trinh-che-bien-nuoc-lau-cua-dong-va-thit-cua-dong-dong-hop",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T02:37:29.312Z"
+  },
+  "created_at": {
+    "$date": "2022-05-28T02:24:09.872Z"
+  },
+  "id_en": {
+    "$oid": "629189342dbe623a73481ce5"
+  },
+  "slug_en": "acceptance-of-the-scientific-research-developing-the-protocol-of-processing-freshwater-crab-somanniathelphusa-germaini-soup-and-canned-freshwater-crab-meat"
+},{
+  "_id": {
+    "$oid": "62918adb9227ed27ae3c3b6b"
+  },
+  "id_vi": {
+    "$oid": "62918adb9227ed27ae3c3b6a"
+  },
+  "slug_vi": "hoi-thao-pho-bien-va-giao-duc-phap-luat-cho-cong-dong-qua-thuc-tien-ap-dung-tai-cac-tinh-dong-bang-song-cuu-long",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T02:44:22.322Z"
+  },
+  "created_at": {
+    "$date": "2022-05-28T02:37:15.637Z"
+  },
+  "id_en": {
+    "$oid": "62918c2fcd736e01f212ccb2"
+  },
+  "slug_en": "legal-dissemination-and-education-workshop-for-community-in-mekong-delta-provinces"
+},{
+  "_id": {
+    "$oid": "62918de4a4afa27787591563"
+  },
+  "id_vi": {
+    "$oid": "62918de4a4afa27787591562"
+  },
+  "slug_vi": "study-in-italy-2020-ngay-hoi-thong-tin-du-hoc-y",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T06:50:31.864Z"
+  },
+  "created_at": {
+    "$date": "2022-05-28T02:50:12.040Z"
+  },
+  "id_en": {
+    "$oid": "62918ed17feaf21ade4dc092"
+  },
+  "slug_en": "study-in-italy-2020-italian-study-abroad-information-day"
+},{
+  "_id": {
+    "$oid": "62919068a4afa27787591569"
+  },
+  "id_vi": {
+    "$oid": "62919068a4afa27787591568"
+  },
+  "slug_vi": "truong-dh-an-giang-va-truong-dh-quoc-te-ky-ket-ghi-nho-hop-tac-toan-dien",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T06:56:08.769Z"
+  },
+  "created_at": {
+    "$date": "2022-05-28T03:00:56.435Z"
+  },
+  "id_en": {
+    "$oid": "629191b47feaf21ade4dc095"
+  },
+  "slug_en": "an-giang-university-signing-the-memorandum-of-understanding-mou-with-international-university"
+},{
+  "_id": {
+    "$oid": "6295612fa4b1d16fd8702e3a"
+  },
+  "id_vi": {
+    "$oid": "6295612fa4b1d16fd8702e39"
+  },
+  "slug_vi": "tuyen-duong-guong-thanh-nien-tien-tien-lam-theo-loi-bac-va-chung-ket-thu-linh-thanh-nien-mua-thu-3",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-31T00:28:31.008Z"
+  },
+  "created_at": {
+    "$date": "2022-05-31T00:28:31.008Z"
+  }
+},{
+  "_id": {
+    "$oid": "6295759b7e1b7a5fc05e6544"
+  },
+  "id_vi": {
+    "$oid": "6295759b7e1b7a5fc05e6543"
+  },
+  "slug_vi": "quyet-dinh-ve-viec-cong-bo-cong-khai-du-toan-ngan-sach-nam-2022-cua-truong-dai-hoc-an-giang-dot-2",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T01:08:56.142Z"
+  },
+  "created_at": {
+    "$date": "2022-05-31T01:55:39.339Z"
+  }
+},{
+  "_id": {
+    "$oid": "629576de0ce029436d0c84c4"
+  },
+  "id_vi": {
+    "$oid": "629576de0ce029436d0c84c3"
+  },
+  "slug_vi": "quyet-dinh-ve-viec-cong-bo-cong-khai-du-toan-ngan-sach-nam-2022-cua-truong-dai-hoc-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T01:08:36.303Z"
+  },
+  "created_at": {
+    "$date": "2022-05-31T02:01:02.374Z"
+  }
+},{
+  "_id": {
+    "$oid": "62957bfd0ce029436d0c84c8"
+  },
+  "id_vi": {
+    "$oid": "62957bfd0ce029436d0c84c7"
+  },
+  "slug_vi": "quyet-dinh-ve-viec-cong-bo-cong-khai-quyet-toan-ngan-sach-nam-2020-cua-truong-dai-hoc-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T01:08:15.790Z"
+  },
+  "created_at": {
+    "$date": "2022-05-31T02:22:53.488Z"
+  }
+},{
+  "_id": {
+    "$oid": "62957d25fb45a67b0d52d0f5"
+  },
+  "id_vi": {
+    "$oid": "62957d25fb45a67b0d52d0f4"
+  },
+  "slug_vi": "thong-bao-thu-hoc-phi-dao-tao-chinh-quy-hoc-ky-i-nam-hoc-2021-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T01:13:37.296Z"
+  },
+  "created_at": {
+    "$date": "2022-05-31T02:27:49.419Z"
+  }
+},{
+  "_id": {
+    "$oid": "62957e178eb6480a5852dd96"
+  },
+  "id_vi": {
+    "$oid": "62957e178eb6480a5852dd95"
+  },
+  "slug_vi": "quyet-dinh-ve-quy-dinh-muc-thu-hoc-phi-nam-hoc-2021-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T01:07:55.372Z"
+  },
+  "created_at": {
+    "$date": "2022-05-31T02:31:51.107Z"
+  }
+},{
+  "_id": {
+    "$oid": "62957ed88eb6480a5852dd9a"
+  },
+  "id_vi": {
+    "$oid": "62957ed88eb6480a5852dd99"
+  },
+  "slug_vi": "bao-cao-cong-khai-nam-hoc-2020-2021",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-27T03:33:10.494Z"
+  },
+  "created_at": {
+    "$date": "2022-05-31T02:35:04.799Z"
+  }
+},{
+  "_id": {
+    "$oid": "62957fd86387ac28f1207343"
+  },
+  "id_vi": {
+    "$oid": "62957fd86387ac28f1207342"
+  },
+  "slug_vi": "quyet-dinh-ve-viec-cong-bo-cong-khai-du-toan-ngan-sach-nam-2021-cua-truong-dai-hoc-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T01:07:07.013Z"
+  },
+  "created_at": {
+    "$date": "2022-05-31T02:39:20.496Z"
+  }
+},{
+  "_id": {
+    "$oid": "629580696ee57b4e2b7e3553"
+  },
+  "id_vi": {
+    "$oid": "629580696ee57b4e2b7e3552"
+  },
+  "slug_vi": "bao-cao-cong-khai-nam-hoc-2019-2020",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-27T03:30:48.016Z"
+  },
+  "created_at": {
+    "$date": "2022-05-31T02:41:45.909Z"
+  }
+},{
+  "_id": {
+    "$oid": "629581becf845e7d4c3976c5"
+  },
+  "id_vi": {
+    "$oid": "629581becf845e7d4c3976c4"
+  },
+  "slug_vi": "thong-bao-thu-hoc-phi-chinh-quy-hoc-ky-i-nam-hoc-2020-2021",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T01:05:59.853Z"
+  },
+  "created_at": {
+    "$date": "2022-05-31T02:47:26.894Z"
+  }
+},{
+  "_id": {
+    "$oid": "62958bae6387ac28f1207347"
+  },
+  "id_vi": {
+    "$oid": "62958bae6387ac28f1207346"
+  },
+  "slug_vi": "webinar-ve-hoc-bong-teep-va-cac-chuong-trinh-hoc-bong-khac-tai-dai-hoc-quoc-lap-kim-mon",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T06:34:48.437Z"
+  },
+  "created_at": {
+    "$date": "2022-05-31T03:29:50.464Z"
+  },
+  "id_en": {
+    "$oid": "62958cf77881a42a44299eb5"
+  },
+  "slug_en": "webinar-about-teep-scholarships-and-other-scholarship-programs-at-national-quemoy-university"
+},{
+  "_id": {
+    "$oid": "62958ed473faaa690d1a8fd3"
+  },
+  "id_vi": {
+    "$oid": "62958ed473faaa690d1a8fd2"
+  },
+  "slug_vi": "tiep-tong-lanh-su-quan-hoa-ky-tai-tphcm-va-ky-niem-1-nam-thanh-lap-diem-hen-hoa-ky-tai-truong-dhag",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T06:46:36.282Z"
+  },
+  "created_at": {
+    "$date": "2022-05-31T03:43:16.961Z"
+  },
+  "id_en": {
+    "$oid": "6295907473faaa690d1a8fd6"
+  },
+  "slug_en": "welcoming-the-delegation-of-the-us-general-consulate-in-ho-chi-minh-city-and-the-1st-anniversary-of-the-american-hangout-of-agu"
+},{
+  "_id": {
+    "$oid": "6295924f7881a42a44299eba"
+  },
+  "id_vi": {
+    "$oid": "6295924f7881a42a44299eb9"
+  },
+  "slug_vi": "truong-dh-an-giang-tang-cuong-hop-tac-voi-dh-assumption-thai-lan",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T08:50:12.467Z"
+  },
+  "created_at": {
+    "$date": "2022-05-31T03:58:07.717Z"
+  },
+  "id_en": {
+    "$oid": "629594619ef9cf0fb4516722"
+  },
+  "slug_en": "an-giang-university-enhancing-cooperation-with-assumption-university-thailand"
+},{
+  "_id": {
+    "$oid": "62959d8cd718e97d25786c45"
+  },
+  "id_vi": {
+    "$oid": "62959d8cd718e97d25786c44"
+  },
+  "slug_vi": "nghiem-thu-de-tai-nghien-cuu-khoa-hoc-cap-quoc-gia",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T01:41:33.940Z"
+  },
+  "created_at": {
+    "$date": "2022-05-31T04:46:04.217Z"
+  },
+  "id_en": {
+    "$oid": "62959e599ef9cf0fb4516726"
+  },
+  "slug_en": "acceptance-of-national-scientific-research-projects"
+},{
+  "_id": {
+    "$oid": "6295a029d718e97d25786c49"
+  },
+  "id_vi": {
+    "$oid": "6295a029d718e97d25786c48"
+  },
+  "slug_vi": "danh-gia-cap-dhqg-hcm-04-chuong-trinh-dao-tao-theo-tieu-chuan-aun-qa",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T01:36:39.788Z"
+  },
+  "created_at": {
+    "$date": "2022-05-31T04:57:13.718Z"
+  },
+  "id_en": {
+    "$oid": "6295a390459f0d3e92590753"
+  },
+  "slug_en": "survey-at-the-vnu-hcm-level-of-04-training-programs-according-to-aun-qa-standards"
+},{
+  "_id": {
+    "$oid": "6295a51a484bff6ad0039973"
+  },
+  "id_vi": {
+    "$oid": "6295a51a484bff6ad0039972"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-dat-giai-ba-toan-doan-cuoc-thi-olympic-vat-ly-sinh-vien-toan-quoc-nam-2021",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T02:29:22.755Z"
+  },
+  "created_at": {
+    "$date": "2022-05-31T05:18:18.164Z"
+  },
+  "id_en": {
+    "$oid": "6295a645ab3e357d0870d0f2"
+  },
+  "slug_en": "an-giang-university-won-the-third-group-prize-in-the-2021-national-student-physics-olympiad-competition"
+},{
+  "_id": {
+    "$oid": "6295a952459f0d3e92590757"
+  },
+  "id_vi": {
+    "$oid": "6295a952459f0d3e92590756"
+  },
+  "slug_vi": "hoi-thao-truc-tuyen-ky-nang-khai-thac-nguon-tin-khcn-va-viet-bai-bao-khoa-hoc-quoc-te",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T02:33:55.784Z"
+  },
+  "created_at": {
+    "$date": "2022-05-31T05:36:18.735Z"
+  },
+  "id_en": {
+    "$oid": "6295b400459f0d3e9259075a"
+  },
+  "slug_en": "online-workshop-on-skills-of-searching-science-technology-resources-and-writing-for-international-scientific-articles"
+},{
+  "_id": {
+    "$oid": "6295b517e9aa374be768b1a3"
+  },
+  "id_vi": {
+    "$oid": "6295b517e9aa374be768b1a2"
+  },
+  "slug_vi": "nghiem-thu-de-tai-nghien-cuu-khoa-hoc-xay-dung-quy-trinh-trong-va-nhan-giong-hoa-hong-co-sa-pa-va-hai-phong-tai-long-xuyen-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T02:48:20.101Z"
+  },
+  "created_at": {
+    "$date": "2022-05-31T06:26:31.235Z"
+  },
+  "id_en": {
+    "$oid": "6295b5ea4d59bf41c044cc33"
+  },
+  "slug_en": "acceptance-of-the-scientific-project-of-building-the-process-of-planting-and-propagating-sa-pa-and-hai-phong-ancient-roses-in-long-xuyen-an-giang"
+},{
+  "_id": {
+    "$oid": "6295b7a17881a42a44299ebf"
+  },
+  "id_en": {
+    "$oid": "6295b7a17881a42a44299ebe"
+  },
+  "slug_en": "agu-buddy-program",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-05-31T06:37:21.310Z"
+  },
+  "created_at": {
+    "$date": "2022-05-31T06:37:21.310Z"
+  }
+},{
+  "_id": {
+    "$oid": "6295b8e3d718e97d25786c50"
+  },
+  "id_vi": {
+    "$oid": "6295b8e3d718e97d25786c4f"
+  },
+  "slug_vi": "truong-dhag-lam-viec-cung-truong-dh-quoc-te-ve-lien-ket-dao-tao-trinh-do-thac-si",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T02:53:01.814Z"
+  },
+  "created_at": {
+    "$date": "2022-05-31T06:42:43.970Z"
+  },
+  "id_en": {
+    "$oid": "6295b9ee24449d567c10edf3"
+  },
+  "slug_en": "an-giang-university-collaborates-with-international-university-on-joint-training-at-masters-level"
+},{
+  "_id": {
+    "$oid": "6296b85e6f041f13ef1676b6"
+  },
+  "id_vi": {
+    "$oid": "6296b85e6f041f13ef1676b5"
+  },
+  "slug_vi": "hoi-thao-khoa-hoc-ung-dung-mo-hinh-hoa-va-giai-phap-ung-pho-bien-doi-khi-hau-trong-trong-trot",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-01T00:52:46.272Z"
+  },
+  "created_at": {
+    "$date": "2022-06-01T00:52:46.272Z"
+  }
+},{
+  "_id": {
+    "$oid": "6296bc06af52ae09991f7454"
+  },
+  "id_vi": {
+    "$oid": "6296bc06af52ae09991f7453"
+  },
+  "slug_vi": "nghiem-thu-de-tai-nghien-cuu-khoa-hoc-cap-truong-01-06-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-01T01:08:22.371Z"
+  },
+  "created_at": {
+    "$date": "2022-06-01T01:08:22.371Z"
+  }
+},{
+  "_id": {
+    "$oid": "6296be816f041f13ef1676bc"
+  },
+  "id_vi": {
+    "$oid": "6296be816f041f13ef1676bb"
+  },
+  "slug_vi": "nghiem-thu-de-tai-nghien-cuu-khoa-hoc-cap-co-so",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T03:25:16.035Z"
+  },
+  "created_at": {
+    "$date": "2022-06-01T01:18:57.983Z"
+  },
+  "id_en": {
+    "$oid": "6296bf78f24cb2281e641df3"
+  },
+  "slug_en": "acceptance-of-grassroot-level-scientific-research"
+},{
+  "_id": {
+    "$oid": "6296c1591de444072c6954c4"
+  },
+  "id_vi": {
+    "$oid": "6296c1591de444072c6954c3"
+  },
+  "slug_vi": "nhieu-cong-trinh-phan-viec-cua-tuoi-tre-truong-dai-hoc-an-giang-trong-thang-thanh-nien-2021",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T06:38:12.224Z"
+  },
+  "created_at": {
+    "$date": "2022-06-01T01:31:05.031Z"
+  },
+  "id_en": {
+    "$oid": "6296c242f24cb2281e641df6"
+  },
+  "slug_en": "an-giang-university-commenced-the-youth-month-of-2021"
+},{
+  "_id": {
+    "$oid": "6296cfae426f01641a1d3c40"
+  },
+  "id_vi": {
+    "$oid": "6296cfae426f01641a1d3c3f"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-dhqg-hcm-hop-trien-khai-hoat-dong-cua-du-an-koica-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-01T02:32:14.269Z"
+  },
+  "created_at": {
+    "$date": "2022-06-01T02:32:14.269Z"
+  }
+},{
+  "_id": {
+    "$oid": "62970523e2f1064b0f17bfb7"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-01T06:20:50.959Z"
+  },
+  "created_at": {
+    "$date": "2022-06-01T06:20:19.941Z"
+  }
+},{
+  "_id": {
+    "$oid": "62970574a359be28e54c9219"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-01T06:22:23.062Z"
+  },
+  "created_at": {
+    "$date": "2022-06-01T06:21:40.603Z"
+  }
+},{
+  "_id": {
+    "$oid": "629731094707fa33a824e0ca"
+  },
+  "id_vi": {
+    "$oid": "629731094707fa33a824e0c9"
+  },
+  "slug_vi": "nghiem-thu-02-de-tai-nghien-cuu-khoa-hoc-cap-truong",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-01T09:27:37.832Z"
+  },
+  "created_at": {
+    "$date": "2022-06-01T09:27:37.832Z"
+  }
+},{
+  "_id": {
+    "$oid": "629816cfd2cdaa75b025ad40"
+  },
+  "id_vi": {
+    "$oid": "629816cfd2cdaa75b025ad3f"
+  },
+  "slug_vi": "hoi-thao-nhan-thuc-va-hanh-vi-cua-ho-gia-dinh-nong-thon-ve-su-dung-nang-luong-tiet-kiem-hieu-qua-tren-dia-ban-tinh-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-02T06:34:10.820Z"
+  },
+  "created_at": {
+    "$date": "2022-06-02T01:47:59.693Z"
+  }
+},{
+  "_id": {
+    "$oid": "629dbd7ac74d662eca392738"
+  },
+  "id_vi": {
+    "$oid": "629dbd7ac74d662eca392737"
+  },
+  "slug_vi": "be-mac-hoi-thao-tap-huan-cong-tac-xa-hoi-va-suc-khoe-cong-dong-nam-2022-lan-16",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-06T08:40:26.111Z"
+  },
+  "created_at": {
+    "$date": "2022-06-06T08:40:26.111Z"
+  }
+},{
+  "_id": {
+    "$oid": "629feb039141755b8d04c017"
+  },
+  "id_vi": {
+    "$oid": "629feb039141755b8d04c016"
+  },
+  "slug_vi": "khai-mac-danh-gia-ngoai-04-chuong-trinh-dao-tao-theo-bo-tieu-chuan-aun-qa",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-08T07:21:16.756Z"
+  },
+  "created_at": {
+    "$date": "2022-06-08T00:19:15.737Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a04c23401d2e601e70d7d3"
+  },
+  "id_vi": {
+    "$oid": "62a04c23401d2e601e70d7d2"
+  },
+  "slug_vi": "quyet-dinh-ve-viec-sua-doi-bo-sung-mot-so-dieu-cua-quy-dinh-tuyen-sinh-trinh-do-thac-si-va-tien-si-ban-hanh-kem-theo-quyet-dinh-so-838-qd-dhag-ngay-26-4-2021-cua-hieu-truong-truong-dai-hoc-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-08T07:13:39.227Z"
+  },
+  "created_at": {
+    "$date": "2022-06-08T07:13:39.227Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a13df8401d2e601e70d7d9"
+  },
+  "id_vi": {
+    "$oid": "62a13df8401d2e601e70d7d8"
+  },
+  "slug_vi": "quyet-dinh-ve-viec-cong-bo-cong-khai-bo-sung-du-toan-ngan-sach-nam-2020-cua-truong-dai-hoc-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T01:04:41.282Z"
+  },
+  "created_at": {
+    "$date": "2022-06-09T00:25:28.944Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a13f7dac044637241165b3"
+  },
+  "id_vi": {
+    "$oid": "62a13f7dac044637241165b2"
+  },
+  "slug_vi": "quyet-dinh-ve-viec-cong-bo-cong-khai-du-toan-ngan-sach-nam-2020-cua-truong-dai-hoc-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T01:05:09.231Z"
+  },
+  "created_at": {
+    "$date": "2022-06-09T00:31:57.691Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a140a81a1b1e10702ca103"
+  },
+  "id_vi": {
+    "$oid": "62a140a81a1b1e10702ca102"
+  },
+  "slug_vi": "quyet-dinh-ve-viec-su-dung-ket-qua-hoat-dong-tai-chinh-va-phan-phoi-loi-nhuan-nam-2019",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T01:05:30.799Z"
+  },
+  "created_at": {
+    "$date": "2022-06-09T00:36:56.857Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a142e8066d470c5d45d264"
+  },
+  "id_vi": {
+    "$oid": "62a142e8066d470c5d45d263"
+  },
+  "slug_vi": "bao-cao-cong-khai-nam-hoc-2018-2019",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-27T03:26:25.985Z"
+  },
+  "created_at": {
+    "$date": "2022-06-09T00:46:32.105Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a1490a2e6580651a579168"
+  },
+  "id_vi": {
+    "$oid": "62a1490a2e6580651a579167"
+  },
+  "slug_vi": "bao-cao-cong-khai-nam-hoc-2017-2018",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T01:12:42.800Z"
+  },
+  "created_at": {
+    "$date": "2022-06-09T01:12:42.800Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a14b0c1a1b1e10702ca113"
+  },
+  "id_vi": {
+    "$oid": "62a14b0c1a1b1e10702ca112"
+  },
+  "slug_vi": "thong-bao-cong-khai-thong-tin-co-so-vat-chat-cua-co-so-giao-duc-dai-hoc-nam-hoc-2015-2016",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T01:21:16.811Z"
+  },
+  "created_at": {
+    "$date": "2022-06-09T01:21:16.811Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a15bd7401d2e601e70d7e8"
+  },
+  "id_vi": {
+    "$oid": "62a15bd7401d2e601e70d7e7"
+  },
+  "slug_vi": "hoi-thao-co-hoi-hoc-bong-trao-doi-va-du-hoc-tai-hoa-ky",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-28T06:10:27.588Z"
+  },
+  "created_at": {
+    "$date": "2022-06-09T02:32:55.815Z"
+  },
+  "id_en": {
+    "$oid": "63ec2b70c02f745524095655"
+  },
+  "slug_en": "seminar-on-scholarships-for-international-study-and-exchange-programs-in-america"
+},{
+  "_id": {
+    "$oid": "62a15da506a1051cca2580e3"
+  },
+  "id_vi": {
+    "$oid": "62a15da506a1051cca2580e2"
+  },
+  "slug_vi": "thong-bao-cong-khai-du-toan-thu-chi-nam-2016",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T02:40:37.071Z"
+  },
+  "created_at": {
+    "$date": "2022-06-09T02:40:37.071Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a196f6811a0337d0240da6"
+  },
+  "id_vi": {
+    "$oid": "62a196f6811a0337d0240da5"
+  },
+  "slug_vi": "thong-bao-cong-khai-du-toan-thu-chi-ngan-sach-nha-nuoc-duoc-giao-va-phan-bo-cho-cac-don-vi-truc-thuoc-nam-2016",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T06:45:10.815Z"
+  },
+  "created_at": {
+    "$date": "2022-06-09T06:45:10.815Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a197b3bebe5416810b4fcb"
+  },
+  "id_vi": {
+    "$oid": "62a197b3bebe5416810b4fca"
+  },
+  "slug_vi": "thong-bao-cong-khai-quyet-toan-thu-chi-nguon-nsnn-nguon-khac-nam-2015",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T06:48:19.780Z"
+  },
+  "created_at": {
+    "$date": "2022-06-09T06:48:19.780Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a198faaa2f5e18177cb34c"
+  },
+  "id_vi": {
+    "$oid": "62a198faaa2f5e18177cb34b"
+  },
+  "slug_vi": "danh-sach-giang-vien-co-huu-cua-truong-dai-hoc-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T06:53:46.295Z"
+  },
+  "created_at": {
+    "$date": "2022-06-09T06:53:46.295Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a199ed861d8526403c2056"
+  },
+  "id_vi": {
+    "$oid": "62a199ed861d8526403c2055"
+  },
+  "slug_vi": "thong-bao-cong-khai-nam-hoc-2014-2015",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T06:57:49.285Z"
+  },
+  "created_at": {
+    "$date": "2022-06-09T06:57:49.285Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a19ab027f18121f950c0b7"
+  },
+  "id_vi": {
+    "$oid": "62a19ab027f18121f950c0b6"
+  },
+  "slug_vi": "danh-sach-giang-vien-co-huu-cua-co-so-dao-tao",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T07:01:04.844Z"
+  },
+  "created_at": {
+    "$date": "2022-06-09T07:01:04.844Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a19b8a9771e26c0f3de476"
+  },
+  "id_vi": {
+    "$oid": "62a19b8a9771e26c0f3de475"
+  },
+  "slug_vi": "thong-bao-cong-khai-quyet-toan-thu-chi-nguon-nsnn-nguon-khac-nam-2013",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-09T07:04:42.707Z"
+  },
+  "created_at": {
+    "$date": "2022-06-09T07:04:42.707Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a2a8edbebe5416810b4fd9"
+  },
+  "id_vi": {
+    "$oid": "62a2a8edbebe5416810b4fd8"
+  },
+  "slug_vi": "thong-bao-ve-viec-nop-van-bang-chung-chi-ngoai-ngu-va-tin-hoc-doi-voi-sinh-vien-trinh-do-dai-hoc-hinh-thuc-giao-duc-chinh-quy-de-nhan-bang-tot-nghiep",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-10T02:14:05.528Z"
+  },
+  "created_at": {
+    "$date": "2022-06-10T02:14:05.528Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a6885d5dff0f4666249b53"
+  },
+  "id_vi": {
+    "$oid": "62a6885d5dff0f4666249b52"
+  },
+  "slug_vi": "be-mac-dot-danh-gia-ngoai-04-chuong-trinh-dao-tao-cua-truong-dai-hoc-an-giang-dhqg-hcm-theo-bo-tieu-chuan-aun-qa",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-13T01:26:41.690Z"
+  },
+  "created_at": {
+    "$date": "2022-06-13T00:44:13.029Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a6dbf796b1121ba53ca915"
+  },
+  "id_vi": {
+    "$oid": "62a6dbf796b1121ba53ca914"
+  },
+  "slug_vi": "tiep-va-lam-viec-voi-doan-khao-sat-du-an-hop-tac-doi-moi-giao-duc-dai-hoc-pher",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-24T09:02:01.520Z"
+  },
+  "created_at": {
+    "$date": "2022-06-13T06:40:55.165Z"
+  },
+  "id_en": {
+    "$oid": "637f32ce2ea7531b6a3d7cb5"
+  },
+  "slug_en": "working-with-the-servey-team-of-higher-education-innovation-cooperation-project"
+},{
+  "_id": {
+    "$oid": "62a6fc2ef9c1012ca66e80bf"
+  },
+  "id_vi": {
+    "$oid": "62a6fc2ef9c1012ca66e80be"
+  },
+  "slug_vi": "hoi-nghi-pho-bien-cac-quy-dinh-va-thuc-thi-cam-ket-ve-sps-trong-hiep-dinh-evfta-va-rcep",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-13T08:58:22.948Z"
+  },
+  "created_at": {
+    "$date": "2022-06-13T08:58:22.948Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a6ffa867834e2015254805"
+  },
+  "id_vi": {
+    "$oid": "62a6ffa867834e2015254804"
+  },
+  "slug_vi": "hoi-thao-giai-phap-cong-nghe-thong-tin-trong-nong-nghiep-giao-duc-so-va-cac-chuong-trinh-hoc-bong-cua-chinh-phu-an-do",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-13T09:13:12.462Z"
+  },
+  "created_at": {
+    "$date": "2022-06-13T09:13:12.462Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a7d698c6ed271385217207"
+  },
+  "id_vi": {
+    "$oid": "62a7d698c6ed271385217206"
+  },
+  "slug_vi": "thong-bao-ve-viec-dieu-chinh-nguyen-vong-dang-ky-xet-tuyen-dai-hoc-theo-phuong-thuc-5-trong-dot-tuyen-sinh-dai-hoc-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-14T00:30:16.597Z"
+  },
+  "created_at": {
+    "$date": "2022-06-14T00:30:16.597Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a813daa0ce0d0562394009"
+  },
+  "id_vi": {
+    "$oid": "62a813daa0ce0d0562394008"
+  },
+  "slug_vi": "thong-bao-ve-viec-su-dung-chung-chi-vnu-ept",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-14T04:51:38.941Z"
+  },
+  "created_at": {
+    "$date": "2022-06-14T04:51:38.941Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b0123b2ba7d4033f52cbf3"
+  },
+  "id_vi": {
+    "$oid": "62b0123b2ba7d4033f52cbf2"
+  },
+  "slug_vi": "hoi-thao-chuyen-mon-thuoc-du-an-agb-2019-153",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-20T06:22:51.859Z"
+  },
+  "created_at": {
+    "$date": "2022-06-20T06:22:51.859Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b1108850ff2c58495e4821"
+  },
+  "id_vi": {
+    "$oid": "62b1108850ff2c58495e4820"
+  },
+  "slug_vi": "hoi-thao-tap-huan-doi-moi-sang-tao-trong-giao-duc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-21T00:27:52.841Z"
+  },
+  "created_at": {
+    "$date": "2022-06-21T00:27:52.841Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b3ce1baa17174a010d11d6"
+  },
+  "id_vi": {
+    "$oid": "62b3ce1baa17174a010d11d5"
+  },
+  "slug_vi": "nghiem-thu-de-tai-nghien-cuu-khoa-hoc-cap-truong-23-06-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-23T02:22:29.865Z"
+  },
+  "created_at": {
+    "$date": "2022-06-23T02:21:15.729Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b43323aa17174a010d11df"
+  },
+  "id_vi": {
+    "$oid": "62b43323aa17174a010d11de"
+  },
+  "slug_vi": "bao-cao-cong-khai-nam-hoc-2021-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-27T03:36:00.631Z"
+  },
+  "created_at": {
+    "$date": "2022-06-23T09:32:19.497Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b90480808f074ed4191ae0"
+  },
+  "id_vi": {
+    "$oid": "62b90480808f074ed4191adf"
+  },
+  "slug_vi": "doan-vien-cong-doan-co-so-truong-tham-du-chuong-trinh-doi-thoai-giua-lanh-dao-tinh-voi-doan-vien-cong-nhan-lao-dong-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-27T01:14:40.815Z"
+  },
+  "created_at": {
+    "$date": "2022-06-27T01:14:40.815Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b90760c767d067310a5bf6"
+  },
+  "id_vi": {
+    "$oid": "62b90760c767d067310a5bf5"
+  },
+  "slug_vi": "tong-ket-va-trao-giai-thuong-cuoc-thi-viet-chinh-luan-bao-ve-nen-tang-tu-tuong-cua-dang-dau-tranh-phan-bac-cac-quan-diem-sai-trai-thu-dich-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-27T01:26:56.052Z"
+  },
+  "created_at": {
+    "$date": "2022-06-27T01:26:56.052Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b90e4ab0e6a54f9072b585"
+  },
+  "id_vi": {
+    "$oid": "62b90e4ab0e6a54f9072b584"
+  },
+  "slug_vi": "tap-huan-ky-nang-viet-luan-van-va-trich-dan-tai-lieu",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-27T01:56:26.119Z"
+  },
+  "created_at": {
+    "$date": "2022-06-27T01:56:26.119Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b91c55b0e6a54f9072b591"
+  },
+  "id_vi": {
+    "$oid": "62b91c55b0e6a54f9072b590"
+  },
+  "slug_vi": "nghiem-thu-giao-trinh-lap-trinh-web",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-27T02:56:21.596Z"
+  },
+  "created_at": {
+    "$date": "2022-06-27T02:56:21.596Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b920c8b8a9be3b547c9b88"
+  },
+  "id_vi": {
+    "$oid": "62b920c8b8a9be3b547c9b87"
+  },
+  "slug_vi": "them-02-de-tai-nghien-cuu-khoa-hoc-duoc-nghiem-thu",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-27T03:15:20.920Z"
+  },
+  "created_at": {
+    "$date": "2022-06-27T03:15:20.920Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b94e878820e078f85b7353"
+  },
+  "id_vi": {
+    "$oid": "62b94e878820e078f85b7352"
+  },
+  "slug_vi": "ke-hoach-ve-viec-dang-ky-hoc-chuong-trinh-thu-hai-cua-nam-hoc-2022-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-27T06:30:31.680Z"
+  },
+  "created_at": {
+    "$date": "2022-06-27T06:30:31.680Z"
+  }
+},{
+  "_id": {
+    "$oid": "62b952ce8820e078f85b7359"
+  },
+  "id_vi": {
+    "$oid": "62b952ce8820e078f85b7358"
+  },
+  "slug_vi": "thong-bao-ve-viec-dang-ky-thi-nang-khieu-nganh-giao-duc-mam-non-dot-tuyen-sinh-dai-hoc-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-27T06:48:46.886Z"
+  },
+  "created_at": {
+    "$date": "2022-06-27T06:48:46.886Z"
+  }
+},{
+  "_id": {
+    "$oid": "62bd1207ba5b6311d3021325"
+  },
+  "id_vi": {
+    "$oid": "62bd1207ba5b6311d3021324"
+  },
+  "slug_vi": "thong-bao-ve-viec-xac-dinh-moc-thoi-gian-nop-ho-so-va-dieu-chinh-nguyen-vong-dang-ky-xet-tuyen-dai-hoc-theo-phuong-thuc-6-trong-dot-tuyen-sinh-dai-hoc-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-06-30T03:01:27.767Z"
+  },
+  "created_at": {
+    "$date": "2022-06-30T03:01:27.767Z"
+  }
+},{
+  "_id": {
+    "$oid": "62be9cbe2934e74a36136a53"
+  },
+  "id_vi": {
+    "$oid": "62be9cbe2934e74a36136a52"
+  },
+  "slug_vi": "sinh-vien-agu-trai-nghiem-cong-nghe-tai-su-kien-intel-campus-tour",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-01T07:05:34.343Z"
+  },
+  "created_at": {
+    "$date": "2022-07-01T07:05:34.343Z"
+  }
+},{
+  "_id": {
+    "$oid": "62bebffdd9f00e71483f2583"
+  },
+  "id_vi": {
+    "$oid": "62bebffdd9f00e71483f2582"
+  },
+  "slug_vi": "truong-dhag-giao-luu-cung-trung-tam-khoi-nghiep-doi-moi-sang-tao-dhqg-hcm",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-01T09:35:57.369Z"
+  },
+  "created_at": {
+    "$date": "2022-07-01T09:35:57.369Z"
+  }
+},{
+  "_id": {
+    "$oid": "62c238a403a58467aa7ec113"
+  },
+  "id_vi": {
+    "$oid": "62c238a403a58467aa7ec112"
+  },
+  "slug_vi": "tap-huan-nghiep-vu-kiem-tra-ky-thi-tot-nghiep-thpt-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-04T00:47:32.868Z"
+  },
+  "created_at": {
+    "$date": "2022-07-04T00:47:32.868Z"
+  }
+},{
+  "_id": {
+    "$oid": "62c2613803a58467aa7ec124"
+  },
+  "id_vi": {
+    "$oid": "62c2613803a58467aa7ec123"
+  },
+  "slug_vi": "hoi-thao-sinh-vien-truong-dai-hoc-an-giang-voi-hoat-dong-nghien-cuu-khoa-hoc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-04T03:40:40.704Z"
+  },
+  "created_at": {
+    "$date": "2022-07-04T03:40:40.704Z"
+  }
+},{
+  "_id": {
+    "$oid": "62c2b1aec92cd4371d3f3476"
+  },
+  "id_vi": {
+    "$oid": "62c2b1aec92cd4371d3f3475"
+  },
+  "slug_vi": "ra-quan-tiep-suc-mua-thi-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-04T09:23:58.707Z"
+  },
+  "created_at": {
+    "$date": "2022-07-04T09:23:58.707Z"
+  }
+},{
+  "_id": {
+    "$oid": "62c3a76d1dfa66033c0736c3"
+  },
+  "id_vi": {
+    "$oid": "62c3a76d1dfa66033c0736c2"
+  },
+  "slug_vi": "trao-quyet-dinh-bo-nhiem-pho-giao-su-va-vinh-danh-07-tan-tien-si",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-10T03:53:58.103Z"
+  },
+  "created_at": {
+    "$date": "2022-07-05T02:52:29.783Z"
+  },
+  "id_en": {
+    "$oid": "636c753b8db9bd1691283962"
+  },
+  "slug_en": "granting-the-decision-to-appoint-associate-professor-and-honoring-07-new-doctors"
+},{
+  "_id": {
+    "$oid": "62ce1e7a0ef1642d2328c204"
+  },
+  "id_vi": {
+    "$oid": "62ce1e7a0ef1642d2328c203"
+  },
+  "slug_vi": "hoi-nghi-can-bo-chu-chot-ve-trien-khai-quy-trinh-bo-nhiem-lai-hieu-truong-truong-dai-hoc-an-giang-dhqg-hcm",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-13T01:23:06.458Z"
+  },
+  "created_at": {
+    "$date": "2022-07-13T01:23:06.458Z"
+  }
+},{
+  "_id": {
+    "$oid": "62ce1fe6ac6d44567f7c0b86"
+  },
+  "id_vi": {
+    "$oid": "62ce1fe6ac6d44567f7c0b85"
+  },
+  "slug_vi": "dai-hoi-dai-bieu-doan-tncs-ho-chi-minh-truong-dai-hoc-an-giang-nhiem-ky-2022-2024",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-20T09:18:38.723Z"
+  },
+  "created_at": {
+    "$date": "2022-07-13T01:29:10.065Z"
+  }
+},{
+  "_id": {
+    "$oid": "62ce20bbfb0c657a636e3583"
+  },
+  "id_vi": {
+    "$oid": "62ce20bbfb0c657a636e3582"
+  },
+  "slug_vi": "hoi-thao-tap-huan-chuyen-doi-san-xuat-nong-nghiep-trong-dieu-kien-bien-doi-khi-hau",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-18T01:21:54.403Z"
+  },
+  "created_at": {
+    "$date": "2022-07-13T01:32:43.869Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d0c807e8e86c39d02191d0"
+  },
+  "id_vi": {
+    "$oid": "62d0c807e8e86c39d02191cf"
+  },
+  "slug_vi": "hoi-cuu-sinh-vien",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-07-15T01:51:28.762Z"
+  },
+  "created_at": {
+    "$date": "2022-07-15T01:51:03.557Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d0c83e72913172c221fb9f"
+  },
+  "id_vi": {
+    "$oid": "62d0c83e72913172c221fb9e"
+  },
+  "slug_vi": "hoi-cuu-giao-chuc",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-07-15T01:51:58.654Z"
+  },
+  "created_at": {
+    "$date": "2022-07-15T01:51:58.654Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d4b805038eb439e2174603"
+  },
+  "id_vi": {
+    "$oid": "62d4b805038eb439e2174602"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-tiep-va-lam-viec-voi-pgsts-vu-hai-quan-giam-doc-dhqg-hcm",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-18T01:31:49.343Z"
+  },
+  "created_at": {
+    "$date": "2022-07-18T01:31:49.343Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d4b959380989097b68f18d"
+  },
+  "id_vi": {
+    "$oid": "62d4b959380989097b68f18c"
+  },
+  "slug_vi": "hoi-nghi-can-bo-thu-vien-dai-hoc-quoc-gia-tphcm",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-18T08:45:10.129Z"
+  },
+  "created_at": {
+    "$date": "2022-07-18T01:37:29.272Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d4fdfcc3025653cc1c0276"
+  },
+  "id_vi": {
+    "$oid": "62d4fdfcc3025653cc1c0275"
+  },
+  "slug_vi": "hieu-truong-truong-dhag-dhqg-hcm-tham-du-le-ky-niem-246-nam-doc-lap-cua-hop-chung-quoc-hoa-ky",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-18T06:30:20.846Z"
+  },
+  "created_at": {
+    "$date": "2022-07-18T06:30:20.846Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d5175f6d5cdb68a12f4dd5"
+  },
+  "id_vi": {
+    "$oid": "62d5175f6d5cdb68a12f4dd4"
+  },
+  "slug_vi": "hoi-nghi-truc-tuyen-trien-khai-hop-phan-cai-tien-chuong-trinh-dao-tao-thuoc-du-an-koica",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-18T08:58:21.964Z"
+  },
+  "created_at": {
+    "$date": "2022-07-18T08:18:39.633Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d64d33f8ee8d6024324d33"
+  },
+  "id_vi": {
+    "$oid": "62d64d33f8ee8d6024324d32"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-to-chuc-thi-nang-khieu-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-19T06:20:35.178Z"
+  },
+  "created_at": {
+    "$date": "2022-07-19T06:20:35.178Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d76e99ec6cb2338013836c"
+  },
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-07-20T02:56:59.175Z"
+  },
+  "created_at": {
+    "$date": "2022-07-20T02:55:21.609Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d7713f5b601163c733373f"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-20T03:06:39.915Z"
+  },
+  "created_at": {
+    "$date": "2022-07-20T03:06:39.915Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d7a090d815b7690f4a3953"
+  },
+  "id_vi": {
+    "$oid": "62d7a090d815b7690f4a3952"
+  },
+  "slug_vi": "hon-350-trieu-dong-ho-tro-cho-ban-tran-thi-truc-giang-dh20ta1-bi-tai-nan-giao-thong",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-20T06:28:32.851Z"
+  },
+  "created_at": {
+    "$date": "2022-07-20T06:28:32.851Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d7ccda5b601163c733374d"
+  },
+  "id_vi": {
+    "$oid": "62d7ccda5b601163c733374c"
+  },
+  "slug_vi": "hoi-thao-lay-y-kien-cac-ben-lien-quan-ve-chuong-trinh-dao-tao-va-chuan-dau-ra-cac-nganh-dao-tao-cua-khoa-kinh-te-quan-tri-kinh-doanh",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-20T09:37:30.801Z"
+  },
+  "created_at": {
+    "$date": "2022-07-20T09:37:30.801Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d8a70f8539d858c859bb0a"
+  },
+  "id_vi": {
+    "$oid": "62d8a70f8539d858c859bb09"
+  },
+  "slug_vi": "dai-hoi-dai-bieu-hoi-cuu-sinh-vien-dai-hoc-an-giang-khoa-i",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-21T01:08:31.208Z"
+  },
+  "created_at": {
+    "$date": "2022-07-21T01:08:31.208Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d8a88d8539d858c859bb0e"
+  },
+  "id_vi": {
+    "$oid": "62d8a88d8539d858c859bb0d"
+  },
+  "slug_vi": "hop-mat-cuu-sinh-vien-dai-hoc-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-21T01:14:53.207Z"
+  },
+  "created_at": {
+    "$date": "2022-07-21T01:14:53.207Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d8ada15b601163c733375d"
+  },
+  "id_vi": {
+    "$oid": "62d8ada15b601163c733375c"
+  },
+  "slug_vi": "thong-bao-cong-nhan-ket-qua-trung-tuyen-va-hoan-thien-ho-so-tuyen-dung",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-21T01:37:36.658Z"
+  },
+  "created_at": {
+    "$date": "2022-07-21T01:36:33.781Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d8b1de8539d858c859bb15"
+  },
+  "id_vi": {
+    "$oid": "62d8b1de8539d858c859bb14"
+  },
+  "slug_vi": "quyet-dinh-ve-viec-cong-nhan-ket-qua-tuyen-dung",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-21T01:54:38.128Z"
+  },
+  "created_at": {
+    "$date": "2022-07-21T01:54:38.128Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d8b4d724c42b305f329b7f"
+  },
+  "id_vi": {
+    "$oid": "62d8b4d724c42b305f329b7e"
+  },
+  "slug_vi": "thong-bao-danh-sach-bo-tri-phong-cho-va-phong-xet-tuyen-vong-2",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-21T02:07:19.340Z"
+  },
+  "created_at": {
+    "$date": "2022-07-21T02:07:19.340Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d8b55924c42b305f329b83"
+  },
+  "id_vi": {
+    "$oid": "62d8b55924c42b305f329b82"
+  },
+  "slug_vi": "thong-bao-danh-sach-va-trieu-tap-thi-sinh-du-dieu-kien-du-xet-tuyen-vong-2",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-21T02:09:29.062Z"
+  },
+  "created_at": {
+    "$date": "2022-07-21T02:09:29.062Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d8b5d6b4c31c17b77b1729"
+  },
+  "id_vi": {
+    "$oid": "62d8b5d6b4c31c17b77b1728"
+  },
+  "slug_vi": "thong-bao-ket-qua-kiem-tra-phieu-du-tuyen-vien-chuc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-21T02:11:34.205Z"
+  },
+  "created_at": {
+    "$date": "2022-07-21T02:11:34.205Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d8b650b11268223b7b6836"
+  },
+  "id_vi": {
+    "$oid": "62d8b650b11268223b7b6835"
+  },
+  "slug_vi": "thong-bao-ve-viec-ra-soat-va-xac-nhan-thong-tin-dang-ky-tuyen-dung-cua-truong-dai-hoc-an-giang-nam-2020",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-21T02:13:36.679Z"
+  },
+  "created_at": {
+    "$date": "2022-07-21T02:13:36.679Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d8b80fb4c31c17b77b172d"
+  },
+  "id_vi": {
+    "$oid": "62d8b80fb4c31c17b77b172c"
+  },
+  "slug_vi": "thong-bao-ve-viec-tuyen-dung-vien-chuc-nam-2020",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-21T02:21:59.613Z"
+  },
+  "created_at": {
+    "$date": "2022-07-21T02:21:03.087Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d8b9e2d7299365b2065513"
+  },
+  "id_vi": {
+    "$oid": "62d8b9e2d7299365b2065512"
+  },
+  "slug_vi": "thong-bao-ket-qua-xet-tuyen-vien-chuc-vao-truong-dai-hoc-an-giang-nam-2017-dot-2",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-21T02:28:50.010Z"
+  },
+  "created_at": {
+    "$date": "2022-07-21T02:28:50.010Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d8baf271d44b47562a2a38"
+  },
+  "id_vi": {
+    "$oid": "62d8baf271d44b47562a2a37"
+  },
+  "slug_vi": "thong-bao-ket-qua-phong-van-vong-2-xet-tuyen-vien-chuc-truong-dai-hoc-an-giang-nam-2017-dot-02",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-21T02:38:02.365Z"
+  },
+  "created_at": {
+    "$date": "2022-07-21T02:33:22.376Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d8bbbf41a8951f5b31ef84"
+  },
+  "id_vi": {
+    "$oid": "62d8bbbf41a8951f5b31ef83"
+  },
+  "slug_vi": "thong-bao-ket-qua-phong-van-vong-1-va-lich-phong-van-vong-2-ung-vien-du-tuyen-vao-truong-dai-hoc-an-giang-nam-2017-dot-2",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-21T02:45:34.945Z"
+  },
+  "created_at": {
+    "$date": "2022-07-21T02:36:47.838Z"
+  }
+},{
+  "_id": {
+    "$oid": "62d91fe5d7299365b2065518"
+  },
+  "id_vi": {
+    "$oid": "62d91fe5d7299365b2065517"
+  },
+  "slug_vi": "truong-dhag-nhan-giai-tap-the-tai-cuoc-thi-vo-dich-tin-hoc-van-phong-the-gioi-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-21T09:44:05.521Z"
+  },
+  "created_at": {
+    "$date": "2022-07-21T09:44:05.521Z"
+  }
+},{
+  "_id": {
+    "$oid": "62da0c08844cc7198d2348f4"
+  },
+  "id_vi": {
+    "$oid": "62da0c08844cc7198d2348f3"
+  },
+  "slug_vi": "hoi-thao-tap-huan-tu-danh-gia-co-so-giao-duc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-22T02:31:36.309Z"
+  },
+  "created_at": {
+    "$date": "2022-07-22T02:31:36.309Z"
+  }
+},{
+  "_id": {
+    "$oid": "62df5b032c667237ef0de253"
+  },
+  "id_vi": {
+    "$oid": "62df5b032c667237ef0de252"
+  },
+  "slug_vi": "hoi-nghi-tong-ket-tinh-hinh-hoat-dong-cong-tac-6-thang-dau-nam-va-phuong-huong-nhiem-vu-6-thang-cuoi-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-26T03:09:55.677Z"
+  },
+  "created_at": {
+    "$date": "2022-07-26T03:09:55.677Z"
+  }
+},{
+  "_id": {
+    "$oid": "62e0ddf04a2f4761bd49ac78"
+  },
+  "id_vi": {
+    "$oid": "62e0ddf04a2f4761bd49ac77"
+  },
+  "slug_vi": "thong-bao-tuyen-sinh-dai-hoc-hinh-thuc-vua-lam-vua-hoc-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-27T06:40:48.252Z"
+  },
+  "created_at": {
+    "$date": "2022-07-27T06:40:48.252Z"
+  }
+},{
+  "_id": {
+    "$oid": "62e0e11501e6816411498d93"
+  },
+  "id_vi": {
+    "$oid": "62e0e11501e6816411498d92"
+  },
+  "slug_vi": "thong-bao-tuyen-sinh-lien-thong-tu-cao-dang-len-dai-hoc-hinh-thuc-vua-lam-vua-hoc-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-27T06:54:13.628Z"
+  },
+  "created_at": {
+    "$date": "2022-07-27T06:54:13.628Z"
+  }
+},{
+  "_id": {
+    "$oid": "62e1f9d7367ed7612a43084f"
+  },
+  "id_vi": {
+    "$oid": "62e1f9d7367ed7612a43084e"
+  },
+  "slug_vi": "tham-dinh-de-an-mo-nganh-dam-bao-chat-luong-va-an-toan-thuc-pham-trinh-do-dai-hoc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-28T02:52:07.942Z"
+  },
+  "created_at": {
+    "$date": "2022-07-28T02:52:07.942Z"
+  }
+},{
+  "_id": {
+    "$oid": "62e1fc9bf2048819fa60d358"
+  },
+  "id_vi": {
+    "$oid": "62e1fc9bf2048819fa60d357"
+  },
+  "slug_vi": "soi-noi-ngay-hoi-hien-mau-giot-hong-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-28T03:03:55.643Z"
+  },
+  "created_at": {
+    "$date": "2022-07-28T03:03:55.643Z"
+  }
+},{
+  "_id": {
+    "$oid": "62e34657487dea033618072c"
+  },
+  "id_vi": {
+    "$oid": "62e34657487dea033618072b"
+  },
+  "slug_vi": "giai-quan-vot-agu-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-29T02:30:47.559Z"
+  },
+  "created_at": {
+    "$date": "2022-07-29T02:30:47.559Z"
+  }
+},{
+  "_id": {
+    "$oid": "62e35737f2048819fa60d363"
+  },
+  "id_vi": {
+    "$oid": "62e35737f2048819fa60d362"
+  },
+  "slug_vi": "tiep-dai-dien-bo-noi-vu-quy-thuc-day-sang-kien-tu-phap-jiff-va-to-chuc-oxfam-tai-viet-nam",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-07-29T03:42:47.746Z"
+  },
+  "created_at": {
+    "$date": "2022-07-29T03:42:47.746Z"
+  }
+},{
+  "_id": {
+    "$oid": "62e735903bd88f35901ce487"
+  },
+  "id_vi": {
+    "$oid": "62e735903bd88f35901ce486"
+  },
+  "slug_vi": "ke-hoach-chien-luoc",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-09-14T08:28:29.232Z"
+  },
+  "created_at": {
+    "$date": "2022-08-01T02:08:16.242Z"
+  }
+},{
+  "_id": {
+    "$oid": "62e73740ebf8f83bc551fe08"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-01T02:18:09.252Z"
+  },
+  "created_at": {
+    "$date": "2022-08-01T02:15:28.984Z"
+  }
+},{
+  "_id": {
+    "$oid": "62e887628ad8d555e27eaa93"
+  },
+  "id_vi": {
+    "$oid": "62e887628ad8d555e27eaa92"
+  },
+  "slug_vi": "de-an-mo-nganh-dao-tao-su-pham-am-nhac-trinh-do-dai-hoc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-02T02:11:04.987Z"
+  },
+  "created_at": {
+    "$date": "2022-08-02T02:09:38.833Z"
+  }
+},{
+  "_id": {
+    "$oid": "62e88ac841661923f30e0adb"
+  },
+  "id_vi": {
+    "$oid": "62e88ac841661923f30e0ada"
+  },
+  "slug_vi": "de-an-mo-nganh-dao-tao-giao-duc-the-chat-trinh-do-dai-hoc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-02T02:24:08.318Z"
+  },
+  "created_at": {
+    "$date": "2022-08-02T02:24:08.318Z"
+  }
+},{
+  "_id": {
+    "$oid": "62e88fdab2aa29609b631ba3"
+  },
+  "id_vi": {
+    "$oid": "62e88fdab2aa29609b631ba2"
+  },
+  "slug_vi": "so-tay-dam-bao-chat-luong-truong-dai-hoc-an-giang-nam-hoc-2019-2020",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-02T02:45:46.425Z"
+  },
+  "created_at": {
+    "$date": "2022-08-02T02:45:46.425Z"
+  }
+},{
+  "_id": {
+    "$oid": "62e890f22a30d55c4e395465"
+  },
+  "id_vi": {
+    "$oid": "62e890f22a30d55c4e395464"
+  },
+  "slug_vi": "so-tay-dam-bao-chat-luong-truong-dai-hoc-an-giang-nam-hoc-2020-2021",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-02T02:50:26.612Z"
+  },
+  "created_at": {
+    "$date": "2022-08-02T02:50:26.612Z"
+  }
+},{
+  "_id": {
+    "$oid": "62e89614292f8c52610a934a"
+  },
+  "id_vi": {
+    "$oid": "62e89614292f8c52610a9349"
+  },
+  "slug_vi": "ke-hoach-chien-luoc-truong-dai-hoc-an-giang-giai-doan-2021-2025-tam-nhin-den-2030",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-02T01:56:18.153Z"
+  },
+  "created_at": {
+    "$date": "2022-08-02T03:12:20.786Z"
+  }
+},{
+  "_id": {
+    "$oid": "62e898b46c0767148217b857"
+  },
+  "id_vi": {
+    "$oid": "62e898b46c0767148217b856"
+  },
+  "slug_vi": "ban-chap-hanh-nhiem-ky-i-2008-2012",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-02T03:23:32.650Z"
+  },
+  "created_at": {
+    "$date": "2022-08-02T03:23:32.650Z"
+  }
+},{
+  "_id": {
+    "$oid": "62e8998d8ad8d555e27eaa9e"
+  },
+  "id_vi": {
+    "$oid": "62e8998d8ad8d555e27eaa9d"
+  },
+  "slug_vi": "ban-chap-hanh-nhiem-ky-ii-2013-2018",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-02T03:27:09.787Z"
+  },
+  "created_at": {
+    "$date": "2022-08-02T03:27:09.787Z"
+  }
+},{
+  "_id": {
+    "$oid": "62e8c664292f8c52610a9350"
+  },
+  "id_vi": {
+    "$oid": "62e8c664292f8c52610a934f"
+  },
+  "slug_vi": "ban-chap-hanh-nhiem-ky-iii-2018-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-02T06:38:28.211Z"
+  },
+  "created_at": {
+    "$date": "2022-08-02T06:38:28.211Z"
+  }
+},{
+  "_id": {
+    "$oid": "62e8cfeea2ec755c183d9662"
+  },
+  "id_vi": {
+    "$oid": "62e8cfeea2ec755c183d9661"
+  },
+  "slug_vi": "doi-tac-nam-2004",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-15T11:29:32.120Z"
+  },
+  "created_at": {
+    "$date": "2022-08-02T07:19:10.305Z"
+  }
+},{
+  "_id": {
+    "$oid": "62ea1542a76c507cb379c8fc"
+  },
+  "id_vi": {
+    "$oid": "62ea1542a76c507cb379c8fb"
+  },
+  "slug_vi": "tiep-va-lam-viec-voi-to-chuc-bao-ton-thien-nhien-quoc-te-iucn-tai-viet-nam",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-03T06:27:14.833Z"
+  },
+  "created_at": {
+    "$date": "2022-08-03T06:27:14.833Z"
+  }
+},{
+  "_id": {
+    "$oid": "62ea18ee623b3450863f8e84"
+  },
+  "id_vi": {
+    "$oid": "62ea18ee623b3450863f8e83"
+  },
+  "slug_vi": "thong-bao-ve-viec-cong-bo-nguong-dam-bao-chat-luong-dau-vao-diem-san-tuyen-sinh-dai-hoc-hinh-thuc-giao-duc-chinh-quy-theo-phuong-thuc-xet-tuyen-dua-tren-ket-qua-thi-tot-nghiep-thpt-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-03T06:51:25.645Z"
+  },
+  "created_at": {
+    "$date": "2022-08-03T06:42:54.950Z"
+  }
+},{
+  "_id": {
+    "$oid": "62ea4038a7edaf5d3309c8e5"
+  },
+  "id_vi": {
+    "$oid": "62ea4038a7edaf5d3309c8e4"
+  },
+  "slug_vi": "sinh-vien-truong-dhag-nhan-hoc-bong-toan-phan-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-03T09:30:32.942Z"
+  },
+  "created_at": {
+    "$date": "2022-08-03T09:30:32.942Z"
+  }
+},{
+  "_id": {
+    "$oid": "62ea448da7edaf5d3309c8eb"
+  },
+  "id_vi": {
+    "$oid": "62ea448da7edaf5d3309c8ea"
+  },
+  "slug_vi": "danh-gia-giua-ky-de-tai-khoa-hoc-va-cong-nghe-cap-dhqg-hcm-loai-b",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-03T09:49:01.597Z"
+  },
+  "created_at": {
+    "$date": "2022-08-03T09:49:01.597Z"
+  }
+},{
+  "_id": {
+    "$oid": "62eb71746c0767148217b87a"
+  },
+  "id_vi": {
+    "$oid": "62eb71746c0767148217b879"
+  },
+  "slug_vi": "hoi-thao-chuyen-de-danh-gia-can-bang-nuoc-phuc-vu-san-xuat-nong-nghiep-ben-vung",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-04T07:12:52.833Z"
+  },
+  "created_at": {
+    "$date": "2022-08-04T07:12:52.833Z"
+  }
+},{
+  "_id": {
+    "$oid": "62eb73ce2adb2d140026eb3f"
+  },
+  "id_vi": {
+    "$oid": "62eb73ce2adb2d140026eb3e"
+  },
+  "slug_vi": "tiep-doan-xay-dung-du-an-nghien-cuu-chung-viet-nhat",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-04T07:22:54.742Z"
+  },
+  "created_at": {
+    "$date": "2022-08-04T07:22:54.742Z"
+  }
+},{
+  "_id": {
+    "$oid": "62ec83d12adb2d140026eb4f"
+  },
+  "id_vi": {
+    "$oid": "62ec83d12adb2d140026eb4e"
+  },
+  "slug_vi": "thong-bao-ve-viec-tham-gia-sang-tac-ca-khuc-ve-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-05T02:46:30.211Z"
+  },
+  "created_at": {
+    "$date": "2022-08-05T02:43:29.962Z"
+  }
+},{
+  "_id": {
+    "$oid": "62ecded72adb2d140026eb65"
+  },
+  "id_vi": {
+    "$oid": "62ecded72adb2d140026eb64"
+  },
+  "slug_vi": "danh-gia-giua-ky-de-tai-khoa-hoc-va-cong-nghe-cap-dhqg-hcm-loai-b-2022-08-05",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-05T09:11:51.712Z"
+  },
+  "created_at": {
+    "$date": "2022-08-05T09:11:51.712Z"
+  }
+},{
+  "_id": {
+    "$oid": "62f22b5f2c73527ff3081424"
+  },
+  "id_vi": {
+    "$oid": "62f22b5f2c73527ff3081423"
+  },
+  "slug_vi": "giai-quan-vot-agu-mo-rong-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-10T02:47:45.866Z"
+  },
+  "created_at": {
+    "$date": "2022-08-09T09:39:43.658Z"
+  }
+},{
+  "_id": {
+    "$oid": "62f22d36443ed303c345dc16"
+  },
+  "id_vi": {
+    "$oid": "62f22d36443ed303c345dc15"
+  },
+  "slug_vi": "danh-gia-giua-ky-de-tai-khoa-hoc-va-cong-nghe-cap-dhqg-hcm-loai-c",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-09T09:47:34.043Z"
+  },
+  "created_at": {
+    "$date": "2022-08-09T09:47:34.043Z"
+  }
+},{
+  "_id": {
+    "$oid": "62f3510c285a5b0eff77eef3"
+  },
+  "id_vi": {
+    "$oid": "62f3510c285a5b0eff77eef2"
+  },
+  "slug_vi": "tiep-dai-dien-bo-khoa-hoc-va-cong-nghe",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-10T06:32:44.401Z"
+  },
+  "created_at": {
+    "$date": "2022-08-10T06:32:44.401Z"
+  }
+},{
+  "_id": {
+    "$oid": "62f35444190d810ae970b0f6"
+  },
+  "id_vi": {
+    "$oid": "62f35444190d810ae970b0f5"
+  },
+  "slug_vi": "thong-bao-tuyen-sinh-dao-tao-trinh-do-thac-si-nam-2022-dot-2",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-10T06:46:28.030Z"
+  },
+  "created_at": {
+    "$date": "2022-08-10T06:46:28.030Z"
+  }
+},{
+  "_id": {
+    "$oid": "62f60c681850021fc96b3d54"
+  },
+  "id_vi": {
+    "$oid": "62f60c681850021fc96b3d53"
+  },
+  "slug_vi": "hoi-nghi-giao-ban-kiem-tra-viec-thuc-hien-chi-thi-05-ct-tw",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-12T08:16:40.500Z"
+  },
+  "created_at": {
+    "$date": "2022-08-12T08:16:40.500Z"
+  }
+},{
+  "_id": {
+    "$oid": "62f9b1e0cfef5d1a8033d953"
+  },
+  "id_vi": {
+    "$oid": "62f9b1e0cfef5d1a8033d952"
+  },
+  "slug_vi": "hoi-nghi-so-ket-6-thang-dau-nam-2022-khoi-thi-dua-cac-bo-nganh-khoa-hoc-van-hoa-xa-hoi",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-15T02:39:28.512Z"
+  },
+  "created_at": {
+    "$date": "2022-08-15T02:39:28.512Z"
+  }
+},{
+  "_id": {
+    "$oid": "62fc8acbf301356aff53c868"
+  },
+  "id_vi": {
+    "$oid": "62fc8acbf301356aff53c867"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-dhqg-hcm-tiep-doan-cong-tac-truong-dai-hoc-quang-nam-den-tham-va-trao-doi-kinh-nghiem",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-18T03:51:20.558Z"
+  },
+  "created_at": {
+    "$date": "2022-08-17T06:29:31.826Z"
+  }
+},{
+  "_id": {
+    "$oid": "62fde6b9799f603faa514e4d"
+  },
+  "id_vi": {
+    "$oid": "62fde6b9799f603faa514e4c"
+  },
+  "slug_vi": "hoi-thao-huong-dan-tao-tai-khoan-dinh-danh-orcid-va-cac-chi-so-danh-gia-nang-luc-nghien-cuu-khoa-hoc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-18T07:14:34.875Z"
+  },
+  "created_at": {
+    "$date": "2022-08-18T07:14:01.592Z"
+  }
+},{
+  "_id": {
+    "$oid": "62fef7ce07df0d03bb4f66a3"
+  },
+  "id_vi": {
+    "$oid": "62fef7ce07df0d03bb4f66a2"
+  },
+  "slug_vi": "thong-bao-ve-viec-nop-ho-so-xet-tot-nghiep-hinh-thuc-vua-lam-vua-hoc-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-19T02:39:10.959Z"
+  },
+  "created_at": {
+    "$date": "2022-08-19T02:39:10.959Z"
+  }
+},{
+  "_id": {
+    "$oid": "63058240dac66d62de0b9f0a"
+  },
+  "id_vi": {
+    "$oid": "63058240dac66d62de0b9f09"
+  },
+  "slug_vi": "hoi-thao-phat-trien-chuong-trinh-dao-tao-thuoc-hop-phan-2-du-an-koica",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-24T01:43:28.641Z"
+  },
+  "created_at": {
+    "$date": "2022-08-24T01:43:28.641Z"
+  }
+},{
+  "_id": {
+    "$oid": "63059d01bd97826e9b2c830d"
+  },
+  "id_vi": {
+    "$oid": "63059d01bd97826e9b2c830c"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-co-them-04-chuong-trinh-dao-tao-dat-chuan-quoc-te-aun-qa",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-10T06:48:04.525Z"
+  },
+  "created_at": {
+    "$date": "2022-08-24T03:37:37.118Z"
+  },
+  "id_en": {
+    "$oid": "636c9ea4b5345f5dad13e14d"
+  },
+  "slug_en": "an-giang-university-has-another-04-study-programmes-meeting-aun-qa-standards"
+},{
+  "_id": {
+    "$oid": "63071f0c54502d06e728d299"
+  },
+  "id_vi": {
+    "$oid": "63071f0c54502d06e728d298"
+  },
+  "slug_vi": "khai-giang-lop-boi-duong-nghiep-vu-tu-van-tam-ly-hoc-duong",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-25T07:04:44.948Z"
+  },
+  "created_at": {
+    "$date": "2022-08-25T07:04:44.948Z"
+  }
+},{
+  "_id": {
+    "$oid": "63072b8259936643112b4de7"
+  },
+  "id_vi": {
+    "$oid": "63072b8259936643112b4de6"
+  },
+  "slug_vi": "hoi-nghi-can-bo-chu-chot-ve-viec-quy-hoach-nhan-su-lanh-dao-quan-ly-nhiem-ky-2026-2031",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-25T07:57:54.433Z"
+  },
+  "created_at": {
+    "$date": "2022-08-25T07:57:54.433Z"
+  }
+},{
+  "_id": {
+    "$oid": "630db4e2ff7e4139fd471cf8"
+  },
+  "id_vi": {
+    "$oid": "630db4e2ff7e4139fd471cf7"
+  },
+  "slug_vi": "thong-bao-ve-viec-lay-y-kien-danh-sach-de-nghi-binh-chon-nha-giao-tieu-bieu-cua-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-30T06:57:38.693Z"
+  },
+  "created_at": {
+    "$date": "2022-08-30T06:57:38.693Z"
+  }
+},{
+  "_id": {
+    "$oid": "630dbd79a558df754946cff3"
+  },
+  "id_vi": {
+    "$oid": "630dbd79a558df754946cff2"
+  },
+  "slug_vi": "bao-cao-chuyen-de-huong-dan-su-dung-cong-cu-tim-kiem-tai-lieu-webpac-va-he-thong-tim-kiem-tap-trung-eds-ebsco-discovery-service",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-30T07:34:17.181Z"
+  },
+  "created_at": {
+    "$date": "2022-08-30T07:34:17.181Z"
+  }
+},{
+  "_id": {
+    "$oid": "630dbf75d7be211a01494d67"
+  },
+  "id_vi": {
+    "$oid": "630dbf75d7be211a01494d66"
+  },
+  "slug_vi": "tiep-va-lam-viec-voi-lien-minh-hop-tac-xa-tinh-an-giang-va-cong-ty-matsuyama",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-11T01:52:57.271Z"
+  },
+  "created_at": {
+    "$date": "2022-08-30T07:42:45.651Z"
+  },
+  "id_en": {
+    "$oid": "636daaf960575f13c1016ed8"
+  },
+  "slug_en": "working-with-the-an-giang-cooperative-alliance-and-matsuyama-company"
+},{
+  "_id": {
+    "$oid": "630dc90fb16f597c72616cc3"
+  },
+  "id_vi": {
+    "$oid": "630dc90fb16f597c72616cc2"
+  },
+  "slug_vi": "dien-van-le-tot-nghiep-2022-truong-dh-an-giang-dhqg-hcm",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-30T08:23:43.956Z"
+  },
+  "created_at": {
+    "$date": "2022-08-30T08:23:43.956Z"
+  }
+},{
+  "_id": {
+    "$oid": "630dd06eb16f597c72616cc7"
+  },
+  "id_vi": {
+    "$oid": "630dd06eb16f597c72616cc6"
+  },
+  "slug_vi": "le-tot-nghiep-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-08-30T08:55:10.641Z"
+  },
+  "created_at": {
+    "$date": "2022-08-30T08:55:10.641Z"
+  }
+},{
+  "_id": {
+    "$oid": "6316fa8b3b9a3f61874e39c6"
+  },
+  "id_vi": {
+    "$oid": "6316fa8b3b9a3f61874e39c5"
+  },
+  "slug_vi": "tiep-va-lam-viec-voi-bo-chi-huy-quan-su-tinh-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-06T08:03:57.395Z"
+  },
+  "created_at": {
+    "$date": "2022-09-06T07:45:15.738Z"
+  }
+},{
+  "_id": {
+    "$oid": "6316fdd30f6e7a30bb737097"
+  },
+  "id_vi": {
+    "$oid": "6316fdd30f6e7a30bb737096"
+  },
+  "slug_vi": "le-tong-ket-va-trao-giai-cuoc-thi-gioi-thieu-sach-bang-tieng-anh-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-09T01:55:39.757Z"
+  },
+  "created_at": {
+    "$date": "2022-09-06T07:59:15.810Z"
+  },
+  "id_en": {
+    "$oid": "636b089bbc57c01a9a259a04"
+  },
+  "slug_en": "awarding-ceremony-of-english-book-review-competition"
+},{
+  "_id": {
+    "$oid": "6317001dfa887d415847acf8"
+  },
+  "id_vi": {
+    "$oid": "6317001dfa887d415847acf7"
+  },
+  "slug_vi": "ban-nhac-backtrack-vocals-va-mon-qua-dac-biet-danh-tang-rieng-sinh-vien-agu",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-06T08:09:01.829Z"
+  },
+  "created_at": {
+    "$date": "2022-09-06T08:09:01.829Z"
+  }
+},{
+  "_id": {
+    "$oid": "63185de8b732c1650c6cfa60"
+  },
+  "id_vi": {
+    "$oid": "63185de8b732c1650c6cfa5f"
+  },
+  "slug_vi": "hoi-thao-phat-trien-chuong-trinh-dao-tao-thuoc-hop-phan-2-du-an-koica-2022-09-07",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-07T09:46:17.433Z"
+  },
+  "created_at": {
+    "$date": "2022-09-07T09:01:28.298Z"
+  }
+},{
+  "_id": {
+    "$oid": "63194fb0279933761b3e4f31"
+  },
+  "id_vi": {
+    "$oid": "63194fb0279933761b3e4f30"
+  },
+  "slug_vi": "khoa-nong-nghiep-va-tntn-tiep-va-lam-viec-voi-doan-giao-su-dai-hoc-saga-nhat-ban",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-01-31T09:14:41.394Z"
+  },
+  "created_at": {
+    "$date": "2022-09-08T02:13:04.468Z"
+  },
+  "id_en": {
+    "$oid": "63d8dc019b517070f63421e4"
+  },
+  "slug_en": "the-faculty-of-agriculture-and-natural-resources-welcomed-the-professors-of-saga-university"
+},{
+  "_id": {
+    "$oid": "63199af41a2f872ebf0dd163"
+  },
+  "id_vi": {
+    "$oid": "63199af41a2f872ebf0dd162"
+  },
+  "slug_vi": "hoi-nghi-nghien-cuu-hoc-tap-quan-triet-nghi-quyet-hoi-nghi-lan-thu-nam-ban-chap-hanh-trung-uong-dang-khoa-xiii",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-08T07:34:12.084Z"
+  },
+  "created_at": {
+    "$date": "2022-09-08T07:34:12.084Z"
+  }
+},{
+  "_id": {
+    "$oid": "6319a7e03e12df5d00401523"
+  },
+  "id_vi": {
+    "$oid": "6319a7e03e12df5d00401522"
+  },
+  "slug_vi": "truong-pho-thong-thuc-hanh-su-pham-to-chuc-le-khai-giang-nam-hoc-2022-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-08T08:29:20.195Z"
+  },
+  "created_at": {
+    "$date": "2022-09-08T08:29:20.195Z"
+  }
+},{
+  "_id": {
+    "$oid": "631e82960a74583f0d04f023"
+  },
+  "id_vi": {
+    "$oid": "631e82960a74583f0d04f022"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-don-tiep-chuyen-gia-va-tinh-nguyen-vien-quoc-te-den-cong-tac-tai-truong",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-14T02:04:03.273Z"
+  },
+  "created_at": {
+    "$date": "2022-09-12T00:51:34.632Z"
+  },
+  "id_en": {
+    "$oid": "63eaebb366f59463e23d1f23"
+  },
+  "slug_en": "an-giang-university-welcomed-the-international-specialists-and-volunteers"
+},{
+  "_id": {
+    "$oid": "631ffb6d38cc61535222861a"
+  },
+  "id_vi": {
+    "$oid": "631ffb6d38cc615352228619"
+  },
+  "slug_vi": "cong-doan-truong-dhag-to-chuc-vui-trung-thu-cho-cac-chau-thieu-nhi",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-13T03:39:25.554Z"
+  },
+  "created_at": {
+    "$date": "2022-09-13T03:39:25.554Z"
+  }
+},{
+  "_id": {
+    "$oid": "63203afccefaed20b25e6883"
+  },
+  "id_vi": {
+    "$oid": "63203afccefaed20b25e6882"
+  },
+  "slug_vi": "thong-bao-ve-viec-phoi-hop-voi-truong-dai-hoc-quoc-te-tuyen-sinh-trinh-do-thac-si-nganh-quan-ly-cong-dot-2-nam-2022-tai-truong-dai-hoc-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-13T08:10:36.433Z"
+  },
+  "created_at": {
+    "$date": "2022-09-13T08:10:36.433Z"
+  }
+},{
+  "_id": {
+    "$oid": "6321448c08ad7b001b140973"
+  },
+  "id_vi": {
+    "$oid": "6321448c08ad7b001b140972"
+  },
+  "slug_vi": "hoi-thao-khoa-hoc-chuyen-de-cong-bo-quoc-te-trong-linh-vuc-giao-duc-va-day-hoc-tieng-anh",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-14T03:03:40.099Z"
+  },
+  "created_at": {
+    "$date": "2022-09-14T03:03:40.099Z"
+  }
+},{
+  "_id": {
+    "$oid": "6321921dd58a6f32b9028835"
+  },
+  "id_vi": {
+    "$oid": "6321921dd58a6f32b9028834"
+  },
+  "slug_vi": "chien-luoc-1-nang-cao-hieu-qua-quan-tri-dai-hoc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-15T02:42:19.323Z"
+  },
+  "created_at": {
+    "$date": "2022-09-14T08:34:37.064Z"
+  }
+},{
+  "_id": {
+    "$oid": "632290936a703710817d1797"
+  },
+  "id_vi": {
+    "$oid": "632290936a703710817d1796"
+  },
+  "slug_vi": "chien-luoc-2-dao-tao-nguon-nhan-luc-dat-trinh-do-khu-vuc-dong-nam-a-dan-dat-va-phuc-vu-cong-dong-tay-nam-bo",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-15T07:15:04.803Z"
+  },
+  "created_at": {
+    "$date": "2022-09-15T02:40:19.053Z"
+  }
+},{
+  "_id": {
+    "$oid": "632291f67d035a725c39a92a"
+  },
+  "id_vi": {
+    "$oid": "632291f67d035a725c39a929"
+  },
+  "slug_vi": "chien-luoc-3-nang-cao-nang-luc-nghien-cuu-khoa-hoc-phat-trien-khoa-hoc-va-cong-nghe-doi-moi-sang-tao",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-15T07:17:12.893Z"
+  },
+  "created_at": {
+    "$date": "2022-09-15T02:46:14.152Z"
+  }
+},{
+  "_id": {
+    "$oid": "63229293cfc6f93934134c04"
+  },
+  "id_vi": {
+    "$oid": "63229293cfc6f93934134c03"
+  },
+  "slug_vi": "chien-luoc-4-tang-cuong-hop-tac-va-chu-dong-hoi-nhap",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-15T07:17:55.019Z"
+  },
+  "created_at": {
+    "$date": "2022-09-15T02:48:51.580Z"
+  }
+},{
+  "_id": {
+    "$oid": "632293316a703710817d179d"
+  },
+  "id_vi": {
+    "$oid": "632293316a703710817d179c"
+  },
+  "slug_vi": "chien-luoc-5-xay-dung-nha-truong-xanh-thong-minh-mang-ban-sac-khu-vuc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-15T07:18:49.149Z"
+  },
+  "created_at": {
+    "$date": "2022-09-15T02:51:29.244Z"
+  }
+},{
+  "_id": {
+    "$oid": "632293a2d734f001d0566448"
+  },
+  "id_vi": {
+    "$oid": "632293a2d734f001d0566447"
+  },
+  "slug_vi": "chien-luoc-6-phat-trien-va-quan-tri-nguon-luc-tai-chinh",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-15T07:19:34.141Z"
+  },
+  "created_at": {
+    "$date": "2022-09-15T02:53:22.798Z"
+  }
+},{
+  "_id": {
+    "$oid": "6322ce0397ed9756b02c7087"
+  },
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-09-15T07:07:52.317Z"
+  },
+  "created_at": {
+    "$date": "2022-09-15T07:02:27.148Z"
+  }
+},{
+  "_id": {
+    "$oid": "6322e4574f525a4fe6036257"
+  },
+  "id_vi": {
+    "$oid": "6322e4574f525a4fe6036256"
+  },
+  "slug_vi": "quyet-dinh-ve-viec-cong-bo-diem-chuan-trung-tuyen-dai-hoc-hinh-thuc-dao-tao-chinh-quy-theo-phuong-thuc-xet-tuyen-dua-tren-ket-qua-thi-tot-nghiep-thpt-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-15T08:37:43.185Z"
+  },
+  "created_at": {
+    "$date": "2022-09-15T08:37:43.185Z"
+  }
+},{
+  "_id": {
+    "$oid": "6322e7f14f525a4fe603625c"
+  },
+  "id_vi": {
+    "$oid": "6322e7f14f525a4fe603625b"
+  },
+  "slug_vi": "thong-bao-chieu-sinh-cac-lop-he-thong-kien-thuc-chuan-bi-cho-ky-thi-tuyen-sinh-dao-tao-trinh-do-thac-si-cua-truong-dhag-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-16T08:51:12.909Z"
+  },
+  "created_at": {
+    "$date": "2022-09-15T08:53:05.725Z"
+  }
+},{
+  "_id": {
+    "$oid": "6323e5bbb97b671f1a4e3e44"
+  },
+  "id_vi": {
+    "$oid": "6323e5bbb97b671f1a4e3e43"
+  },
+  "slug_vi": "hoi-thao-sinh-vien-can-trang-bi-gi-cho-hanh-trinh-tu-truong-hoc-den-doanh-nghiep",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-16T02:55:55.489Z"
+  },
+  "created_at": {
+    "$date": "2022-09-16T02:55:55.489Z"
+  }
+},{
+  "_id": {
+    "$oid": "63242adc481d59276c4d5e94"
+  },
+  "id_vi": {
+    "$oid": "63242adc481d59276c4d5e93"
+  },
+  "slug_vi": "quyet-dinh-ve-viec-quy-dinh-muc-thu-hoc-phi-nam-hoc-2022-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-16T07:50:52.921Z"
+  },
+  "created_at": {
+    "$date": "2022-09-16T07:50:52.921Z"
+  }
+},{
+  "_id": {
+    "$oid": "63295d4e52ba7f631f634816"
+  },
+  "id_vi": {
+    "$oid": "63295d4e52ba7f631f634815"
+  },
+  "slug_vi": "quyet-dinh-ve-viec-phe-duyet-mo-nganh-dao-tao-trinh-do-dai-hoc-hinh-thuc-dao-tao-chinh-quy-nganh-thu-y",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-20T06:27:26.902Z"
+  },
+  "created_at": {
+    "$date": "2022-09-20T06:27:26.902Z"
+  }
+},{
+  "_id": {
+    "$oid": "632c2450fe676b022f6bcc83"
+  },
+  "id_vi": {
+    "$oid": "632c2450fe676b022f6bcc82"
+  },
+  "slug_vi": "sinh-vien-hoc-hoi-nhieu-kien-thuc-tu-hoi-thao-toan-cau-hoa-va-phi-toan-cau-hoa",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-22T09:01:04.869Z"
+  },
+  "created_at": {
+    "$date": "2022-09-22T09:01:04.869Z"
+  }
+},{
+  "_id": {
+    "$oid": "632c26b0002a2475d938b6a3"
+  },
+  "id_vi": {
+    "$oid": "632c26b0002a2475d938b6a2"
+  },
+  "slug_vi": "unitour-chao-don-tan-sinh-vien-agu",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-01-31T09:33:04.197Z"
+  },
+  "created_at": {
+    "$date": "2022-09-22T09:11:12.693Z"
+  },
+  "id_en": {
+    "$oid": "63d8dfc8f203ba4e5d25a854"
+  },
+  "slug_en": "unitour-welcomed-agu-new-students"
+},{
+  "_id": {
+    "$oid": "632c279668017f029c0747f4"
+  },
+  "id_vi": {
+    "$oid": "632c279668017f029c0747f3"
+  },
+  "slug_vi": "sinh-vien-truong-dai-hoc-an-giang-nhan-hoc-bong-novagroup",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-06T06:43:38.506Z"
+  },
+  "created_at": {
+    "$date": "2022-09-22T09:15:02.937Z"
+  },
+  "id_en": {
+    "$oid": "638ee452460dc33cb70e7ee5"
+  },
+  "slug_en": "an-giang-universitys-students-receive-novagroup-scholarships"
+},{
+  "_id": {
+    "$oid": "6331488e07ff8a6fba682533"
+  },
+  "id_vi": {
+    "$oid": "6331488e07ff8a6fba682532"
+  },
+  "slug_vi": "thong-bao-chieu-sinh-lop-he-thong-kien-thuc-chuan-bi-cho-ky-thi-tuyen-sinh-dao-tao-trinh-do-thac-si-nganh-quan-ly-cong-dot-2-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-26T02:01:22.857Z"
+  },
+  "created_at": {
+    "$date": "2022-09-26T06:37:02.515Z"
+  }
+},{
+  "_id": {
+    "$oid": "633171bb4758fb48805b5cc8"
+  },
+  "id_vi": {
+    "$oid": "633171bb4758fb48805b5cc7"
+  },
+  "slug_vi": "xet-duyet-02-de-cuong-nghien-cuu-chuyen-nganh-chan-nuoi-thu-y",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-26T09:32:43.957Z"
+  },
+  "created_at": {
+    "$date": "2022-09-26T09:32:43.957Z"
+  }
+},{
+  "_id": {
+    "$oid": "6333a8ee59b93147941a73d4"
+  },
+  "id_vi": {
+    "$oid": "6333a8ee59b93147941a73d3"
+  },
+  "slug_vi": "xet-duyet-de-tai-nghien-cuu-ve-benh-heo-ru-tren-dua-le",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-28T01:52:46.917Z"
+  },
+  "created_at": {
+    "$date": "2022-09-28T01:52:46.917Z"
+  }
+},{
+  "_id": {
+    "$oid": "63365fde99555c535d7c3815"
+  },
+  "id_vi": {
+    "$oid": "63365fde99555c535d7c3814"
+  },
+  "slug_vi": "tiep-va-lam-viec-voi-dai-hoc-minnesota-crookston-hoa-ky",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-30T03:17:50.130Z"
+  },
+  "created_at": {
+    "$date": "2022-09-30T03:17:50.130Z"
+  }
+},{
+  "_id": {
+    "$oid": "633661a6a5f12f76ef5a4045"
+  },
+  "id_vi": {
+    "$oid": "633661a6a5f12f76ef5a4044"
+  },
+  "slug_vi": "quy-dinh-thien-ly-trao-hoc-bong-cho-sinh-vien-truong-dai-hoc-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-16T01:12:26.475Z"
+  },
+  "created_at": {
+    "$date": "2022-09-30T03:25:26.857Z"
+  },
+  "id_en": {
+    "$oid": "637438ca67c36d0f9a0244ea"
+  },
+  "slug_en": "dinh-thien-ly-scholarships-for-disadvantaged-students-of-an-giang-university"
+},{
+  "_id": {
+    "$oid": "6336671c9534ad3ba9617747"
+  },
+  "id_vi": {
+    "$oid": "6336671c9534ad3ba9617746"
+  },
+  "slug_vi": "xet-duyet-de-cuong-chi-tiet-2-de-tai-nghien-cuu-khoa-hoc-cap-dhqg-hcm-loai-c-nam-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-30T03:48:44.796Z"
+  },
+  "created_at": {
+    "$date": "2022-09-30T03:48:44.796Z"
+  }
+},{
+  "_id": {
+    "$oid": "6336b43fdb0ee614a31b6596"
+  },
+  "id_vi": {
+    "$oid": "6336b43fdb0ee614a31b6595"
+  },
+  "slug_vi": "tap-huan-viet-bao-cao-tu-danh-gia-co-so-giao-duc-va-tap-huan-cong-tac-thu-thap-du-lieu-phuc-vu-xep-hang-dai-hoc-ve-phat-trien-ben-vung-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-09-30T09:17:51.905Z"
+  },
+  "created_at": {
+    "$date": "2022-09-30T09:17:51.905Z"
+  }
+},{
+  "_id": {
+    "$oid": "633e35748a8b0c6f971a5343"
+  },
+  "id_vi": {
+    "$oid": "633e35748a8b0c6f971a5342"
+  },
+  "slug_vi": "them-01-de-tai-nghien-cuu-chuyen-nganh-chan-nuoi-thu-y-duoc-duyet-thuc-hien",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-06T02:03:55.467Z"
+  },
+  "created_at": {
+    "$date": "2022-10-06T01:55:00.058Z"
+  }
+},{
+  "_id": {
+    "$oid": "633e374c3ac01c36b3373223"
+  },
+  "id_vi": {
+    "$oid": "633e374c3ac01c36b3373222"
+  },
+  "slug_vi": "tiep-va-lam-viec-doan-cong-tac-so-khoa-hoc-cong-nghe-tinh-kien-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-06T02:02:52.402Z"
+  },
+  "created_at": {
+    "$date": "2022-10-06T02:02:52.402Z"
+  }
+},{
+  "_id": {
+    "$oid": "633e38e6e2ee5a5ba47447d3"
+  },
+  "id_vi": {
+    "$oid": "633e38e6e2ee5a5ba47447d2"
+  },
+  "slug_vi": "xet-duyet-2-de-cuong-de-tai-loai-c-cap-dhqg-hcm-nam-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-06T02:09:42.041Z"
+  },
+  "created_at": {
+    "$date": "2022-10-06T02:09:42.041Z"
+  }
+},{
+  "_id": {
+    "$oid": "6347bde1bf39a67d5772c333"
+  },
+  "id_vi": {
+    "$oid": "6347bde1bf39a67d5772c332"
+  },
+  "slug_vi": "nghiem-thu-de-tai-cap-truong-thuoc-linh-vuc-toan-hoc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-13T07:27:29.056Z"
+  },
+  "created_at": {
+    "$date": "2022-10-13T07:27:29.056Z"
+  }
+},{
+  "_id": {
+    "$oid": "6347c16e230c930396238665"
+  },
+  "id_vi": {
+    "$oid": "6347c16e230c930396238664"
+  },
+  "slug_vi": "xet-duyet-2-de-cuong-chi-tiet-de-tai-cap-dhqg-hcm-loai-c",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-13T07:42:38.059Z"
+  },
+  "created_at": {
+    "$date": "2022-10-13T07:42:38.059Z"
+  }
+},{
+  "_id": {
+    "$oid": "6347cba3fc1f2d69f551ce93"
+  },
+  "id_vi": {
+    "$oid": "6347cba3fc1f2d69f551ce92"
+  },
+  "slug_vi": "thong-bao-ve-viec-nop-ho-so-dang-ky-xet-tuyen-dai-hoc-hinh-thuc-dao-tao-chinh-quy-nam-2022-dot-bo-sung",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-13T08:26:11.449Z"
+  },
+  "created_at": {
+    "$date": "2022-10-13T08:26:11.449Z"
+  }
+},{
+  "_id": {
+    "$oid": "6347d0e15a995664763916f3"
+  },
+  "id_vi": {
+    "$oid": "6347d0e15a995664763916f2"
+  },
+  "slug_vi": "phat-bieu-cua-pgsts-vo-van-thang-tai-le-bo-nhiem-lai-hieu-truong-va-khai-giang-nam-hoc-2022-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-13T08:48:33.192Z"
+  },
+  "created_at": {
+    "$date": "2022-10-13T08:48:33.192Z"
+  }
+},{
+  "_id": {
+    "$oid": "6347d5c439dacb498f4b2363"
+  },
+  "id_vi": {
+    "$oid": "6347d5c439dacb498f4b2362"
+  },
+  "slug_vi": "le-cong-bo-quyet-dinh-bo-nhiem-lai-hieu-truong-va-khai-giang-nam-hoc-2022-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-10T06:59:20.367Z"
+  },
+  "created_at": {
+    "$date": "2022-10-13T09:09:24.412Z"
+  },
+  "id_en": {
+    "$oid": "636ca1487836290f32496e0c"
+  },
+  "slug_en": "the-reappointment-of-the-president-and-opening-ceremony-of-the-academic-year-2022-2023"
+},{
+  "_id": {
+    "$oid": "6347e7cb8f05482f9c7fe4a3"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-14T03:21:37.571Z"
+  },
+  "created_at": {
+    "$date": "2022-10-13T10:26:19.885Z"
+  }
+},{
+  "_id": {
+    "$oid": "634905378009d828ee44d888"
+  },
+  "id_vi": {
+    "$oid": "634905378009d828ee44d887"
+  },
+  "slug_vi": "xet-duyet-de-cuong-chi-tiet-de-tai-nghien-cuu-khoa-hoc-ve-nam-duoc-lieu",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-14T06:44:07.304Z"
+  },
+  "created_at": {
+    "$date": "2022-10-14T06:44:07.304Z"
+  }
+},{
+  "_id": {
+    "$oid": "634912b9a350c27f9f321303"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-14T07:43:22.613Z"
+  },
+  "created_at": {
+    "$date": "2022-10-14T07:41:45.347Z"
+  }
+},{
+  "_id": {
+    "$oid": "634e5ec64ddc53288c3c0b53"
+  },
+  "id_vi": {
+    "$oid": "634e5ec64ddc53288c3c0b52"
+  },
+  "slug_vi": "le-khai-giang-khoa-boi-duong-giao-vien-trung-hoc-co-so-day-mon-khoa-hoc-tu-nhien-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-20T08:12:43.269Z"
+  },
+  "created_at": {
+    "$date": "2022-10-18T08:07:34.608Z"
+  }
+},{
+  "_id": {
+    "$oid": "634e62d01263674f1e146044"
+  },
+  "id_vi": {
+    "$oid": "634e62d01263674f1e146043"
+  },
+  "slug_vi": "xet-duyet-de-cuong-chi-tiet-de-tai-loai-c-cap-dhqg-hcm",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-18T08:24:48.082Z"
+  },
+  "created_at": {
+    "$date": "2022-10-18T08:24:48.082Z"
+  }
+},{
+  "_id": {
+    "$oid": "634e77e190994911c2182744"
+  },
+  "id_vi": {
+    "$oid": "634e77e190994911c2182743"
+  },
+  "slug_vi": "le-cong-bo-trao-quyet-dinh-ve-cong-tac-can-bo-va-vinh-danh-tan-tien-si",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-10T07:08:46.158Z"
+  },
+  "created_at": {
+    "$date": "2022-10-18T09:54:41.577Z"
+  },
+  "id_en": {
+    "$oid": "636ca37e31d76c7e0f3f5e94"
+  },
+  "slug_en": "staff-appointment-and-new-doctor-honoring-ceremony"
+},{
+  "_id": {
+    "$oid": "634e79a637ded6602671e129"
+  },
+  "id_vi": {
+    "$oid": "634e79a637ded6602671e128"
+  },
+  "slug_vi": "xet-duyet-de-cuong-chi-tiet-de-tai-nghien-cuu-ve-luc-luong-lao-dong-lam-viec-trong-linh-vuc-du-lich",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-18T10:02:14.602Z"
+  },
+  "created_at": {
+    "$date": "2022-10-18T10:02:14.602Z"
+  }
+},{
+  "_id": {
+    "$oid": "634fcbe0e4559776797bfa94"
+  },
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-10-19T10:16:44.971Z"
+  },
+  "created_at": {
+    "$date": "2022-10-19T10:05:20.490Z"
+  }
+},{
+  "_id": {
+    "$oid": "6350b325533e1053086e5094"
+  },
+  "id_vi": {
+    "$oid": "6350b325533e1053086e5093"
+  },
+  "slug_vi": "giay-chung-nhan-dam-bao-chat-luong",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-10-20T02:32:05.818Z"
+  },
+  "created_at": {
+    "$date": "2022-10-20T02:32:05.818Z"
+  }
+},{
+  "_id": {
+    "$oid": "6350b6ed59b543405c138b35"
+  },
+  "id_vi": {
+    "$oid": "6350b6ed59b543405c138b34"
+  },
+  "slug_vi": "giay-chung-nhan-kiem-dinh-chat-luong-co-so-giao-duc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-17T04:43:17.280Z"
+  },
+  "created_at": {
+    "$date": "2022-10-20T02:48:13.510Z"
+  }
+},{
+  "_id": {
+    "$oid": "6350bf9a0b157624194dc8d3"
+  },
+  "id_vi": {
+    "$oid": "6350bf9a0b157624194dc8d2"
+  },
+  "slug_vi": "van-ban-quan-ly-dieu-hanh",
+  "collection": "dm_thong_tin",
+  "updated_at": {
+    "$date": "2022-10-20T03:25:14.483Z"
+  },
+  "created_at": {
+    "$date": "2022-10-20T03:25:14.483Z"
+  }
+},{
+  "_id": {
+    "$oid": "6350c6f1a88c1368e26d3e66"
+  },
+  "id_vi": {
+    "$oid": "6350c6f1a88c1368e26d3e65"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-dat-tieu-chuan-kiem-dinh-chat-luong-8-chuong-trinh-dao-tao-theo-bo-tieu-chuan-aun-qa",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-17T04:45:54.180Z"
+  },
+  "created_at": {
+    "$date": "2022-10-20T03:56:33.627Z"
+  }
+},{
+  "_id": {
+    "$oid": "6350ec73f97ee7445e5eadd7"
+  },
+  "id_vi": {
+    "$oid": "6350ec73f97ee7445e5eadd6"
+  },
+  "slug_vi": "van-ban-ve-cong-tac-to-chuc-nhan-su-va-bo-may",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-20T08:58:52.634Z"
+  },
+  "created_at": {
+    "$date": "2022-10-20T06:36:35.028Z"
+  }
+},{
+  "_id": {
+    "$oid": "6350ec9d237fc47abf3e84e3"
+  },
+  "id_vi": {
+    "$oid": "6350ec9d237fc47abf3e84e2"
+  },
+  "slug_vi": "van-ban-ve-cong-tac-dao-tao-dai-hoc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-20T09:02:49.311Z"
+  },
+  "created_at": {
+    "$date": "2022-10-20T06:37:17.460Z"
+  }
+},{
+  "_id": {
+    "$oid": "6350f0b4b28f4f22f42de41a"
+  },
+  "id_vi": {
+    "$oid": "6350f0b4b28f4f22f42de419"
+  },
+  "slug_vi": "van-ban-ve-cong-tac-dao-tao-sau-dai-hoc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-20T09:03:22.073Z"
+  },
+  "created_at": {
+    "$date": "2022-10-20T06:54:44.947Z"
+  }
+},{
+  "_id": {
+    "$oid": "6350f12031d3ba585e4000c6"
+  },
+  "id_vi": {
+    "$oid": "6350f12031d3ba585e4000c5"
+  },
+  "slug_vi": "van-ban-ve-cong-tac-quan-ly-khoa-hoc-cong-nghe",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-20T09:04:04.046Z"
+  },
+  "created_at": {
+    "$date": "2022-10-20T06:56:32.766Z"
+  }
+},{
+  "_id": {
+    "$oid": "6350f176acd60b7cf739b715"
+  },
+  "id_vi": {
+    "$oid": "6350f176acd60b7cf739b714"
+  },
+  "slug_vi": "van-ban-ve-cong-tac-nguoi-hoc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-20T09:04:25.853Z"
+  },
+  "created_at": {
+    "$date": "2022-10-20T06:57:58.049Z"
+  }
+},{
+  "_id": {
+    "$oid": "6350f1d468781d443c403e04"
+  },
+  "id_vi": {
+    "$oid": "6350f1d468781d443c403e03"
+  },
+  "slug_vi": "van-ban-ve-cong-tac-khao-thi",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-20T09:04:48.251Z"
+  },
+  "created_at": {
+    "$date": "2022-10-20T06:59:32.789Z"
+  }
+},{
+  "_id": {
+    "$oid": "6350f233989ff07bd9641af7"
+  },
+  "id_vi": {
+    "$oid": "6350f233989ff07bd9641af6"
+  },
+  "slug_vi": "van-ban-ve-cong-tac-dam-bao-chat-luong",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-20T09:05:11.640Z"
+  },
+  "created_at": {
+    "$date": "2022-10-20T07:01:07.293Z"
+  }
+},{
+  "_id": {
+    "$oid": "6350f2a4237fc47abf3e84eb"
+  },
+  "id_vi": {
+    "$oid": "6350f2a4237fc47abf3e84ea"
+  },
+  "slug_vi": "van-ban-ve-cong-tac-doi-ngoai-hop-tac-quoc-te",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-20T09:05:35.429Z"
+  },
+  "created_at": {
+    "$date": "2022-10-20T07:03:00.632Z"
+  }
+},{
+  "_id": {
+    "$oid": "635103d145940b332822dc88"
+  },
+  "id_vi": {
+    "$oid": "635103d145940b332822dc87"
+  },
+  "slug_vi": "hoat-dong-dang-doan-the",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-20T09:14:52.571Z"
+  },
+  "created_at": {
+    "$date": "2022-10-20T08:16:17.910Z"
+  }
+},{
+  "_id": {
+    "$oid": "635117e900c04b089d5c7547"
+  },
+  "id_vi": {
+    "$oid": "635117e900c04b089d5c7546"
+  },
+  "slug_vi": "nu-cong-doan-vien-truong-dai-hoc-an-giang-ky-niem-ngay-thanh-lap-hoi-lien-hiep-phu-nu-viet-nam-20-10",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-20T09:42:01.921Z"
+  },
+  "created_at": {
+    "$date": "2022-10-20T09:42:01.921Z"
+  }
+},{
+  "_id": {
+    "$oid": "63511a9406ee080bb176ae23"
+  },
+  "id_vi": {
+    "$oid": "63511a9406ee080bb176ae22"
+  },
+  "slug_vi": "dao-tao",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-20T10:05:29.335Z"
+  },
+  "created_at": {
+    "$date": "2022-10-20T09:53:24.519Z"
+  }
+},{
+  "_id": {
+    "$oid": "63511d0e06ee080bb176ae28"
+  },
+  "id_vi": {
+    "$oid": "63511d0e06ee080bb176ae27"
+  },
+  "slug_vi": "hoat-dong-nghien-cuu-khoa-hoc-hop-tac-quoc-te",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-20T10:03:58.291Z"
+  },
+  "created_at": {
+    "$date": "2022-10-20T10:03:58.291Z"
+  }
+},{
+  "_id": {
+    "$oid": "63511ed1a1565f782a4221eb"
+  },
+  "id_vi": {
+    "$oid": "63511ed1a1565f782a4221ea"
+  },
+  "slug_vi": "hoat-dong-chung",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-20T10:11:29.981Z"
+  },
+  "created_at": {
+    "$date": "2022-10-20T10:11:29.981Z"
+  }
+},{
+  "_id": {
+    "$oid": "63525693eecfc6108e5f9c31"
+  },
+  "id_vi": {
+    "$oid": "63525693eecfc6108e5f9c30"
+  },
+  "slug_vi": "thong-bao-ve-viec-cong-bo-ket-qua-xet-duyet-bai-luan-va-phuc-khao-bai-luan-ap-dung-xet-tuyen-theo-phuong-thuc-5-dot-tuyen-sinh-dai-hoc-nam-2022-dot-bo-sung",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-21T08:21:39.637Z"
+  },
+  "created_at": {
+    "$date": "2022-10-21T08:21:39.637Z"
+  }
+},{
+  "_id": {
+    "$oid": "63556526f191c06b72436def"
+  },
+  "id_vi": {
+    "$oid": "63556526f191c06b72436dee"
+  },
+  "slug_vi": "xet-duyet-2-de-cuong-chi-tiet-de-tai-cua-bo-mon-chan-nuoi-thu-y",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-23T16:03:50.432Z"
+  },
+  "created_at": {
+    "$date": "2022-10-23T16:00:38.709Z"
+  }
+},{
+  "_id": {
+    "$oid": "6355e21e308ac90b1306b17b"
+  },
+  "id_vi": {
+    "$oid": "6355e21e308ac90b1306b17a"
+  },
+  "slug_vi": "them-02-de-cuong-chi-tiet-thuoc-linh-vuc-nong-nghiep-duoc-xet-duyet",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-24T00:53:50.750Z"
+  },
+  "created_at": {
+    "$date": "2022-10-24T00:53:50.750Z"
+  }
+},{
+  "_id": {
+    "$oid": "635644784696395f63516bbb"
+  },
+  "id_vi": {
+    "$oid": "635644784696395f63516bba"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-doat-giai-nhat-khu-vuc-tay-nam-bo-hoi-thi-tim-hieu-luat-giao-thong-duong-bo-va-ky-nang-lai-xe-mo-to-an-toan-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-24T07:53:28.003Z"
+  },
+  "created_at": {
+    "$date": "2022-10-24T07:53:28.003Z"
+  }
+},{
+  "_id": {
+    "$oid": "6357cf81f4d57f73a935fdd6"
+  },
+  "id_vi": {
+    "$oid": "6357cf81f4d57f73a935fdd5"
+  },
+  "slug_vi": "tiep-va-lam-viec-voi-lien-doan-lao-dong-tinh",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-25T11:58:57.181Z"
+  },
+  "created_at": {
+    "$date": "2022-10-25T11:58:57.181Z"
+  }
+},{
+  "_id": {
+    "$oid": "6357d0864d31a90d3845c8f5"
+  },
+  "id_vi": {
+    "$oid": "6357d0864d31a90d3845c8f4"
+  },
+  "slug_vi": "xet-duyet-de-cuong-chi-tiet-de-tai-loai-c-cap-dhqg-hcm-2022-10-25",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-25T12:03:18.451Z"
+  },
+  "created_at": {
+    "$date": "2022-10-25T12:03:18.451Z"
+  }
+},{
+  "_id": {
+    "$oid": "6357d1cd3e199611846e28d9"
+  },
+  "id_vi": {
+    "$oid": "6357d1cd3e199611846e28d8"
+  },
+  "slug_vi": "xet-duyet-de-cuong-chi-tiet-de-tai-nghien-cuu-khoa-hoc-thuoc-linh-vuc-cong-nghe-thuc-pham",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-25T12:08:45.920Z"
+  },
+  "created_at": {
+    "$date": "2022-10-25T12:08:45.920Z"
+  }
+},{
+  "_id": {
+    "$oid": "6359e4a807dd0465642a29f5"
+  },
+  "id_vi": {
+    "$oid": "6359e4a807dd0465642a29f4"
+  },
+  "slug_vi": "thong-bao-ve-viec-thu-hoc-phi-dao-tao-chinh-quy-nam-hoc-2022-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-27T02:50:25.391Z"
+  },
+  "created_at": {
+    "$date": "2022-10-27T01:53:44.633Z"
+  }
+},{
+  "_id": {
+    "$oid": "635f6e0dcfb697727b6cad57"
+  },
+  "id_vi": {
+    "$oid": "635f6e0dcfb697727b6cad56"
+  },
+  "slug_vi": "sinh-vien-truong-dai-hoc-an-giang-nhan-hoc-bong-thap-sang-tuong-lai-luyf",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-21T02:17:00.993Z"
+  },
+  "created_at": {
+    "$date": "2022-10-31T06:41:17.188Z"
+  },
+  "id_en": {
+    "$oid": "64191376b3de9e22985aa38d"
+  },
+  "slug_en": "lighting-up-your-future-luyf-scholarships-for-disadvantaged-students-of-an-giang-university"
+},{
+  "_id": {
+    "$oid": "635f85620413a104e82a059a"
+  },
+  "id_vi": {
+    "$oid": "635f85620413a104e82a0599"
+  },
+  "slug_vi": "ky-thi-cap-chung-nhan-tieng-anh-vnu-ept",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-10-31T09:35:57.144Z"
+  },
+  "created_at": {
+    "$date": "2022-10-31T08:20:50.707Z"
+  }
+},{
+  "_id": {
+    "$oid": "6362734c102ccb40d8542d23"
+  },
+  "id_vi": {
+    "$oid": "6362734c102ccb40d8542d22"
+  },
+  "slug_vi": "quyet-dinh-ve-viec-quy-dinh-muc-thu-hoc-phi-dai-hoc-02-nganh-bo-sung-cao-dang-nam-hoc-2022-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-02T13:40:28.710Z"
+  },
+  "created_at": {
+    "$date": "2022-11-02T13:40:28.710Z"
+  }
+},{
+  "_id": {
+    "$oid": "636275235ba79d6db640c243"
+  },
+  "id_vi": {
+    "$oid": "636275235ba79d6db640c242"
+  },
+  "slug_vi": "hoi-thao-khoa-hoc-gioi-va-binh-dang-gioi-trong-viec-tham-gia-quan-ly-dat-ngap-nuoc-xuyen-bien-gioi-o-dbscl",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-02T14:14:11.604Z"
+  },
+  "created_at": {
+    "$date": "2022-11-02T13:48:19.314Z"
+  }
+},{
+  "_id": {
+    "$oid": "6363cc48946ccf1e18421266"
+  },
+  "id_vi": {
+    "$oid": "6363cc48946ccf1e18421265"
+  },
+  "slug_vi": "nghiem-thu-de-tai-nghien-cuu-khoa-hoc-thuoc-khoa-su-pham",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-03T14:12:24.678Z"
+  },
+  "created_at": {
+    "$date": "2022-11-03T14:12:24.678Z"
+  }
+},{
+  "_id": {
+    "$oid": "6363cd7e9d49202420037a66"
+  },
+  "id_vi": {
+    "$oid": "6363cd7e9d49202420037a65"
+  },
+  "slug_vi": "tiep-va-lam-viec-voi-cong-ty-co-phan-cung-ung-nhan-luc-trasesco",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-03T14:36:47.081Z"
+  },
+  "created_at": {
+    "$date": "2022-11-03T14:17:34.729Z"
+  }
+},{
+  "_id": {
+    "$oid": "6366778a67471b609143fbe7"
+  },
+  "id_vi": {
+    "$oid": "6366778a67471b609143fbe6"
+  },
+  "slug_vi": "quyet-dinh-ban-hanh-so-tay-dam-bao-chat-luong-nam-hoc-2021-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-05T14:47:38.701Z"
+  },
+  "created_at": {
+    "$date": "2022-11-05T14:47:38.701Z"
+  }
+},{
+  "_id": {
+    "$oid": "636902449a2e174408122839"
+  },
+  "id_vi": {
+    "$oid": "636902449a2e174408122838"
+  },
+  "slug_vi": "khoi-tranh-hoi-thao-vien-chuc-lao-dong-truong-dai-hoc-an-giang-lan-thu-19-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-07T13:06:38.453Z"
+  },
+  "created_at": {
+    "$date": "2022-11-07T13:04:04.023Z"
+  }
+},{
+  "_id": {
+    "$oid": "636903fa6181406724421528"
+  },
+  "id_vi": {
+    "$oid": "636903fa6181406724421527"
+  },
+  "slug_vi": "hoi-nghi-can-bo-chu-chot-quy-hoach-nhan-su-lanh-dao-quan-ly-cap-phong-khoa-va-tuong-duong-nhiem-ky-2021-2026",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-07T13:11:22.272Z"
+  },
+  "created_at": {
+    "$date": "2022-11-07T13:11:22.272Z"
+  }
+},{
+  "_id": {
+    "$oid": "636b043418d9984d0a6ca477"
+  },
+  "id_vi": {
+    "$oid": "636b043418d9984d0a6ca476"
+  },
+  "slug_vi": "le-trao-hoc-bong-tiep-buoc-den-truong-nam-hoc-2022-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-14T06:26:00.547Z"
+  },
+  "created_at": {
+    "$date": "2022-11-09T01:36:52.768Z"
+  },
+  "id_en": {
+    "$oid": "63eb294d29621975646a95b3"
+  },
+  "slug_en": "the-scholarship-ceremony-for-low-income-students-in-the-academic-of-2022-2023"
+},{
+  "_id": {
+    "$oid": "636b262818d9984d0a6ca480"
+  },
+  "id_vi": {
+    "$oid": "636b262818d9984d0a6ca47f"
+  },
+  "slug_vi": "dieu-khoan-tham-chieu-tor-tuyen-chuyen-gia-gop-y-chinh-sach",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-09T04:01:44.630Z"
+  },
+  "created_at": {
+    "$date": "2022-11-09T04:01:44.630Z"
+  }
+},{
+  "_id": {
+    "$oid": "636ca6bab5345f5dad13e151"
+  },
+  "id_vi": {
+    "$oid": "636ca6bab5345f5dad13e150"
+  },
+  "slug_vi": "hoi-thao-ap-dung-ky-thuat-tuoi-ngap-kho-xen-ke-tren-lua-quy-mo-cong-dong-vung-thuong-nguon-dbscl",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-10T07:22:34.483Z"
+  },
+  "created_at": {
+    "$date": "2022-11-10T07:22:34.483Z"
+  }
+},{
+  "_id": {
+    "$oid": "636ca9f0edfd7a3e3123ad1f"
+  },
+  "id_vi": {
+    "$oid": "636ca9f0edfd7a3e3123ad1e"
+  },
+  "slug_vi": "danh-gia-giua-ky-de-tai-khoa-hoc-va-cong-nghe-cap-dhqg-hcm-loai-c-nam-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-10T07:36:16.246Z"
+  },
+  "created_at": {
+    "$date": "2022-11-10T07:36:16.246Z"
+  }
+},{
+  "_id": {
+    "$oid": "636e13b052ac1a7f2022af00"
+  },
+  "id_vi": {
+    "$oid": "636e13b052ac1a7f2022aeff"
+  },
+  "slug_vi": "buoi-lam-viec-cua-thuong-truc-tinh-uy-voi-dang-uy-truong-dai-hoc-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-11T09:19:44.545Z"
+  },
+  "created_at": {
+    "$date": "2022-11-11T09:19:44.545Z"
+  }
+},{
+  "_id": {
+    "$oid": "636f09656c7c880e0d5196af"
+  },
+  "id_vi": {
+    "$oid": "636f09656c7c880e0d5196ae"
+  },
+  "slug_vi": "thong-bao-ve-viec-nop-ho-so-dang-ky-xet-tuyen-dai-hoc-hinh-thuc-dao-tao-chinh-quy-nam-2022-bo-sung-dot-2",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-12T02:48:05.511Z"
+  },
+  "created_at": {
+    "$date": "2022-11-12T02:48:05.511Z"
+  }
+},{
+  "_id": {
+    "$oid": "63743c61ea955627946c74ed"
+  },
+  "id_vi": {
+    "$oid": "63743c61ea955627946c74ec"
+  },
+  "slug_vi": "03-sinh-vien-truong-dai-hoc-an-giang-nhan-hoc-bong-hessen-chlb-duc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-16T01:26:57.565Z"
+  },
+  "created_at": {
+    "$date": "2022-11-16T01:26:57.565Z"
+  }
+},{
+  "_id": {
+    "$oid": "63743f8137c2f762e876c53b"
+  },
+  "id_vi": {
+    "$oid": "63743f8137c2f762e876c53a"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-huong-ung-ngay-phap-luat-viet-nam",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-16T01:40:17.832Z"
+  },
+  "created_at": {
+    "$date": "2022-11-16T01:40:17.832Z"
+  }
+},{
+  "_id": {
+    "$oid": "637490e8ef656831e2183c27"
+  },
+  "id_vi": {
+    "$oid": "637490e8ef656831e2183c26"
+  },
+  "slug_vi": "quyet-dinh-ve-viec-quy-dinh-muc-thu-hoc-phi-trinh-do-cao-dang-ap-dung-cho-sinh-vien-qua-thoi-gian-thiet-ke-chuong-trinh-dao-tao-nam-hoc-2022-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-16T07:29:07.637Z"
+  },
+  "created_at": {
+    "$date": "2022-11-16T07:27:36.831Z"
+  }
+},{
+  "_id": {
+    "$oid": "6374b16cbad6c41e9451da55"
+  },
+  "id_vi": {
+    "$oid": "6374b16cbad6c41e9451da54"
+  },
+  "slug_vi": "tiep-va-lam-viec-voi-cong-ty-co-phan-vinpearl-chi-nhanh-kien-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-16T09:46:20.558Z"
+  },
+  "created_at": {
+    "$date": "2022-11-16T09:46:20.558Z"
+  }
+},{
+  "_id": {
+    "$oid": "6374b2d1787b8738c0526736"
+  },
+  "id_vi": {
+    "$oid": "6374b2d1787b8738c0526735"
+  },
+  "slug_vi": "tap-huan-huong-dan-su-dung-phan-mem-turnitin",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-16T09:52:17.878Z"
+  },
+  "created_at": {
+    "$date": "2022-11-16T09:52:17.878Z"
+  }
+},{
+  "_id": {
+    "$oid": "637612321547c44a446bb595"
+  },
+  "id_vi": {
+    "$oid": "637612321547c44a446bb594"
+  },
+  "slug_vi": "thong-bao-ve-viec-bao-hiem-con-nguoi-nam-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-17T10:51:30.640Z"
+  },
+  "created_at": {
+    "$date": "2022-11-17T10:51:30.640Z"
+  }
+},{
+  "_id": {
+    "$oid": "6376e347f0ce3a155b6c6d37"
+  },
+  "id_vi": {
+    "$oid": "6376e347f0ce3a155b6c6d36"
+  },
+  "slug_vi": "thu-chuc-mung-cua-hieu-truong-gui-quy-thay-co-giao-nhan-ky-niem-ngay-nha-giao-viet-nam",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-18T01:43:35.656Z"
+  },
+  "created_at": {
+    "$date": "2022-11-18T01:43:35.656Z"
+  }
+},{
+  "_id": {
+    "$oid": "63784f42ab79f500b80a7856"
+  },
+  "id_vi": {
+    "$oid": "63784f42ab79f500b80a7855"
+  },
+  "slug_vi": "dien-van-ky-niem-40-nam-ngay-nha-giao-viet-nam-20-11-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-19T04:50:12.814Z"
+  },
+  "created_at": {
+    "$date": "2022-11-19T03:36:34.818Z"
+  }
+},{
+  "_id": {
+    "$oid": "637a4a0f7dbf0a7d731c5506"
+  },
+  "id_vi": {
+    "$oid": "637a4a0f7dbf0a7d731c5505"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-ky-niem-40-nam-ngay-nha-giao-viet-nam-20-11",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-20T15:38:55.485Z"
+  },
+  "created_at": {
+    "$date": "2022-11-20T15:38:55.485Z"
+  }
+},{
+  "_id": {
+    "$oid": "637b30bcc5cc3b20962ce2fd"
+  },
+  "id_vi": {
+    "$oid": "637b30bcc5cc3b20962ce2fc"
+  },
+  "slug_vi": "thong-bao-ve-viec-cong-bo-ket-qua-xet-duyet-bai-luan-ap-dung-xet-tuyen-theo-phuong-thuc-thu-5-trong-dot-tuyen-sinh-dai-hoc-hinh-thuc-dao-tao-chinh-quy-nam-2022-bo-sung-dot-2",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-21T08:03:08.675Z"
+  },
+  "created_at": {
+    "$date": "2022-11-21T08:03:08.675Z"
+  }
+},{
+  "_id": {
+    "$oid": "637ca1bbdb8a423a361d9599"
+  },
+  "id_vi": {
+    "$oid": "637ca1bbdb8a423a361d9598"
+  },
+  "slug_vi": "ke-hoach-thu-vien-mo-cua-phuc-vu-nam-hoc-2022-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-22T10:17:31.553Z"
+  },
+  "created_at": {
+    "$date": "2022-11-22T10:17:31.553Z"
+  }
+},{
+  "_id": {
+    "$oid": "638038a169e9393037672ffb"
+  },
+  "id_vi": {
+    "$oid": "638038a169e9393037672ffa"
+  },
+  "slug_vi": "hoi-nghi-vien-chuc-nguoi-lao-dong-cac-cong-doan-bo-phan-nam-hoc-2022-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-25T03:38:09.795Z"
+  },
+  "created_at": {
+    "$date": "2022-11-25T03:38:09.795Z"
+  }
+},{
+  "_id": {
+    "$oid": "638469c0247332376056a013"
+  },
+  "id_vi": {
+    "$oid": "638469c0247332376056a012"
+  },
+  "slug_vi": "hoi-thao-phan-tich-cong-viec-cua-nhan-vien-hanh-chinh-de-nang-cao-nang-luc-nghien-cuu-va-phat-trien-truong-dai-hoc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-11-28T07:56:48.980Z"
+  },
+  "created_at": {
+    "$date": "2022-11-28T07:56:48.980Z"
+  }
+},{
+  "_id": {
+    "$oid": "638975e83a91d030543b5fe5"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-02T03:50:00.303Z"
+  },
+  "created_at": {
+    "$date": "2022-12-02T03:50:00.303Z"
+  }
+},{
+  "_id": {
+    "$oid": "63899f313a91d030543b5fe8"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-02T06:50:06.961Z"
+  },
+  "created_at": {
+    "$date": "2022-12-02T06:46:09.814Z"
+  }
+},{
+  "_id": {
+    "$oid": "638d44680585c60f32617e48"
+  },
+  "id_vi": {
+    "$oid": "638d44680585c60f32617e47"
+  },
+  "slug_vi": "tiep-doan-cong-tac-cua-dhqg-hcm-ve-du-an-yseali-mlp",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-05T01:07:52.170Z"
+  },
+  "created_at": {
+    "$date": "2022-12-05T01:07:52.170Z"
+  }
+},{
+  "_id": {
+    "$oid": "638d697297520067cb73f411"
+  },
+  "id_vi": {
+    "$oid": "638d697297520067cb73f410"
+  },
+  "slug_vi": "hoi-thao-symposium-on-equipment-for-water-and-river-research-thiet-bi-nghien-cuu-nuoc-va-song",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-10T02:46:34.167Z"
+  },
+  "created_at": {
+    "$date": "2022-12-05T03:45:54.324Z"
+  },
+  "id_en": {
+    "$oid": "63e5b00a0a44d5220b790b86"
+  },
+  "slug_en": "the-workshop-of-symposium-on-equipment-for-water-and-river-research"
+},{
+  "_id": {
+    "$oid": "638db80e8a6e9a1ed568b06c"
+  },
+  "id_vi": {
+    "$oid": "638db80e8a6e9a1ed568b06b"
+  },
+  "slug_vi": "hoi-dong-nghiem-thu-bao-cao-tu-danh-gia-cap-co-so-giao-duc-nam-hoc-2021-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-08T03:02:28.309Z"
+  },
+  "created_at": {
+    "$date": "2022-12-05T09:21:18.529Z"
+  }
+},{
+  "_id": {
+    "$oid": "638ea930460dc33cb70e7edd"
+  },
+  "id_vi": {
+    "$oid": "638ea930460dc33cb70e7edc"
+  },
+  "slug_vi": "ban-khai-thanh-tich-de-nghi-xet-tang-danh-hieu-nha-giao-uu-tu",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-06T02:40:09.024Z"
+  },
+  "created_at": {
+    "$date": "2022-12-06T02:30:08.107Z"
+  }
+},{
+  "_id": {
+    "$oid": "638eeeca87f38c5a052466d0"
+  },
+  "id_vi": {
+    "$oid": "638eeeca87f38c5a052466cf"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-hop-tac-voi-truong-dai-hoc-cong-nghe-auckland-new-zealand-va-truong-dai-hoc-tasmania-australia",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-21T07:32:26.316Z"
+  },
+  "created_at": {
+    "$date": "2022-12-06T07:27:06.313Z"
+  },
+  "id_en": {
+    "$oid": "63f4736941c85b0ef51df3d8"
+  },
+  "slug_en": "an-giang-university-cooperated-with-auckland-university-of-technology-new-zealand-and-tasmania-university-australia"
+},{
+  "_id": {
+    "$oid": "638f2ae6a871bf44cc027230"
+  },
+  "id_vi": {
+    "$oid": "638f2ae6a871bf44cc02722f"
+  },
+  "slug_vi": "thong-bao-ket-qua-lay-phieu-tin-nhiem-doi-voi-ca-nhan-de-nghi-xet-tang-danh-hieu-nha-giao-uu-tu",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-06T11:43:34.038Z"
+  },
+  "created_at": {
+    "$date": "2022-12-06T11:43:34.038Z"
+  }
+},{
+  "_id": {
+    "$oid": "63913724151e59616c783338"
+  },
+  "id_vi": {
+    "$oid": "63913724151e59616c783337"
+  },
+  "slug_vi": "hoi-thao-tap-huan-so-huu-tri-tue-trong-truong-dai-hoc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-08T01:00:20.826Z"
+  },
+  "created_at": {
+    "$date": "2022-12-08T01:00:20.826Z"
+  }
+},{
+  "_id": {
+    "$oid": "6391514d5984c621c56843c7"
+  },
+  "id_vi": {
+    "$oid": "6391514d5984c621c56843c6"
+  },
+  "slug_vi": "quyet-dinh-ve-viec-quy-dinh-muc-thu-hoc-phi-trinh-do-dai-hoc-ap-dung-cho-sinh-vien-qua-thoi-gian-thiet-ke-ctdt-nam-hoc-2022-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-08T02:51:57.460Z"
+  },
+  "created_at": {
+    "$date": "2022-12-08T02:51:57.460Z"
+  }
+},{
+  "_id": {
+    "$oid": "6395f2c7d3fbab7dc7141eca"
+  },
+  "id_vi": {
+    "$oid": "6395f2c7d3fbab7dc7141ec9"
+  },
+  "slug_vi": "hoi-nghi-vien-chuc-nguoi-lao-dong-truong-dai-hoc-an-giang-nam-hoc-2022-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-11T15:09:59.924Z"
+  },
+  "created_at": {
+    "$date": "2022-12-11T15:09:59.924Z"
+  }
+},{
+  "_id": {
+    "$oid": "639683851b879101273ad0a9"
+  },
+  "id_vi": {
+    "$oid": "639683851b879101273ad0a8"
+  },
+  "slug_vi": "02-sinh-vien-truong-dai-hoc-an-giang-dat-giai-cap-quoc-gia-cuoc-thi-dai-su-van-hoa-doc-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-13T07:08:20.281Z"
+  },
+  "created_at": {
+    "$date": "2022-12-12T01:27:33.482Z"
+  }
+},{
+  "_id": {
+    "$oid": "6398286abef3884e042f0bee"
+  },
+  "id_vi": {
+    "$oid": "6398286abef3884e042f0bed"
+  },
+  "slug_vi": "hoi-nghi-tong-ket-hoat-dong-cong-doan-nam-2022-va-trien-khai-cong-tac-nam-2023-thuoc-khoi-thi-dua-so-6",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-13T07:23:22.775Z"
+  },
+  "created_at": {
+    "$date": "2022-12-13T07:23:22.775Z"
+  }
+},{
+  "_id": {
+    "$oid": "6398773a985613414633b398"
+  },
+  "id_vi": {
+    "$oid": "6398773a985613414633b397"
+  },
+  "slug_vi": "9-sinh-vien-truong-dai-hoc-an-giang-duoc-tuyen-duong-danh-hieu-sinh-vien-5-tot-cap-dhqg-hcm-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-13T12:59:38.310Z"
+  },
+  "created_at": {
+    "$date": "2022-12-13T12:59:38.310Z"
+  }
+},{
+  "_id": {
+    "$oid": "639de4ad8f38942d0f7906c5"
+  },
+  "id_vi": {
+    "$oid": "639de4ad8f38942d0f7906c4"
+  },
+  "slug_vi": "hoi-nghi-ban-doc-thu-vien-va-trao-giai-cuoc-thi-dai-su-van-hoa-doc-truong-dai-hoc-an-giang-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-17T15:47:57.477Z"
+  },
+  "created_at": {
+    "$date": "2022-12-17T15:47:57.477Z"
+  }
+},{
+  "_id": {
+    "$oid": "63a007483444574b5774e14b"
+  },
+  "id_vi": {
+    "$oid": "63a007483444574b5774e14a"
+  },
+  "slug_vi": "le-trao-hoc-bong-do-quy-giao-duc-fuji-va-ngan-hang-tmcp-cong-thuong-viet-nam-tai-tro",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-19T06:40:08.994Z"
+  },
+  "created_at": {
+    "$date": "2022-12-19T06:40:08.994Z"
+  }
+},{
+  "_id": {
+    "$oid": "63a1573edf8c320480294930"
+  },
+  "id_vi": {
+    "$oid": "63a1573edf8c32048029492f"
+  },
+  "slug_vi": "hop-tac-dao-tao-chuong-trinh-thuc-tap-sinh-nong-nghiep-tai-dan-mach",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-20T06:33:34.400Z"
+  },
+  "created_at": {
+    "$date": "2022-12-20T06:33:34.400Z"
+  }
+},{
+  "_id": {
+    "$oid": "63a3add2e6ea79096667af67"
+  },
+  "id_vi": {
+    "$oid": "63a3add2e6ea79096667af66"
+  },
+  "slug_vi": "hon-400-sinh-vien-tranh-tai-tai-giai-viet-da-we-run-we-share",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-22T01:07:30.629Z"
+  },
+  "created_at": {
+    "$date": "2022-12-22T01:07:30.629Z"
+  }
+},{
+  "_id": {
+    "$oid": "63a41494dc4ab4454367a8dd"
+  },
+  "id_vi": {
+    "$oid": "63a41494dc4ab4454367a8dc"
+  },
+  "slug_vi": "xet-duyet-danh-muc-de-tai-nghien-cuu-khoa-hoc-cap-truong-nam-hoc-2022-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-22T08:25:56.531Z"
+  },
+  "created_at": {
+    "$date": "2022-12-22T08:25:56.531Z"
+  }
+},{
+  "_id": {
+    "$oid": "63a415d184c4e83c3067b26a"
+  },
+  "id_vi": {
+    "$oid": "63a415d184c4e83c3067b269"
+  },
+  "slug_vi": "24-sinh-vien-truong-dai-hoc-an-giang-nhan-hoc-bong-doan-toi-nam-hoc-2022-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-22T08:31:13.122Z"
+  },
+  "created_at": {
+    "$date": "2022-12-22T08:31:13.122Z"
+  }
+},{
+  "_id": {
+    "$oid": "63a417483ecd1f33511ea679"
+  },
+  "id_vi": {
+    "$oid": "63a417483ecd1f33511ea678"
+  },
+  "slug_vi": "hoi-dong-truong-dai-hoc-an-giang-to-chuc-ky-hop-lan-thu-9",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-22T09:28:07.843Z"
+  },
+  "created_at": {
+    "$date": "2022-12-22T08:37:28.521Z"
+  }
+},{
+  "_id": {
+    "$oid": "63a4227802449526c319d06c"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-22T09:25:12.995Z"
+  },
+  "created_at": {
+    "$date": "2022-12-22T09:25:12.995Z"
+  }
+},{
+  "_id": {
+    "$oid": "63a4fa3648eba638bf7b7b85"
+  },
+  "id_vi": {
+    "$oid": "63a4fa3648eba638bf7b7b84"
+  },
+  "slug_vi": "nghiem-thu-de-tai-nghien-cuu-khoa-hoc-ve-giang-day-ngon-ngu-tieng-viet-cho-hoc-sinh-khmer",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-23T00:45:42.166Z"
+  },
+  "created_at": {
+    "$date": "2022-12-23T00:45:42.166Z"
+  }
+},{
+  "_id": {
+    "$oid": "63a5094a42b7f55ce7497ebe"
+  },
+  "id_vi": {
+    "$oid": "63a5094a42b7f55ce7497ebd"
+  },
+  "slug_vi": "chuyen-gia-tinh-nguyen-vien-va-sinh-vien-nuoc-ngoai-mung-giang-sinh-va-don-nam-moi-tai-agu",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-26T04:29:19.665Z"
+  },
+  "created_at": {
+    "$date": "2022-12-23T01:50:02.413Z"
+  }
+},{
+  "_id": {
+    "$oid": "63a512d0365a46237716755e"
+  },
+  "id_vi": {
+    "$oid": "63a512d0365a46237716755d"
+  },
+  "slug_vi": "hoi-nghi-tong-ket-cong-tac-tuyen-sinh-nam-2022-va-phuong-huong-cong-tac-tuyen-sinh-nam-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-23T02:30:40.898Z"
+  },
+  "created_at": {
+    "$date": "2022-12-23T02:30:40.898Z"
+  }
+},{
+  "_id": {
+    "$oid": "63a8fec1bd66a9531c69f847"
+  },
+  "id_vi": {
+    "$oid": "63a8fec1bd66a9531c69f846"
+  },
+  "slug_vi": "tiep-don-nhom-nghien-cuu-cua-truong-dai-hoc-hull-va-truong-dai-hoc-nong-lam",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-28T02:22:27.009Z"
+  },
+  "created_at": {
+    "$date": "2022-12-26T01:54:09.924Z"
+  },
+  "id_en": {
+    "$oid": "63fd65371074a511e01d1b38"
+  },
+  "slug_en": "welcoming-the-research-team-from-hull-university-and-the-agriculture-and-forestry-university"
+},{
+  "_id": {
+    "$oid": "63a9076633e769165b58f7c3"
+  },
+  "id_vi": {
+    "$oid": "63a9076633e769165b58f7c2"
+  },
+  "slug_vi": "tiep-va-lam-viec-voi-giao-su-detlef-werner-briesen",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-21T01:53:35.494Z"
+  },
+  "created_at": {
+    "$date": "2022-12-26T02:31:02.769Z"
+  },
+  "id_en": {
+    "$oid": "64190debb3de9e22985aa389"
+  },
+  "slug_en": "working-with-professor-detlef-werner-briesen"
+},{
+  "_id": {
+    "$oid": "63a909838061dc4746385369"
+  },
+  "id_vi": {
+    "$oid": "63a909838061dc4746385368"
+  },
+  "slug_vi": "truong-dhag-tham-du-buoi-chia-se-thuc-day-tinh-than-doi-moi-sang-tao-va-khoi-nghiep-kinh-nghiem-cua-dai-hoc-quoc-gia-singapore",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-26T02:40:03.922Z"
+  },
+  "created_at": {
+    "$date": "2022-12-26T02:40:03.922Z"
+  }
+},{
+  "_id": {
+    "$oid": "63a90acd33e769165b58f7c6"
+  },
+  "id_vi": {
+    "$oid": "63a90acd33e769165b58f7c5"
+  },
+  "slug_vi": "nghiem-thu-de-tai-nghien-cuu-khoa-hoc-cap-truong-ve-ung-dung-cong-nghe-thong-tin-trong-day-hoc-ngu-van",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-26T02:45:33.656Z"
+  },
+  "created_at": {
+    "$date": "2022-12-26T02:45:33.656Z"
+  }
+},{
+  "_id": {
+    "$oid": "63a96ee1bd66a9531c69f84d"
+  },
+  "id_vi": {
+    "$oid": "63a96ee1bd66a9531c69f84c"
+  },
+  "slug_vi": "dai-hoi-cau-lac-bo-khoi-nghiep-va-doi-moi-sang-tao-truong-dai-hoc-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-26T09:52:33.336Z"
+  },
+  "created_at": {
+    "$date": "2022-12-26T09:52:33.336Z"
+  }
+},{
+  "_id": {
+    "$oid": "63aa51ef0c6bc96bd8503097"
+  },
+  "id_vi": {
+    "$oid": "63aa51ef0c6bc96bd8503096"
+  },
+  "slug_vi": "hoc-sinh-truong-pho-thong-thuc-hanh-su-pham-dat-nhieu-giai-cao-tai-cac-cuoc-thi-ve-khoa-hoc-ky-thuat",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-27T02:01:19.051Z"
+  },
+  "created_at": {
+    "$date": "2022-12-27T02:01:19.051Z"
+  }
+},{
+  "_id": {
+    "$oid": "63aa5dff8e4e4734ea277257"
+  },
+  "id_vi": {
+    "$oid": "63aa5dff8e4e4734ea277256"
+  },
+  "slug_vi": "xet-duyet-de-cuong-chi-tiet-va-danh-muc-dang-ky-de-tai-cap-truong-2022-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-27T02:53:09.992Z"
+  },
+  "created_at": {
+    "$date": "2022-12-27T02:52:47.591Z"
+  }
+},{
+  "_id": {
+    "$oid": "63ac1095ea21b866ed4ec8b6"
+  },
+  "id_vi": {
+    "$oid": "63ac1095ea21b866ed4ec8b5"
+  },
+  "slug_vi": "tiep-doan-dai-bieu-quoc-hoi-tinh-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-28T09:47:01.487Z"
+  },
+  "created_at": {
+    "$date": "2022-12-28T09:47:01.487Z"
+  }
+},{
+  "_id": {
+    "$oid": "63ae5305d635d671ad6ce2a7"
+  },
+  "id_vi": {
+    "$oid": "63ae5305d635d671ad6ce2a6"
+  },
+  "slug_vi": "thong-bao-ve-viec-thu-hoc-phi-dao-tao-chinh-quy-doi-voi-sinh-vien-su-pham-khong-dang-ky-huong-chinh-sach-ho-tro-theo-nghi-dinh-116-2020-nd-cp",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2022-12-30T02:55:01.651Z"
+  },
+  "created_at": {
+    "$date": "2022-12-30T02:55:01.651Z"
+  }
+},{
+  "_id": {
+    "$oid": "63b23837054bee4ff12e95d9"
+  },
+  "id_vi": {
+    "$oid": "63b23837054bee4ff12e95d8"
+  },
+  "slug_vi": "nghiem-thu-hai-de-tai-cap-truong-ve-linh-vuc-nong-nghiep",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-01-02T01:49:43.981Z"
+  },
+  "created_at": {
+    "$date": "2023-01-02T01:49:43.981Z"
+  }
+},{
+  "_id": {
+    "$oid": "63b23987175c9e3d970e8a47"
+  },
+  "id_vi": {
+    "$oid": "63b23987175c9e3d970e8a46"
+  },
+  "slug_vi": "hoi-nghi-nghien-cuu-hoc-tap-quan-triet-nghi-quyet-hoi-nghi-lan-thu-sau-ban-chap-hanh-trung-uong-dang-khoa-xiii",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-01-02T01:55:19.454Z"
+  },
+  "created_at": {
+    "$date": "2023-01-02T01:55:19.454Z"
+  }
+},{
+  "_id": {
+    "$oid": "63b23a85f6cc2570ce23a275"
+  },
+  "id_vi": {
+    "$oid": "63b23a85f6cc2570ce23a274"
+  },
+  "slug_vi": "tiep-doan-cong-tac-bao-hiem-xa-hoi-tinh-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-01-02T01:59:33.616Z"
+  },
+  "created_at": {
+    "$date": "2023-01-02T01:59:33.616Z"
+  }
+},{
+  "_id": {
+    "$oid": "63b23b8b054bee4ff12e95dc"
+  },
+  "id_vi": {
+    "$oid": "63b23b8b054bee4ff12e95db"
+  },
+  "slug_vi": "nghiem-thu-de-tai-nghien-cuu-khoa-hoc-ve-phong-tri-benh-gan-than-mu-tren-ca-loc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-01-02T02:03:55.889Z"
+  },
+  "created_at": {
+    "$date": "2023-01-02T02:03:55.889Z"
+  }
+},{
+  "_id": {
+    "$oid": "63b23d38054bee4ff12e95df"
+  },
+  "id_vi": {
+    "$oid": "63b23d38054bee4ff12e95de"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-ky-hop-tac-voi-he-thong-truong-hoi-nhap-quoc-te-bamboo",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-21T02:03:32.608Z"
+  },
+  "created_at": {
+    "$date": "2023-01-02T02:11:04.724Z"
+  },
+  "id_en": {
+    "$oid": "641910544438580be2477c6f"
+  },
+  "slug_en": "signing-a-cooperation-agreement-with-bamboo-school-system"
+},{
+  "_id": {
+    "$oid": "63b38115f0df1b79b45db666"
+  },
+  "id_vi": {
+    "$oid": "63b38115f0df1b79b45db665"
+  },
+  "slug_vi": "phien-thao-luan-phat-trien-chuong-trinh-dao-tao-thuoc-hop-phan-2-du-an-sahed-koica-tai-tro",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-01-03T01:12:53.165Z"
+  },
+  "created_at": {
+    "$date": "2023-01-03T01:12:53.165Z"
+  }
+},{
+  "_id": {
+    "$oid": "63b62267f6cd044d0336d416"
+  },
+  "id_vi": {
+    "$oid": "63b62267f6cd044d0336d415"
+  },
+  "slug_vi": "hoi-nghi-tong-ket-cong-tac-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-01-05T01:05:43.235Z"
+  },
+  "created_at": {
+    "$date": "2023-01-05T01:05:43.235Z"
+  }
+},{
+  "_id": {
+    "$oid": "63b63e3dcc551503f8386477"
+  },
+  "id_vi": {
+    "$oid": "63b63e3dcc551503f8386476"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-trien-khai-cac-nhiem-vu-trong-tam-nam-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-01-05T03:04:29.879Z"
+  },
+  "created_at": {
+    "$date": "2023-01-05T03:04:29.879Z"
+  }
+},{
+  "_id": {
+    "$oid": "63b7db1927da781683129519"
+  },
+  "id_vi": {
+    "$oid": "63b7db1927da781683129518"
+  },
+  "slug_vi": "hoi-thao-tap-huan-cong-tac-dam-bao-chat-luong-va-tu-danh-gia-chuong-trinh-dao-tao",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-01-06T08:26:01.762Z"
+  },
+  "created_at": {
+    "$date": "2023-01-06T08:26:01.762Z"
+  }
+},{
+  "_id": {
+    "$oid": "63be10177e4a504f382b9e55"
+  },
+  "id_vi": {
+    "$oid": "63be10177e4a504f382b9e54"
+  },
+  "slug_vi": "le-trao-hoc-bong-xo-so-kien-thiet-an-giang-dot-i-nam-hoc-2022-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-01-11T01:25:43.838Z"
+  },
+  "created_at": {
+    "$date": "2023-01-11T01:25:43.838Z"
+  }
+},{
+  "_id": {
+    "$oid": "63be12047e4a504f382b9e58"
+  },
+  "id_vi": {
+    "$oid": "63be12047e4a504f382b9e57"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-tuyen-duong-205-sinh-vien-tieu-bieu",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-01-11T01:33:56.574Z"
+  },
+  "created_at": {
+    "$date": "2023-01-11T01:33:56.574Z"
+  }
+},{
+  "_id": {
+    "$oid": "63c13b6579966f62da5c626f"
+  },
+  "id_vi": {
+    "$oid": "63c13b6579966f62da5c626e"
+  },
+  "slug_vi": "hoi-nghi-trao-doi-cong-tac-dao-tao-luu-hoc-sinh-lao-va-campuchia",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-02T08:21:11.391Z"
+  },
+  "created_at": {
+    "$date": "2023-01-13T11:07:17.696Z"
+  },
+  "id_en": {
+    "$oid": "64005c4ce4f6eb498c37d06d"
+  },
+  "slug_en": "lao-and-cambodian-student-training-conference"
+},{
+  "_id": {
+    "$oid": "63c13cc5d23d5564e926be3c"
+  },
+  "id_vi": {
+    "$oid": "63c13cc5d23d5564e926be3b"
+  },
+  "slug_vi": "cong-doan-co-so-truong-dai-hoc-an-giang-mung-xuan-quy-mao",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-01-13T11:13:09.270Z"
+  },
+  "created_at": {
+    "$date": "2023-01-13T11:13:09.270Z"
+  }
+},{
+  "_id": {
+    "$oid": "63c4f0005017012d82123bac"
+  },
+  "id_vi": {
+    "$oid": "63c4f0005017012d82123bab"
+  },
+  "slug_vi": "xet-duyet-de-cuong-chi-tiet-de-tai-thuoc-linh-vuc-xa-hoi-nhan-van",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-01-16T08:29:34.656Z"
+  },
+  "created_at": {
+    "$date": "2023-01-16T06:34:40.463Z"
+  }
+},{
+  "_id": {
+    "$oid": "63c64b517ffc91469f477d1d"
+  },
+  "id_vi": {
+    "$oid": "63c64b517ffc91469f477d1c"
+  },
+  "slug_vi": "doi-tac-nam-2005",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-15T11:28:49.473Z"
+  },
+  "created_at": {
+    "$date": "2023-01-17T07:16:33.359Z"
+  }
+},{
+  "_id": {
+    "$oid": "63c655160d90b274f8717913"
+  },
+  "id_vi": {
+    "$oid": "63c655160d90b274f8717912"
+  },
+  "slug_vi": "doi-tac-nam-2006",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-15T11:27:55.850Z"
+  },
+  "created_at": {
+    "$date": "2023-01-17T07:58:14.545Z"
+  }
+},{
+  "_id": {
+    "$oid": "63c752dd7fc259148e1c70d9"
+  },
+  "id_vi": {
+    "$oid": "63c752dd7fc259148e1c70d8"
+  },
+  "slug_vi": "doi-tac-nam-2019",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-15T11:19:18.665Z"
+  },
+  "created_at": {
+    "$date": "2023-01-18T02:01:01.818Z"
+  }
+},{
+  "_id": {
+    "$oid": "63c7b30013320f68fb19f3ba"
+  },
+  "id_vi": {
+    "$oid": "63c7b30013320f68fb19f3b9"
+  },
+  "slug_vi": "doi-tac-nam-2018",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-15T11:20:24.981Z"
+  },
+  "created_at": {
+    "$date": "2023-01-18T08:51:12.107Z"
+  }
+},{
+  "_id": {
+    "$oid": "63c8abb4e5647958ab0d0486"
+  },
+  "id_vi": {
+    "$oid": "63c8abb4e5647958ab0d0485"
+  },
+  "slug_vi": "doi-tac-nam-2017",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-15T11:21:28.532Z"
+  },
+  "created_at": {
+    "$date": "2023-01-19T02:32:20.916Z"
+  }
+},{
+  "_id": {
+    "$oid": "63cbaee5a01b0703237b1ed6"
+  },
+  "id_vi": {
+    "$oid": "63cbaee5a01b0703237b1ed5"
+  },
+  "slug_vi": "nghiem-thu-them-2-de-tai-nghien-cuu-khoa-hoc-cap-truong",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-01-30T03:52:28.958Z"
+  },
+  "created_at": {
+    "$date": "2023-01-21T09:22:45.799Z"
+  }
+},{
+  "_id": {
+    "$oid": "63ccaf43e564a15113091a75"
+  },
+  "id_vi": {
+    "$oid": "63ccaf43e564a15113091a74"
+  },
+  "slug_vi": "cong-doan-co-so-truong-dai-hoc-an-giang-doat-14-giai-thuong-tai-hoi-thao-cnvc-ld-tinh-an-giang-nam-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-01-30T03:53:26.291Z"
+  },
+  "created_at": {
+    "$date": "2023-01-22T03:36:35.601Z"
+  }
+},{
+  "_id": {
+    "$oid": "63ccb4601ec147746e28fe66"
+  },
+  "id_vi": {
+    "$oid": "63ccb4601ec147746e28fe65"
+  },
+  "slug_vi": "tham-va-tang-qua-tet-cho-luu-hoc-sinh-lao-va-campuchia",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-01-22T03:58:24.742Z"
+  },
+  "created_at": {
+    "$date": "2023-01-22T03:58:24.742Z"
+  }
+},{
+  "_id": {
+    "$oid": "63cdd34db69f501c384eebb5"
+  },
+  "id_vi": {
+    "$oid": "63cdd34db69f501c384eebb4"
+  },
+  "slug_vi": "thu-chuc-tet-quy-mao-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-01-27T01:45:45.781Z"
+  },
+  "created_at": {
+    "$date": "2023-01-23T00:22:37.921Z"
+  }
+},{
+  "_id": {
+    "$oid": "63d9e5d93eafd9435b705f92"
+  },
+  "id_vi": {
+    "$oid": "63d9e5d93eafd9435b705f91"
+  },
+  "slug_vi": "thong-bao-ve-viec-nop-ho-so-xet-tot-nghiep-hinh-thuc-giao-duc-chinh-quy-nam-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-01T04:08:57.064Z"
+  },
+  "created_at": {
+    "$date": "2023-02-01T04:08:57.064Z"
+  }
+},{
+  "_id": {
+    "$oid": "63de3f7aa42a155c3e406fb6"
+  },
+  "id_vi": {
+    "$oid": "63de3f7aa42a155c3e406fb5"
+  },
+  "slug_vi": "thong-bao-tuyen-sinh-cac-lop-boi-duong-nam-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-04T11:20:26.308Z"
+  },
+  "created_at": {
+    "$date": "2023-02-04T11:20:26.308Z"
+  }
+},{
+  "_id": {
+    "$oid": "63e4bb07832dfc42c004a147"
+  },
+  "id_vi": {
+    "$oid": "63e4bb07832dfc42c004a146"
+  },
+  "slug_vi": "lanh-dao-truong-dai-hoc-an-giang-tham-va-lam-viec-voi-phan-hieu-dhqg-hcm-tai-tinh-ben-tre",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-09T09:21:11.439Z"
+  },
+  "created_at": {
+    "$date": "2023-02-09T09:21:11.439Z"
+  }
+},{
+  "_id": {
+    "$oid": "63eada9966f59463e23d1f0f"
+  },
+  "id_vi": {
+    "$oid": "63eada9966f59463e23d1f0e"
+  },
+  "slug_vi": "doi-tac-nam-2016",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-15T11:22:08.972Z"
+  },
+  "created_at": {
+    "$date": "2023-02-14T00:49:29.320Z"
+  }
+},{
+  "_id": {
+    "$oid": "63eae6600af0e75a49202267"
+  },
+  "id_vi": {
+    "$oid": "63eae6600af0e75a49202266"
+  },
+  "slug_vi": "doi-tac-nam-2015",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-15T11:22:50.675Z"
+  },
+  "created_at": {
+    "$date": "2023-02-14T01:39:44.205Z"
+  }
+},{
+  "_id": {
+    "$oid": "63eae7f409f5c703943be1da"
+  },
+  "id_vi": {
+    "$oid": "63eae7f409f5c703943be1d9"
+  },
+  "slug_vi": "hoi-thao-khoa-hoc-ung-dung-cong-nghe-sinh-hoc-trong-chon-giong-thuc-vat-san-xuat-duoc-lieu-va-probiotic",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-14T04:42:10.410Z"
+  },
+  "created_at": {
+    "$date": "2023-02-14T01:46:28.309Z"
+  }
+},{
+  "_id": {
+    "$oid": "63eae9768cebc85e4925d185"
+  },
+  "id_vi": {
+    "$oid": "63eae9768cebc85e4925d184"
+  },
+  "slug_vi": "khoa-kt-cn-mt-tiep-truong-dai-hoc-khoa-hoc-ung-dung-jade-cong-hoa-lien-bang-duc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-28T08:23:01.755Z"
+  },
+  "created_at": {
+    "$date": "2023-02-14T01:52:54.983Z"
+  },
+  "id_en": {
+    "$oid": "63fdb9e51f666b02a96c5e30"
+  },
+  "slug_en": "faculty-of-engineering-technology-environment-welcomed-jade-university-of-applied-sciences-delegation"
+},{
+  "_id": {
+    "$oid": "63eafb9e8cebc85e4925d18e"
+  },
+  "id_vi": {
+    "$oid": "63eafb9e8cebc85e4925d18d"
+  },
+  "slug_vi": "giam-doc-va-doan-cong-tac-dhqg-hcm-den-chuc-xuan-truong-dai-hoc-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-14T03:10:22.655Z"
+  },
+  "created_at": {
+    "$date": "2023-02-14T03:10:22.655Z"
+  }
+},{
+  "_id": {
+    "$oid": "63eafca5648ab018e709f1c2"
+  },
+  "id_vi": {
+    "$oid": "63eafca5648ab018e709f1c1"
+  },
+  "slug_vi": "doi-tac-nam-2014",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-15T11:23:35.441Z"
+  },
+  "created_at": {
+    "$date": "2023-02-14T03:14:45.822Z"
+  }
+},{
+  "_id": {
+    "$oid": "63eb2af422408f4a96692b33"
+  },
+  "id_vi": {
+    "$oid": "63eb2af422408f4a96692b32"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-tham-gia-le-hoi-trao-doi-van-hoa-tai-thai-lan",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-14T06:32:20.858Z"
+  },
+  "created_at": {
+    "$date": "2023-02-14T06:32:20.858Z"
+  }
+},{
+  "_id": {
+    "$oid": "63eb2cb02f1e5000ac62eeb4"
+  },
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-17T06:58:57.862Z"
+  },
+  "created_at": {
+    "$date": "2023-02-14T06:39:44.139Z"
+  }
+},{
+  "_id": {
+    "$oid": "63ec57188a53944b375567e7"
+  },
+  "id_vi": {
+    "$oid": "63ec57188a53944b375567e6"
+  },
+  "slug_vi": "doi-tac-nam-2013",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-15T11:24:22.893Z"
+  },
+  "created_at": {
+    "$date": "2023-02-15T03:52:56.390Z"
+  }
+},{
+  "_id": {
+    "$oid": "63ecb57f51e3497e8206353f"
+  },
+  "id_vi": {
+    "$oid": "63ecb57f51e3497e8206353e"
+  },
+  "slug_vi": "doi-tac-nam-2012",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-15T11:25:05.351Z"
+  },
+  "created_at": {
+    "$date": "2023-02-15T10:35:43.935Z"
+  }
+},{
+  "_id": {
+    "$oid": "63ecb9eacc9f0f2a3462b2bf"
+  },
+  "id_vi": {
+    "$oid": "63ecb9eacc9f0f2a3462b2be"
+  },
+  "slug_vi": "doi-tac-nam-2011",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-15T11:26:25.405Z"
+  },
+  "created_at": {
+    "$date": "2023-02-15T10:54:34.982Z"
+  }
+},{
+  "_id": {
+    "$oid": "63ecbc6151e3497e82063546"
+  },
+  "id_vi": {
+    "$oid": "63ecbc6151e3497e82063545"
+  },
+  "slug_vi": "doi-tac-nam-2010",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-15T11:27:06.555Z"
+  },
+  "created_at": {
+    "$date": "2023-02-15T11:05:05.500Z"
+  }
+},{
+  "_id": {
+    "$oid": "63eccde2b109462c0035d2f0"
+  },
+  "id_vi": {
+    "$oid": "63eccde2b109462c0035d2ef"
+  },
+  "slug_vi": "doi-tac-nam-2009",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-15T12:29:39.063Z"
+  },
+  "created_at": {
+    "$date": "2023-02-15T12:19:46.653Z"
+  }
+},{
+  "_id": {
+    "$oid": "63ecd09bd6c0896ccc4466f7"
+  },
+  "id_vi": {
+    "$oid": "63ecd09bd6c0896ccc4466f6"
+  },
+  "slug_vi": "doi-tac-nam-2008",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-15T12:39:26.869Z"
+  },
+  "created_at": {
+    "$date": "2023-02-15T12:31:23.324Z"
+  }
+},{
+  "_id": {
+    "$oid": "63ecd31267f9214bed01b836"
+  },
+  "id_vi": {
+    "$oid": "63ecd31267f9214bed01b835"
+  },
+  "slug_vi": "doi-tac-nam-2007",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-15T12:51:29.769Z"
+  },
+  "created_at": {
+    "$date": "2023-02-15T12:41:54.033Z"
+  }
+},{
+  "_id": {
+    "$oid": "63eee51b28a0e37d574ebd43"
+  },
+  "id_vi": {
+    "$oid": "63eee51b28a0e37d574ebd42"
+  },
+  "slug_vi": "Dien-van-le-tot-nghiep2022-dot2",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-17T07:46:41.552Z"
+  },
+  "created_at": {
+    "$date": "2023-02-17T02:23:23.505Z"
+  }
+},{
+  "_id": {
+    "$oid": "63ef3048eb3c3a3a6505a193"
+  },
+  "id_vi": {
+    "$oid": "63ef3048eb3c3a3a6505a192"
+  },
+  "slug_vi": "hop-thuong-nien-du-an-quy-hoach-va-thiet-lap-chuoi-gia-tri-lua-gao-ben-vung-vung-dong-bang-song-cuu-long",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-17T07:44:08.503Z"
+  },
+  "created_at": {
+    "$date": "2023-02-17T07:44:08.503Z"
+  }
+},{
+  "_id": {
+    "$oid": "63ef3b7dcb2c38410a04d592"
+  },
+  "id_vi": {
+    "$oid": "63ef3b7dcb2c38410a04d591"
+  },
+  "slug_vi": "le-vinh-danh-va-trao-bang-tot-nghiep-dot-2",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-17T09:43:43.022Z"
+  },
+  "created_at": {
+    "$date": "2023-02-17T08:31:57.814Z"
+  }
+},{
+  "_id": {
+    "$oid": "63f215391ce78249d57ae8c6"
+  },
+  "id_vi": {
+    "$oid": "63f215391ce78249d57ae8c5"
+  },
+  "slug_vi": "cong-doan-co-so-truong-dai-hoc-an-giang-hoi-thi-tieng-hat-vien-chuc-lao-dong-lan-thu-19-nam-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-23T07:06:32.497Z"
+  },
+  "created_at": {
+    "$date": "2023-02-19T12:25:29.337Z"
+  }
+},{
+  "_id": {
+    "$oid": "63f334e8f61c056d696e6637"
+  },
+  "id_vi": {
+    "$oid": "63f334e8f61c056d696e6636"
+  },
+  "slug_vi": "cam-nang-tuyen-sinh-nam-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-20T08:52:56.842Z"
+  },
+  "created_at": {
+    "$date": "2023-02-20T08:52:56.842Z"
+  }
+},{
+  "_id": {
+    "$oid": "63f41a45062b586f680f3a64"
+  },
+  "id_vi": {
+    "$oid": "63f41a45062b586f680f3a63"
+  },
+  "slug_vi": "tiep-dai-hoc-quoc-gia-seoul-han-quoc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-21T01:11:33.339Z"
+  },
+  "created_at": {
+    "$date": "2023-02-21T01:11:33.339Z"
+  }
+},{
+  "_id": {
+    "$oid": "63f438de06373712f47d3ebf"
+  },
+  "id_vi": {
+    "$oid": "63f438de06373712f47d3ebe"
+  },
+  "slug_vi": "dang-uy-truong-dai-hoc-an-giang-lam-viec-voi-cac-chi-bo-sinh-vien",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-21T03:22:06.537Z"
+  },
+  "created_at": {
+    "$date": "2023-02-21T03:22:06.537Z"
+  }
+},{
+  "_id": {
+    "$oid": "63f43a4cdc930a6c935b69a7"
+  },
+  "id_vi": {
+    "$oid": "63f43a4cdc930a6c935b69a6"
+  },
+  "slug_vi": "tang-cuong-hop-tac-toan-dien-giua-truong-dai-hoc-an-giang-va-truong-dai-hoc-andalas-indonesia",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-28T07:52:51.222Z"
+  },
+  "created_at": {
+    "$date": "2023-02-21T03:28:12.366Z"
+  }
+},{
+  "_id": {
+    "$oid": "63f5cdaf55b7ee5b4e63c567"
+  },
+  "id_vi": {
+    "$oid": "63f5cdaf55b7ee5b4e63c566"
+  },
+  "slug_vi": "xet-duyet-de-cuong-chi-tiet-de-tai-thuoc-linh-vuc-toan-hoc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-22T08:09:19.082Z"
+  },
+  "created_at": {
+    "$date": "2023-02-22T08:09:19.082Z"
+  }
+},{
+  "_id": {
+    "$oid": "63f82a917521a83a4721d6f8"
+  },
+  "id_vi": {
+    "$oid": "63f82a917521a83a4721d6f7"
+  },
+  "slug_vi": "nghiem-thu-de-tai-cap-truong-ve-linh-vuc-toan-hoc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-24T03:10:09.904Z"
+  },
+  "created_at": {
+    "$date": "2023-02-24T03:10:09.904Z"
+  }
+},{
+  "_id": {
+    "$oid": "63f86504eadd1508607f3c5b"
+  },
+  "id_vi": {
+    "$oid": "63f86504eadd1508607f3c5a"
+  },
+  "slug_vi": "dai-hoi-cong-doan-co-so-truong-dai-hoc-an-giang-dhqg-hcm-lan-thu-viii-nhiem-ky-2023-2028",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-28T01:36:59.770Z"
+  },
+  "created_at": {
+    "$date": "2023-02-24T07:19:32.060Z"
+  }
+},{
+  "_id": {
+    "$oid": "63fc5c3aebdf7933cb687a55"
+  },
+  "id_vi": {
+    "$oid": "63fc5c3aebdf7933cb687a54"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-tham-gia-chuong-trinh-tiep-buoc-truong-thi-tai-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-27T07:31:06.404Z"
+  },
+  "created_at": {
+    "$date": "2023-02-27T07:31:06.404Z"
+  }
+},{
+  "_id": {
+    "$oid": "63fdaab6a5ab1614f66fe8f8"
+  },
+  "id_vi": {
+    "$oid": "63fdaab6a5ab1614f66fe8f7"
+  },
+  "slug_vi": "le-trao-hoc-bong-liet-si-huynh-thien-nghe-nam-hoc-2022-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-28T07:18:14.836Z"
+  },
+  "created_at": {
+    "$date": "2023-02-28T07:18:14.836Z"
+  }
+},{
+  "_id": {
+    "$oid": "63fdb7d3d0f75c19e15ee5db"
+  },
+  "id_vi": {
+    "$oid": "63fdb7d3d0f75c19e15ee5da"
+  },
+  "slug_vi": "hoi-nghi-tong-ket-cong-tac-doi-ngoai-va-quan-ly-du-an-nam-2022-va-trien-khai-nhiem-vu-cong-tac-doi-ngoai-nam-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-28T08:14:11.786Z"
+  },
+  "created_at": {
+    "$date": "2023-02-28T08:14:11.786Z"
+  }
+},{
+  "_id": {
+    "$oid": "63fdcb55d413075d2674593d"
+  },
+  "id_vi": {
+    "$oid": "63fdcb54d413075d2674593c"
+  },
+  "slug_vi": "hoi-dong-truong-truong-dai-hoc-an-giang-to-chuc-ky-hop-lan-thu-10",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-02-28T09:37:25Z"
+  },
+  "created_at": {
+    "$date": "2023-02-28T09:37:25Z"
+  }
+},{
+  "_id": {
+    "$oid": "6403e789b4202f59d816b1a6"
+  },
+  "id_vi": {
+    "$oid": "6403e789b4202f59d816b1a5"
+  },
+  "slug_vi": "hoi-thao-nang-cao-nang-luc-lanh-dao-cho-giang-vien-giu-chuc-vu-tai-cac-khoa-bo-mon",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-21T02:30:34.814Z"
+  },
+  "created_at": {
+    "$date": "2023-03-05T00:51:21.813Z"
+  },
+  "id_en": {
+    "$oid": "641916a89f608b1e8e16af3d"
+  },
+  "slug_en": "workshop-on-enhancing-leadership-skills-for-faculty-members-in-departments-and-faculties"
+},{
+  "_id": {
+    "$oid": "6403e87f7663f073313a9244"
+  },
+  "id_vi": {
+    "$oid": "6403e87f7663f073313a9243"
+  },
+  "slug_vi": "nghiem-thu-de-tai-cap-truong-ve-linh-vuc-khoa-hoc-tu-nhien",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-06T06:50:56.778Z"
+  },
+  "created_at": {
+    "$date": "2023-03-05T00:55:27.486Z"
+  }
+},{
+  "_id": {
+    "$oid": "640690d37585a211492fb533"
+  },
+  "id_vi": {
+    "$oid": "640690d37585a211492fb532"
+  },
+  "slug_vi": "le-khai-giang-dao-tao-thac-si-cac-nganh-khoa-2022",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-07T01:19:56.275Z"
+  },
+  "created_at": {
+    "$date": "2023-03-07T01:18:11.542Z"
+  }
+},{
+  "_id": {
+    "$oid": "6407dde0ba002a419b53e0c7"
+  },
+  "id_vi": {
+    "$oid": "6407dde0ba002a419b53e0c6"
+  },
+  "slug_vi": "bao-cao-nghiem-thu-giao-trinh-phuong-phap-giang-day-tieng-anh-tre-em",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-08T00:59:12.224Z"
+  },
+  "created_at": {
+    "$date": "2023-03-08T00:59:12.224Z"
+  }
+},{
+  "_id": {
+    "$oid": "6407dec0c081d94acc05d428"
+  },
+  "id_vi": {
+    "$oid": "6407dec0c081d94acc05d427"
+  },
+  "slug_vi": "xet-duyet-de-cuong-chi-tiet-de-tai-thuoc-linh-vuc-thuy-san",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-08T01:02:56.116Z"
+  },
+  "created_at": {
+    "$date": "2023-03-08T01:02:56.116Z"
+  }
+},{
+  "_id": {
+    "$oid": "6407e0637ca5be452b79b5cc"
+  },
+  "id_vi": {
+    "$oid": "6407e0637ca5be452b79b5cb"
+  },
+  "slug_vi": "cong-doan-co-so-truong-dai-hoc-an-giang-huong-ung-hoat-dong-chao-mung-8-3-do-cong-doan-dhqg-hcm-to-chuc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-08T15:57:16.587Z"
+  },
+  "created_at": {
+    "$date": "2023-03-08T01:09:55.390Z"
+  }
+},{
+  "_id": {
+    "$oid": "64093c6b54f52c323069d038"
+  },
+  "id_vi": {
+    "$oid": "64093c6b54f52c323069d037"
+  },
+  "slug_vi": "nu-cong-doan-vien-truong-dai-hoc-an-giang-huong-ung-tuan-le-ao-dai",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-28T02:00:42.427Z"
+  },
+  "created_at": {
+    "$date": "2023-03-09T01:54:51.937Z"
+  }
+},{
+  "_id": {
+    "$oid": "640952762398cd607d3157ad"
+  },
+  "id_vi": {
+    "$oid": "640952762398cd607d3157ac"
+  },
+  "slug_vi": "nghiem-thu-de-tai-nghien-cuu-khoa-hoc-cap-truong-07-03",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-13T02:13:56.637Z"
+  },
+  "created_at": {
+    "$date": "2023-03-09T03:28:54.847Z"
+  }
+},{
+  "_id": {
+    "$oid": "6413e002a5b72006776279ce"
+  },
+  "id_vi": {
+    "$oid": "6413e002a5b72006776279cd"
+  },
+  "slug_vi": "thong-bao-tuyen-sinh-khoa-boi-duong-tieu-chuan-chuc-danh-nghe-nghiep-vien-chuc-chuyen-nganh-thu-vien",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-17T03:35:30.088Z"
+  },
+  "created_at": {
+    "$date": "2023-03-17T03:35:30.088Z"
+  }
+},{
+  "_id": {
+    "$oid": "6417b5b28c9c184c7d3d908e"
+  },
+  "id_vi": {
+    "$oid": "6417b5b28c9c184c7d3d908d"
+  },
+  "slug_vi": "xet-duyet-de-cuong-chi-tiet-giao-trinh-va-de-tai-ve-linh-vuc-quan-ly-giao-duc",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-20T01:24:02.004Z"
+  },
+  "created_at": {
+    "$date": "2023-03-20T01:24:02.004Z"
+  }
+},{
+  "_id": {
+    "$oid": "6417b7fb36fe305dee71edba"
+  },
+  "id_vi": {
+    "$oid": "6417b7fb36fe305dee71edb9"
+  },
+  "slug_vi": "them-02-giao-trinh-duoc-nghiem-thu",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-20T01:33:47.385Z"
+  },
+  "created_at": {
+    "$date": "2023-03-20T01:33:47.385Z"
+  }
+},{
+  "_id": {
+    "$oid": "6417cdc236fe305dee71edbe"
+  },
+  "id_vi": {
+    "$oid": "6417cdc236fe305dee71edbd"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-dhqg-hcm-tham-gia-khoa-tap-huan-bo-tieu-chuan-acbsp",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-21T02:54:07.586Z"
+  },
+  "created_at": {
+    "$date": "2023-03-20T03:06:42.996Z"
+  },
+  "id_en": {
+    "$oid": "64191c157a57bb4b06069f1c"
+  },
+  "slug_en": "an-giang-university-vietnam-national-university-participates-in-acbsp-standards-training-course"
+},{
+  "_id": {
+    "$oid": "641911fab39ced36030bda9c"
+  },
+  "id_vi": {
+    "$oid": "641911fab39ced36030bda9b"
+  },
+  "slug_vi": "hoi-nghi-mang-thong-tin-vien-va-giang-vien-ve-cong-tac-thu-vien-nam-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-21T02:10:02.994Z"
+  },
+  "created_at": {
+    "$date": "2023-03-21T02:10:02.994Z"
+  }
+},{
+  "_id": {
+    "$oid": "64191e8bbfb0145dab1950ba"
+  },
+  "id_vi": {
+    "$oid": "64191e8bbfb0145dab1950b9"
+  },
+  "slug_vi": "le-ra-mat-cau-lac-bo-bonsai-hoa-canh-truong-dai-hoc-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-21T03:03:39.070Z"
+  },
+  "created_at": {
+    "$date": "2023-03-21T03:03:39.070Z"
+  }
+},{
+  "_id": {
+    "$oid": "641963962decfc1333523b94"
+  },
+  "id_vi": {
+    "$oid": "641963962decfc1333523b93"
+  },
+  "slug_vi": "le-vinh-danh-07-tan-tien-si",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-21T07:58:14.637Z"
+  },
+  "created_at": {
+    "$date": "2023-03-21T07:58:14.637Z"
+  }
+},{
+  "_id": {
+    "$oid": "641981fd2decfc1333523b98"
+  },
+  "id_vi": {
+    "$oid": "641981fd2decfc1333523b97"
+  },
+  "slug_vi": "hon-400-van-dong-vien-tham-gia-hoi-thao-sinh-vien-khoe-nam-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-21T10:07:57.752Z"
+  },
+  "created_at": {
+    "$date": "2023-03-21T10:07:57.752Z"
+  }
+},{
+  "_id": {
+    "$oid": "641aa8c5c09fec08d67bf004"
+  },
+  "id_vi": {
+    "$oid": "641aa8c5c09fec08d67bf003"
+  },
+  "slug_vi": "xet-duyet-de-cuong-chi-tiet-2-de-tai-nghien-cuu-khoa-hoc-cap-truong",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-22T07:05:41.723Z"
+  },
+  "created_at": {
+    "$date": "2023-03-22T07:05:41.723Z"
+  }
+},{
+  "_id": {
+    "$oid": "641aad0d1adf6862df30fb59"
+  },
+  "id_vi": {
+    "$oid": "641aad0d1adf6862df30fb58"
+  },
+  "slug_vi": "tap-huan-cong-tac-to-chuc-ky-thi-danh-gia-nang-luc-dhqg-hcm-nam-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-22T07:23:57.277Z"
+  },
+  "created_at": {
+    "$date": "2023-03-22T07:23:57.277Z"
+  }
+},{
+  "_id": {
+    "$oid": "6420eed4929de90b7453d916"
+  },
+  "id_vi": {
+    "$oid": "6420eed4929de90b7453d915"
+  },
+  "slug_vi": "xet-duyet-de-cuong-chi-tiet-de-tai-nghien-cuu-khoa-hoc-cap-truong",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-27T01:19:48.290Z"
+  },
+  "created_at": {
+    "$date": "2023-03-27T01:18:12.860Z"
+  }
+},{
+  "_id": {
+    "$oid": "6421005f7eac89014c7055d8"
+  },
+  "id_vi": {
+    "$oid": "6421005f7eac89014c7055d7"
+  },
+  "slug_vi": "tiep-va-lam-viec-voi-doan-cong-tac-dai-su-quan-australia",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-27T02:33:03.572Z"
+  },
+  "created_at": {
+    "$date": "2023-03-27T02:33:03.572Z"
+  }
+},{
+  "_id": {
+    "$oid": "642239b859128f75981d7ef7"
+  },
+  "id_vi": {
+    "$oid": "642239b859128f75981d7ef6"
+  },
+  "slug_vi": "hai-sinh-vien-truong-dai-hoc-an-giang-nhan-giai-thuong-van-hoc-tre-dhqg-hcm",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-28T00:50:00.688Z"
+  },
+  "created_at": {
+    "$date": "2023-03-28T00:50:00.688Z"
+  }
+},{
+  "_id": {
+    "$oid": "6422ba660813ca37ad613077"
+  },
+  "id_vi": {
+    "$oid": "6422ba660813ca37ad613076"
+  },
+  "slug_vi": "toa-dam-khat-vong-thanh-nien-doi-thoai-giua-sinh-vien-va-hieu-truong-truong-dai-hoc-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-28T09:59:02.892Z"
+  },
+  "created_at": {
+    "$date": "2023-03-28T09:59:02.892Z"
+  }
+},{
+  "_id": {
+    "$oid": "6423ac49993f0e564d7ecbbb"
+  },
+  "id_vi": {
+    "$oid": "6423ac49993f0e564d7ecbba"
+  },
+  "slug_vi": "nghiem-thu-de-tai-cap-dhqg-hcm-loai-b",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-29T03:11:05.936Z"
+  },
+  "created_at": {
+    "$date": "2023-03-29T03:11:05.936Z"
+  }
+},{
+  "_id": {
+    "$oid": "6423ad75be9ea85cb76ea15c"
+  },
+  "id_vi": {
+    "$oid": "6423ad75be9ea85cb76ea15b"
+  },
+  "slug_vi": "nghiem-thu-giao-trinh-ky-nang-lam-viec-nhom-thuyet-trinh",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-29T03:16:05.487Z"
+  },
+  "created_at": {
+    "$date": "2023-03-29T03:16:05.487Z"
+  }
+},{
+  "_id": {
+    "$oid": "6423aeb4c6a1177fa852d9be"
+  },
+  "id_vi": {
+    "$oid": "6423aeb4c6a1177fa852d9bd"
+  },
+  "slug_vi": "tap-huan-huong-dan-su-dung-he-thong-quan-ly-hoc-tap-lms-tren-nen-tang-moodle",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-29T03:21:24.646Z"
+  },
+  "created_at": {
+    "$date": "2023-03-29T03:21:24.646Z"
+  }
+},{
+  "_id": {
+    "$oid": "642501e9486d430968045381"
+  },
+  "id_vi": {
+    "$oid": "642501e9486d430968045380"
+  },
+  "slug_vi": "tap-huan-su-dung-he-thong-quan-ly-co-so-du-lieu-dam-bao-chat-luong",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-30T03:28:41.350Z"
+  },
+  "created_at": {
+    "$date": "2023-03-30T03:28:41.350Z"
+  }
+},{
+  "_id": {
+    "$oid": "64265b0288fb3b4ccc101e28"
+  },
+  "id_vi": {
+    "$oid": "64265b0288fb3b4ccc101e27"
+  },
+  "slug_vi": "truong-dai-hoc-an-giang-trien-khai-hai-du-an-sach-moi-voi-su-ho-tro-cua-co-quan-trao-doi-han-lam-duc-daad",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-03-31T04:01:06.835Z"
+  },
+  "created_at": {
+    "$date": "2023-03-31T04:01:06.835Z"
+  }
+},{
+  "_id": {
+    "$oid": "6427a47f2f07620f056340a4"
+  },
+  "id_vi": {
+    "$oid": "6427a47f2f07620f056340a3"
+  },
+  "slug_vi": "them-01-de-tai-thuoc-linh-vuc-nong-nghiep-duoc-nghiem-thu-29-03-2023",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-04-01T03:26:55.941Z"
+  },
+  "created_at": {
+    "$date": "2023-04-01T03:26:55.941Z"
+  }
+},{
+  "_id": {
+    "$oid": "642a2b065b81f83568131939"
+  },
+  "id_vi": {
+    "$oid": "642a2b065b81f83568131938"
+  },
+  "slug_vi": "trai-nghiem-mot-ngay-lam-sinh-vien-truong-dai-hoc-an-giang",
+  "collection": "thong_tin",
+  "updated_at": {
+    "$date": "2023-04-03T01:57:23.602Z"
+  },
+  "created_at": {
+    "$date": "2023-04-03T01:25:26.150Z"
+  }
+}]
