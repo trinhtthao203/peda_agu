@@ -784,11 +784,6 @@ body.scrolling .nav-main-collapse.collapsing {
 	html.boxed body.sticky-menu-active #header.flat-menu.clean-top, html.boxed body.sticky-menu-active #header.flat-menu.colored {
 		padding: 15px 0 7px;
 	}
-	/* Sticky Boxed
-	.sticky-menu-active #header.narrow.full-width .container, .sticky-menu-active #header.narrow.full-width > .container,
-	.sticky-menu-active #header.narrow.full-width > .navbar-collapse > .container{
-		max-width: 1170px;
-	}*/
 }
 /* Header Single Menu */
 @media (min-width: 992px) {

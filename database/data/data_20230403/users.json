@@ -1,96 +1,59 @@
-[{
-  "_id": {
-    "$oid": "5d4837cb4d9fb92758005066"
-  },
-  "fullname": "Phan Minh Trung",
-  "username": "pmtrung@agu.edu.vn",
-  "password": "$2y$10$cxML/dCwI2IJCAyBoAhlD.VCllHyobXmhbOz7ANdRh.wA5AoE1IyG",
-  "roles": [
-    "Admin",
-    "Manager"
-  ],
-  "phone": "0985954347",
-  "address": [
-    "89",
-    "883",
-    "30283",
-    "18 Ung Văn Khiêm"
-  ],
-  "active": 1,
-  "photos": [],
-  "updated_at": {
-    "$date": "2021-03-23T04:27:56.562Z"
-  },
-  "created_at": {
-    "$date": "2019-08-05T14:06:03Z"
-  },
-  "avatar": "https://lh3.googleusercontent.com/a-/AOh14GiaNEb9jrpaR251ifhcSNsHeoWzRBtUMITvMcxm",
-  "user_info": {
-    "sub": "112211416674439814641",
-    "name": "Phan Minh Trung",
-    "given_name": "Phan Minh",
-    "family_name": "Trung",
-    "picture": "https://lh3.googleusercontent.com/a-/AOh14GiaNEb9jrpaR251ifhcSNsHeoWzRBtUMITvMcxm",
-    "email": "pmtrung@agu.edu.vn",
-    "email_verified": true,
-    "locale": "en",
-    "hd": "agu.edu.vn",
-    "id": "112211416674439814641",
-    "verified_email": true,
-    "link": null
-  },
-  "remember_token": "CxYVn4vN3qVP9WD5OQI3TD0kVzAcqxPvN3BEXOtPzuUqDNPkQ2VCAZBthiz4",
-  "id": "5d4837cb4d9fb92758005066"
-},{
-  "_id": {
-    "$oid": "6281aa95bf17c26d63073522"
-  },
-  "fullname": "Võ Thanh Phi",
-  "username": "vtphi@agu.edu.vn",
-  "password": "$2y$10$fRL4EXhlyJLIM8Z/GFsZn.176BYLr.yH4G5xjWk6psDQip6HOhcYe",
-  "roles": [
-    "Admin"
-  ],
-  "phone": null,
-  "address": [
-    null,
-    null,
-    null,
-    "Tân Châu"
-  ],
-  "active": 1,
-  "photos": [],
-  "updated_at": {
-    "$date": "2022-07-15T01:27:35.191Z"
-  },
-  "created_at": {
-    "$date": "2022-05-16T01:36:21.484Z"
-  },
-  "id": "6281aa95bf17c26d63073522"
-},{
-  "_id": {
-    "$oid": "62ce1cb78c1aeb3be43e2413"
-  },
-  "fullname": "Nguyễn Ngọc Anh Thư",
-  "username": "nnathu@agu.edu.vn",
-  "password": "$2y$10$BSJt0qi64.AvNmnk7QwB.O05dsQfnprz95tgq2zPs5BkhWh.gl1We",
-  "roles": [
-    "Admin"
-  ],
-  "phone": null,
-  "address": [
-    "89",
-    null,
-    null,
-    "Châu Đốc, An Giang"
-  ],
-  "active": 1,
-  "photos": [],
-  "updated_at": {
-    "$date": "2022-12-22T09:19:37.933Z"
-  },
-  "created_at": {
-    "$date": "2022-07-13T01:15:35.882Z"
-  },
-  "id": "62ce1cb78c1aeb3be43e2413"
-}]
+[
+    {
+        "_id": {
+            "$oid": "6a44ecced9a0845af70b6e88"
+        },
+        "fullname": "Admin",
+        "username": "admin",
+        "password": "$2y$12$mpPckJX930IHmEhSoLbh0.M0nAoWOvmwUHdZr0dTYbmTvfbKHR4JG",
+        "roles": ["Admin"],
+        "phone": null,
+        "address": [null, null, null, "Long Xuyên"],
+        "active": 1,
+        "photos": [],
+        "updated_at": {
+            "$date": "2026-07-01T10:32:46.326Z"
+        },
+        "created_at": {
+            "$date": "2026-07-01T10:32:46.326Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6a4628c3388ca6bb5f082cb8"
+        },
+        "fullname": "Manager",
+        "username": "manager",
+        "password": "$2y$12$g90PFjvCEkDBu3fJUqw43.Y3/ZVGA/hAe.m9GwZn3eRAXK./yC24y",
+        "roles": ["Manager"],
+        "phone": null,
+        "address": ["11", null, null, "Long Xuyên"],
+        "active": 1,
+        "photos": [],
+        "updated_at": {
+            "$date": "2026-07-02T09:00:51.016Z"
+        },
+        "created_at": {
+            "$date": "2026-07-02T09:00:51.016Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6a462a3b388ca6bb5f082cc2"
+        },
+        "fullname": "Trịnh Thanh Thảo",
+        "username": "ttthao@agu.edu.vn",
+        "password": "$2y$12$7UpP8nvDpsJ6.5RCN6IjYecLKMGZZ2uln.gR4/pxSSGQSIcWboMZe",
+        "roles": ["Admin"],
+        "phone": null,
+        "address": ["89", null, null, "Long Xuyên"],
+        "active": 1,
+        "photos": [],
+        "updated_at": {
+            "$date": "2026-07-02T09:07:07.783Z"
+        },
+        "created_at": {
+            "$date": "2026-07-02T09:07:07.783Z"
+        }
+    }
+]
