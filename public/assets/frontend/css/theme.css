@@ -567,6 +567,7 @@ html.boxed .panel-btns.config-layout li a#layout-config-boxed {
 #pageloader .loader-inner img {
     margin: 0 auto;
     display: block;
+    width: 235px;
 }
 
 /* Animation */

@@ -3,15 +3,13 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>@yield('title') | {{ __("ĐẠI HỌC QUỐC GIA TPHCM TRƯỜNG ĐẠI HỌC AN GIANG") }} - {{ __("AGU") }}</title>
+    <title>@yield('title') | {{ __("KHOA SƯ PHẠM, ĐẠI HỌC QUỐC GIA TPHCM TRƯỜNG ĐẠI HỌC AN GIANG") }} - {{ __("AGU") }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="{{ __("ĐẠI HỌC QUỐC GIA TPHCM TRƯỜNG ĐẠI HỌC AN GIANG") }} - {{ __("AGU") }}" name="description" />
+    <meta content="{{ __("KHOA SƯ PHẠM, ĐẠI HỌC QUỐC GIA TPHCM TRƯỜNG ĐẠI HỌC AN GIANG") }} - {{ __("AGU") }}" name="description" />
     <meta content="Phan Minh Trung - trungminhphan@gmail.com" name="author" />
 
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ env('APP_URL') }}assets/backend/images/favicon.ico">
+    <link rel="shortcut icon" href="{{ env('APP_URL') }}assets/backend/images/favicon.png">
 
-    <!-- CDN CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css">
 
@@ -23,14 +21,11 @@
 </head>
 
 <body>
-    <!-- Navigation Bar-->
     <header id="topnav" style="background-color:#0072c6;">
-        <!-- Topbar Start -->
         <div class="navbar-custom">
             <div class="container-fluid">
                 <ul class="list-unstyled topnav-menu float-right mb-0">
                     <li class="dropdown notification-list">
-                        <!-- Mobile menu toggle-->
                         <a class="navbar-toggle nav-link">
                             <div class="lines">
                                 <span></span>
@@ -88,20 +83,18 @@
                 <div class="logo-box">
                     <a href="{{ env('APP_URL') }}admin" class="logo text-center">
                         <span class="logo-lg">
-                            <img src="{{ env('APP_URL') }}assets/backend/images/logo_{{ app()->getLocale() }}.jpg" title="{{ __("ĐẠI HỌC QUỐC GIA TPHCM TRƯỜNG ĐẠI HỌC AN GIANG") }} - {{ __("AGU") }}" height="40">
+                            <img src="{{ env('APP_URL') }}assets/backend/images/logo_{{ app()->getLocale() }}.png" title="{{ __("ĐẠI HỌC QUỐC GIA TPHCM TRƯỜNG ĐẠI HỌC AN GIANG") }} - {{ __("AGU") }}" height="40">
                         </span>
                         <span class="logo-sm">
                             <img src="{{ env('APP_URL') }}assets/backend/images/logo-sm.png" alt="" height="26">
                         </span>
                     </a>
                 </div>
-            </div> <!-- end container-fluid-->
+            </div>
         </div>
-        <!-- end Topbar -->
         <div class="topbar-menu">
             <div class="container-fluid">
                 <div id="navigation">
-                    <!-- Navigation Menu-->
                     <ul class="navigation-menu">
                         @if(App\Http\Controllers\UserController::is_roles('Admin,Manager,Updater'))
                         <li>
@@ -128,44 +121,28 @@
                         </li>
 
                     </ul>
-                    <!-- End navigation menu -->
                     <div class="clearfix"></div>
                 </div>
-                <!-- end #navigation -->
             </div>
-            <!-- end container -->
-        </div>
-        <!-- end navbar-custom -->
     </header>
-    <!-- End Navigation Bar-->
-    <!-- ============================================================== -->
-    <!-- Start Page Content here -->
-    <!-- ============================================================== -->
+
     <div class="wrapper">
         <div class="container-fluid">
-            <!-- start page title -->
             @section('body') @show
         </div>
     </div>
-    <!-- end wrapper -->
-    <!-- ============================================================== -->
-    <!-- End Page content -->
-    <!-- ============================================================== -->
-    <!-- Footer Start -->
+
     <footer class="footer">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    &copy; 2022 {{ __('Đại học Quốc gia TPHCM Trường Đại học An Giang') }}
+                    &copy; 2026 {{ __('Đại học Quốc gia TPHCM Trường Đại học An Giang') }}
                 </div>
             </div>
         </div>
     </footer>
-    <!-- end Footer -->
-    <!-- Vendor js -->
     <script src="{{ env('APP_URL') }}assets/backend/js/vendor.min.js"></script>
     @section('js') @show
-    <!-- App js -->
     <script src="{{ env('APP_URL') }}assets/backend/js/app.min.js"></script>
 </body>
 

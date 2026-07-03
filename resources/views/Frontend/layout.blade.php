@@ -23,7 +23,7 @@
     <meta name="robots" content="index, follow, max-image-preview:large" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets/frontend/images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/frontend/images/favicon.png') }}">
 
     <!-- Web Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700&display=swap" rel="stylesheet">
@@ -156,7 +156,7 @@
                         Địa chỉ: số 18, đường Ung Văn Khiêm, phường Long Xuyên, tỉnh An Giang<br>
                         Điện thoại: +84 296 6256565 ext 1900 | Fax: +84 296 3842560<br>
                         Email: <a href="mailto:webmaster@agu.edu.vn">webmaster@agu.edu.vn</a><br>
-                        © 2017 Trường Đại học An Giang. Phát triển bởi
+                        © 2026 Trường Đại học An Giang. Phát triển bởi
                         <a href="https://lib.agu.edu.vn/gioi-thieu/nhan-su">Tổ Nghiệp vụ - Thông tin, Thư viện</a>
                     </p>
                 </div>
@@ -194,14 +194,6 @@
 
     <!-- Theme Custom -->
     <script src="{{ env('APP_ASSETS') }}assets/frontend/js/custom.js"></script>
-    <!-- <script>
-        document.getElementById('toggle-lang').addEventListener('change', function() {
-            var targetUrl = this.checked ? "{{ $path_vi }}" : "{{ $path_en }}";
-            setTimeout(function() {
-                window.location.href = targetUrl;
-            }, 2500);
-        });
-    </script> -->
     <script>
         window.addEventListener('load', function() {
             var loader = document.getElementById('pageloader');
