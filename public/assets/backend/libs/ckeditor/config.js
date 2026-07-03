@@ -7,8 +7,8 @@ CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here. For example:
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
-	var APP_URL = 'http://172.19.49.161/AGU2022/public/';
-	//var APP_URL = 'https://www.agu.edu.vn/';
+	//var APP_URL = 'http://172.19.49.161/AGU2022/public/';
+	var APP_URL = 'https://www.agu.edu.vn/';
 	config.contentsCss = [
 		APP_URL + 'assets/frontend/css/ckeditor.css'
 	];

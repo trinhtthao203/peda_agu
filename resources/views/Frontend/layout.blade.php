@@ -194,14 +194,34 @@
 
     <!-- Theme Custom -->
     <script src="{{ env('APP_ASSETS') }}assets/frontend/js/custom.js"></script>
-    <script>
+    <!-- <script>
         document.getElementById('toggle-lang').addEventListener('change', function() {
-            // Nếu có checked thì chuyển về vi, ngược lại không checked thì chuyển sang en
+            var targetUrl = this.checked ? "{{ $path_vi }}" : "{{ $path_en }}";
+            setTimeout(function() {
+                window.location.href = targetUrl;
+            }, 2500);
+        });
+    </script> -->
+    <script>
+        window.addEventListener('load', function() {
+            var loader = document.getElementById('pageloader');
+            if (loader) {
+                setTimeout(function() {
+                    loader.style.transition = 'opacity 0.5s ease';
+                    loader.style.opacity = '0';
+
+                    setTimeout(function() {
+                        loader.style.display = 'none';
+                    }, 500);
+                }, 2000);
+            }
+        });
+        document.getElementById('toggle-lang').addEventListener('change', function() {
             var targetUrl = this.checked ? "{{ $path_vi }}" : "{{ $path_en }}";
 
             setTimeout(function() {
                 window.location.href = targetUrl;
-            }, 200); // Chờ hiệu ứng trượt tròn chạy xong rồi chuyển trang
+            }, 2500);
         });
     </script>
     @section('js') @show
