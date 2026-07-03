@@ -95,27 +95,6 @@
                 $path_searh = env('APP_URL') . 'en/search';
                 }
                 @endphp
-
-                <!-- <div class="search">
-                    <form id="searchForm" action="{{ $path_searh }}" method="get">
-                        <div class="input-group">
-                            <input type="text" class="form-control search" value="{{ Request::input('q') }}" name="q" id="q" placeholder="{{ __('Tìm kiếm') }}" required>
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-                            </span>
-                        </div>
-                    </form>
-                </div>
-                <div class="lang-switch-wrapper">
-                    <label class="switch-modern">
-                        <input type="checkbox" id="toggle-lang" {{ $locale != 'en' ? 'checked' : '' }}>
-                        <div class="slider-modern">
-                            <span class="lang-text en-text">EN</span>
-                            <span class="lang-text vi-text">VI</span>
-                            <span class="slider-button"></span>
-                        </div>
-                    </label>
-                </div>                 -->
                 <div class="search">
                     <form id="searchForm" action="{{ $path_searh }}" method="get">
                         <div class="input-group">
