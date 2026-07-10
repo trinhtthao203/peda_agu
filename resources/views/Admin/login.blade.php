@@ -55,29 +55,20 @@
                             <input type="hidden" name="url" value="{{ isset($destination) ? $destination : '' }}" />
                             <div class="form-group row">
                                 <div class="col-12">
-                                    <label for="emailaddress">{{ __("Username") }}</label>
-                                    <input class="form-control" type="text" id="username" name="username" required="" placeholder="{{ __("Username") }}">
+                                    <label for="emailaddress">{{ __("Tên đăng nhập") }}</label>
+                                    <input class="form-control" type="text" id="username" name="username" required="" placeholder="{{ __("Tên đăng nhập") }}">
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <div class="col-12">
-                                    <label for="password">{{ __("Password") }}</label>
-                                    <input class="form-control" type="password" required name="password" id="password" placeholder="{{ __("Password") }}">
+                                    <label for="password">{{ __("Mật khẩu") }}</label>
+                                    <input class="form-control" type="password" required name="password" id="password" placeholder="{{ __("Mật khẩu") }}">
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <div class="col-12">
-                                    <div class="checkbox checkbox-primary">
-                                        <input id="remember" type="checkbox" checked="">
-                                        <label for="remember">{{ __("Remember login") }}</label>
-                                    </div>
-                                </div>
-                            </div>
-
                             <div class="form-group row text-center">
                                 <div class="col-12">
-                                    <button class="btn btn-block btn-primary waves-effect waves-light" type="submit"><i class="fas fa-lock"></i> {{ __("Login") }}</button>
+                                    <button class="btn btn-block btn-primary waves-effect waves-light" type="submit"><i class="fas fa-lock"></i> {{ __("Đăng nhập") }}</button>
                                 </div>
                             </div>
                         </form>

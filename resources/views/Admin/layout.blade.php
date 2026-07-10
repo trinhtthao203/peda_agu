@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css">
 
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     @section('css') @show
 
     <!-- Local App css -->
@@ -64,17 +67,17 @@
                             </div>
                             @if(Session::get('user.roles') && in_array('Admin', Session::get('user.roles')))
                             <a href="{{ env('APP_URL') . app()->getLocale() }}/admin/user" class="dropdown-item notify-item">
-                                <i class="fe-user"></i> <span>{{ __("Accounts") }}</span>
+                                <i class="fe-user"></i> <span>{{ __("QL Người dùng") }}</span>
                             </a>
-                            <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/admin/translate" class="dropdown-item notify-item">
-                                <i class="fas fa-language"></i> <span>{{ __('Translate') }}</span>
+                            <!-- <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/admin/translate" class="dropdown-item notify-item">
+                                <i class="fas fa-language"></i> <span>{{ __('Chuyển ngữ') }}</span>
                             </a>
                             <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/admin/translate-path" class="dropdown-item notify-item">
-                                <i class="fas fa-code-branch"></i> <span>{{ __('Translate Path') }}</span>
-                            </a>
+                                <i class="fas fa-code-branch"></i> <span>{{ __('Chuyển ngữ đường dẫn') }}</span>
+                            </a> -->
                             @endif
                             <a href="{{ env('APP_URL') . app()->getLocale() }}/auth/logout" class="dropdown-item notify-item">
-                                <i class="fe-log-out"></i> <span>{{ __("Logout") }}</span>
+                                <i class="fe-log-out"></i> <span>{{ __("Đăng xuất") }}</span>
                             </a>
                         </div>
                     </li>
@@ -98,7 +101,7 @@
                     <ul class="navigation-menu">
                         @if(App\Http\Controllers\UserController::is_roles('Admin,Manager,Updater'))
                         <li>
-                            <a href="{{ env('APP_URL') . app()->getLocale() }}/admin/banner"><i class="far fa-images"></i> {{ __('Banner') }}</a>
+                            <a href="{{ env('APP_URL') . app()->getLocale() }}/admin/banner"><i class="far fa-images"></i> {{ __('Ảnh bìa') }}</a>
                         </li>
                         <li>
                             <a href="{{ env('APP_URL') . app()->getLocale() }}/admin/danh-muc-thong-tin"><i class="fas fa-tags"></i> {{ __('Danh mục Thông tin') }}</a>
@@ -107,19 +110,6 @@
                             <a href="{{ env('APP_URL') . app()->getLocale() }}/admin/thong-tin"><i class="fas fa-tasks"></i> {{ __('Bài viết') }}</a>
                         </li>
                         @endif
-
-                        <li class="has-submenu">
-                            <a href="{{ env('APP_URL') . app()->getLocale() }}/admin/tuyen-sinh"><i class="fas fa-graduation-cap"></i> {{ __('Tuyển sinh') }}
-                                <div class="arrow-down"></div>
-                            </a>
-                            <ul class="submenu">
-                                @if(App\Http\Controllers\UserController::is_roles('Admin,Manager,Updater,Consulter'))
-                                <li><a href="{{ env('APP_URL'). app()->getLocale() }}/admin/tuyen-sinh/thong-tin">Thông tin Tuyển sinh</a></li>
-                                <li><a href="{{ env('APP_URL'). app()->getLocale() }}/admin/tuyen-sinh/tu-van">Tư vấn Tuyển sinh</a></li>
-                                @endif
-                            </ul>
-                        </li>
-
                     </ul>
                     <div class="clearfix"></div>
                 </div>
@@ -136,7 +126,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    &copy; 2026 {{ __('Đại học Quốc gia TPHCM Trường Đại học An Giang') }}
+                    &copy; 2026 {{ __('Tổ Nghiệp vụ - Thông tin, AGU-VNU') }}
                 </div>
             </div>
         </div>

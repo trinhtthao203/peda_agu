@@ -396,13 +396,13 @@ typo-thin small {
 .cd-top::after {
     color: #fff;
     content: "\e6ad";
-    font-family: "universh-icon";
     font-size: 27px;
     font-weight: bold;
     left: 0;
     position: absolute;
     right: 0;
     text-align: center;
+    content: none !important;
     text-indent: 0 !important;
     top: 4px;
 }

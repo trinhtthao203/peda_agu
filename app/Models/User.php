@@ -20,13 +20,18 @@ class User extends Authenticatable
     protected $connection = 'mongodb';
     protected $table = 'users';
 
-     /**
+    /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
     protected $fillable = [
-        'username', 'password', 'fullname', 'roles', 'phone', 'address', 'photos', 'active'
+        'username',
+        'password',
+        'fullname',
+        'roles',
+        'phone',
+        'active'
     ];
 
     /**

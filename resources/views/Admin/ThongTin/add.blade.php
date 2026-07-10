@@ -239,14 +239,10 @@
         delete_file();
         $(".select2").select2();
         var options = {
-            filebrowserImageBrowseUrl: '{{ env('
-            APP_URL ') }}laravel-filemanager?type=Images',
-            filebrowserImageUploadUrl: '{{ env('
-            APP_URL ') }}laravel-filemanager/upload?type=Images&_token=',
-            filebrowserBrowseUrl: '{{ env('
-            APP_URL ') }}laravel-filemanager?type=Files',
-            filebrowserUploadUrl: '{{ env('
-            APP_URL ') }}laravel-filemanager/upload?type=Files&_token=',
+            filebrowserImageBrowseUrl: "{{ env('APP_URL') }}laravel-filemanager?type=Images",
+            filebrowserImageUploadUrl: "{{ env('APP_URL') }}laravel-filemanager/upload?type=Images&_token={{ csrf_token() }}",
+            filebrowserBrowseUrl: "{{ env('APP_URL') }}laravel-filemanager?type=Files",
+            filebrowserUploadUrl: "{{ env('APP_URL') }}laravel-filemanager/upload?type=Files&_token={{ csrf_token() }}",
             removePlugins: 'exportpdf'
         };
 

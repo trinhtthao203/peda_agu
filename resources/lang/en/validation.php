@@ -142,11 +142,13 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'username' => [
+            'unique' => 'This username has already been taken, please choose another one.',
+        ],
+        'phone' => [
+            'regex' => 'The phone number format is invalid (Vietnamese phone numbers only).',
         ],
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes
@@ -158,6 +160,11 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'username' => 'username',
+        'fullname' => 'full name',
+        'password' => 'password',
+        'phone'    => 'phone number',
+    ],
 
 ];
