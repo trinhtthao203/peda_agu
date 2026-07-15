@@ -10,5 +10,8 @@ class Banner extends Eloquent
     use HasFactory;
     protected $connection = 'mongodb';
     protected $table = 'banners';
+    protected $casts = [
+        'photos' => 'array',
+    ];
     //_id, photos, url
 }

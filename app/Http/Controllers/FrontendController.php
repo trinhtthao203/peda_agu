@@ -8,13 +8,18 @@ use App\Http\Controllers\ThongTinController;
 use App\Models\ThongTin;
 use App\Models\DMThongTin;
 use Illuminate\Support\Str;
+use App\Models\Banner;
 
 class FrontendController extends Controller
 {
     function index(Request $request, $locale = 'vi')
     {
+        $banners = Banner::where('status', 1)
+            ->where('trang_chu', 1)
+            ->orderBy('order', 'desc')
+            ->get();
+
         $tin_moi_nhat = ThongTin::where('locale', '=', $locale)->where('id_cat', '!=', '65080bb00bc7b8223c27c10a')->orderBy('date_post', 'desc')->take(6)->get();
-        //$thong_tin_tuyen_sinh = ThongTinTuyenSinh::where('locale','=',$locale)->where('id_cat','dai-hoc-chinh-quy')->where('date_post', 'regexp', '/.*2026/i')->orderBy('date_post', 'desc')->take(10)->get();
 
         $ch = curl_init('https://tuyensinh.agu.edu.vn/api/partner/v1/news?limit=12');
         curl_setopt_array($ch, [
@@ -30,7 +35,8 @@ class FrontendController extends Controller
         }
 
         $sdg_tags = ThongTinController::get_sdg_tags();
-        return view('Frontend.index')->with(compact('tin_moi_nhat', 'thong_tin_tuyen_sinh', 'sdg_tags'));
+
+        return view('Frontend.index')->with(compact('banners', 'tin_moi_nhat', 'thong_tin_tuyen_sinh', 'sdg_tags'));
     }
 
     function gioi_thieu(Request $request, $locale = 'vi', $slug = '')

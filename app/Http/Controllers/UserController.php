@@ -5,26 +5,29 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use App\Models\User;
 use App\Models\DMDiaChi;
-use App\Http\Controllers\AuthController;
+use App\Models\User;
 use Validator;
 use Session;
 
 class UserController extends Controller
 {
+    // CẢI TIẾN: Để Key và Value gốc là Tiếng Anh chuẩn hóa làm nhãn dịch (Translation Keys)
     private static $roles = array(
-        'Admin' => 'Quản trị',
-        'Manager' => 'Quản lý',
-        'Updater' => 'Cập nhật bài',
-        'Consulter' => 'Tư vấn Tuyển sinh'
+        'Admin'     => 'Admin Role',
+        'Manager'   => 'Manager Role',
+        'Updater'   => 'Updater Role',
+        'Consulter' => 'Consulter Role'
     );
 
-    // Đã xóa __construct lỗi/thừa ở đây. Nên phân quyền bằng Middleware trong file Routes.
-
+    // Hàm bốc mảng và dịch động theo Locale hiện tại của hệ thống
     static function getRoles()
     {
-        return self::$roles;
+        $translatedRoles = array();
+        foreach (self::$roles as $key => $value) {
+            $translatedRoles[$key] = __($value);
+        }
+        return $translatedRoles;
     }
 
     static function is_roles($roles)
@@ -52,13 +55,15 @@ class UserController extends Controller
             return $user;
         }, $users);
 
-        return view('Admin.User.list', ['users' => $users, 'roles' => self::$roles]);
+        // Đảm bảo truyền mảng roles đã được dịch qua hàm getRoles()
+        return view('Admin.User.list', ['users' => $users, 'roles' => self::getRoles()]);
     }
 
     function add()
     {
         $address = DMDiaChi::where('matructhuoc', 'exists', false)->orWhere('matructhuoc', '=', '')->get();
-        return view('Admin.User.add', ['address' => $address, 'roles' => self::$roles]);
+        // CẬP NHẬT: Đổi từ self::$roles thành self::getRoles() để trang thêm mới cũng được chuyển ngữ các hộp chọn
+        return view('Admin.User.add', ['address' => $address, 'roles' => self::getRoles()]);
     }
 
     function create(Request $request, $locale = '')
@@ -125,12 +130,13 @@ class UserController extends Controller
             ? DMDiaChi::where('matructhuoc', '=', $user['address'][1])->get()
             : '';
 
+        // CẬP NHẬT: Đổi từ self::$roles thành self::getRoles() để giao diện chỉnh sửa hiển thị chuẩn ngôn ngữ
         return view('Admin.User.edit', [
             'user' => $user,
             'address' => $address,
             'address_1' => $address_1,
             'address_2' => $address_2,
-            'roles' => self::$roles,
+            'roles' => self::getRoles(),
             'destination' => $destination
         ]);
     }

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -14,6 +15,7 @@ class ImageController extends Controller
         $files = $request->file('hinhanh_files');
         $storagePath = storage_path('app');
         $manager = new ImageManager(new Driver());
+        $htmlOutput = '';
 
         if (!empty($files)):
             foreach ($files as $file):
@@ -24,24 +26,22 @@ class ImageController extends Controller
 
                 Storage::put('private/images/' . $filename, file_get_contents($file), 'private');
 
-                // Ensure output directories exist
                 @mkdir($storagePath . '/public/images/origin',       0755, true);
                 @mkdir($storagePath . '/public/images/thumb_360x200', 0755, true);
                 @mkdir($storagePath . '/public/images/thumb_50',      0755, true);
 
-                // Intervention Image v4 API
                 $manager->decode($file->getRealPath())
-                        ->save($storagePath . '/public/images/origin/' . $filename);
+                    ->save($storagePath . '/public/images/origin/' . $filename);
 
                 $manager->decode($file->getRealPath())
-                        ->scaleDown(width: 360)
-                        ->save($storagePath . '/public/images/thumb_360x200/' . $filename);
+                    ->scaleDown(width: 360)
+                    ->save($storagePath . '/public/images/thumb_360x200/' . $filename);
 
                 $manager->decode($file->getRealPath())
-                        ->scaleDown(height: 50)
-                        ->save($storagePath . '/public/images/thumb_50/' . $filename);
+                    ->scaleDown(height: 50)
+                    ->save($storagePath . '/public/images/thumb_50/' . $filename);
 
-                echo '<div class="col-sm-6 col-md-4 items draggable-element text-center">
+                $htmlOutput .= '<div class="col-sm-6 col-md-4 items draggable-element text-center">
                 <input type="hidden" name="hinhanh_aliasname[]" value="' . $filename . '" readonly/>
                 <input type="hidden" name="hinhanh_filename[]" class="form-control" value="' . $realname . '" />
                   <a href="' . env('APP_URL') . 'storage/images/origin/' . $filename . '" class="image-popup">
@@ -61,21 +61,42 @@ class ImageController extends Controller
                 </div>';
             endforeach;
         endif;
+        return response($htmlOutput, 200)->header('Content-Type', 'text/html');
     }
 
     function delete(Request $request, $locale = '', $filename = '')
     {
-        // Storage::delete('private/images/'.$filename);
-        // Storage::delete('public/images/origin/'.$filename);
-        // Storage::delete('public/images/thumb_360x200/'.$filename);
-        // Storage::delete('public/images/thumb_50/'.$filename);
+        if ($filename) {
+            self::remove($filename);
+            return response()->json(['status' => 'success']);
+        }
+        return response()->json(['status' => 'error']);
     }
 
     static function remove($filename)
     {
-        // Storage::delete('private/images/'.$filename);
-        // Storage::delete('public/images/origin/'.$filename);
-        // Storage::delete('public/images/thumb_360x200/'.$filename);
-        // Storage::delete('public/images/thumb_50/'.$filename);
+        if (empty($filename)) return;
+        \Illuminate\Support\Facades\Storage::delete('private/images/' . $filename);
+        \Illuminate\Support\Facades\Storage::delete('public/images/origin/' . $filename);
+        \Illuminate\Support\Facades\Storage::delete('public/images/thumb_360x200/' . $filename);
+        \Illuminate\Support\Facades\Storage::delete('public/images/thumb_50/' . $filename);
+        $paths = [
+            storage_path('app/public/images/origin/' . $filename),
+            storage_path('app/public/images/thumb_360x200/' . $filename),
+            storage_path('app/public/images/thumb_50/' . $filename),
+            public_path('storage/images/origin/' . $filename),
+            public_path('storage/images/thumb_360x200/' . $filename),
+            public_path('storage/images/thumb_50/' . $filename),
+        ];
+
+        foreach ($paths as $path) {
+            $cleanPath = str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $path);
+
+            if (file_exists($cleanPath)) {
+                @unlink($cleanPath);
+            }
+        }
+
+        clearstatcache();
     }
 }

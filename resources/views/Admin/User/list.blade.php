@@ -12,7 +12,7 @@
                 <thead>
                     <tr>
                         <th data-sort-initial="true" data-toggle="true">{{ __('STT') }}</th>
-                        <th>{{ __('Username') }}</th>
+                        <th>{{ __('Tên đăng nhập') }}</th>
                         <th>{{ __('Họ và tên') }}</th>
                         <th>{{ __('Quyền') }}</th>
                         <th class="text-center">{{ __('Trạng thái') }}</th>
@@ -29,7 +29,9 @@
                         <td>
                             @if(isset($user['roles']) && $user['roles'])
                             @foreach($user['roles'] as $role)
-                            <span class="badge badge-pill badge-primary">{{ $roles[$role] }}</span>
+                            <span class="badge badge-pill badge-primary">
+                                {{ isset($roles[$role]) ? __($roles[$role]) : __($role) }}
+                            </span>
                             @endforeach
                             @endif
                         </td>

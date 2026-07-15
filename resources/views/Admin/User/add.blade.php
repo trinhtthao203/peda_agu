@@ -27,14 +27,14 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group row">
-                                <label class="control-label col-md-2 text-right p-t-10">{{ __('Tên tài khoản') }}</label>
+                                <label class="control-label col-md-2 text-right p-t-10">{{ __('Tên đăng nhập') }}</label>
                                 <div class="col-md-4">
-                                    <input type="text" id="username" name="username" class="form-control" placeholder="{{ __('Tên tài khoản') }}" value="{{ old('username') }}" required />
+                                    <input type="text" id="username" name="username" class="form-control" placeholder="{{ __('Tên đăng nhập') }}" value="{{ old('username') }}" required />
                                 </div>
                                 <label class="control-label col-md-2 text-right p-t-10">{{ __('Mật khẩu') }}</label>
                                 <div class="col-md-4">
                                     <div class="input-group">
-                                        <input type="password" id="password" name="password" class="form-control pwd-input" placeholder="{{ __('Mật khẩu phải có ít nhất 8 ký tự') }}" required>
+                                        <input type="password" id="password" name="password" class="form-control pwd-input" placeholder="{{ __('Mật khẩu') }} ({{ __('>= 8 ký tự') }})">
                                         <div class="input-group-append">
                                             <button class="btn btn-outline-secondary toggle-pwd" type="button">
                                                 <i class="bi bi-eye"></i>
@@ -55,7 +55,7 @@
                                 <label class="control-label col-md-2 text-right p-t-10">{{ __('Xác nhận mật khẩu') }}</label>
                                 <div class="col-md-4">
                                     <div class="input-group">
-                                        <input type="password" id="password_confirmation" name="password_confirmation" class="form-control pwd-input" placeholder="{{ __('Xác nhận mật khẩu') }}" required>
+                                        <input type="password" id="password_confirmation" name="password_confirmation" class="form-control pwd-input" placeholder="{{ __('Nhập lại mật khẩu') }}">
                                         <div class="input-group-append">
                                             <button class="btn btn-outline-secondary toggle-pwd" type="button">
                                                 <i class="bi bi-eye"></i>
@@ -76,26 +76,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group row">
-                                <label class="control-label col-md-2 text-right p-t-10">{{ __('Quyền') }}</label>
-                                <div class="col-12 col-md-6">
-                                    <select name="roles[]" id="roles" multiple class="form-control" data-placeholer="{{ __('Chọn quyền') }}" style="width:100%;" required>
-                                        <option value="">{{ __('Chọn quyền') }}</option>
-                                        @if($roles)
-                                        @foreach($roles as $key => $value)
-                                        <option value="{{ $key }}">{{ $value }}</option>
-                                        @endforeach
-                                        @endif
-                                    </select>
-                                </div>
-                                <label class="control-label col-md-2 text-right p-t-10"></label>
-                                <div class="col-md-2 switchery-demo">
-                                    {{ __('Đang hoạt động') }}
-                                    <input type="checkbox" name="active" id="active" class="js-switch" data-plugin="switchery" checked="checked" data-color="#009efb" value="1" />
-                                </div>
+                    <div class="form-group row">
+                        <label class="control-label col-md-2 text-right p-t-10">{{ __('Quyền') }}</label>
+                        <div class="col-md-10">
+                            @if(isset($roles) && $roles)
+                            @foreach($roles as $key => $value)
+                            <div class="checkbox checkbox-primary form-check-inline">
+                                <input type="checkbox" name="roles[]" id="role_{{ $key }}" value="{{ $key }}"
+                                    {{ is_array(old('roles')) && in_array($key, old('roles')) ? 'checked' : '' }}>
+                                <label for="role_{{ $key }}"> {{ $value }} </label>
                             </div>
+                            @endforeach
+                            @endif
                         </div>
                     </div>
                 </div>
