@@ -18,22 +18,20 @@ class FrontendController extends Controller
             ->where('trang_chu', 1)
             ->orderBy('order', 'desc')
             ->get();
-
-        $tin_moi_nhat = ThongTin::where('locale', '=', $locale)->where('id_cat', '!=', '65080bb00bc7b8223c27c10a')->orderBy('date_post', 'desc')->take(6)->get();
+        $tin_moi_nhat = ThongTin::where('locale', '=', $locale)
+            ->where('id_cat', '!=', '65080bb00bc7b8223c27c10a')
+            ->orderBy('thu_tu', 'asc')
+            ->orderBy('date_post', 'desc')
+            ->take(6)
+            ->get();
 
         $ch = curl_init('https://tuyensinh.agu.edu.vn/api/partner/v1/news?limit=12');
         curl_setopt_array($ch, [
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_HTTPHEADER => ['X-API-Key: edcrm_f014f7ca_ca0c118571ac7d52e79e0e938acbfd95561b0de790179be5']
         ]);
-
         $data = json_decode(curl_exec($ch), true);
-        if (!empty($data['data'])) {
-            $thong_tin_tuyen_sinh = $data['data'];
-        } else {
-            $thong_tin_tuyen_sinh = array();
-        }
-
+        $thong_tin_tuyen_sinh = !empty($data['data']) ? $data['data'] : array();
         $sdg_tags = ThongTinController::get_sdg_tags();
 
         return view('Frontend.index')->with(compact('banners', 'tin_moi_nhat', 'thong_tin_tuyen_sinh', 'sdg_tags'));
@@ -57,12 +55,21 @@ class FrontendController extends Controller
             } else {
                 $title = 'Lastest News';
             }
-            $danhsach = ThongTin::where('locale', '=', $locale)->orderBy('date_post', 'desc')->paginate(12);
+            $danhsach = ThongTin::where('locale', '=', $locale)
+                ->orderBy('thu_tu', 'asc')
+                ->orderBy('date_post', 'desc')
+                ->paginate(12);
         } else {
             $cat = DMThongTin::where('locale', '=', $locale)->where('slug', '=', $slug)->first();
             $title = $cat['ten'];
-            $danhsach = ThongTin::where('locale', '=', $locale)->where('id_cat', $cat['_id'])->orderBy('date_post', 'desc')->paginate(12);
+
+            $danhsach = ThongTin::where('locale', '=', $locale)
+                ->where('id_cat', $cat['_id'])
+                ->orderBy('thu_tu', 'asc')
+                ->orderBy('date_post', 'desc')
+                ->paginate(12);
         }
+
         if ($slug == '') {
             if ($locale == 'vi') $path = 'tin-tuc-su-kien/tin-moi-nhat';
             else $path = 'news-and-events/lastest-news';

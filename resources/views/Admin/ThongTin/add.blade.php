@@ -1,22 +1,57 @@
 @extends('Admin.layout')
-@section('title', __('Thêm mới Thông tin'))
+@section('title', __('Thêm mới'))
 @section('css')
 <link href="{{ env('APP_URL') }}assets/backend/libs/select2/select2.min.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="{{ env('APP_URL') }}assets/backend/libs/magnific-popup/magnific-popup.css" />
+<style>
+    /* CSS Inline tối ưu cho Menu Chuột phải */
+    #custom-context-menu {
+        position: absolute;
+        display: none;
+        background: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+        min-width: 200px;
+        border-radius: 4px;
+    }
+
+    #custom-context-menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 5px 0;
+    }
+
+    #custom-context-menu ul li {
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 13px;
+        color: #333;
+    }
+
+    #custom-context-menu ul li:hover {
+        background: #009efb;
+        color: #fff;
+    }
+
+    #custom-context-menu ul li i {
+        margin-right: 8px;
+    }
+</style>
 @endsection
 @section('body')
 <div class="row">
     <div class="col-12">
         <div class="card-box">
-            <h3 class="m-t-0"><a href="{{ env('APP_URl') }}{{ app()->getLocale() }}/admin/thong-tin" class="btn btn-primary btn-sm"><i class="mdi mdi-reply-all"></i> {{ __('Trở về') }}</a> {{ __('Thêm mới Thông tin') }}</h3>
+            <h3 class="m-t-0"><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/admin/thong-tin" class="btn btn-primary btn-sm"><i class="mdi mdi-reply-all"></i> {{ __('Trở về') }}</a> {{ __('Thêm mới') }} {{ __('Bài viết') }}</h3>
             <form action="{{ env('APP_URL') }}{{ app()->getLocale() }}/admin/thong-tin/create" method="post" id="dinhkemform" enctype="multipart/form-data">
                 {{ csrf_field() }}
-                <input type="hidden" name="trans_id" id="trans_id" value="{{ $trans_id }}" placeholder="">
-                <input type="hidden" name="trans_lang" id="trans_lang" value="{{ $trans_lang }}" placeholder="">
+                <input type="hidden" name="trans_id" id="trans_id" value="{{ $trans_id }}">
+                <input type="hidden" name="trans_lang" id="trans_lang" value="{{ $trans_lang }}">
                 <div class="form-body">
                     <hr />
                     @if($errors->any())
-                    <div class="alert alert-success">
+                    <div class="alert alert-danger">
                         <ul>
                             @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
@@ -39,21 +74,21 @@
                     }
                     @endphp
                     <div class="form-group row">
-                        <label class="control-label col-md-2 text-right p-t-10">{{ __('Tên') }}</label>
+                        <label class="control-label col-md-2 text-right p-t-10">{{ __('Tiêu đề') }}</label>
                         <div class="col-md-10">
-                            <input type="text" id="ten" name="ten" class="form-control" placeholder="{{ __('Tên') }}" value="{{ $ten }}" required />
+                            <input type="text" id="ten" name="ten" class="form-control" placeholder="{{ __('Tiêu đề') }}" value="{{ $ten }}" required />
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="control-label col-md-2 text-right p-t-10">{{ __('Slug') }}</label>
                         <div class="col-md-10">
-                            <input type="text" id="slug" name="slug" class="form-control" placeholder="{{ __('slug') }}" value="{{ $slug }}" required />
+                            <input type="text" id="slug" name="slug" class="form-control" placeholder="{{ __('Slug') }}" value="{{ $slug }}" required />
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="control-label col-md-2 text-right p-t-10">{{ __('Mô tả') }}</label>
                         <div class="col-12 col-md-10">
-                            <textarea name="mo_ta" id="mo_ta" class="form-control" required placeholder="{{ __('Mô tả nội dung') }}" style="height:100px;">{{ $mo_ta }}</textarea>
+                            <textarea name="mo_ta" id="mo_ta" class="form-control" required placeholder="{{ __('Mô tả') }}" style="height:100px;">{{ $mo_ta }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -63,7 +98,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="control-label col-md-2 text-right p-t-10">{{ __('Thuộc Danh mục') }}</label>
+                        <label class="control-label col-md-2 text-right p-t-10">{{ __('Danh mục Thông tin') }}</label>
                         <div class="col-md-10">
                             <select name="id_cat[]" id="id_cat" required class="form-control select2" multiple data-placeholder="{{ __('Chọn danh mục') }}">
                                 <option value=""></option>
@@ -78,7 +113,7 @@
                     <div class="form-group row">
                         <label class="control-label col-md-2 text-right p-t-10">{{ __('SDG TAGS') }}</label>
                         <div class="col-md-10">
-                            <select name="id_sdg_tags[]" id="id_sdg_tags" required class="form-control select2" multiple data-placeholder="{{ __('Chọn SDG TAGS') }}">
+                            <select name="id_sdg_tags[]" id="id_sdg_tags" required class="form-control select2" multiple data-placeholder="{{ __('Chọn nhãn SDG') }}">
                                 <option value=""></option>
                                 @if($sdg_tags)
                                 @foreach($sdg_tags as $sk => $vk)
@@ -99,14 +134,15 @@
                             <input type="text" id="thu_tu" name="thu_tu" class="form-control" placeholder="{{ __('Thứ tự') }}" value="{{ $thu_tu }}" required />
                         </div>
                     </div>
+
                     <div class="card-box bg-light">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group row">
                                     <div class="col-md-4">
                                         <label class="btn btn-danger">
-                                            <input type="file" name="hinhanh_files[]" class="hinhanh_files btn btn-primary" multiple accept="image/png, image/jpeg, image/jpg, image/gif" placeholder="Chọn hình ảnh" style="display:none;" />
-                                            <i class="fa fa-images"></i> {{ __('Chọn Hình ảnh') }} : (jpg, png, bmp)
+                                            <input type="file" name="hinhanh_files[]" id="hinhanh_files" class="hinhanh_files btn btn-primary" multiple accept="image/png, image/jpeg, image/jpg, image/gif" style="display:none;" />
+                                            <i class="fa fa-images"></i> {{ __('Chọn Hình ảnh') }} : (jpg, png, gif)
                                         </label>
                                     </div>
                                 </div>
@@ -118,7 +154,7 @@
                             <div class="col-sm-6 col-md-4 items draggable-element text-center">
                                 <input type="hidden" name="hinhanh_aliasname[]" value="{{ old('hinhanh_aliasname')[$k] }}" readonly />
                                 <input type="hidden" name="hinhanh_filename[]" class="form-control" value="{{ old('hinhanh_filename')[$k] }}" />
-                                <a href="{{  env('APP_URL') }}storage/images/origin/{{ old('hinhanh_aliasname')[$k] }}" class="image-popup">
+                                <a href="{{ env('APP_URL') }}storage/images/origin/{{ old('hinhanh_aliasname')[$k] }}" class="image-popup">
                                     <div class="portfolio-masonry-box">
                                         <div class="portfolio-masonry-img">
                                             <img src="{{ env('APP_URL') }}storage/images/thumb_360x200/{{ old('hinhanh_aliasname')[$k] }}" class="thumb-img img-fluid" alt="work-thumbnail">
@@ -139,7 +175,7 @@
                             <div class="col-sm-6 col-md-4 items draggable-element text-center">
                                 <input type="hidden" name="hinhanh_aliasname[]" value="{{ $photo['aliasname'] }}" readonly />
                                 <input type="hidden" name="hinhanh_filename[]" class="form-control" value="{{ $photo['filename'] }}" />
-                                <a href="{{  env('APP_URL') }}storage/images/origin/{{ $photo['aliasname'] }}" class="image-popup">
+                                <a href="{{ env('APP_URL') }}storage/images/origin/{{ $photo['aliasname'] }}" class="image-popup">
                                     <div class="portfolio-masonry-box">
                                         <div class="portfolio-masonry-img">
                                             <img src="{{ env('APP_URL') }}storage/images/thumb_360x200/{{ $photo['aliasname'] }}" class="thumb-img img-fluid" alt="work-thumbnail">
@@ -161,14 +197,15 @@
                     <div class="progress m-b-20" id="progressbar">
                         <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
+
                     <div class="card-box" style="background-color:#eee;">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group row">
                                     <div class="col-md-4">
                                         <label class="btn btn-info">
-                                            <input type="file" name="dinhkem_files[]" class="dinhkem_files btn btn-primary" multiple accept="*" placeholder="Chọn tập tin đính kèm" style="display:none;" />
-                                            <i class="mdi mdi mdi-attachment"></i> {{ __('Chọn Đính kèm') }} : (pdf, xlsx, docx, pptx, zip, ....)
+                                            <input type="file" name="dinhkem_files[]" id="dinhkem_files" class="dinhkem_files btn btn-primary" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.zip,.rar" style="display:none;" />
+                                            <i class="mdi mdi-attachment"></i> {{ __('Thêm File đính kèm') }} : (pdf, xlsx, docx, zip, ...)
                                         </label>
                                     </div>
                                 </div>
@@ -187,7 +224,7 @@
                                         </div>
                                         <input type="hidden" name="file_size[]" value="{{ old('file_size')[$key] }}" class="form-control">
                                         <input type="hidden" name="file_type[]" value="{{ old('file_type')[$key] }}" class="form-control">
-                                        <input type="text" name="file_title[]" placeholder="{{ __('Chú thích tập tinh đính kèm') }}" value="{{ old('file_title')[$key] }}" class="form-control">
+                                        <input type="text" name="file_title[]" placeholder="{{ __('Chú thích tập tinh đính kèm') }} - Bấm chuột phải để lấy mã nhúng" value="{{ old('file_title')[$key] }}" class="form-control">
                                         <div class="input-group-append">
                                             <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/file/delete/{{ $dk }}" class="btn btn-info btn-circle delete_file" onclick="return false;" style="margin-left:2px;"><i class="mdi mdi-delete"></i></a>
                                         </div>
@@ -207,7 +244,7 @@
                                         </div>
                                         <input type="hidden" name="file_size[]" value="{{ $dk['size'] }}" class="form-control">
                                         <input type="hidden" name="file_type[]" value="{{ $dk['type'] }}" class="form-control">
-                                        <input type="text" name="file_title[]" placeholder="{{ __('Chú thích tập tinh đính kèm') }}" value="{{ $dk['title'] }}" class="form-control">
+                                        <input type="text" name="file_title[]" placeholder="{{ __('Chú thích tập tinh đính kèm') }} - Bấm chuột phải để lấy mã nhúng" value="{{ $dk['title'] }}" class="form-control">
                                         <div class="input-group-append">
                                             <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/file/delete/{{ $dk['aliasname'] }}" class="btn btn-info btn-circle delete_file" onclick="return false;" style="margin-left:2px;"><i class="mdi mdi-delete"></i></a>
                                         </div>
@@ -226,6 +263,13 @@
             </form>
         </div>
     </div>
+
+    <div id="custom-context-menu">
+        <ul>
+            <li id="copy-iframe-pdf"><i class="fa fa-code"></i> Copy mã Iframe PDF</li>
+            <li id="copy-direct-link"><i class="fa fa-link"></i> Copy Link trực tiếp</li>
+        </ul>
+    </div>
 </div>
 @endsection
 @section('js')
@@ -236,26 +280,78 @@
 <script src="{{ env('APP_URL') }}assets/backend/js/script.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(document).ready(function() {
+        const baseUrl = "{{ url('/') }}";
+        const locale = "{{ app()->getLocale() }}";
+        let selectedFileUrl = "";
+
         delete_file();
         $(".select2").select2();
+
         var options = {
-            filebrowserImageBrowseUrl: "{{ env('APP_URL') }}laravel-filemanager?type=Images",
-            filebrowserImageUploadUrl: "{{ env('APP_URL') }}laravel-filemanager/upload?type=Images&_token={{ csrf_token() }}",
-            filebrowserBrowseUrl: "{{ env('APP_URL') }}laravel-filemanager?type=Files",
-            filebrowserUploadUrl: "{{ env('APP_URL') }}laravel-filemanager/upload?type=Files&_token={{ csrf_token() }}",
+            filebrowserImageBrowseUrl: baseUrl + "/laravel-filemanager?type=Images",
+            filebrowserImageUploadUrl: baseUrl + "/laravel-filemanager/upload?type=Images&_token={{ csrf_token() }}",
+            filebrowserBrowseUrl: baseUrl + "/laravel-filemanager?type=Files",
+            filebrowserUploadUrl: baseUrl + "/laravel-filemanager/upload?type=Files&_token={{ csrf_token() }}",
             removePlugins: 'exportpdf'
         };
 
-        upload_files("{{ env('APP_URL') }}{{ app()->getLocale() }}/file/uploads");
-        upload_hinhanh("{{ env('APP_URL') }}{{ app()->getLocale() }}/image/uploads");
+        upload_files(baseUrl + "/" + locale + "/file/uploads");
+        upload_hinhanh(baseUrl + "/" + locale + "/image/uploads");
+
         $("#ten").change(function() {
             var title = $(this).val();
-            $.get("{{ env('APP_URL') }}{{ app()->getLocale() }}/slug/" + title, function(slug) {
+            $.get(baseUrl + "/" + locale + "/slug/" + title, function(slug) {
                 $("#slug").val(slug);
             });
         });
         $("#progressbar").hide();
         CKEDITOR.replace('noi_dung', options);
+        $('#dinhkem_files').on('change', function() {
+            var validExtensions = ['pdf', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'zip', 'rar'];
+            var files = this.files;
+            for (var i = 0; i < files.length; i++) {
+                var ext = files[i].name.split('.').pop().toLowerCase();
+                if ($.inArray(ext, validExtensions) == -1) {
+                    alert("Tập tin '" + files[i].name + "' không đúng định dạng cho phép (pdf, docx, xlsx, zip...)!");
+                    this.value = '';
+                    return false;
+                }
+            }
+        });
+        $('#list_files').on('contextmenu', 'input[name="file_title[]"]', function(e) {
+            e.preventDefault();
+            let aliasname = $(this).closest('.items').find('input[name="file_aliasname[]"]').val();
+            selectedFileUrl = baseUrl + "/storage/files/" + aliasname;
+
+            $("#custom-context-menu").css({
+                top: e.pageY + "px",
+                left: e.pageX + "px",
+                display: "block"
+            });
+        });
+        $("#copy-iframe-pdf").on("click", function() {
+            if (!selectedFileUrl.toLowerCase().endsWith('.pdf')) {
+                alert("Hệ thống chỉ hỗ trợ sinh mã nhúng cho định dạng tệp tin PDF!");
+                return;
+            }
+            let iframeCode = `<iframe src="${selectedFileUrl}" width="100%" height="700px" style="border:none;">Trình duyệt của bạn không hỗ trợ hiển thị tệp PDF trực tiếp. <a href="${selectedFileUrl}">Tải tệp tin tại đây.</a></iframe>`;
+            copyToClipboard(iframeCode, "Đã copy mã Iframe nhúng PDF thành công!");
+        });
+        $("#copy-direct-link").on("click", function() {
+            copyToClipboard(selectedFileUrl, "Đã sao chép đường dẫn liên kết tệp tin thành công!");
+        });
+        $(document).on("click", function() {
+            $("#custom-context-menu").hide();
+        });
+
+        function copyToClipboard(text, msg) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert(msg);
+                $("#custom-context-menu").hide();
+            }).catch(() => {
+                prompt("Trình duyệt chặn sao chép tự động. Hãy copy thủ công tại đây:", text);
+            });
+        }
     });
 </script>
 @endsection

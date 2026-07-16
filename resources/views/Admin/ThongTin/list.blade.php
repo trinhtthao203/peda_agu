@@ -13,18 +13,18 @@
         <form method="GET" action="{{ env('APP_URL') . app()->getLocale() }}/admin/thong-tin">
             <div class="row form-group">
                 <div class="col-12 col-md-4">
-                    <input type="text" name="keywords" id="keywords" value="{{ $keywords }}" placeholder="Tìm Tên" class="form-control">
+                    <input type="text" name="keywords" id="keywords" value="{{ $keywords }}" placeholder="{{ __('Nhập tiêu đề cần tìm') }}" class="form-control">
                 </div>
                 <div class="col-12 col-md-4">
                     <select name="id_cat" class="form-control select2">
-                        <option value="">{{ __('Danh mục thông tin') }}</option>
+                        <option value="">{{ __('Danh mục Thông tin') }}</option>
                         @foreach($dmthongtin as $tt)
                         <option value="{{ $tt['_id'] }}" @if($id_cat==$tt['_id']) selected @endif>{{ $tt['ten'] }}</option>
                         @endforeach
                     </select>
                 </div>
                 <div class="col-12 col-md-2">
-                    <button type="submit" name="submit" value="Search" class="btn btn-primary"><i class="fa fa-search"></i> {{ __('Tìm') }}</button>
+                    <button type="submit" name="submit" value="Search" class="btn btn-primary"><i class="fa fa-search"></i> {{ __('Tìm kiếm') }}</button>
                 </div>
             </div>
         </form>
@@ -33,9 +33,9 @@
             <thead>
                 <tr>
                     <th>{{ __('STT') }}</th>
-                    <th>{{ __('Hình') }}</th>
-                    <th>{{ __('Tên') }}</th>
-                    <th>{{ __('Danh mục') }}</th>
+                    <th>{{ __('Hình ảnh') }}</th>
+                    <th>{{ __('Tiêu đề') }}</th>
+                    <th>{{ __('Danh mục Thông tin') }}</th>
                     <th style="width:55px;">#</th>
                     @foreach($arr_lang as $klang => $vlang)
                     @if($klang != app()->getLocale())
@@ -65,7 +65,7 @@
                         @if($ds['id_cat'])
                         <div class="btn-group mb-2 dropleft" style="margin:0px !important;">
                             <button class="btn btn-info btn-sm waves-effect waves-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="line-height:12px;">
-                                {{ __('Danh mục') }} <span class="badge badge-danger">{{ count($ds['id_cat']) }}</span>
+                                {{ __('Danh mục Thông tin') }} <span class="badge badge-danger">{{ count($ds['id_cat']) }}</span>
                             </button>
                             <div class="dropdown-menu">
                                 @foreach($ds['id_cat'] as $key => $cat)

@@ -1,228 +1,178 @@
 @extends('Frontend.layout')
+
 @section('title', __('Trang chủ'))
 @section('css')
 <style>
     ul.list-news-home-ts {
         list-style-type: square;
-        padding: 20px 30px 20px 30px;
-        font-size: 18px;
     }
 
-    ul.list-news-home-ts li {
-        padding: 3px;
+    .mo_ta {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+        color: #4b5563;
     }
 
-    #daycounter-hero {
-        width: 500px;
-        position: absolute;
-        right: 100px;
-        top: 490px;
-    }
-
-    #home-new {
-        margin-top: 0px !important;
-    }
-
-    @media screen and (max-width: 640px) {
-        #daycounter-hero {
-            width: 100%;
-            top: 290px;
-            left: 0px;
-            font-size: 15px !important;
-            background: #007326 !important;
-            margin-top: -15px;
-        }
-
-        .countdown-section {
-            padding: 18px 0px 18px 0px;
-            font-size: 18px;
-            width: 25%;
-
-        }
-
-        .countdown-amount {
-            font-size: 20px !important;
-            padding: 0px;
-            line-height: 20px;
-        }
-
-        #home-new {
-            margin-top: 10px !important;
-        }
-    }
-
-    @media screen and (max-width: 430px) {
-        #daycounter-hero {
-            margin-top: -10px;
-        }
-
-        #home-new {
-            margin-top: -10px !important;
-        }
-    }
-
-    @media screen and (min-width: 1920px) {
-        .tp-revslider-mainul {
-            min-height: 700px !important;
-        }
-
-        #daycounter-hero {
-            top: 700px;
-            right: 400px;
-            font-size: 50px !important;
-        }
-
-        #home-new {
-            margin-top: 160px !important;
-        }
-
-        .countdown-amount {
-            font-size: 50px !important;
-            padding: 0px;
-            line-height: 30px;
-        }
-
+    .calendar-container iframe {
+        width: 100%;
+        height: 450px;
+        border: none;
+        border-radius: 8px;
     }
 </style>
 @endsection
+
 @section('body')
 @include('Frontend.widget_banner')
-{{-- <div id="daycounter-hero" class="daycounter clearfix" data-counter="down" data-year="2024" data-month="11" data-date="16"></div>
-<br /> --}}
-<section class="typo-dark" id="home-new">
-    <div class="container">
-        <div class="row">
-            @if($tin_moi_nhat && count($tin_moi_nhat) > 0)
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title" style="font-size:22px;font-weight:bold;"><i class="uni-globe"></i> {{ __('Tin mới nhất') }}</h3>
-                </div>
-                <div class="panel-body">
-                    <div class="row">
-                        @foreach($tin_moi_nhat as $tmn)
-                        <!-- Item Begins -->
-                        <div class="col-sm-4">
-                            <!-- Blog Grid Wrapper -->
-                            <div class="blog-wrap">
-                                <!-- Blog Image Wrapper -->
-                                <div class="blog-img-wrap">
-                                    @if(isset($tmn['photos'][0]['aliasname']) && $tmn['photos'][0]['aliasname'])
-                                    <img width="600" height="220" src="{{ env('APP_ASSETS') }}storage/images/thumb_360x200/{{ $tmn['photos'][0]['aliasname'] }}" class="img-responsive" alt="{{ $tmn['ten'] }}">
-                                    @else
-                                    <img width="600" height="220" src="{{ env('APP_ASSETS') }}assets/frontend/images/blog/blog-02.jpg" class="img-responsive" alt="{{ $tmn['ten'] }}">
-                                    @endif
-                                </div><!-- Blog Wraper -->
-                                <!-- Blog Detail Wrapper -->
-                                <div class="blog-details">
-                                    <h5><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/{{ __('chi-tiet-thong-tin') }}/{{ $tmn['slug'] }}" title="{{ $tmn['ten'] }}">{{ $tmn['ten'] }}</a></h5>
-                                    <ul class="blog-meta">
-                                        <li><i class="fa fa-calendar-o"></i> {{ App\Http\Controllers\ObjectController::getDate($tmn['date_post'], "d/m/Y") }}</li>
-                                        <li>
-                                            @if(isset($tmn['id_sdg_tags']) && $tmn['id_sdg_tags'])
-                                            @foreach($tmn['id_sdg_tags'] as $st)
-                                            <img src="{{ env('APP_URL') }}assets/frontend/images/sdg-tags/{{ $st }}_{{ $tmn['locale'] }}.png" alt="{{ __($sdg_tags[$st]) }}" title="{{ __($sdg_tags[$st]) }}" style="height: 25px;cursor: pointer;" />
-                                            @endforeach
-                                            @endif
-                                        </li>
-                                    </ul><!-- Blog Meta -->
 
-                                    <p class="mo_ta">{{ $tmn['mo_ta'] }}</p>
-                                    <a class="btn" href="{{ env('APP_URL') }}{{ app()->getLocale() }}/{{ __('chi-tiet-thong-tin') }}/{{ $tmn['slug'] }}">{{ __('Xem thêm') }}</a>
-                                </div><!-- Blog Detail Wrapper -->
-                            </div><!-- Blog Wrapper -->
-                        </div><!-- Column -->
-                        @endforeach
-                    </div>
-                    <br />
-                    <div class="row">
-                        <div class="col-sm-12 text-right">
-                            @if(app()->getLocale() == 'vi')
-                            <p><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/tin-tuc-su-kien/tin-moi-nhat" class="btn btn-primary bg-pink"><i class="uni-paper-plane"></i> {{ __('Xem tất cả') }}</a></p>
-                            @else
-                            <p><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/news-and-events" class="btn btn-primary bg-pink"><i class="uni-paper-plane"></i> {{ __('Xem tất cả') }}</a></p>
-                            @endif
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12" id="home-new">
+
+    @if($tin_moi_nhat && count($tin_moi_nhat) > 0)
+    <div class="space-y-6">
+        <div class="border-b-2 border-agu-blue pb-3 flex items-center justify-between">
+            <h2 class="text-agu-blue font-heading font-bold text-xl uppercase tracking-wide m-0">
+                <span class="inline-block w-2.5 h-5 bg-agu-blue mr-2 align-middle rounded-sm"></span>{{ __('Tin mới nhất') }}
+            </h2>
+
+            @if(app()->getLocale() == 'vi')
+            <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/tin-tuc-su-kien/tin-moi-nhat" class="text-xs font-heading font-semibold text-agu-blue hover:text-blue-700 transition flex items-center">
+                {{ __('Xem tất cả') }} &rarr;
+            </a>
+            @else
+            <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/news-and-events" class="text-xs font-heading font-semibold text-agu-blue hover:text-blue-700 transition flex items-center">
+                {{ __('Xem tất cả') }} &rarr;
+            </a>
             @endif
         </div>
-        {{-- <div class="row">
-            <div class="panel panel-warning">
-                <div class="panel-heading">
-                    <h3 class="panel-title" style="font-size:22px;font-weight:bold;"><i class="uni-information"></i> {{ __('Thông tin về Trường Đại học An Giang') }}</h3>
-    </div>
-    <div class="panel-body">
-        <div class="row">
-            <div class="col-sm-6 col-md-3">
-                <!-- Count Block -->
-                <div class="count-block dark bg-green">
-                    <h5>{{ __('Chương trình Đào tạo') }}</h5>
-                    <h3 data-count="63" class="count-number"><span class="counter">63</span></h3>
-                    <i class="uni-fountain-pen"></i>
-                </div><!-- Counter Block -->
-            </div><!-- Column -->
-            <div class="col-sm-6 col-md-3">
-                <!-- Count Block -->
-                <div class="count-block dark bg-yellow">
-                    <h5>{{ __('Đề tài NCKH') }}</h5>
-                    <h3 data-count="624" class="count-number"><span class="counter">624</span></h3>
-                    <i class="uni-chemical"></i>
-                </div><!-- Counter Block -->
-            </div><!-- Column -->
-            <div class="col-sm-6 col-md-3">
-                <!-- Count Block -->
-                <div class="count-block dark bg-pink">
-                    <h5>{{ __('Cán bộ - Giảng viên') }}</h5>
-                    <h3 data-count="824" class="count-number"><span class="counter">824</span></h3>
-                    <i class="uni-talk-man"></i>
-                </div><!-- Counter Block -->
-            </div><!-- Column -->
-            <div class="col-sm-6 col-md-3">
-                <!-- Count Block -->
-                <div class="count-block dark bg-orange">
-                    <h5>{{ __('Người học') }}</h5>
-                    <h3 data-count="12281" class="count-number"><span class="counter">12281</span></h3>
-                    <i class="uni-brain"></i>
-                </div><!-- Counter Block -->
-            </div><!-- Column -->
-        </div>
-    </div>
-    </div>
-    </div>--}}
-    <div class="row">
-        <div class="panel panel-success">
-            <div class="panel-heading">
-                <h3 class="panel-title" style="font-size:22px;font-weight:bold;"><i class="uni-calendar-4"></i> {{ __('Lịch công tác') }}</h3>
-            </div>
-            <div class="panel-body">
-                <div class="row">
-                    <span class="loading bg-orange"><i class="uni-repeat-2"></i> {{ __('Đang tải, vui lòng chờ') }}</span>
-                    <div class="col-sm-12 col-md-12" id="calendar"></div>
-                    <br />
-                    <div class="col-sm-12 col-md-12">
-                        <p><a class="ghost-button" href="https://calendar.google.com/calendar/u/0/r?cid=agu.edu.vn_qf2qof63stvjftctim9u8clh6c@group.calendar.google.com" target="_blank"><i class="uni-align-right"></i> {{ __('Xem thêm') }} </a></p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            @foreach($tin_moi_nhat as $tmn)
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="relative aspect-[16/9] bg-gray-100 overflow-hidden">
+                        @if(isset($tmn['thu_tu']) && $tmn['thu_tu'] < 0)
+                            <span class="absolute top-3 left-3 z-10 inline-flex items-center px-2.5 py-1 rounded text-[10px] font-heading font-bold bg-[#ed1c24] text-white tracking-wider uppercase shadow-md animate-pulse">
+                            🔥 {{ __('TIN HOT') }}
+                            </span>
+                            @endif
+
+                            @if(isset($tmn['photos'][0]['aliasname']) && $tmn['photos'][0]['aliasname'])
+                            <img src="{{ env('APP_ASSETS') }}storage/images/thumb_360x200/{{ $tmn['photos'][0]['aliasname'] }}" class="w-full h-full object-cover" alt="{{ $tmn['ten'] }}">
+                            @else
+                            <img src="{{ env('APP_ASSETS') }}assets/frontend/images/blog/blog-02.jpg" class="w-full h-full object-cover" alt="{{ $tmn['ten'] }}">
+                            @endif
+                    </div>
+
+                    <div class="p-5 space-y-3">
+                        <span class="text-xs font-heading font-semibold text-gray-400 block">
+                            📅 {{ App\Http\Controllers\ObjectController::getDate($tmn['date_post'], "d/m/Y") }}
+                        </span>
+
+                        <h3 class="text-base font-heading font-bold text-gray-900 leading-snug hover:text-agu-blue transition">
+                            <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/{{ __('chi-tiet-thong-tin') }}/{{ $tmn['slug'] }}" title="{{ $tmn['ten'] }}">
+                                {{ $tmn['ten'] }}
+                            </a>
+                        </h3>
+
+                        <p class="mo_ta">{{ $tmn['mo_ta'] }}</p>
                     </div>
                 </div>
+
+                <div class="p-5 pt-0 flex justify-between items-center">
+                    <div class="flex space-x-1">
+                        @if(isset($tmn['id_sdg_tags']) && $tmn['id_sdg_tags'])
+                        @foreach($tmn['id_sdg_tags'] as $st)
+                        <img src="{{ env('APP_URL') }}assets/frontend/images/sdg-tags/{{ $st }}_{{ $tmn['locale'] }}.png" alt="SDG" class="h-6 object-contain" />
+                        @endforeach
+                        @endif
+                    </div>
+
+                    <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/{{ __('chi-tiet-thong-tin') }}/{{ $tmn['slug'] }}"
+                        class="text-xs font-heading font-bold text-white bg-agu-blue px-4 py-2 rounded shadow-sm hover:bg-blue-700 transition btn-agu-effect">
+                        {{ __('Xem thêm') }}
+                    </a>
+                </div>
             </div>
+            @endforeach
         </div>
     </div>
-    </div><!-- Container -->
-</section><!-- Section -->
+    @endif
+
+    <!-- <div class="space-y-6">
+        <div class="border-b-2 border-gray-200 pb-3">
+            <h2 class="text-gray-800 font-heading font-bold text-xl uppercase tracking-wide m-0">{{ __('Con số nổi bật') }}</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-[#0066b3] text-white p-6 rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between min-h-[130px]">
+                <div>
+                    <span class="text-xs font-heading font-semibold uppercase tracking-wider opacity-90">{{ __('Chương trình Đào tạo') }}</span>
+                    <h3 class="text-3xl font-heading font-bold mt-2 m-0"><span class="counter">63</span></h3>
+                </div>
+                <div class="absolute bottom-2 right-2 text-white/20 text-5xl font-bold">🎯</div>
+            </div>
+
+            <div class="bg-[#ffe600] text-gray-900 p-6 rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between min-h-[130px]">
+                <div>
+                    <span class="text-xs font-heading font-semibold uppercase tracking-wider opacity-90">{{ __('Đề tài NCKH') }}</span>
+                    <h3 class="text-3xl font-heading font-bold mt-2 m-0"><span class="counter">624</span></h3>
+                </div>
+                <div class="absolute bottom-2 right-2 text-black/10 text-5xl font-bold">🔬</div>
+            </div>
+
+            <div class="bg-[#ed1c24] text-white p-6 rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between min-h-[130px]">
+                <div>
+                    <span class="text-xs font-heading font-semibold uppercase tracking-wider opacity-90">{{ __('Cán bộ - Giảng viên') }}</span>
+                    <h3 class="text-3xl font-heading font-bold mt-2 m-0"><span class="counter">824</span></h3>
+                </div>
+                <div class="absolute bottom-2 right-2 text-white/20 text-5xl font-bold">👨‍🏫</div>
+            </div>
+
+            <div class="bg-[#00954d] text-white p-6 rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between min-h-[130px]">
+                <div>
+                    <span class="text-xs font-heading font-semibold uppercase tracking-wider opacity-90">{{ __('Người học') }}</span>
+                    <h3 class="text-3xl font-heading font-bold mt-2 m-0"><span class="counter">12281</span></h3>
+                </div>
+                <div class="absolute bottom-2 right-2 text-white/20 text-5xl font-bold">🎓</div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 space-y-6">
+        <div class="border-b-2 border-agu-green pb-3 flex items-center justify-between">
+            <h2 class="text-agu-green font-heading font-bold text-xl uppercase tracking-wide m-0">{{ __('Lịch công tác') }}</h2>
+            <a class="text-xs font-heading font-bold text-agu-green hover:underline flex items-center"
+                href="https://calendar.google.com/calendar/u/0/r?cid=agu.edu.vn_qf2qof63stvjftctim9u8clh6c@group.calendar.google.com" target="_blank">
+                {{ __('Xem trên Google Calendar') }} &nearrow;
+            </a>
+        </div>
+
+        <div class="relative">
+            <div id="calendar-loading" class="flex items-center justify-center py-16 text-gray-400 text-sm font-heading">
+                <span class="animate-pulse flex items-center">🔄 {{ __('Đang kết nối dữ liệu lịch công tác học thuật...') }}</span>
+            </div>
+            <div class="calendar-container" id="calendar"></div>
+        </div>
+    </div>
+
+</section>
 @endsection
+
 @section('js')
 <script type="text/javascript">
-    jQuery(document).ready(function() {
+    jQuery(document).ready(function($) {
         var load = 0;
-        $(window).scroll(function() {
-            if ($(window).scrollTop() + $(window).height() >= $(document).height() - 300 && load == 0) {
-                $("#calendar").html('<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=2&amp;hl=vi&amp;bgcolor=%23FFFFFF&amp;src=agu.edu.vn_qf2qof63stvjftctim9u8clh6c%40group.calendar.google.com&amp;color=%23853104&amp;ctz=Asia%2FSaigon" style="border-width:0" width="100%" height="350" frameborder="0" scrolling="no"></iframe>');
+        setTimeout(function() {
+            if (load === 0) {
+                $("#calendar").html('<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=500&amp;wkst=2&amp;hl=vi&amp;bgcolor=%23FFFFFF&amp;src=agu.edu.vn_qf2qof63stvjftctim9u8clh6c%40group.calendar.google.com&amp;color=%230066b3&amp;ctz=Asia%2FHo_Chi_Minh" scrolling="no"></iframe>');
                 load = 1;
-                setInterval(function() {
-                    $(".loading").hide();
-                }, 3000);
+                $("#calendar-loading").hide();
             }
-        });
+        }, 500);
     });
 </script>
 @endsection

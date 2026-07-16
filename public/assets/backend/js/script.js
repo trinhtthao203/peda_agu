@@ -55,59 +55,23 @@ function upload_hinhanh(path = "") {
         });
     });
 }
-function upload_files(path) {
-    $(".dinhkem_files").change(function () {
-        var formData = new FormData($("#dinhkemform")[0]);
-        $("#progressbar").show();
+function upload_files(url) {
+    $("#dinhkem_files").on("change", function () {
+        var formData = new FormData();
+        var files = $(this)[0].files;
+        for (var i = 0; i < files.length; i++) {
+            formData.append("dinhkem_files[]", files[i]);
+        }
+
         $.ajax({
-            url: path,
+            url: url,
             type: "POST",
-            cache: false,
-            contentType: false,
             data: formData,
-            processData: false,
-            xhr: function () {
-                //upload Progress
-                var xhr = $.ajaxSettings.xhr();
-                if (xhr.upload) {
-                    xhr.upload.addEventListener(
-                        "progress",
-                        function (event) {
-                            var percent = 0;
-                            var position = event.loaded || event.position;
-                            var total = event.total;
-                            if (event.lengthComputable) {
-                                percent = Math.ceil((position / total) * 100);
-                            }
-                            //update progressbar
-                            $(".progress .progress-bar").css(
-                                "width",
-                                +percent + "%",
-                            );
-                            $(".progress .progress-bar").text(percent + "%");
-                            if (percent == 100) {
-                                $("#progressbar").fadeOut();
-                            }
-                        },
-                        true,
-                    );
-                }
-                return xhr;
-            },
-            success: function (datas) {
-                if (datas == "Failed") {
-                    alert("Lỗi không thể Upload tập tin.");
-                } else {
-                    $("#list_files").prepend(datas);
-                    delete_file();
-                    $(".draggable-element").arrangeable();
-                }
-            },
-            cache: false,
             contentType: false,
             processData: false,
-        }).fail(function () {
-            alert("Lỗi không thể Upload tập tin.");
+            success: function (response) {
+                $("#list_files").append(response);
+            },
         });
     });
 }

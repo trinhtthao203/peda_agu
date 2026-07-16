@@ -4278,3 +4278,17 @@ ul.shop-meta {
 .contact-info p:last-child {
     margin-bottom: 0;
 }
+
+.gallery-title-accent {
+    margin-bottom: 20px;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    color: #343a40;
+    background-color: #f8f9fa;
+    border-left: 4px solid #009efb; /* Vạch màu xanh giống switchery của bạn */
+    border-radius: 0 4px 4px 0;
+    display: flex;
+    align-items: center;
+}
