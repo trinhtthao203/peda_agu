@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\Http\Controllers\ObjectController;
 use App\Http\Controllers\ThongTinController;
 use App\Models\ThongTin;
 use App\Models\DMThongTin;
-use Illuminate\Support\Str;
 use App\Models\Banner;
+use App\Models\SubInfo;
+use App\Models\NhanSu;
+use App\Models\Department;
 
 class FrontendController extends Controller
 {
@@ -18,12 +22,44 @@ class FrontendController extends Controller
             ->where('trang_chu', 1)
             ->orderBy('order', 'desc')
             ->get();
-        $tin_moi_nhat = ThongTin::where('locale', '=', $locale)
-            ->where('id_cat', '!=', '65080bb00bc7b8223c27c10a')
-            ->orderBy('thu_tu', 'asc')
-            ->orderBy('date_post', 'desc')
-            ->take(6)
-            ->get();
+
+        $tin_moi_nhat = ThongTin::raw(function ($collection) use ($locale) {
+            return $collection->aggregate([
+                [
+                    '$match' => [
+                        'locale' => $locale,
+                        'id_cat' => ['$ne' => '65080bb00bc7b8223c27c10a']
+                    ]
+                ],
+                [
+                    '$addFields' => [
+                        'sort_priority' => [
+                            '$cond' => [
+                                'if' => ['$lt' => ['$thu_tu', 0]],
+                                'then' => 1,
+                                'else' => [
+                                    '$cond' => [
+                                        'if' => ['$gt' => ['$thu_tu', 0]],
+                                        'then' => 2,
+                                        'else' => 3
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ],
+                [
+                    '$sort' => [
+                        'sort_priority' => 1,
+                        'thu_tu' => -1,
+                        'date_post' => -1
+                    ]
+                ],
+                [
+                    '$limit' => 6
+                ]
+            ]);
+        });
 
         $ch = curl_init('https://tuyensinh.agu.edu.vn/api/partner/v1/news?limit=12');
         curl_setopt_array($ch, [
@@ -49,34 +85,77 @@ class FrontendController extends Controller
 
     function thong_tin(Request $request, $locale = 'vi', $slug = '')
     {
+        $query = ThongTin::where('locale', '=', $locale);
+        $cat = null;
+
         if ($slug == 'tin-moi-nhat' || $slug == '' || $slug == 'lastest-news') {
-            if ($locale == 'vi') {
-                $title = 'Tin mới nhất';
-            } else {
-                $title = 'Lastest News';
-            }
-            $danhsach = ThongTin::where('locale', '=', $locale)
-                ->orderBy('thu_tu', 'asc')
-                ->orderBy('date_post', 'desc')
-                ->paginate(12);
+            $title = ($locale == 'vi') ? 'Tin mới nhất' : 'Lastest News';
         } else {
             $cat = DMThongTin::where('locale', '=', $locale)->where('slug', '=', $slug)->first();
             $title = $cat['ten'];
-
-            $danhsach = ThongTin::where('locale', '=', $locale)
-                ->where('id_cat', $cat['_id'])
-                ->orderBy('thu_tu', 'asc')
-                ->orderBy('date_post', 'desc')
-                ->paginate(12);
+            $query->where('id_cat', $cat['_id']);
         }
+
+        $all_items = $query->raw(function ($collection) use ($locale, $slug, $cat) {
+            $matchCondition = ['locale' => $locale];
+
+            if ($slug != 'tin-moi-nhat' && $slug != '' && $slug != 'lastest-news' && $cat) {
+                $matchCondition['id_cat'] = $cat['_id'];
+            }
+
+            return $collection->aggregate([
+                [
+                    '$match' => $matchCondition
+                ],
+                [
+                    '$addFields' => [
+                        'sort_priority' => [
+                            '$cond' => [
+                                'if' => ['$lt' => ['$thu_tu', 0]],
+                                'then' => 1,
+                                'else' => [
+                                    '$cond' => [
+                                        'if' => ['$gt' => ['$thu_tu', 0]],
+                                        'then' => 2,
+                                        'else' => 3
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ],
+                [
+                    '$sort' => [
+                        'sort_priority' => 1,
+                        'thu_tu' => -1,
+                        'date_post' => -1
+                    ]
+                ]
+            ]);
+        });
+
+        $perPage = 12;
+        $currentPage = LengthAwarePaginator::resolveCurrentPage();
+        $itemCollection = collect($all_items);
+
+        $currentPageItems = $itemCollection->slice(($currentPage - 1) * $perPage, $perPage)->all();
+        $danhsach = new LengthAwarePaginator(
+            $currentPageItems,
+            $itemCollection->count(),
+            $perPage,
+            $currentPage,
+            [
+                'path' => LengthAwarePaginator::resolveCurrentPath(),
+                'query' => $request->query()
+            ]
+        );
 
         if ($slug == '') {
-            if ($locale == 'vi') $path = 'tin-tuc-su-kien/tin-moi-nhat';
-            else $path = 'news-and-events/lastest-news';
+            $path = ($locale == 'vi') ? 'tin-tuc-su-kien/tin-moi-nhat' : 'news-and-events/lastest-news';
         } else {
-            if ($locale == 'vi') $path = 'tin-tuc-su-kien/' . $slug;
-            else $path = 'news-and-events/' . $slug;
+            $path = ($locale == 'vi') ? 'tin-tuc-su-kien/' . $slug : 'news-and-events/' . $slug;
         }
+
         return view('Frontend.thong-tin')->with(compact('danhsach', 'title', 'slug', 'path'));
     }
 
@@ -126,5 +205,82 @@ class FrontendController extends Controller
         $id = ObjectController::ObjectId($ds['_id']);
         $tin_lien_quan = ThongTin::where('locale', '=', $locale)->where('_id', '<>', $id)->where('id_cat', $id_cat)->orderBy('date_post', 'desc')->take(9)->get();
         return view('Frontend.thong-tin-chi-tiet')->with(compact('ds', 'tin_lien_quan', 'sdg_tags'));
+    }
+
+    public function renderSubInfoVi(Request $request, $locale = 'vi', $slug = '')
+    {
+        $type = $request->segment(2);
+
+        $page = SubInfo::where('locale', 'vi')
+            ->where('type', $type)
+            ->where('slug', $slug)
+            ->where('status', 1)
+            ->firstOrFail();
+
+        $danhSachNhanSu = collect();
+        if ($type == 'nhan-su') {
+            $dept = Department::where('slug', $slug)->first();
+            if ($dept) {
+                $deptId = (string) $dept->_id;
+                $rawNhanSu = NhanSu::where('departments.department_id', $deptId)->get();
+
+                $danhSachNhanSu = $rawNhanSu->sortBy(function ($ns) use ($deptId) {
+                    $role = collect($ns->departments)->firstWhere('department_id', $deptId);
+                    return intval($role['thu_tu'] ?? 0);
+                })->values();
+            }
+        }
+
+        return view('Frontend.subinfo-detail', compact('page', 'danhSachNhanSu'));
+    }
+
+    public function renderSubInfoEn(Request $request, $locale = 'en', $slug = '')
+    {
+        $segment = $request->segment(2);
+        $typeMap = [
+            'staff'     => 'nhan-su',
+            'academics' => 'dao-tao',
+            'about'     => 'gioi-thieu'
+        ];
+        $type = $typeMap[$segment] ?? 'gioi-thieu';
+        $page = SubInfo::where('locale', 'en')
+            ->where('type', $type)
+            ->where('slug', $slug)
+            ->where('status', 1)
+            ->firstOrFail();
+
+        $danhSachNhanSu = collect();
+
+        if ($type == 'nhan-su') {
+            $viPage = SubInfo::where('locale', 'vi')
+                ->where('type', 'nhan-su')
+                ->where(function ($q) use ($page, $slug) {
+                    if (!empty($page->id_parent)) {
+                        $q->where('_id', $page->id_parent);
+                    } else {
+                        $q->where('slug', $slug);
+                    }
+                })
+                ->first();
+
+            $dept = null;
+            if ($viPage) {
+                $dept = Department::where('slug', $viPage->slug)->first();
+            }
+            if (!$dept) {
+                $dept = Department::where('slug', $slug)->first();
+            }
+            if ($dept) {
+                $deptId = (string) $dept->_id;
+                $rawNhanSu = NhanSu::where('departments.department_id', $deptId)->get();
+
+                $danhSachNhanSu = $rawNhanSu->sortBy(function ($ns) use ($deptId) {
+                    $role = collect($ns->departments)->firstWhere('department_id', $deptId);
+                    return intval($role['thu_tu'] ?? 0);
+                })->values();
+            }
+        }
+
+        return view('Frontend.subinfo-detail', compact('page', 'danhSachNhanSu'));
     }
 }

@@ -7,6 +7,61 @@
 @section('image', env('APP_URL') . "assets/frontend/images/blog/blog-02.jpg")
 @endif
 
+@section('css')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+<style>
+    #related-news-container .owl-nav {
+        position: static !important;
+        margin: 0 !important;
+    }
+
+    #related-news-container .owl-prev,
+    #related-news-container .owl-next {
+        position: absolute !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        margin: 0 !important;
+        z-index: 30 !important;
+        background: transparent !important;
+        color: #000000 !important;
+        width: 30px !important;
+        height: 50px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-shadow: none !important;
+        transition: all 0.2s ease-in-out !important;
+    }
+
+    #related-news-container .owl-prev:hover,
+    #related-news-container .owl-next:hover {
+        color: #0066b3 !important;
+        transform: translateY(-50%) scale(1.2) !important;
+    }
+
+    #related-news-container .owl-prev {
+        left: -20px !important;
+    }
+
+    #related-news-container .owl-next {
+        right: -20px !important;
+    }
+
+    #related-news-container .owl-prev span,
+    #related-news-container .owl-next span {
+        font-size: 32px !important;
+        font-weight: 300 !important;
+        line-height: 1 !important;
+        display: block !important;
+        font-family: 'Montserrat', sans-serif !important;
+    }
+
+    .fancybox__container {
+        --fancybox-bg: rgba(24, 24, 27, 0.95);
+    }
+</style>
+@endsection
+
 @section('body')
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0&appId=131376384294659&autoLogAppEvents=1" nonce="xz8OBKsp"></script>
@@ -73,8 +128,13 @@
                         @foreach($ds['photos'] as $h)
                         <div class="group relative aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden border border-gray-200 shadow-sm">
                             <img src="{{ env('APP_URL') }}storage/images/thumb_360x200/{{ $h['aliasname'] }}" title="{{ $h['title'] }}" alt="{{ $h['title'] }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+
                             <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                                <a href="{{ env('APP_URL') }}storage/images/origin/{{ $h['aliasname'] }}" data-rel="prettyPhoto[portfolio]" title="{{ $h['title'] }}" class="p-3 bg-agu-blue text-white rounded-full shadow-lg hover:bg-blue-700 transition transform hover:scale-110">
+                                <a href="{{ env('APP_URL') }}storage/images/origin/{{ $h['aliasname'] }}"
+                                    data-fancybox="gallery"
+                                    data-caption="{{ $h['title'] }}"
+                                    title="{{ $h['title'] }}"
+                                    class="p-3 bg-agu-blue text-white rounded-full shadow-lg hover:bg-blue-700 transition transform hover:scale-110 cursor-zoom-in">
                                     🔍
                                 </a>
                             </div>
@@ -146,27 +206,18 @@
                 $widget_tintucmoi = App\Models\ThongTin::where('locale','=',app()->getLocale())->where('_id', '<>', $ds['_id'])->orderBy('date_post', 'desc')->take(6)->get();
                     $detail_taxonomy = (app()->getLocale() == 'vi') ? 'chi-tiet-thong-tin' : 'detail-news-and-events';
                     @endphp
+
                     @if($widget_tintucmoi)
                     <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-5 space-y-4">
                         <h5 class="font-heading font-bold text-gray-900 text-base m-0 border-b-2 border-agu-green pb-2 uppercase tracking-wide">
                             {{ __('Tin tức mới') }}
                         </h5>
-                        <ul class="space-y-4">
+                        <ul class="space-y-3 text-xs font-heading font-semibold">
                             @foreach($widget_tintucmoi as $ttm)
-                            <li class="flex items-start space-x-3">
-                                <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/{{ $detail_taxonomy }}/{{ $ttm['slug'] }}" class="w-12 h-12 rounded-lg bg-gray-100 overflow-hidden shrink-0 block border border-gray-200">
-                                    @if(isset($ttm['photos'][0]['aliasname']) && $ttm['photos'][0]['aliasname'])
-                                    <img src="{{ env('APP_URL') }}storage/images/thumb_50/{{ $ttm['photos'][0]['aliasname'] }}" class="w-full h-full object-cover" alt="{{ $ttm['ten'] }}">
-                                    @else
-                                    <img src="{{ env('APP_URL') }}assets/frontend/images/default/thumb_agu.jpg" class="w-full h-full object-cover" alt="{{ $ttm['ten'] }}">
-                                    @endif
+                            <li class="border-b border-gray-100 pb-2 last:border-0 last:pb-0">
+                                <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/{{ $detail_taxonomy }}/{{ $ttm['slug'] }}" class="block text-gray-700 hover:text-agu-blue transition leading-snug">
+                                    ➔ {{ $ttm['ten'] }}
                                 </a>
-                                <div class="space-y-1">
-                                    <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/{{ $detail_taxonomy }}/{{ $ttm['slug'] }}" class="text-xs font-heading font-bold text-gray-800 hover:text-agu-blue transition line-clamp-2 leading-tight block" title="{{ $ttm['ten'] }}">
-                                        {{ $ttm['ten'] }}
-                                    </a>
-                                    <span class="text-[10px] text-gray-400 font-semibold block">📅 {{ App\Http\Controllers\ObjectController::getDate($ttm['date_post'], "d/m/Y H:i") }}</span>
-                                </div>
                             </li>
                             @endforeach
                         </ul>
@@ -177,30 +228,17 @@
         </div>
     </div>
 </div>
+
 @if($tin_lien_quan && count($tin_lien_quan) > 0)
 <section class="bg-gray-100 py-12 border-t border-gray-200 clear-both w-full block">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-
         <h5 class="font-heading font-bold text-gray-800 text-lg uppercase tracking-wider m-0 flex items-center gap-2">
             🔗 {{ __('Tin tức liên quan học thuật') }}
         </h5>
 
         <div class="w-full relative px-0 md:px-10" id="related-news-container">
-
             @if(count($tin_lien_quan) > 3)
-            <div class="owl-carousel related-carousel-init"
-                data-items="1"
-                data-loop="true"
-                data-merge="true"
-                data-nav="true"
-                data-dots="true"
-                data-margin="24"
-                data-mobile="1"
-                data-tablet="2"
-                data-desktopsmall="3"
-                data-desktop="3"
-                data-autoplay="false">
-
+            <div class="owl-carousel related-carousel-init" data-items="1" data-loop="true" data-merge="true" data-nav="true" data-dots="true" data-margin="24" data-mobile="1" data-tablet="2" data-desktopsmall="3" data-desktop="3" data-autoplay="false">
                 @foreach($tin_lien_quan as $tmn)
                 <div class="item bg-white rounded-xl shadow-sm border border-gray-200/60 overflow-hidden flex flex-col justify-between min-h-[380px] p-4 hover:shadow-md transition-all duration-300 w-full box-border">
                     <div class="space-y-3">
@@ -265,81 +303,25 @@
             </div>
             @endif
         </div>
-
     </div>
 </section>
 @endif
+
 <div id="xemdinhkem" class="modal fade" window-status="closed" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-xl fixed inset-4 md:inset-10 bg-white rounded-xl shadow-2xl z-[9999] border border-gray-200 flex flex-col hidden" id="modal-container">
         <div class="flex items-center justify-between p-4 border-b border-gray-200 bg-gray-50 rounded-t-xl">
             <h4 class="font-heading font-bold text-gray-800 text-base m-0">{{ __("Xem chi tiết đính kèm trực tuyến") }}</h4>
             <button type="button" class="close-modal text-gray-400 hover:text-gray-600 text-2xl font-bold focus:outline-none">&times;</button>
         </div>
-        <div id="chitiet" class="modal-body flex-grow p-4 overflow-y-auto bg-gray-100">
-        </div>
+        <div id="chitiet" class="modal-body flex-grow p-4 overflow-y-auto bg-gray-100"></div>
     </div>
 </div>
 @endsection
-<style>
-    #related-news-container .owl-nav {
-        position: static !important;
-        margin: 0 !important;
-    }
-
-    #related-news-container .owl-prev,
-    #related-news-container .owl-next {
-        position: absolute !important;
-        top: 50% !important;
-        transform: translateY(-50%) !important;
-        margin: 0 !important;
-        z-index: 30 !important;
-        background: transparent !important;
-        /* KHÔNG CẦN MÀU NỀN */
-        color: #000000 !important;
-        /* ICON MÀU ĐEN THUẦN */
-        width: 30px !important;
-        height: 50px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        box-shadow: none !important;
-        /* KHÔNG ĐỔ BÓNG NỀN TRÒN */
-        transition: all 0.2s ease-in-out !important;
-    }
-
-    /* Hiệu ứng hover tăng kích thước nhẹ cho mũi tên */
-    #related-news-container .owl-prev:hover,
-    #related-news-container .owl-next:hover {
-        color: #0066b3 !important;
-        /* Khi hover chuyển sang màu xanh dương AGU làm điểm nhấn nhẹ */
-        transform: translateY(-50%) scale(1.2) !important;
-    }
-
-    /* Đẩy lệch hẳn ra ngoài rìa biên của khối bản tin */
-    #related-news-container .owl-prev {
-        left: -20px !important;
-    }
-
-    #related-news-container .owl-next {
-        right: -20px !important;
-    }
-
-    /* Tinh chỉnh size của ký tự mũi tên trần < và > */
-    #related-news-container .owl-prev span,
-    #related-news-container .owl-next span {
-        font-size: 32px !important;
-        font-weight: 300 !important;
-        /* Làm mũi tên mảnh lại thanh lịch */
-        line-height: 1 !important;
-        display: block !important;
-        font-family: 'Montserrat', sans-serif !important;
-    }
-</style>
 
 @section('js')
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function($) {
-        // Khởi tạo bổ trợ an toàn cho Owl Carousel nếu có nhiều hơn 4 bài viết
         if ($.fn.owlCarousel && $('.related-carousel-init').length > 0) {
             $('.related-carousel-init').owlCarousel({
                 loop: true,
@@ -359,12 +341,11 @@
                     },
                     1200: {
                         items: 4
-                    } // Ép cứng hiển thị tỷ lệ col-3 (4 cột) trên màn hình máy tính lớn
+                    }
                 }
             });
         }
 
-        // Logic tương tác đóng mở tài liệu Modal đính kèm
         $(".view_online").click(function() {
             var href = $(this).attr("href");
             $("#modal-container").removeClass('hidden');
@@ -377,6 +358,24 @@
         $(".close-modal").click(function() {
             $("#modal-container").addClass('hidden');
             $("#chitiet").html('');
+        });
+
+        Fancybox.bind("[data-fancybox='gallery']", {
+            Toolbar: {
+                display: {
+                    left: ["infobar"],
+                    middle: [],
+                    right: ["slideshow", "thumbs", "zoom", "close"],
+                },
+            },
+            Images: {
+                Panzoom: {
+                    maxScale: 3,
+                },
+            },
+            Html: {
+                videoAutoplay: true
+            }
         });
     });
 </script>

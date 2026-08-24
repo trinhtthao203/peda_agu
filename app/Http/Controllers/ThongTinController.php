@@ -15,23 +15,23 @@ use Validator;
 class ThongTinController extends Controller
 {
     protected static $sdg_tags = array(
-        1 => 'SDG 1. No Poverty',
-        2 => 'SDG 2. Zero Hunger',
-        3 => 'SDG 3. Good Health and Well-being',
-        4 => 'SDG 4. Quality Education',
-        5 => 'SDG 5. Gender Equality',
-        6 => 'SDG 6. Clean Water and Vệ sinh',
-        7 => 'SDG 7. Affordable and Clean Energy',
-        8 => 'SDG 8. Decent Work and Economic Growth',
-        9 => 'SDG 9. Industry, Innovation and Infrastructure',
-        10 => 'SDG 10. Reduced Inequalities',
-        11 => 'SDG 11. Sustainable Cities and Communities',
-        12 => 'SDG 12. Responsible Consumption and Production',
-        13 => 'SDG 13. Climate Action',
-        14 => 'SDG 14. Life Below Water',
-        15 => 'SDG 15. Life on Land',
-        16 => 'SDG 16. Peace, Justice and Strong Institutions',
-        17 => 'SDG 17. Partnerships for the Goals'
+        1 => '1. Không nghèo đói',
+        2 => '2. Không còn nạn đói',
+        3 => '3. Sức khỏe và cuộc sống hạnh phúc',
+        4 => '4. Giáo dục có chất lượng',
+        5 => '5. Bình đẳng giới',
+        6 => '6. Nước sạch và vệ sinh',
+        7 => '7. Năng lượng sạch và giá cả phải chăng',
+        8 => '8. Việc làm tốt và tăng trưởng kinh tế',
+        9 => '9. Công nghiệp, sáng tạo và phát triển hạ tầng',
+        10 => '10. Giảm bất bình đẳng',
+        11 => '11. Các thành phố và cộng đồng bền vững',
+        12 => '12. Tiêu dùng và sản xuất có trách nhiệm',
+        13 => '13. Hành động ứng phó với biến đổi khí hậu',
+        14 => '14. Cuộc sống dưới nước',
+        15 => '15. Cuộc sống trên đất liền',
+        16 => '16. Hòa bình, công lý và các thể chế vững mạnh',
+        17 => '17. Hợp tác vì các mục tiêu'
     );
 
     public static function get_sdg_tags()

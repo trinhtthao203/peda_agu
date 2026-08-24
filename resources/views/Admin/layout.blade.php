@@ -13,8 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css">
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     @section('css') @show
 
@@ -42,7 +41,6 @@
                             <img src="{{ env('APP_URL') }}assets/backend/images/flags/{{ app()->getLocale() }}.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">{{ $arr_lang[app()->getLocale()] }} <i class="mdi mdi-chevron-down"></i> </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <!-- item-->
                             @foreach($arr_lang as $klang => $vlang)
                             @php
                             $id = isset($id) ? $id : App\Http\Controllers\ObjectController::Id();
@@ -56,12 +54,10 @@
                     </li>
                     <li class="dropdown notification-list">
                         <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            <img src="{{ env('APP_URL') }}assets/backend/images/logo-sm.png" alt="{{ Session::get('user.name') }}" alt="{{ Session::get('user.username') }}" class="rounded-circle">
-                            <span class="pro-user-name ml-1">{{ Session::get('user.username') }}<i class="mdi mdi-chevron-down"></i>
-                            </span>
+                            <img src="{{ env('APP_URL') }}assets/backend/images/logo-sm.png" alt="{{ Session::get('user.name') }}" class="rounded-circle">
+                            <span class="pro-user-name ml-1">{{ Session::get('user.username') }}<i class="mdi mdi-chevron-down"></i></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right profile-dropdown">
-                            <!-- item-->
                             <div class="dropdown-item noti-title">
                                 <h6 class="text-overflow m-0">Welcome !</h6>
                             </div>
@@ -69,12 +65,6 @@
                             <a href="{{ env('APP_URL') . app()->getLocale() }}/admin/user" class="dropdown-item notify-item">
                                 <i class="fe-user"></i> <span>{{ __("QL Người dùng") }}</span>
                             </a>
-                            <!-- <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/admin/translate" class="dropdown-item notify-item">
-                                <i class="fas fa-language"></i> <span>{{ __('Chuyển ngữ') }}</span>
-                            </a>
-                            <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/admin/translate-path" class="dropdown-item notify-item">
-                                <i class="fas fa-code-branch"></i> <span>{{ __('Chuyển ngữ đường dẫn') }}</span>
-                            </a> -->
                             @endif
                             <a href="{{ env('APP_URL') . app()->getLocale() }}/auth/logout" class="dropdown-item notify-item">
                                 <i class="fe-log-out"></i> <span>{{ __("Đăng xuất") }}</span>
@@ -82,7 +72,6 @@
                         </div>
                     </li>
                 </ul>
-                <!-- LOGO -->
                 <div class="logo-box">
                     <a href="{{ env('APP_URL') }}admin" class="logo text-center">
                         <span class="logo-lg">
@@ -109,11 +98,22 @@
                         <li>
                             <a href="{{ env('APP_URL') . app()->getLocale() }}/admin/thong-tin"><i class="fas fa-tasks"></i> {{ __('Bài viết') }}</a>
                         </li>
+
+                        <!-- ĐÃ THÊM: Quản lý các trang nội dung tĩnh CSDL thay cho file .txt -->
+                        <li>
+                            <a href="{{ env('APP_URL') . app()->getLocale() }}/admin/sub-info"><i class="fas fa-file-code"></i> {{ __('Trang HTML tĩnh') }}</a>
+                        </li>
+
+                        <!-- ĐÃ THÊM: Quản lý giảng viên nhân sự thuộc khối phòng/bộ môn -->
+                        <li>
+                            <a href="{{ env('APP_URL') . app()->getLocale() }}/admin/nhan-su"><i class="fas fa-user-graduate"></i> {{ __('Cán bộ & Nhân sự') }}</a>
+                        </li>
                         @endif
                     </ul>
                     <div class="clearfix"></div>
                 </div>
             </div>
+        </div>
     </header>
 
     <div class="wrapper">

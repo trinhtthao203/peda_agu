@@ -33,7 +33,7 @@
             <thead>
                 <tr>
                     <th>{{ __('STT') }}</th>
-                    <th>{{ __('Hình ảnh') }}</th>
+                    <th style="width:80px;">{{ __('Hình ảnh') }}</th>
                     <th>{{ __('Tiêu đề') }}</th>
                     <th>{{ __('Danh mục Thông tin') }}</th>
                     <th style="width:55px;">#</th>
@@ -58,7 +58,9 @@
                         @endif
                     </td>
                     <td>
-                        <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/@if(app()->getLocale() == 'vi'){{ 'chi-tiet-thong-tin' }}@else{{ ('detail-news-and-events') }}@endif/{{ $ds['slug'] }}" target="_blank"><strong>{{ $ds['ten'] }}</strong></a>
+                        <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/@if(app()->getLocale() == 'vi'){{ 'chi-tiet-thong-tin' }}@else{{ ('detail-news-and-events') }}@endif/{{ $ds['slug'] }}" target="_blank" style="font-weight: 500;">
+                            {{ $ds['ten'] }}
+                        </a>
                         <span class="badge badge-info"><small>{{ App\Http\Controllers\ObjectController::getDate($ds['date_post'],"d/m/Y H:i") }}</small></span>
                     </td>
                     <td class="text-center">

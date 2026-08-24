@@ -13,6 +13,9 @@ use App\Http\Controllers\TranslatePathController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\DMThongTinController;
 use App\Http\Controllers\ThongTinController;
+use App\Http\Controllers\SubInfoController;
+use App\Http\Controllers\NhanSuController;
+use App\Http\Controllers\DepartmentController;
 use UniSharp\LaravelFilemanager\Lfm;
 
 Route::get('/', function () {
@@ -23,13 +26,13 @@ Route::get('admin', function () {
     return redirect(app()->getLocale() . '/admin');
 });
 
-Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}'], 'middleware' => 'setlocale'], function() {
+Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}'], 'middleware' => 'setlocale'], function () {
 
     // Auth
     Route::get('auth/login',     [AuthController::class, 'getLogin'])->name('auth-login-get');
     Route::post('auth/login',    [AuthController::class, 'authenticate'])->name('auth-login-post');
     Route::get('auth/logout',    [AuthController::class, 'logout'])->name('auth-logout-get');
-    Route::get('auth/not-permis',[AuthController::class, 'notPermis'])->name('auth-not-permis');
+    Route::get('auth/not-permis', [AuthController::class, 'notPermis'])->name('auth-not-permis');
 
     // Utilities
     Route::get('slug/{str}', [ObjectController::class, 'getSlug'])->name('slug-string');
@@ -39,7 +42,7 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}'], 'm
     Route::get('image/delete/{filename}',   [ImageController::class, 'delete'])->middleware('checkauth');
     Route::post('file/uploads/{fileID}',    [FileController::class, 'fileUploads'])->middleware('checkauth');
     Route::post('file/uploads',             [FileController::class, 'uploads'])->middleware('checkauth');
-    Route::post('file/upload-json/{fileID}',[FileController::class, 'upload_json'])->middleware('checkauth');
+    Route::post('file/upload-json/{fileID}', [FileController::class, 'upload_json'])->middleware('checkauth');
     Route::get('file/delete/{filename}',    [FileController::class, 'delete'])->middleware('checkauth');
     Route::get('file/download/{filename}',  [FileController::class, 'download'])->middleware('checkauth');
 
@@ -49,16 +52,12 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}'], 'm
 
     // Frontend
     Route::get('/',                            [FrontendController::class, 'index'])->name('trang-chu');
-    Route::get('gioi-thieu',                   [FrontendController::class, 'gioi_thieu'])->name('gioi-thieu');
-    Route::get('gioi-thieu/{slug}',            [FrontendController::class, 'gioi_thieu'])->name('gioi-thieu-slug');
-    Route::get('about',                        [FrontendController::class, 'about'])->name('about');
-    Route::get('about/{slug}',                 [FrontendController::class, 'about'])->name('about-slug');
     Route::get('tin-tuc-su-kien',              [FrontendController::class, 'thong_tin'])->name('thong-tin');
     Route::get('tin-tuc-su-kien/{slug}',       [FrontendController::class, 'thong_tin'])->name('thong-tin-slug');
     Route::get('news-and-events',              [FrontendController::class, 'thong_tin'])->name('news-and-events');
     Route::get('news-and-events/{slug}',       [FrontendController::class, 'thong_tin'])->name('news-and-events-slug');
     Route::get('chi-tiet-thong-tin/{slug}',    [FrontendController::class, 'thong_tin_chi_tiet'])->name('chi-tiet-thong-tin-slug');
-    Route::get('detail-news-and-events/{slug}',[FrontendController::class, 'thong_tin_chi_tiet'])->name('detail-news-and-events-slug');
+    Route::get('detail-news-and-events/{slug}', [FrontendController::class, 'thong_tin_chi_tiet'])->name('detail-news-and-events-slug');
     Route::get('xem-truc-tuyen/thong-tin/{id}',       [FrontendController::class, 'xem_truc_tuyen'])->name('xem-truc-tuyen-thong-tin-slug');
     Route::get('xem-truc-tuyen/thong-tin/{id}/{key}', [FrontendController::class, 'xem_truc_tuyen'])->name('xem-truc-tuyen-thong-tin-slug-key');
     Route::get('tai-ve/thong-tin/{id}',               [FrontendController::class, 'tai_ve'])->name('tai-ve-thong-tin-slug');
@@ -66,8 +65,18 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}'], 'm
     Route::get('tim-kiem', [FrontendController::class, 'tim_kiem'])->name('tim-kiem');
     Route::get('search',   [FrontendController::class, 'tim_kiem'])->name('search');
 
+    // Đường dẫn động dành cho Giao diện Tiếng Việt
+    Route::get('nhan-su/{slug}', [FrontendController::class, 'renderSubInfoVi'])->name('subinfo-nhansu-vi');
+    Route::get('dao-tao/{slug}', [FrontendController::class, 'renderSubInfoVi'])->name('subinfo-daotao-vi');
+    Route::get('gioi-thieu/{slug}', [FrontendController::class, 'renderSubInfoVi'])->name('subinfo-gioithieu-vi');
+
+    // Đường dẫn động dành cho Giao diện Tiếng Anh (staff, academics, about)
+    Route::get('staff/{slug}', [FrontendController::class, 'renderSubInfoEn'])->name('subinfo-staff-en');
+    Route::get('academics/{slug}', [FrontendController::class, 'renderSubInfoEn'])->name('subinfo-academics-en');
+    Route::get('about/{slug}', [FrontendController::class, 'renderSubInfoEn'])->name('subinfo-about-en');
+
     // Admin group
-    Route::group(['prefix' => 'admin', 'middleware' => 'checkauth'], function() {
+    Route::group(['prefix' => 'admin', 'middleware' => 'checkauth'], function () {
         Route::get('/',  [AuthController::class, 'admin'])->name('admin');
 
         // Banner
@@ -104,26 +113,32 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}'], 'm
         Route::post('user/update',               [UserController::class, 'update'])->middleware('role:Admin')->name('admin-user-update');
         Route::get('user/delete/{id}',           [UserController::class, 'delete'])->middleware('role:Admin')->name('admin-delete');
 
-        // Translate
-        Route::get('translate',              [TranslateController::class, 'index'])->middleware('role:Admin,Manager,Updater')->name('admin-translate');
-        Route::get('translate/add',          [TranslateController::class, 'add'])->middleware('role:Admin,Manager,Updater')->name('admin-translate-add');
-        Route::post('translate/create',      [TranslateController::class, 'create'])->middleware('role:Admin,Manager,Updater')->name('admin-translate-create');
-        Route::get('translate/edit/{key}',   [TranslateController::class, 'edit'])->middleware('role:Admin,Manager,Updater')->name('admin-translate-edit');
-        Route::post('translate/update',      [TranslateController::class, 'update'])->middleware('role:Admin,Manager,Updater')->name('admin-translate-update');
-        Route::get('translate/delete/{key}', [TranslateController::class, 'delete'])->middleware('role:Admin,Manager,Updater')->name('admin-translate-delete');
+        // Quản lý Trang thông tin tĩnh (SubInfo)
+        Route::get('sub-info',              [SubInfoController::class, 'list'])->name('admin-sub-info');
+        Route::get('sub-info/add',          [SubInfoController::class, 'add'])->name('admin-sub-info-add');
+        Route::post('sub-info/create',      [SubInfoController::class, 'create'])->name('admin-sub-info-create');
+        Route::get('sub-info/edit/{id}',    [SubInfoController::class, 'edit'])->name('admin-sub-info-edit');
+        Route::post('sub-info/update',      [SubInfoController::class, 'update'])->name('admin-sub-info-update');
+        Route::get('sub-info/delete/{id}',  [SubInfoController::class, 'delete'])->name('admin-sub-info-delete');
 
-        // Translate Path
-        Route::get('translate-path',              [TranslatePathController::class, 'index'])->middleware('role:Admin,Manager,Updater')->name('admin-translate-path');
-        Route::get('translate-path/add',          [TranslatePathController::class, 'add'])->middleware('role:Admin,Manager,Updater')->name('admin-translate-path-add');
-        Route::post('translate-path/create',      [TranslatePathController::class, 'create'])->middleware('role:Admin,Manager,Updater')->name('admin-translate-path-create');
-        Route::get('translate-path/edit/{key}',   [TranslatePathController::class, 'edit'])->middleware('role:Admin,Manager,Updater')->name('admin-translate-path-edit');
-        Route::post('translate-path/update',      [TranslatePathController::class, 'update'])->middleware('role:Admin,Manager,Updater')->name('admin-translate-path-update');
-        Route::get('translate-path/delete/{key}', [TranslatePathController::class, 'delete'])->middleware('role:Admin,Manager,Updater')->name('admin-translate-path-delete');
+        // Quản lý Nhân sự bộ môn (NhanSu)
+        Route::get('nhan-su',               [NhanSuController::class, 'list'])->name('admin-nhan-su');
+        Route::get('nhan-su/add',           [NhanSuController::class, 'add'])->name('admin-nhan-su-add');
+        Route::post('nhan-su/create',       [NhanSuController::class, 'create'])->name('admin-nhan-su-create');
+        Route::get('nhan-su/edit/{id}',     [NhanSuController::class, 'edit'])->name('admin-nhan-su-edit');
+        Route::post('nhan-su/update',       [NhanSuController::class, 'update'])->name('admin-nhan-su-update');
+        Route::get('nhan-su/delete/{id}',   [NhanSuController::class, 'delete'])->name('admin-nhan-su-delete');
+
+        // Quản lý Đơn vị (Department)
+        Route::get('department',              [DepartmentController::class, 'list'])->middleware('role:Admin,Manager,Updater')->name('admin-department');
+        Route::get('department/add',          [DepartmentController::class, 'add'])->middleware('role:Admin,Manager,Updater')->name('admin-department-add');
+        Route::post('department/create',      [DepartmentController::class, 'create'])->middleware('role:Admin,Manager,Updater')->name('admin-department-create');
+        Route::get('department/edit/{id}',    [DepartmentController::class, 'edit'])->middleware('role:Admin,Manager,Updater')->name('admin-department-edit');
+        Route::post('department/update',      [DepartmentController::class, 'update'])->middleware('role:Admin,Manager,Updater')->name('admin-department-update');
+        Route::get('department/delete/{id}',  [DepartmentController::class, 'delete'])->middleware('role:Admin,Manager,Updater')->name('admin-department-delete');
     });
-
 });
 
-// File manager — chỉ dùng một prefix, bỏ prefix 'filemanager' trùng
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     Lfm::routes();
 });
