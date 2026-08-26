@@ -9,10 +9,26 @@ use Illuminate\Support\Str;
 
 class NhanSuController extends Controller
 {
-    public function list()
+    public function list(Request $request)
     {
-        $danhsach = NhanSu::paginate(20);
-        return view('Admin.NhanSu.list', compact('danhsach'));
+        $query = NhanSu::query();
+        if ($request->filled('keyword')) {
+            $keyword = trim($request->keyword);
+            $query->where(function ($q) use ($keyword) {
+                $q->where('ho_ten', 'regexp', "/{$keyword}/i")
+                    ->orWhere('ho_ten_en', 'regexp', "/{$keyword}/i")
+                    ->orWhere('email', 'regexp', "/{$keyword}/i");
+            });
+        }
+        if ($request->filled('department_id')) {
+            $deptId = (string) $request->department_id;
+            $query->where('departments.department_id', $deptId);
+        }
+
+        $danhsach = $query->paginate(20)->appends($request->all());
+        $departments = Department::active()->orderBy('display_order', 'asc')->get();
+
+        return view('Admin.NhanSu.list', compact('danhsach', 'departments'));
     }
 
     public function add()
@@ -25,13 +41,16 @@ class NhanSuController extends Controller
     {
         $request->validate([
             'ho_ten'                      => 'required|string|max:255',
+            'ho_ten_en'                   => 'nullable|string|max:255',
+            'hoc_ham_hoc_vi_en'           => 'nullable|string|max:255',
+            'chuyen_nganh_en'             => 'nullable|string|max:255',
             'email'                       => 'required|email',
             'departments'                 => 'required|array|min:1|max:20',
             'departments.*.department_id' => 'required|string',
             'departments.*.chuc_vu'       => 'required|string|max:100',
+            'departments.*.chuc_vu_en'    => 'nullable|string|max:100',
         ]);
 
-        // Validate each department_id exists
         foreach ($request->departments as $entry) {
             if (!Department::find($entry['department_id'])) {
                 return redirect()->back()->withInput()
@@ -39,7 +58,6 @@ class NhanSuController extends Controller
             }
         }
 
-        // Handle file uploads (keep existing logic)
         $hinh_anh = '';
         if ($request->hasFile('hinh_anh')) {
             $file = $request->file('hinh_anh');
@@ -50,7 +68,7 @@ class NhanSuController extends Controller
         $ly_lich = [];
         if ($request->hasFile('ly_lich_khoa_hoc')) {
             $file = $request->file('ly_lich_khoa_hoc');
-            $aliasname = time() . '_llkh_' . \Illuminate\Support\Str::slug($request->ho_ten, '_') . '.' . $file->getClientOriginalExtension();
+            $aliasname = time() . '_llkh_' . Str::slug($request->ho_ten, '_') . '.' . $file->getClientOriginalExtension();
             $file->move(public_path('storage/files'), $aliasname);
             $ly_lich = [
                 'title' => 'LLKH_' . $request->ho_ten,
@@ -59,17 +77,19 @@ class NhanSuController extends Controller
             ];
         }
 
-        // Build departments array
         $deptEntries = $this->buildDepartmentEntries($request->departments);
 
         NhanSu::create([
-            'ho_ten'           => $request->ho_ten,
-            'hoc_ham_hoc_vi'   => $request->hoc_ham_hoc_vi,
-            'chuyen_nganh'     => $request->chuyen_nganh,
-            'email'            => $request->email,
-            'hinh_anh'         => $hinh_anh,
-            'ly_lich_khoa_hoc' => $ly_lich,
-            'departments'      => $deptEntries,
+            'ho_ten'            => $request->ho_ten,
+            'ho_ten_en'         => $request->ho_ten_en,
+            'hoc_ham_hoc_vi'    => $request->hoc_ham_hoc_vi,
+            'hoc_ham_hoc_vi_en' => $request->hoc_ham_hoc_vi_en,
+            'chuyen_nganh'      => $request->chuyen_nganh,
+            'chuyen_nganh_en'   => $request->chuyen_nganh_en,
+            'email'             => $request->email,
+            'hinh_anh'          => $hinh_anh,
+            'ly_lich_khoa_hoc'  => $ly_lich,
+            'departments'       => $deptEntries,
         ]);
 
         return redirect()->route('admin-nhan-su', [app()->getLocale()])->with('success', 'Thêm nhân sự mới thành công!');
@@ -87,9 +107,13 @@ class NhanSuController extends Controller
         $request->validate([
             'id'                          => 'required',
             'ho_ten'                      => 'required|string|max:255',
+            'ho_ten_en'                   => 'nullable|string|max:255',
+            'hoc_ham_hoc_vi_en'           => 'nullable|string|max:255',
+            'chuyen_nganh_en'             => 'nullable|string|max:255',
             'departments'                 => 'required|array|min:1|max:20',
             'departments.*.department_id' => 'required|string',
             'departments.*.chuc_vu'       => 'required|string|max:100',
+            'departments.*.chuc_vu_en'    => 'nullable|string|max:100',
         ]);
 
         foreach ($request->departments as $entry) {
@@ -111,7 +135,7 @@ class NhanSuController extends Controller
         $ly_lich = $ns->ly_lich_khoa_hoc;
         if ($request->hasFile('ly_lich_khoa_hoc')) {
             $file = $request->file('ly_lich_khoa_hoc');
-            $aliasname = time() . '_llkh_' . \Illuminate\Support\Str::slug($request->ho_ten, '_') . '.' . $file->getClientOriginalExtension();
+            $aliasname = time() . '_llkh_' . Str::slug($request->ho_ten, '_') . '.' . $file->getClientOriginalExtension();
             $file->move(public_path('storage/files'), $aliasname);
             $ly_lich = [
                 'title' => 'LLKH_' . $request->ho_ten,
@@ -122,13 +146,16 @@ class NhanSuController extends Controller
 
         $deptEntries = $this->buildDepartmentEntries($request->departments);
 
-        $ns->ho_ten           = $request->ho_ten;
-        $ns->hoc_ham_hoc_vi   = $request->hoc_ham_hoc_vi;
-        $ns->chuyen_nganh     = $request->chuyen_nganh;
-        $ns->email            = $request->email;
-        $ns->hinh_anh         = $hinh_anh;
-        $ns->ly_lich_khoa_hoc = $ly_lich;
-        $ns->departments      = $deptEntries;
+        $ns->ho_ten            = $request->ho_ten;
+        $ns->ho_ten_en         = $request->ho_ten_en;
+        $ns->hoc_ham_hoc_vi    = $request->hoc_ham_hoc_vi;
+        $ns->hoc_ham_hoc_vi_en = $request->hoc_ham_hoc_vi_en;
+        $ns->chuyen_nganh      = $request->chuyen_nganh;
+        $ns->chuyen_nganh_en   = $request->chuyen_nganh_en;
+        $ns->email             = $request->email;
+        $ns->hinh_anh          = $hinh_anh;
+        $ns->ly_lich_khoa_hoc  = $ly_lich;
+        $ns->departments       = $deptEntries;
         $ns->save();
 
         return redirect()->route('admin-nhan-su', [app()->getLocale()])->with('success', 'Cập nhật nhân sự thành công!');
@@ -152,15 +179,16 @@ class NhanSuController extends Controller
             if ($isPrimary) $primarySet = true;
 
             $entries[] = [
-                'department_id'   => (string)$entry['department_id'],
-                'department_name' => $dept ? $dept->name : '',
-                'chuc_vu'         => $entry['chuc_vu'],
-                'thu_tu'          => intval($entry['thu_tu'] ?? 0),
-                'is_primary'      => $isPrimary,
+                'department_id'      => (string)$entry['department_id'],
+                'department_name'    => $dept ? ($dept->name ?? '') : '',
+                'department_name_en' => $dept ? ($dept->name_en ?? $dept->name ?? '') : '',
+                'chuc_vu'            => $entry['chuc_vu'],
+                'chuc_vu_en'         => $entry['chuc_vu_en'] ?? null,
+                'thu_tu'             => intval($entry['thu_tu'] ?? 0),
+                'is_primary'         => $isPrimary,
             ];
         }
 
-        // If no primary was set, promote the first entry
         if (!$primarySet && !empty($entries)) {
             $entries[0]['is_primary'] = true;
         }

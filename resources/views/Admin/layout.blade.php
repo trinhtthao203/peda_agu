@@ -88,25 +88,68 @@
             <div class="container-fluid">
                 <div id="navigation">
                     <ul class="navigation-menu">
+                        <!-- <li>
+                            <a href="{{ route('admin', [app()->getLocale()]) }}"><i class="fas fa-tachometer-alt"></i> {{ __('Bảng điều khiển') }}</a>
+                        </li> -->
+
                         @if(App\Http\Controllers\UserController::is_roles('Admin,Manager,Updater'))
-                        <li>
-                            <a href="{{ env('APP_URL') . app()->getLocale() }}/admin/banner"><i class="far fa-images"></i> {{ __('Ảnh bìa') }}</a>
-                        </li>
-                        <li>
-                            <a href="{{ env('APP_URL') . app()->getLocale() }}/admin/danh-muc-thong-tin"><i class="fas fa-tags"></i> {{ __('Danh mục Thông tin') }}</a>
-                        </li>
-                        <li>
-                            <a href="{{ env('APP_URL') . app()->getLocale() }}/admin/thong-tin"><i class="fas fa-tasks"></i> {{ __('Bài viết') }}</a>
+                        <!-- 1. QUẢN LÝ NỘI DUNG -->
+                        <li class="has-submenu">
+                            <a href="#"><i class="fas fa-newspaper"></i> {{ __('Quản lý Nội dung') }}
+                                <div class="arrow-down"></div>
+                            </a>
+                            <ul class="submenu">
+                                <li>
+                                    <a href="{{ route('admin-thong-tin', [app()->getLocale()]) }}">
+                                        <i class="fas fa-edit mr-1"></i> {{ __('Bài viết & Tin tức') }}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('admin-sub-info', [app()->getLocale()]) }}">
+                                        <i class="fas fa-file-alt mr-1"></i> {{ __('Trang thông tin (HTML)') }}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('admin-banner', [app()->getLocale()]) }}">
+                                        <i class="far fa-images mr-1"></i> {{ __('Ảnh bìa & Banner') }}
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
 
-                        <!-- ĐÃ THÊM: Quản lý các trang nội dung tĩnh CSDL thay cho file .txt -->
-                        <li>
-                            <a href="{{ env('APP_URL') . app()->getLocale() }}/admin/sub-info"><i class="fas fa-file-code"></i> {{ __('Trang HTML tĩnh') }}</a>
+                        <!-- 2. QUẢN LÝ DANH MỤC & TỔ CHỨC -->
+                        <li class="has-submenu">
+                            <a href="#"><i class="fas fa-layer-group"></i> {{ __('Quản lý Danh mục') }}
+                                <div class="arrow-down"></div>
+                            </a>
+                            <ul class="submenu">
+                                <li>
+                                    <a href="{{ route('admin-nganh-dao-tao', [app()->getLocale()]) }}">
+                                        <i class="fas fa-graduation-cap mr-1"></i> {{ __('Ngành đào tạo') }}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('admin-department', [app()->getLocale()]) }}">
+                                        <i class="fas fa-sitemap mr-1"></i> {{ __('Đơn vị / Bộ môn') }}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('admin-nhan-su', [app()->getLocale()]) }}">
+                                        <i class="fas fa-user-tie mr-1"></i> {{ __('Đội ngũ Cán bộ & Nhân sự') }}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('admin-danh-muc-thong-tin', [app()->getLocale()]) }}">
+                                        <i class="fas fa-tags mr-1"></i> {{ __('Danh mục Tin tức') }}
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
+                        @endif
 
-                        <!-- ĐÃ THÊM: Quản lý giảng viên nhân sự thuộc khối phòng/bộ môn -->
+                        @if(Session::get('user.roles') && in_array('Admin', Session::get('user.roles')))
                         <li>
-                            <a href="{{ env('APP_URL') . app()->getLocale() }}/admin/nhan-su"><i class="fas fa-user-graduate"></i> {{ __('Cán bộ & Nhân sự') }}</a>
+                            <a href="{{ route('admin-user', [app()->getLocale()]) }}"><i class="fas fa-users-cog"></i> {{ __('Tài khoản') }}</a>
                         </li>
                         @endif
                     </ul>

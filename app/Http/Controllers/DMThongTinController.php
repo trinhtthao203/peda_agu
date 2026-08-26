@@ -7,6 +7,7 @@ use App\Http\Controllers\ObjectController;
 use App\Http\Controllers\LogController;
 use App\Models\DMThongTin;
 use App\Models\TranslatePath;
+use App\Models\ThongTin;
 use Session;
 use Validator;
 
@@ -99,41 +100,79 @@ class DMThongTinController extends Controller
             'ten' => 'required'
         ]);
         if ($validator->fails()) {
-            return redirect(env('APP_URL') . $locale . '/admin/danh-muc-thong-tin/edit/' . $data['id'] . '?trans_id=' . $data['trans_id'] . '&trans_lang=' . $data['trans_lang'])->withErrors($validator)->withInput();
+            $trans_id = $data['trans_id'] ?? '';
+            $trans_lang = $data['trans_lang'] ?? '';
+            return redirect(env('APP_URL') . $locale . '/admin/danh-muc-thong-tin/edit/' . $data['id'] . '?trans_id=' . $trans_id . '&trans_lang=' . $trans_lang)->withErrors($validator)->withInput();
         }
+
         $id_user = $request->session()->get('user._id');
         $db = DMThongTin::find($data['id']);
+        if (!$db) {
+            Session::flash('error', 'Danh mục không tồn tại!');
+            return redirect(env('APP_URL') . $locale . '/admin/danh-muc-thong-tin');
+        }
+
         $db->ten = $data['ten'];
         $db->slug = $data['slug'];
-        $db->thu_tu = intval($data['thu_tu']);
+        $db->thu_tu = intval($data['thu_tu'] ?? 0);
         $db->locale = $locale;
         $db->id_user = ObjectController::ObjectId($id_user);
         $db->save();
-        //update translatepath
-        $trans_lang = $data['trans_lang'];
-        $trans_id = $data['trans_id'];
+
+        // Cập nhật TranslatePath an toàn (tránh lỗi null)
+        $trans_lang = $data['trans_lang'] ?? null;
+        $trans_id = $data['trans_id'] ?? null;
         $id_path = ObjectController::ObjectId($data['id']);
+
         $check_path = TranslatePath::where("id_" . $locale, "=", $id_path)->first();
-        $trans = TranslatePath::find($check_path['_id']);
-        $trans->{"id_$locale"} = $id_path;
-        $trans->{"slug_$locale"} = $data['slug'];
-        $trans->collection = 'dm_thong_tin';
-        $trans->save();
+        if ($check_path) {
+            $trans = TranslatePath::find($check_path['_id'] ?? $check_path->_id);
+        } else {
+            $trans = new TranslatePath();
+        }
+
+        if ($trans) {
+            $trans->{"id_$locale"} = $id_path;
+            $trans->{"slug_$locale"} = $data['slug'];
+            $trans->collection = 'dm_thong_tin';
+            $trans->save();
+        }
+
         $logQuery = array(
-            'action' => 'Chỉnh sửa Danh mục Kiến thức Nha Khoa [' . $data['ten'] . ']',
+            'action' => 'Chỉnh sửa Danh mục [' . $data['ten'] . ']',
             'id_collection' => $data['id'],
             'collection' => 'dm_thong_tin',
             'data' => $data
         );
         LogController::addLog($logQuery);
+
         Session::flash('msg', 'Chỉnh sửa thành công');
-        if ($trans_lang) return redirect(env('APP_URL') . $trans_lang . '/admin/danh-muc-thong-tin');
+        if (!empty($trans_lang)) return redirect(env('APP_URL') . $trans_lang . '/admin/danh-muc-thong-tin');
         return redirect(env('APP_URL') . $locale . '/admin/danh-muc-thong-tin');
     }
 
     function delete(Request $request, $locale = '', $id = '')
     {
         $data = DMThongTin::find($id);
+        if (!$data) {
+            Session::flash('msg', 'Danh mục không tồn tại');
+            return redirect(env('APP_URL') . $locale . '/admin/danh-muc-thong-tin');
+        }
+
+        // 1. Kiểm tra bài viết đang dùng danh mục này (so sánh cả String và ObjectId)
+        $objectId = ObjectController::ObjectId($id);
+        $countArticles = ThongTin::where(function ($q) use ($id, $objectId) {
+            $q->where('id_cat', (string) $id)
+                ->orWhere('id_cat', $objectId);
+        })->count();
+
+        // 2. Nếu có bài viết -> Chặn xóa và gửi Session error
+        if ($countArticles > 0) {
+            Session::flash('error', 'Không thể xóa! Đang có ' . $countArticles . ' bài viết thuộc danh mục [' . $data['ten'] . '].');
+            return redirect(env('APP_URL') . $locale . '/admin/danh-muc-thong-tin');
+        }
+
+        // 3. Nếu không có bài viết -> Tiến hành xóa
         $logQuery = array(
             'action' => 'Xóa Danh mục Kiến thức Nha Khoa [' . $data['ten'] . ']',
             'id_collection' => $id,
@@ -149,7 +188,7 @@ class DMThongTinController extends Controller
             $trans->unset('slug_' . $locale);
         }
         LogController::addLog($logQuery);
-        Session::flash('msg', 'Xóa thành công');
+        Session::flash('msg', 'Xóa danh mục thành công');
         return redirect(env('APP_URL') . $locale . '/admin/danh-muc-thong-tin');
     }
 }

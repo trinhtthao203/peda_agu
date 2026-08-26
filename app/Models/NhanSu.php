@@ -11,24 +11,23 @@ class NhanSu extends Model
 
     protected $fillable = [
         'ho_ten',
+        'ho_ten_en',
         'hoc_ham_hoc_vi',
+        'hoc_ham_hoc_vi_en',
         'chuyen_nganh',
+        'chuyen_nganh_en',
         'email',
         'hinh_anh',
         'ly_lich_khoa_hoc',
         'departments',
-        'chuc_vu'
+        'chuc_vu',
+        'chuc_vu_en'
     ];
 
     protected $casts = [
         'ly_lich_khoa_hoc' => 'array',
     ];
 
-    /**
-     * Accessor for backward compatibility — old records without a `departments`
-     * field will return an empty array instead of null.
-     * Also handles JSON-encoded strings from MongoDB.
-     */
     public function getDepartmentsAttribute($value): array
     {
         if (is_array($value)) {
@@ -41,9 +40,6 @@ class NhanSu extends Model
         return [];
     }
 
-    /**
-     * Return the DepartmentEntry for the given department ID, or null if not found.
-     */
     public function getRoleInDepartment(?string $departmentId): ?array
     {
         if (empty($departmentId)) {

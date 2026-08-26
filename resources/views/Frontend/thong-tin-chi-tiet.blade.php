@@ -183,7 +183,11 @@
 
             <div class="lg:col-span-1 space-y-6">
                 @php
-                $widget_tintuc = App\Models\DMThongTin::where('locale','=',app()->getLocale())->where('thu_tu', '>', 0)->get();
+                $excludedSlugs = ['quy-trinh', 'bieu-mau', 'van-ban', 'van-ban-bo', 'van-ban-truong', 'van-ban-khoa'];
+                $widget_tintuc = App\Models\DMThongTin::where('locale', app()->getLocale())
+                ->where('thu_tu', '>', 0)
+                ->whereNotIn('slug', $excludedSlugs)
+                ->get();
                 @endphp
                 @if($widget_tintuc)
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-5 space-y-4">

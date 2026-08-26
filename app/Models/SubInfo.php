@@ -10,12 +10,19 @@ class SubInfo extends Model
     protected $collection = 'sub_infos';
 
     protected $fillable = [
+        'ten',
         'type',
         'slug',
         'locale',
-        'ten',
         'mo_ta',
         'noi_dung',
-        'status'
+        'video_ytb',
+        'hinh_anh',
+        'id_parent',
+        'status',
+    ];
+
+    protected $casts = [
+        'status' => 'int',
     ];
 }

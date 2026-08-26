@@ -11,7 +11,9 @@ class Department extends Model
 
     protected $fillable = [
         'name',
+        'name_en',
         'slug',
+        'slug_en',
         'type',
         'display_order',
         'is_active',
@@ -22,9 +24,6 @@ class Department extends Model
         'is_active'     => 'bool',
     ];
 
-    /**
-     * Scope lọc các department đang hoạt động.
-     */
     public function scopeActive($query)
     {
         return $query->where('is_active', true);

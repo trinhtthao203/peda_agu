@@ -15,11 +15,6 @@
                     <th>{{ __('Tiêu đề') }}</th>
                     <th>{{ __('Thứ tự') }}</th>
                     <th>#</th>
-                    <!-- @foreach($arr_lang as $klang => $vlang)
-                    @if($klang != app()->getLocale())
-                    <th><img src="{{ env('APP_URL') }}assets/backend/images/flags/{{ $klang }}.jpg" alt="" class="flag-icon"></th>
-                    @endif
-                    @endforeach -->
                 </tr>
             </thead>
             <tbody>
@@ -32,26 +27,6 @@
                         <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/admin/danh-muc-thong-tin/delete/{{ $ds['_id'] }}" onclick="return confirm('Chắc chắc xóa?')"><i class="fas fa-trash text-danger"></i></a>&nbsp;
                         <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/admin/danh-muc-thong-tin/edit/{{ $ds['_id'] }}"><i class="fas fa-pencil-alt"></i></a>
                     </td>
-                    <!-- @foreach($arr_lang as $klang => $vlang)
-                    @if($klang != app()->getLocale())
-                    @php
-                    $lang = $ds['locale'];
-                    $id_path = App\Http\Controllers\ObjectController::ObjectId($ds['_id']);
-                    $transpath = App\Models\TranslatePath::where("id_".$lang,"=",$id_path)->where('collection','=','dm_thong_tin')->first();
-                    @endphp
-                    <td class="text-center text-middle">
-                        @if($transpath && isset($transpath['id_'.$klang]))
-                        <a href="{{ env('APP_URL') }}{{ $klang }}/admin/danh-muc-thong-tin/edit/{{ $transpath["id_$klang"] }}?trans_id={{ $ds['_id'] }}&trans_lang={{ app()->getLocale() }}">
-                            <img src="{{ env('APP_URL') }}assets/backend/images/flags/{{ $klang }}.jpg" alt="" class="flag-icon">
-                        </a>
-                        @else
-                        <a href="{{ env('APP_URL') }}{{ $klang }}/admin/danh-muc-thong-tin/add?trans_id={{ $ds['_id'] }}&trans_lang={{ app()->getLocale() }}">
-                            <img src="{{ env('APP_URL') }}assets/backend/images/flags/{{ $klang }}_black.jpg" alt="" class="flag-icon">
-                        </a>
-                        @endif
-                    </td>
-                    @endif
-                    <!-- @endforeach -->
                 </tr>
                 @endforeach
             </tbody>
@@ -63,13 +38,25 @@
 <script src="{{ env('APP_URL') }}assets/backend/libs/jquery-toast/jquery.toast.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        @if(Session::get('msg') != null && Session::get('msg'))
+        @if(Session::has('msg'))
         $.toast({
             heading: "Thông báo",
             text: "{{ Session::get('msg') }}",
             loaderBg: "#3b98b5",
             icon: "info",
-            hideAfter: 3e3,
+            hideAfter: 3000,
+            stack: 1,
+            position: "top-right"
+        });
+        @endif
+
+        @if(Session::has('error'))
+        $.toast({
+            heading: "Cảnh báo",
+            text: "{{ Session::get('error') }}",
+            loaderBg: "#bf441d",
+            icon: "error",
+            hideAfter: 4000,
             stack: 1,
             position: "top-right"
         });

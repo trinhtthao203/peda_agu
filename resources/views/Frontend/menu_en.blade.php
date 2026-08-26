@@ -47,22 +47,70 @@ $taxonomy = (app()->getLocale() == 'vi') ? 'tin-tuc-su-kien' : 'news-and-events'
             </div>
         </div>
     </li>
+    @php
+    $taxonomy = 'news-and-events';
+
+    $dsNganh = \App\Models\NganhDaoTao::active()->orderBy('display_order', 'asc')->get();
+    $nganhChinhQuy = $dsNganh->where('he_dao_tao', 'DAI_HOC');
+    $nganhSauDaiHoc = $dsNganh->where('he_dao_tao', 'SAU_DAI_HOC');
+
+    $subInfoDaoTaoEn = \App\Models\SubInfo::where('locale', 'en')->where('type', 'dao-tao')->where('status', 1)->get()->keyBy('slug');
+    @endphp
+
+    <!-- Mục ACADEMICS TRONG MENU TIẾNG ANH -->
     <li class="!static">
         <a href="#">{{ __('Academics') }} <span class="text-[10px] ml-1">▼</span></a>
         <div class="mega-menu-dropdown left-0 p-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 1. UNDERGRADUATE -->
                 <div class="space-y-3">
-                    <span class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">{{ __('Curriculum') }}</span>
+                    <span class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">
+                        🎓 {{ __('Undergraduate Programs') }}
+                    </span>
                     <ul class="space-y-2 text-xs text-gray-600">
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/academics/undergraduate" class="hover:text-agu-blue transition">{{ __('Undergraduate Programs') }}</a></li>
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/academics/postgraduate" class="hover:text-agu-blue transition">{{ __('Postgraduate Programs') }}</a></li>
+                        @forelse($nganhChinhQuy as $nganh)
+                        @php $slugEn = $nganh->slug_en ?: $nganh->slug; @endphp
+                        @if(isset($subInfoDaoTaoEn[$slugEn]))
+                        <li>
+                            <a href="{{ env('APP_URL') }}en/academics/{{ $slugEn }}" class="hover:text-agu-blue transition block truncate">
+                                • {{ $nganh->ten_en ?: $nganh->ten }}
+                            </a>
+                        </li>
+                        @endif
+                        @empty
+                        <li class="text-gray-400 italic">Updating...</li>
+                        @endforelse
+                    </ul>
+                </div>
+
+                <!-- 2. POSTGRADUATE -->
+                <div class="space-y-3">
+                    <span class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">
+                        🏛️ {{ __('Postgraduate Programs') }}
+                    </span>
+                    <ul class="space-y-2 text-xs text-gray-600">
+                        @forelse($nganhSauDaiHoc as $nganh)
+                        @php $slugEn = $nganh->slug_en ?: $nganh->slug; @endphp
+                        @if(isset($subInfoDaoTaoEn[$slugEn]))
+                        <li>
+                            <a href="{{ env('APP_URL') }}en/academics/{{ $slugEn }}" class="hover:text-agu-blue transition block truncate">
+                                • {{ $nganh->ten_en ?: $nganh->ten }}
+                            </a>
+                        </li>
+                        @endif
+                        @empty
+                        <li class="text-gray-400 italic">Updating...</li>
+                        @endforelse
                     </ul>
                 </div>
                 <div class="space-y-3">
-                    <span class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">{{ __('Resources') }}</span>
+                    <span class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">
+                        📚 {{ __('Academic Resources') }}
+                    </span>
                     <ul class="space-y-2 text-xs text-gray-600">
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/academics/program-proposals" class="hover:text-agu-blue transition">{{ __('Program Proposals') }}</a></li>
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/academics/syllabi" class="hover:text-agu-blue transition">{{ __('Syllabi Digital Repository') }}</a></li>
+                        <li><a href="{{ env('APP_URL') }}en/academics/curriculum" class="hover:text-agu-blue transition">{{ __('Curriculum') }}</a></li>
+                        <li><a href="{{ env('APP_URL') }}en/academics/course-syllabi" class="hover:text-agu-blue transition">{{ __('Course Syllabi') }}</a></li>
+                        <li><a href="{{ env('APP_URL') }}en/academics/program-proposals" class="hover:text-agu-blue transition">{{ __('Program Proposals') }}</a></li>
                     </ul>
                 </div>
             </div>
@@ -78,20 +126,6 @@ $taxonomy = (app()->getLocale() == 'vi') ? 'tin-tuc-su-kien' : 'news-and-events'
                         <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/research/provincial-research" class="hover:text-agu-blue transition">{{ __('Provincial Research') }}</a></li>
                         <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/research/school-research" class="hover:text-agu-blue transition">{{ __('School Research') }}</a></li>
                         <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/research/faculty-research" class="hover:text-agu-blue transition">{{ __('Faculty Research') }}</a></li>
-                    </ul>
-                </div>
-                <div class="space-y-3">
-                    <span class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">{{ __('Publications') }}</span>
-                    <ul class="space-y-2 text-xs text-gray-600">
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/research/journal-articles" class="hover:text-agu-blue transition">{{ __('Journal Articles') }}</a></li>
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/research/published-textbooks-and-teaching-materials" class="hover:text-agu-blue transition">{{ __('Published Textbooks') }}</a></li>
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/research/working-innovations" class="hover:text-agu-blue transition">{{ __('Working Innovations') }}</a></li>
-                    </ul>
-                </div>
-                <div class="space-y-3">
-                    <span class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">{{ __('Incubation') }}</span>
-                    <ul class="space-y-2 text-xs text-gray-600">
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/research/student-research" class="hover:text-agu-blue transition">{{ __('Student Research Awards') }}</a></li>
                     </ul>
                 </div>
             </div>
@@ -141,7 +175,9 @@ $taxonomy = (app()->getLocale() == 'vi') ? 'tin-tuc-su-kien' : 'news-and-events'
                 <div class="space-y-3">
                     <span class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">{{ __('Forms hub') }}</span>
                     <ul class="space-y-2 text-xs text-gray-600">
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/students/procedures-and-forms" class="hover:text-agu-blue transition">{{ __('Procedures & Forms') }}</a></li>
+                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/students/procedures" class="hover:text-agu-blue transition">{{ __('Procedures') }}</a></li>
+                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/students/documents" class="hover:text-agu-blue transition">{{ __('Documents') }}</a></li>
+                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/students/forms" class="hover:text-agu-blue transition">{{ __('Forms') }}</a></li>
                     </ul>
                 </div>
             </div>

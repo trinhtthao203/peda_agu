@@ -5,17 +5,15 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ObjectController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\FileController;
-use App\Http\Controllers\DMDiaChiController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\TranslateController;
-use App\Http\Controllers\TranslatePathController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\DMThongTinController;
 use App\Http\Controllers\ThongTinController;
 use App\Http\Controllers\SubInfoController;
 use App\Http\Controllers\NhanSuController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\NganhDaoTaoController;
 use UniSharp\LaravelFilemanager\Lfm;
 
 Route::get('/', function () {
@@ -46,10 +44,6 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}'], 'm
     Route::get('file/delete/{filename}',    [FileController::class, 'delete'])->middleware('checkauth');
     Route::get('file/download/{filename}',  [FileController::class, 'download'])->middleware('checkauth');
 
-    // Address
-    Route::get('address/get/{id}',       [DMDiaChiController::class, 'getOptions'])->middleware('checkauth');
-    Route::get('address/get/{id}/{id1}', [DMDiaChiController::class, 'getOptions1'])->middleware('checkauth');
-
     // Frontend
     Route::get('/',                            [FrontendController::class, 'index'])->name('trang-chu');
     Route::get('tin-tuc-su-kien',              [FrontendController::class, 'thong_tin'])->name('thong-tin');
@@ -65,15 +59,26 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}'], 'm
     Route::get('tim-kiem', [FrontendController::class, 'tim_kiem'])->name('tim-kiem');
     Route::get('search',   [FrontendController::class, 'tim_kiem'])->name('search');
 
-    // Đường dẫn động dành cho Giao diện Tiếng Việt
-    Route::get('nhan-su/{slug}', [FrontendController::class, 'renderSubInfoVi'])->name('subinfo-nhansu-vi');
-    Route::get('dao-tao/{slug}', [FrontendController::class, 'renderSubInfoVi'])->name('subinfo-daotao-vi');
-    Route::get('gioi-thieu/{slug}', [FrontendController::class, 'renderSubInfoVi'])->name('subinfo-gioithieu-vi');
+    // Các trang dành cho Sinh viên (Ưu tiên đặt trước Dynamic route)
+    Route::get('sinh-vien/quy-trinh', [FrontendController::class, 'sinhVienQuyTrinh'])->name('sinhvien-quy-trinh');
+    Route::get('sinh-vien/van-ban',   [FrontendController::class, 'sinhVienVanBan'])->name('sinhvien-van-ban');
+    Route::get('sinh-vien/bieu-mau',  [FrontendController::class, 'sinhVienBieuMau'])->name('sinhvien-bieu-mau');
 
-    // Đường dẫn động dành cho Giao diện Tiếng Anh (staff, academics, about)
-    Route::get('staff/{slug}', [FrontendController::class, 'renderSubInfoEn'])->name('subinfo-staff-en');
-    Route::get('academics/{slug}', [FrontendController::class, 'renderSubInfoEn'])->name('subinfo-academics-en');
-    Route::get('about/{slug}', [FrontendController::class, 'renderSubInfoEn'])->name('subinfo-about-en');
+    // Dynamic Pages (SubInfo) - Sử dụng closure để tránh xung đột vi / en
+    Route::get('{type}/{slug}', function ($locale, $type, $slug, Request $request) {
+        $viTypes = ['nhan-su', 'dao-tao', 'gioi-thieu', 'nckh', 'sinh-vien', 'dbcl'];
+        $enTypes = ['staff', 'academics', 'about', 'research', 'students', 'quality-assurance'];
+
+        if (in_array($type, $viTypes)) {
+            return app(FrontendController::class)->renderSubInfoVi($request, $locale, $type, $slug);
+        }
+
+        if (in_array($type, $enTypes)) {
+            return app(FrontendController::class)->renderSubInfoEn($request, $locale, $type, $slug);
+        }
+
+        abort(404);
+    })->where('type', 'nhan-su|dao-tao|gioi-thieu|nckh|sinh-vien|dbcl|staff|academics|about|research|students|quality-assurance');
 
     // Admin group
     Route::group(['prefix' => 'admin', 'middleware' => 'checkauth'], function () {
@@ -136,6 +141,14 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}'], 'm
         Route::get('department/edit/{id}',    [DepartmentController::class, 'edit'])->middleware('role:Admin,Manager,Updater')->name('admin-department-edit');
         Route::post('department/update',      [DepartmentController::class, 'update'])->middleware('role:Admin,Manager,Updater')->name('admin-department-update');
         Route::get('department/delete/{id}',  [DepartmentController::class, 'delete'])->middleware('role:Admin,Manager,Updater')->name('admin-department-delete');
+
+        // Quản lý Ngành đào tạo
+        Route::get('nganh-dao-tao',              [NganhDaoTaoController::class, 'list'])->middleware('role:Admin,Manager,Updater')->name('admin-nganh-dao-tao');
+        Route::get('nganh-dao-tao/add',          [NganhDaoTaoController::class, 'add'])->middleware('role:Admin,Manager,Updater')->name('admin-nganh-dao-tao-add');
+        Route::post('nganh-dao-tao/create',      [NganhDaoTaoController::class, 'create'])->middleware('role:Admin,Manager,Updater')->name('admin-nganh-dao-tao-create');
+        Route::get('nganh-dao-tao/edit/{id}',    [NganhDaoTaoController::class, 'edit'])->middleware('role:Admin,Manager,Updater')->name('admin-nganh-dao-tao-edit');
+        Route::post('nganh-dao-tao/update',      [NganhDaoTaoController::class, 'update'])->middleware('role:Admin,Manager,Updater')->name('admin-nganh-dao-tao-update');
+        Route::get('nganh-dao-tao/delete/{id}',  [NganhDaoTaoController::class, 'delete'])->middleware('role:Admin,Manager,Updater')->name('admin-nganh-dao-tao-delete');
     });
 });
 

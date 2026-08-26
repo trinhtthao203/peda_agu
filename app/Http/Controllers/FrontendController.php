@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\ObjectController;
 use App\Http\Controllers\ThongTinController;
 use App\Models\ThongTin;
@@ -13,9 +14,38 @@ use App\Models\Banner;
 use App\Models\SubInfo;
 use App\Models\NhanSu;
 use App\Models\Department;
+use App\Models\NganhDaoTao;
 
 class FrontendController extends Controller
 {
+    private function getExcludedCatIds($locale = 'vi')
+    {
+        $excludedSlugs = [
+            'quy-trinh',
+            'bieu-mau',
+            'van-ban',
+            'van-ban-bo',
+            'van-ban-truong',
+            'van-ban-khoa'
+        ];
+
+        $cats = DMThongTin::where('locale', $locale)
+            ->whereIn('slug', $excludedSlugs)
+            ->get();
+
+        $excludedIds = [];
+        foreach ($cats as $cat) {
+            $idStr = (string) $cat['_id'];
+            $excludedIds[] = $idStr;
+            try {
+                $excludedIds[] = ObjectController::ObjectId($idStr);
+            } catch (\Exception $e) {
+            }
+        }
+
+        return array_values(array_unique($excludedIds, SORT_REGULAR));
+    }
+
     function index(Request $request, $locale = 'vi')
     {
         $banners = Banner::where('status', 1)
@@ -23,12 +53,20 @@ class FrontendController extends Controller
             ->orderBy('order', 'desc')
             ->get();
 
-        $tin_moi_nhat = ThongTin::raw(function ($collection) use ($locale) {
+        $excludedCatIds = $this->getExcludedCatIds($locale);
+        $oldExclude = '65080bb00bc7b8223c27c10a';
+        $excludedCatIds[] = $oldExclude;
+        try {
+            $excludedCatIds[] = ObjectController::ObjectId($oldExclude);
+        } catch (\Exception $e) {
+        }
+
+        $tin_moi_nhat = ThongTin::raw(function ($collection) use ($locale, $excludedCatIds) {
             return $collection->aggregate([
                 [
                     '$match' => [
                         'locale' => $locale,
-                        'id_cat' => ['$ne' => '65080bb00bc7b8223c27c10a']
+                        'id_cat' => ['$nin' => $excludedCatIds]
                     ]
                 ],
                 [
@@ -73,34 +111,35 @@ class FrontendController extends Controller
         return view('Frontend.index')->with(compact('banners', 'tin_moi_nhat', 'thong_tin_tuyen_sinh', 'sdg_tags'));
     }
 
-    function gioi_thieu(Request $request, $locale = 'vi', $slug = '')
-    {
-        return view('Frontend.GioiThieu.' . $slug);
-    }
-
-    function about(Request $request, $locale = 'vi', $slug = '')
-    {
-        return view('Frontend.About.' . $slug);
-    }
-
     function thong_tin(Request $request, $locale = 'vi', $slug = '')
     {
         $query = ThongTin::where('locale', '=', $locale);
         $cat = null;
+        $excludedCatIds = $this->getExcludedCatIds($locale);
 
         if ($slug == 'tin-moi-nhat' || $slug == '' || $slug == 'lastest-news') {
             $title = ($locale == 'vi') ? 'Tin mới nhất' : 'Lastest News';
         } else {
             $cat = DMThongTin::where('locale', '=', $locale)->where('slug', '=', $slug)->first();
-            $title = $cat['ten'];
-            $query->where('id_cat', $cat['_id']);
+            $title = $cat['ten'] ?? '';
+            if ($cat) {
+                $query->where('id_cat', $cat['_id']);
+            }
         }
 
-        $all_items = $query->raw(function ($collection) use ($locale, $slug, $cat) {
+        $all_items = $query->raw(function ($collection) use ($locale, $slug, $cat, $excludedCatIds) {
             $matchCondition = ['locale' => $locale];
 
             if ($slug != 'tin-moi-nhat' && $slug != '' && $slug != 'lastest-news' && $cat) {
-                $matchCondition['id_cat'] = $cat['_id'];
+                $catIdStr = (string) $cat['_id'];
+                $catIds = [$catIdStr];
+                try {
+                    $catIds[] = ObjectController::ObjectId($catIdStr);
+                } catch (\Exception $e) {
+                }
+                $matchCondition['id_cat'] = ['$in' => $catIds];
+            } else {
+                $matchCondition['id_cat'] = ['$nin' => $excludedCatIds];
             }
 
             return $collection->aggregate([
@@ -159,6 +198,16 @@ class FrontendController extends Controller
         return view('Frontend.thong-tin')->with(compact('danhsach', 'title', 'slug', 'path'));
     }
 
+    function gioi_thieu(Request $request, $locale = 'vi', $slug = '')
+    {
+        return view('Frontend.GioiThieu.' . $slug);
+    }
+
+    function about(Request $request, $locale = 'vi', $slug = '')
+    {
+        return view('Frontend.About.' . $slug);
+    }
+
     function tim_kiem(Request $request, $locale = 'vi')
     {
         $q = $request->input('q');
@@ -207,9 +256,10 @@ class FrontendController extends Controller
         return view('Frontend.thong-tin-chi-tiet')->with(compact('ds', 'tin_lien_quan', 'sdg_tags'));
     }
 
-    public function renderSubInfoVi(Request $request, $locale = 'vi', $slug = '')
+    public function renderSubInfoVi(Request $request, $locale = 'vi', $type = '', $slug = '')
     {
-        $type = $request->segment(2);
+        $type = $type ?: $request->segment(2);
+        $slug = $slug ?: $request->segment(3);
 
         $page = SubInfo::where('locale', 'vi')
             ->where('type', $type)
@@ -218,69 +268,134 @@ class FrontendController extends Controller
             ->firstOrFail();
 
         $danhSachNhanSu = collect();
+        $dept = null;
+        $nganhDaoTao = null;
+
         if ($type == 'nhan-su') {
             $dept = Department::where('slug', $slug)->first();
             if ($dept) {
                 $deptId = (string) $dept->_id;
                 $rawNhanSu = NhanSu::where('departments.department_id', $deptId)->get();
-
                 $danhSachNhanSu = $rawNhanSu->sortBy(function ($ns) use ($deptId) {
                     $role = collect($ns->departments)->firstWhere('department_id', $deptId);
                     return intval($role['thu_tu'] ?? 0);
                 })->values();
             }
+        } elseif ($type == 'dao-tao') {
+            $nganhDaoTao = NganhDaoTao::where('slug', $slug)->first();
         }
 
-        return view('Frontend.subinfo-detail', compact('page', 'danhSachNhanSu'));
+        return view('Frontend.subinfo-detail', compact('page', 'danhSachNhanSu', 'dept', 'nganhDaoTao'));
     }
 
-    public function renderSubInfoEn(Request $request, $locale = 'en', $slug = '')
+    public function renderSubInfoEn(Request $request, $locale = 'en', $type = '', $slug = '')
     {
-        $segment = $request->segment(2);
+        $segment = $type ?: $request->segment(2);
+        $slug = $slug ?: $request->segment(3);
+
         $typeMap = [
-            'staff'     => 'nhan-su',
-            'academics' => 'dao-tao',
-            'about'     => 'gioi-thieu'
+            'staff'             => 'nhan-su',
+            'academics'         => 'dao-tao',
+            'about'             => 'gioi-thieu',
+            'research'          => 'nckh',
+            'students'          => 'sinh-vien',
+            'quality-assurance' => 'dbcl',
         ];
-        $type = $typeMap[$segment] ?? 'gioi-thieu';
+        $dbType = $typeMap[$segment] ?? $segment;
+
         $page = SubInfo::where('locale', 'en')
-            ->where('type', $type)
+            ->where('type', $dbType)
             ->where('slug', $slug)
             ->where('status', 1)
             ->firstOrFail();
 
         $danhSachNhanSu = collect();
+        $dept = null;
+        $nganhDaoTao = null;
 
-        if ($type == 'nhan-su') {
-            $viPage = SubInfo::where('locale', 'vi')
-                ->where('type', 'nhan-su')
-                ->where(function ($q) use ($page, $slug) {
-                    if (!empty($page->id_parent)) {
-                        $q->where('_id', $page->id_parent);
-                    } else {
-                        $q->where('slug', $slug);
-                    }
-                })
-                ->first();
-
-            $dept = null;
-            if ($viPage) {
-                $dept = Department::where('slug', $viPage->slug)->first();
-            }
-            if (!$dept) {
-                $dept = Department::where('slug', $slug)->first();
-            }
+        if ($dbType == 'nhan-su') {
+            $dept = Department::where('slug_en', $slug)->orWhere('slug', $slug)->first();
             if ($dept) {
                 $deptId = (string) $dept->_id;
                 $rawNhanSu = NhanSu::where('departments.department_id', $deptId)->get();
-
                 $danhSachNhanSu = $rawNhanSu->sortBy(function ($ns) use ($deptId) {
                     $role = collect($ns->departments)->firstWhere('department_id', $deptId);
                     return intval($role['thu_tu'] ?? 0);
                 })->values();
             }
+        } elseif ($dbType == 'dao-tao') {
+            $nganhDaoTao = NganhDaoTao::where('slug_en', $slug)->orWhere('slug', $slug)->first();
         }
 
-        return view('Frontend.subinfo-detail', compact('page', 'danhSachNhanSu'));
+        return view('Frontend.subinfo-detail', compact('page', 'danhSachNhanSu', 'dept', 'nganhDaoTao'));
+    }
+
+    public function sinhVienQuyTrinh(Request $request, $locale = 'vi')
+    {
+        $cat = DMThongTin::where('locale', $locale)->where('slug', 'quy-trinh')->first();
+        $danhsach = collect();
+
+        if ($cat) {
+            $catIdStr = (string) $cat['_id'];
+            $catIds = [$catIdStr];
+            try {
+                $catIds[] = ObjectController::ObjectId($catIdStr);
+            } catch (\Exception $e) {
+            }
+
+            $danhsach = ThongTin::where('locale', $locale)
+                ->whereIn('id_cat', $catIds)
+                ->orderBy('date_post', 'desc')
+                ->paginate(12);
+        }
+
+        return view('Frontend.SinhVien.quy-trinh', compact('danhsach'));
+    }
+
+    public function sinhVienBieuMau(Request $request, $locale = 'vi')
+    {
+        $cat = DMThongTin::where('locale', $locale)->where('slug', 'bieu-mau')->first();
+        $danhsach = collect();
+
+        if ($cat) {
+            $catIdStr = (string) $cat['_id'];
+            $catIds = [$catIdStr];
+            try {
+                $catIds[] = ObjectController::ObjectId($catIdStr);
+            } catch (\Exception $e) {
+            }
+
+            $danhsach = ThongTin::where('locale', $locale)
+                ->whereIn('id_cat', $catIds)
+                ->orderBy('date_post', 'desc')
+                ->get();
+        }
+
+        return view('Frontend.SinhVien.bieu-mau', compact('danhsach'));
+    }
+
+    public function sinhVienVanBan(Request $request, $locale = 'vi')
+    {
+        $getIdsBySlug = function ($slug) use ($locale) {
+            $cat = DMThongTin::where('locale', $locale)->where('slug', $slug)->first();
+            if (!$cat) return [];
+            $idStr = (string) $cat['_id'];
+            $ids = [$idStr];
+            try {
+                $ids[] = ObjectController::ObjectId($idStr);
+            } catch (\Exception $e) {
+            }
+            return $ids;
+        };
+
+        $idsBo = $getIdsBySlug('van-ban-bo');
+        $idsTruong = $getIdsBySlug('van-ban-truong');
+        $idsKhoa = $getIdsBySlug('van-ban-khoa');
+
+        $van_ban_bo = !empty($idsBo) ? ThongTin::where('locale', $locale)->whereIn('id_cat', $idsBo)->orderBy('date_post', 'desc')->get() : collect();
+        $van_ban_truong = !empty($idsTruong) ? ThongTin::where('locale', $locale)->whereIn('id_cat', $idsTruong)->orderBy('date_post', 'desc')->get() : collect();
+        $van_ban_khoa = !empty($idsKhoa) ? ThongTin::where('locale', $locale)->whereIn('id_cat', $idsKhoa)->orderBy('date_post', 'desc')->get() : collect();
+
+        return view('Frontend.SinhVien.van-ban', compact('van_ban_bo', 'van_ban_truong', 'van_ban_khoa'));
     }
 }

@@ -69,7 +69,7 @@ class ThongTinController extends Controller
             $ds = '';
         }
         $sdg_tags = self::get_sdg_tags();
-        $cats = DMThongTin::where('locale', '=', $locale)->orderBy('thu_tu', 'asc')->get();
+        $cats = DMThongTin::where('locale', '=', $locale)->orderBy('thu_tu', 'desc')->get();
         return view('Admin.ThongTin.add')->with(compact('ds', 'trans_id', 'trans_lang', 'cats', 'sdg_tags'));
     }
 
@@ -153,7 +153,7 @@ class ThongTinController extends Controller
         $trans_id = $request->input('trans_id');
         $trans_lang = $request->input('trans_lang');
         $ds = ThongTin::find($id);
-        $cats = DMThongTin::where('locale', '=', $locale)->orderBy('thu_tu', 'asc')->get();
+        $cats = DMThongTin::where('locale', '=', $locale)->orderBy('thu_tu', 'desc')->get();
         $sdg_tags = self::get_sdg_tags();
         return view('Admin.ThongTin.edit')->with(compact('ds', 'trans_id', 'trans_lang', 'cats', 'sdg_tags'));
     }
