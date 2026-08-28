@@ -143,6 +143,7 @@
                                         <i class="fas fa-tags mr-1"></i> {{ __('Danh mục Tin tức') }}
                                     </a>
                                 </li>
+
                             </ul>
                         </li>
                         @endif
@@ -152,6 +153,12 @@
                             <a href="{{ route('admin-user', [app()->getLocale()]) }}"><i class="fas fa-users-cog"></i> {{ __('Tài khoản') }}</a>
                         </li>
                         @endif
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('admin-feedback') }}">
+                                <i class="fas fa-comments"></i>
+                                <span>Ý kiến đóng góp</span>
+                            </a>
+                        </li>
                     </ul>
                     <div class="clearfix"></div>
                 </div>

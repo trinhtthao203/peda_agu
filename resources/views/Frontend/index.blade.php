@@ -102,46 +102,6 @@
     </div>
     @endif
 
-    <!-- <div class="space-y-6">
-        <div class="border-b-2 border-gray-200 pb-3">
-            <h2 class="text-gray-800 font-heading font-bold text-xl uppercase tracking-wide m-0">{{ __('Con số nổi bật') }}</h2>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-[#0066b3] text-white p-6 rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between min-h-[130px]">
-                <div>
-                    <span class="text-xs font-heading font-semibold uppercase tracking-wider opacity-90">{{ __('Chương trình Đào tạo') }}</span>
-                    <h3 class="text-3xl font-heading font-bold mt-2 m-0"><span class="counter">63</span></h3>
-                </div>
-                <div class="absolute bottom-2 right-2 text-white/20 text-5xl font-bold">🎯</div>
-            </div>
-
-            <div class="bg-[#ffe600] text-gray-900 p-6 rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between min-h-[130px]">
-                <div>
-                    <span class="text-xs font-heading font-semibold uppercase tracking-wider opacity-90">{{ __('Đề tài NCKH') }}</span>
-                    <h3 class="text-3xl font-heading font-bold mt-2 m-0"><span class="counter">624</span></h3>
-                </div>
-                <div class="absolute bottom-2 right-2 text-black/10 text-5xl font-bold">🔬</div>
-            </div>
-
-            <div class="bg-[#ed1c24] text-white p-6 rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between min-h-[130px]">
-                <div>
-                    <span class="text-xs font-heading font-semibold uppercase tracking-wider opacity-90">{{ __('Cán bộ - Giảng viên') }}</span>
-                    <h3 class="text-3xl font-heading font-bold mt-2 m-0"><span class="counter">824</span></h3>
-                </div>
-                <div class="absolute bottom-2 right-2 text-white/20 text-5xl font-bold">👨‍🏫</div>
-            </div>
-
-            <div class="bg-[#00954d] text-white p-6 rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between min-h-[130px]">
-                <div>
-                    <span class="text-xs font-heading font-semibold uppercase tracking-wider opacity-90">{{ __('Người học') }}</span>
-                    <h3 class="text-3xl font-heading font-bold mt-2 m-0"><span class="counter">12281</span></h3>
-                </div>
-                <div class="absolute bottom-2 right-2 text-white/20 text-5xl font-bold">🎓</div>
-            </div>
-        </div>
-    </div> -->
-
     <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 space-y-6">
         <div class="border-b-2 border-agu-green pb-3 flex items-center justify-between">
             <h2 class="text-agu-green font-heading font-bold text-xl uppercase tracking-wide m-0">{{ __('Lịch công tác') }}</h2>

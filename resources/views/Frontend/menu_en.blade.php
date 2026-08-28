@@ -17,6 +17,7 @@ $taxonomy = (app()->getLocale() == 'vi') ? 'tin-tuc-su-kien' : 'news-and-events'
                         <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/about/overview" class="hover:text-agu-blue transition">{{ __('Overview') }}</a></li>
                         <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/about/history" class="hover:text-agu-blue transition">{{ __('History') }}</a></li>
                         <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/about/mission-vision-core-values" class="hover:text-agu-blue transition">{{ __('Mission - Vision - Core Values') }}</a></li>
+                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/contact" class="hover:text-agu-blue transition">{{ __('Contact & Feedback') }}</a></li>
                     </ul>
                 </div>
                 <div class="space-y-3">

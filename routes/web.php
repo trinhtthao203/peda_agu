@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ObjectController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\FileController;
@@ -14,6 +16,7 @@ use App\Http\Controllers\SubInfoController;
 use App\Http\Controllers\NhanSuController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\NganhDaoTaoController;
+use App\Http\Controllers\FeedbackController;
 use UniSharp\LaravelFilemanager\Lfm;
 
 Route::get('/', function () {
@@ -59,13 +62,17 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}'], 'm
     Route::get('tim-kiem', [FrontendController::class, 'tim_kiem'])->name('tim-kiem');
     Route::get('search',   [FrontendController::class, 'tim_kiem'])->name('search');
 
-    // Các trang dành cho Sinh viên (Ưu tiên đặt trước Dynamic route)
+    // Sinh viên
     Route::get('sinh-vien/quy-trinh', [FrontendController::class, 'sinhVienQuyTrinh'])->name('sinhvien-quy-trinh');
     Route::get('sinh-vien/van-ban',   [FrontendController::class, 'sinhVienVanBan'])->name('sinhvien-van-ban');
     Route::get('sinh-vien/bieu-mau',  [FrontendController::class, 'sinhVienBieuMau'])->name('sinhvien-bieu-mau');
 
-    // Dynamic Pages (SubInfo) - Sử dụng closure để tránh xung đột vi / en
-    Route::get('{type}/{slug}', function ($locale, $type, $slug, Request $request) {
+    // Liên hệ & Ý kiến phản hồi
+    Route::get('lien-he', [FrontendController::class, 'lien_he'])->name('contact.index');
+    Route::get('contact', [FrontendController::class, 'lien_he']);
+
+    // SubInfo (Dynamic)
+    Route::get('{type}/{slug}', function ($locale, $type, $slug, \Illuminate\Http\Request $request) {
         $viTypes = ['nhan-su', 'dao-tao', 'gioi-thieu', 'nckh', 'sinh-vien', 'dbcl'];
         $enTypes = ['staff', 'academics', 'about', 'research', 'students', 'quality-assurance'];
 
@@ -149,8 +156,15 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}'], 'm
         Route::get('nganh-dao-tao/edit/{id}',    [NganhDaoTaoController::class, 'edit'])->middleware('role:Admin,Manager,Updater')->name('admin-nganh-dao-tao-edit');
         Route::post('nganh-dao-tao/update',      [NganhDaoTaoController::class, 'update'])->middleware('role:Admin,Manager,Updater')->name('admin-nganh-dao-tao-update');
         Route::get('nganh-dao-tao/delete/{id}',  [NganhDaoTaoController::class, 'delete'])->middleware('role:Admin,Manager,Updater')->name('admin-nganh-dao-tao-delete');
+
+        Route::get('feedback',              [FeedbackController::class, 'list'])->middleware('role:Admin,Manager,Updater')->name('admin-feedback');
+        Route::get('feedback/detail/{id}',  [FeedbackController::class, 'detail'])->middleware('role:Admin,Manager,Updater')->name('admin-feedback-detail');
+        Route::post('feedback/update/{id}', [FeedbackController::class, 'update'])->middleware('role:Admin,Manager,Updater')->name('admin-feedback-update');
+        Route::get('feedback/delete/{id}',  [FeedbackController::class, 'delete'])->middleware('role:Admin')->name('admin-feedback-delete');
     });
 });
+
+Route::post('gui-y-kien-dong-gop', [App\Http\Controllers\FrontendController::class, 'storeFeedback'])->name('feedback.submit');
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     Lfm::routes();

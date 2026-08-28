@@ -30,7 +30,7 @@ $taxonomy = (app()->getLocale() == 'vi') ? 'tin-tuc-su-kien' : 'news-and-events'
                     <span class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">{{ __('Thông tin chung') }}</span>
                     <ul class="space-y-2 text-xs text-gray-600">
                         <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/gioi-thieu/doi-tac" class="hover:text-agu-blue transition">{{ __('Đối tác') }}</a></li>
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/gioi-thieu/lien-he" class="hover:text-agu-blue transition">{{ __('Liên hệ') }}</a></li>
+                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/lien-he" class="hover:text-agu-blue transition">{{ __('Liên hệ & Góp ý') }}</a></li>
                     </ul>
                 </div>
             </div>
@@ -198,7 +198,6 @@ $taxonomy = (app()->getLocale() == 'vi') ? 'tin-tuc-su-kien' : 'news-and-events'
             </div>
         </div>
     </li>
-
     <li class="!static">
         <a href="#">{{ __('Tin tức - Sự kiện') }} <span class="text-[10px] ml-1">▼</span></a>
         <div class="mega-menu-dropdown left-0 right-0 mx-auto p-8">

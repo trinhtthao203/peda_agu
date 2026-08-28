@@ -30,7 +30,7 @@ $randomGradient = $gradients[crc32($page['slug']) % count($gradients)];
     <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
     @endif
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 flex flex-col lg:flex-row items-center justify-between gap-8 z-10">
-        <div class="w-full lg:w-3/5 space-y-4 text-left">
+        <div class="w-full {{ $cleanVideoId ? 'lg:w-3/5' : 'w-full' }} space-y-4 text-left">
             @if(isset($nganhDaoTao))
             @php
             $heInfo = \App\Models\NganhDaoTao::HE_DAO_TAO[$nganhDaoTao->he_dao_tao] ?? null;

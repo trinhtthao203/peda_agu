@@ -15,6 +15,10 @@ use App\Models\SubInfo;
 use App\Models\NhanSu;
 use App\Models\Department;
 use App\Models\NganhDaoTao;
+use App\Models\Feedback;
+use MongoDB\BSON\UTCDateTime;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 
 class FrontendController extends Controller
 {
@@ -397,5 +401,65 @@ class FrontendController extends Controller
         $van_ban_khoa = !empty($idsKhoa) ? ThongTin::where('locale', $locale)->whereIn('id_cat', $idsKhoa)->orderBy('date_post', 'desc')->get() : collect();
 
         return view('Frontend.SinhVien.van-ban', compact('van_ban_bo', 'van_ban_truong', 'van_ban_khoa'));
+    }
+
+    public function lien_he(Request $request, $locale = 'vi')
+    {
+        $publishedFeedbacks = \App\Models\Feedback::where('is_published', true)
+            ->where('status', 'responded')
+            ->orderBy('created_at', 'desc')
+            ->paginate(3);
+
+        return view('Frontend.contact', compact('publishedFeedbacks'));
+    }
+
+    public function storeFeedback(Request $request)
+    {
+        if (!empty($request->input('_hp_security'))) {
+            return response()->json(['status' => 'success', 'message' => 'Cảm ơn bạn đã gửi ý kiến đóng góp!']);
+        }
+
+        $validator = Validator::make($request->all(), [
+            'sender_type' => 'required|in:student,business,alumni,other',
+            'topic'       => 'required|in:dao-tao,co-so-vat-chat,viec-lam,khac',
+            'fullname'    => 'nullable|string|max:100',
+            'contact'     => 'nullable|string|max:100',
+            'content'     => 'required|string|min:5|max:2000',
+        ], [
+            'content.required' => 'Vui lòng nhập nội dung đóng góp.',
+            'content.min'      => 'Nội dung đóng góp phải có ít nhất 5 ký tự.',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['status' => 'error', 'message' => $validator->errors()->first()], 422);
+        }
+
+        try {
+            $data = [
+                'sender_type'      => htmlspecialchars($request->input('sender_type')),
+                'topic'            => htmlspecialchars($request->input('topic')),
+                'fullname'         => htmlspecialchars($request->input('fullname') ?: 'Ẩn danh'),
+                'contact'          => htmlspecialchars($request->input('contact') ?: ''),
+                'content'          => htmlspecialchars($request->input('content')),
+                'ip_address'       => $request->ip(),
+                'user_agent'       => substr($request->userAgent(), 0, 255),
+                'status'           => 'pending',
+                'assigned_to'      => null,
+                'assigned_at'      => null,
+                'response_content' => null,
+                'responder_name'   => null,
+                'responded_at'     => null,
+                'is_published'     => false,
+                'published_at'     => null,
+                'created_at'       => now(),
+                'updated_at'       => now()
+            ];
+
+            \App\Models\Feedback::create($data);
+
+            return response()->json(['status' => 'success', 'message' => 'Ý kiến đóng góp của bạn đã được gửi thành công!'], 200);
+        } catch (\Throwable $e) {
+            return response()->json(['status' => 'error', 'message' => 'Lỗi máy chủ: ' . $e->getMessage()], 500);
+        }
     }
 }

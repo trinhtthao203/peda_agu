@@ -126,7 +126,6 @@
             transform: translateY(0);
         }
 
-        /* Hiệu ứng tương tác cho Nút bấm */
         .btn-agu-effect {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -135,10 +134,7 @@
             transform: scale(1.05);
         }
 
-        /* Phục vụ hiển thị mượt mà trên thiết bị di động (Mobile Responsive Layout) */
         @media (max-width: 1023px) {
-
-            /* Chuyển thanh điều hướng chính thành dạng danh sách dọc */
             .nav-main {
                 flex-direction: column;
                 align-items: stretch;
@@ -159,7 +155,6 @@
                 align-items: center;
             }
 
-            /* Gỡ bỏ trạng thái absolute của Mega Menu khi ở trên Mobile */
             .mega-menu-dropdown {
                 position: static !important;
                 visibility: visible !important;
@@ -171,10 +166,8 @@
                 padding: 1rem !important;
                 transform: none !important;
                 display: none;
-                /* Ẩn đi, chỉ hiện khi click */
             }
 
-            /* Hiển thị Mega Menu của mục đang active/hover trên mobile */
             .nav-main>li:hover .mega-menu-dropdown,
             .nav-main>li.active-mobile .mega-menu-dropdown {
                 display: block;
@@ -183,7 +176,6 @@
             .mega-menu-dropdown span.mega-menu-sub-title,
             .mega-menu-dropdown span.block {
                 color: #ffe600 !important;
-                /* Đổi tiêu đề nhóm menu thành màu vàng điểm nhấn trên mobile */
                 margin-top: 0.75rem;
                 font-size: 13px;
             }
@@ -295,7 +287,7 @@
 
             <div class="flex items-center pl-6">
                 <a href="{{ url('/') }}" class="flex items-center block">
-                    <img src="{{ env('APP_ASSETS') }}assets/frontend/images/footer_logo.png"
+                    <img src="/assets/frontend/images/footer_logo.png"
                         alt="AGU Logo"
                         class="w-20 h-20 object-contain aspect-square shrink-0" />
 
@@ -368,14 +360,14 @@
             <div class="flex flex-col items-start md:items-end justify-between space-y-4 md:space-y-0">
 
                 <div class="flex items-center space-x-4 md:justify-end w-full">
-                    <img src="{{ env('APP_ASSETS') }}assets/frontend/images/logo_vnu.png"
+                    <img src="/assets/frontend/images/logo_vnu.png"
                         alt="VNU-HCM Logo"
                         class="h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
                         style="max-height: 40px;" />
 
                     <span class="h-6 w-px bg-gray-700 block"></span>
 
-                    <img src="{{ env('APP_ASSETS') }}assets/frontend/images/footer_logo.png"
+                    <img src="/assets/frontend/images/footer_logo.png"
                         alt="AGU Logo"
                         class="h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
                         style="max-height: 40px;" />
