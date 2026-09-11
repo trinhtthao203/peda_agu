@@ -204,7 +204,11 @@ class ThongTinController extends Controller
         $trans_id = $data['trans_id'];
         $id_path = ObjectController::ObjectId($data['id']);
         $check_path = TranslatePath::where("id_" . $locale, "=", $id_path)->first();
-        $trans = TranslatePath::find($check_path['_id']);
+        if ($check_path) {
+            $trans = TranslatePath::find($check_path['_id']);
+        } else {
+            $trans = new TranslatePath();
+        }
         $trans->{"id_$locale"} = $id_path;
         $trans->{"slug_$locale"} = $data['slug'];
         $trans->collection = 'thong_tin';
