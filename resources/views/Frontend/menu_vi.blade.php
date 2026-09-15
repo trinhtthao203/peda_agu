@@ -170,7 +170,7 @@
 
     <!-- 5. NGHIÊN CỨU KHOA HỌC (Dropdown 1 cột gọn gàng) -->
     <li class="relative group">
-        <a href="#">{{ __('Nghiên cứu khoa học') }} <span class="text-[10px] ml-1">▼</span></a>
+        <a href="#">{{ __('NCKH') }} <span class="text-[10px] ml-1">▼</span></a>
         <div
             class="mega-menu-dropdown absolute left-0 top-full hidden group-hover:block w-72 bg-white shadow-lg p-5 z-50">
             <div class="space-y-3">
@@ -224,40 +224,20 @@
         </div>
     </li>
 
-    <!-- 7. SINH VIÊN (Mega Menu 3 cột) -->
-    <li class="!static">
-        <a href="#">{{ __('Sinh viên') }} <span class="text-[10px] ml-1">▼</span></a>
-        <div class="mega-menu-dropdown left-0 right-0 p-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="space-y-3">
-                    <span
-                        class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">{{ __('Tiến trình học tập') }}</span>
-                    <ul class="space-y-2 text-xs text-gray-600">
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/sinh-vien/hoc-vu"
-                                class="hover:text-agu-blue transition">{{ __('Công tác Học vụ') }}</a></li>
-                    </ul>
-                </div>
-                <div class="space-y-3">
-                    <span
-                        class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">{{ __('Chính sách hỗ trợ') }}</span>
-                    <ul class="space-y-2 text-xs text-gray-600">
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/sinh-vien/hoc-bong-va-ho-tro"
-                                class="hover:text-agu-blue transition">{{ __('Học bổng & Hỗ trợ sinh viên') }}</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="space-y-3">
-                    <span
-                        class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">{{ __('Hành chính một cửa') }}</span>
-                    <ul class="space-y-2 text-xs text-gray-600">
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/sinh-vien/quy-trinh"
-                                class="hover:text-agu-blue transition">{{ __('Quy trình') }}</a></li>
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/sinh-vien/van-ban"
-                                class="hover:text-agu-blue transition">{{ __('Văn bản') }}</a></li>
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/sinh-vien/bieu-mau"
-                                class="hover:text-agu-blue transition">{{ __('Biểu mẫu') }}</a></li>
-                    </ul>
-                </div>
+    <!-- 7. SINH VIÊN (1 cột) -->
+    <li class="relative group">
+        <a href="#">{{ __('Văn bản – Biểu mẫu') }} <span class="text-[10px] ml-1">▼</span></a>
+        <div
+            class="mega-menu-dropdown absolute left-0 top-full hidden group-hover:block w-72 bg-white shadow-lg p-5 z-50">
+            <div class="space-y-3">
+                <ul class="space-y-2 text-xs text-gray-600">
+                    <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/sinh-vien/quy-trinh"
+                            class="hover:text-agu-blue transition">{{ __('Quy trình') }}</a></li>
+                    <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/sinh-vien/van-ban"
+                            class="hover:text-agu-blue transition">{{ __('Văn bản') }}</a></li>
+                    <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/sinh-vien/bieu-mau"
+                            class="hover:text-agu-blue transition">{{ __('Biểu mẫu') }}</a></li>
+                </ul>
             </div>
         </div>
     </li>

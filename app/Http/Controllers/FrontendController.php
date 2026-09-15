@@ -385,9 +385,16 @@ class FrontendController extends Controller
 
     public function sinhVienQuyTrinh(Request $request, $locale = 'vi')
     {
-        $cat = DMThongTin::where('locale', $locale)->where('slug', 'quy-trinh')->first();
-        $danhsach = collect();
+        // Xác định slug theo ngôn ngữ
+        $slugCat = ($locale == 'vi') ? 'quy-trinh' : 'procedures';
 
+        $cat = DMThongTin::where('locale', $locale)->where('slug', $slugCat)->first();
+        // Dự phòng: nếu tiếng Anh chưa có danh mục riêng, fallback tìm 'quy-trinh'
+        if (!$cat && $locale != 'vi') {
+            $cat = DMThongTin::where('slug', 'quy-trinh')->first();
+        }
+
+        $danhsach = collect();
         if ($cat) {
             $catIdStr = (string) $cat['_id'];
             $catIds = [$catIdStr];
@@ -407,9 +414,14 @@ class FrontendController extends Controller
 
     public function sinhVienBieuMau(Request $request, $locale = 'vi')
     {
-        $cat = DMThongTin::where('locale', $locale)->where('slug', 'bieu-mau')->first();
-        $danhsach = collect();
+        $slugCat = ($locale == 'vi') ? 'bieu-mau' : 'forms';
 
+        $cat = DMThongTin::where('locale', $locale)->where('slug', $slugCat)->first();
+        if (!$cat && $locale != 'vi') {
+            $cat = DMThongTin::where('slug', 'bieu-mau')->first();
+        }
+
+        $danhsach = collect();
         if ($cat) {
             $catIdStr = (string) $cat['_id'];
             $catIds = [$catIdStr];
@@ -429,9 +441,16 @@ class FrontendController extends Controller
 
     public function sinhVienVanBan(Request $request, $locale = 'vi')
     {
-        $getIdsBySlug = function ($slug) use ($locale) {
-            $cat = DMThongTin::where('locale', $locale)->where('slug', $slug)->first();
+        $getIdsBySlug = function ($slugVi, $slugEn) use ($locale) {
+            $targetSlug = ($locale == 'vi') ? $slugVi : $slugEn;
+            $cat = DMThongTin::where('locale', $locale)->where('slug', $targetSlug)->first();
+
+            // Fallback sang slug tiếng Việt nếu data EN chưa kịp tạo
+            if (!$cat) {
+                $cat = DMThongTin::where('slug', $slugVi)->first();
+            }
             if (!$cat) return [];
+
             $idStr = (string) $cat['_id'];
             $ids = [$idStr];
             try {
@@ -441,9 +460,9 @@ class FrontendController extends Controller
             return $ids;
         };
 
-        $idsBo = $getIdsBySlug('van-ban-bo');
-        $idsTruong = $getIdsBySlug('van-ban-truong');
-        $idsKhoa = $getIdsBySlug('van-ban-khoa');
+        $idsBo = $getIdsBySlug('van-ban-bo', 'ministry-documents');
+        $idsTruong = $getIdsBySlug('van-ban-truong', 'university-documents');
+        $idsKhoa = $getIdsBySlug('van-ban-khoa', 'faculty-documents');
 
         $van_ban_bo = !empty($idsBo) ? ThongTin::where('locale', $locale)->whereIn('id_cat', $idsBo)->orderBy('date_post', 'desc')->get() : collect();
         $van_ban_truong = !empty($idsTruong) ? ThongTin::where('locale', $locale)->whereIn('id_cat', $idsTruong)->orderBy('date_post', 'desc')->get() : collect();

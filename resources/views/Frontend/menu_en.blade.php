@@ -206,39 +206,20 @@
         </div>
     </li>
 
-    <!-- 7. STUDENTS (Mega Menu 3 cột) -->
-    <li class="!static">
-        <a href="#">{{ __('Students') }} <span class="text-[10px] ml-1">▼</span></a>
-        <div class="mega-menu-dropdown left-0 right-0 p-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="space-y-3">
-                    <span
-                        class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">{{ __('Education') }}</span>
-                    <ul class="space-y-2 text-xs text-gray-600">
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/students/academic-affairs"
-                                class="hover:text-agu-blue transition">{{ __('Academic Affairs') }}</a></li>
-                    </ul>
-                </div>
-                <div class="space-y-3">
-                    <span
-                        class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">{{ __('Financial') }}</span>
-                    <ul class="space-y-2 text-xs text-gray-600">
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/students/scholarships-and-support"
-                                class="hover:text-agu-blue transition">{{ __('Scholarships & Support') }}</a></li>
-                    </ul>
-                </div>
-                <div class="space-y-3">
-                    <span
-                        class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">{{ __('Forms hub') }}</span>
-                    <ul class="space-y-2 text-xs text-gray-600">
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/students/procedures"
-                                class="hover:text-agu-blue transition">{{ __('Procedures') }}</a></li>
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/students/documents"
-                                class="hover:text-agu-blue transition">{{ __('Documents') }}</a></li>
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/students/forms"
-                                class="hover:text-agu-blue transition">{{ __('Forms') }}</a></li>
-                    </ul>
-                </div>
+    <!-- 7. STUDENTS (Mega Menu 1 cột) -->
+    <li class="relative group">
+        <a href="#">{{ __('Documents & Forms') }} <span class="text-[10px] ml-1">▼</span></a>
+        <div
+            class="mega-menu-dropdown absolute left-0 top-full hidden group-hover:block w-72 bg-white shadow-lg p-5 z-50">
+            <div class="space-y-3">
+                <ul class="space-y-2 text-xs text-gray-600">
+                    <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/students/procedures"
+                            class="hover:text-agu-blue transition">{{ __('Procedures') }}</a></li>
+                    <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/students/documents"
+                            class="hover:text-agu-blue transition">{{ __('Documents') }}</a></li>
+                    <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/students/forms"
+                            class="hover:text-agu-blue transition">{{ __('Forms') }}</a></li>
+                </ul>
             </div>
         </div>
     </li>

@@ -63,10 +63,15 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}'], 'm
     Route::get('tim-kiem', [FrontendController::class, 'tim_kiem'])->name('tim-kiem');
     Route::get('search',   [FrontendController::class, 'tim_kiem'])->name('search');
 
-    // Sinh viên
-    Route::get('sinh-vien/quy-trinh', [FrontendController::class, 'sinhVienQuyTrinh'])->name('sinhvien-quy-trinh');
-    Route::get('sinh-vien/van-ban',   [FrontendController::class, 'sinhVienVanBan'])->name('sinhvien-van-ban');
-    Route::get('sinh-vien/bieu-mau',  [FrontendController::class, 'sinhVienBieuMau'])->name('sinhvien-bieu-mau');
+    // Tiếng Việt
+    Route::get('sinh-vien/quy-trinh', [FrontendController::class, 'sinhVienQuyTrinh']);
+    Route::get('sinh-vien/bieu-mau', [FrontendController::class, 'sinhVienBieuMau']);
+    Route::get('sinh-vien/van-ban', [FrontendController::class, 'sinhVienVanBan']);
+
+    // Tiếng Anh (Khớp với link trong menu_en.blade.php)
+    Route::get('students/procedures', [FrontendController::class, 'sinhVienQuyTrinh']);
+    Route::get('students/forms', [FrontendController::class, 'sinhVienBieuMau']);
+    Route::get('students/documents', [FrontendController::class, 'sinhVienVanBan']);
 
     // Liên hệ & Ý kiến phản hồi
     Route::get('lien-he', [FrontendController::class, 'lien_he'])->name('contact.index');
