@@ -59,16 +59,40 @@ class SubInfoController extends Controller
         }
         $video_ytb = $this->getYoutubeId($request->video_ytb);
 
+        // Xử lý tệp đính kèm
+        $arr_dinhkem = [];
+        if ($request->hasFile('file_dinhkem')) {
+            $uploadDir = public_path('storage/files');
+            if (!file_exists($uploadDir)) {
+                mkdir($uploadDir, 0777, true);
+            }
+
+            foreach ($request->file('file_dinhkem') as $idx => $file) {
+                $filename = $file->getClientOriginalName();
+                $aliasname = time() . '_' . Str::random(8) . '.' . $file->getClientOriginalExtension();
+                $file->move($uploadDir, $aliasname);
+
+                $arr_dinhkem[] = [
+                    'aliasname' => $aliasname,
+                    'filename'  => $filename,
+                    'title'     => !empty($request->file_title[$idx]) ? $request->file_title[$idx] : pathinfo($filename, PATHINFO_FILENAME),
+                    'size'      => @filesize($uploadDir . '/' . $aliasname) ?: 0,
+                    'type'      => strtolower($file->getClientOriginalExtension())
+                ];
+            }
+        }
+
         SubInfo::create([
-            'ten'       => $request->ten,
-            'type'      => $request->type,
-            'slug'      => $slug,
-            'locale'    => $request->locale,
-            'mo_ta'     => $request->mo_ta,
-            'noi_dung'  => $request->noi_dung,
-            'video_ytb' => $video_ytb,
-            'hinh_anh'  => $hinh_anh,
-            'status'    => intval($request->status ?? 1)
+            'ten'         => $request->ten,
+            'type'        => $request->type,
+            'slug'        => $slug,
+            'locale'      => $request->locale,
+            'mo_ta'       => $request->mo_ta,
+            'noi_dung'    => $request->noi_dung,
+            'video_ytb'   => $video_ytb,
+            'hinh_anh'    => $hinh_anh,
+            'attachments' => $arr_dinhkem,
+            'status'      => intval($request->status ?? 1)
         ]);
 
         return redirect()->route('admin-sub-info', [app()->getLocale()])->with('success', 'Thêm trang thông tin thành công!');
@@ -95,12 +119,14 @@ class SubInfoController extends Controller
 
         $page = SubInfo::findOrFail($request->id);
         $slug = $request->slug ? Str::slug($request->slug) : Str::slug($request->ten);
+
         if ($request->has('delete_hinh_anh') && $request->delete_hinh_anh == '1') {
             if (!empty($page->hinh_anh) && file_exists(public_path('storage/images/subinfo/' . $page->hinh_anh))) {
                 @unlink(public_path('storage/images/subinfo/' . $page->hinh_anh));
             }
             $page->hinh_anh = null;
         }
+
         if ($request->hasFile('hinh_anh')) {
             if (!empty($page->hinh_anh) && file_exists(public_path('storage/images/subinfo/' . $page->hinh_anh))) {
                 @unlink(public_path('storage/images/subinfo/' . $page->hinh_anh));
@@ -111,14 +137,53 @@ class SubInfoController extends Controller
             $page->hinh_anh = $hinh_anh;
         }
 
-        $page->ten       = $request->ten;
-        $page->type      = $request->type;
-        $page->slug      = $slug;
-        $page->locale    = $request->locale;
-        $page->mo_ta     = $request->mo_ta;
-        $page->noi_dung  = $request->noi_dung;
-        $page->video_ytb = $this->getYoutubeId($request->video_ytb);
-        $page->status    = intval($request->status ?? 1);
+        // Xử lý tệp đính kèm cũ & xóa tệp được chọn
+        $existingFiles = is_array($page->attachments) ? $page->attachments : [];
+        $arr_dinhkem = [];
+        $deletedAliases = $request->delete_attachments ?? [];
+
+        foreach ($existingFiles as $file) {
+            if (in_array($file['aliasname'], $deletedAliases)) {
+                $targetFile = public_path('storage/files/' . $file['aliasname']);
+                if (file_exists($targetFile)) {
+                    @unlink($targetFile);
+                }
+            } else {
+                $arr_dinhkem[] = $file;
+            }
+        }
+
+        // Upload thêm tệp mới
+        if ($request->hasFile('file_dinhkem')) {
+            $uploadDir = public_path('storage/files');
+            if (!file_exists($uploadDir)) {
+                mkdir($uploadDir, 0777, true);
+            }
+
+            foreach ($request->file('file_dinhkem') as $idx => $file) {
+                $filename = $file->getClientOriginalName();
+                $aliasname = time() . '_' . Str::random(8) . '.' . $file->getClientOriginalExtension();
+                $file->move($uploadDir, $aliasname);
+
+                $arr_dinhkem[] = [
+                    'aliasname' => $aliasname,
+                    'filename'  => $filename,
+                    'title'     => !empty($request->file_title[$idx]) ? $request->file_title[$idx] : pathinfo($filename, PATHINFO_FILENAME),
+                    'size'      => @filesize($uploadDir . '/' . $aliasname) ?: 0,
+                    'type'      => strtolower($file->getClientOriginalExtension())
+                ];
+            }
+        }
+
+        $page->ten         = $request->ten;
+        $page->type        = $request->type;
+        $page->slug        = $slug;
+        $page->locale      = $request->locale;
+        $page->mo_ta       = $request->mo_ta;
+        $page->noi_dung    = $request->noi_dung;
+        $page->video_ytb   = $this->getYoutubeId($request->video_ytb);
+        $page->status      = intval($request->status ?? 1);
+        $page->attachments = $arr_dinhkem;
 
         $page->save();
 
@@ -128,6 +193,22 @@ class SubInfoController extends Controller
     public function delete($locale, $id)
     {
         $page = SubInfo::findOrFail($id);
+
+        if (!empty($page->attachments)) {
+            foreach ($page->attachments as $file) {
+                if (!empty($file['aliasname'])) {
+                    $target = public_path('storage/files/' . $file['aliasname']);
+                    if (file_exists($target)) {
+                        @unlink($target);
+                    }
+                }
+            }
+        }
+
+        if (!empty($page->hinh_anh) && file_exists(public_path('storage/images/subinfo/' . $page->hinh_anh))) {
+            @unlink(public_path('storage/images/subinfo/' . $page->hinh_anh));
+        }
+
         $page->delete();
         return redirect()->route('admin-sub-info', [app()->getLocale()])->with('success', 'Xóa trang thành công!');
     }

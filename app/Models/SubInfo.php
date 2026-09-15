@@ -19,6 +19,7 @@ class SubInfo extends Model
         'video_ytb',
         'hinh_anh',
         'id_parent',
+        'attachments',
         'status',
     ];
 

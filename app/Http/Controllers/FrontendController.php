@@ -231,23 +231,72 @@ class FrontendController extends Controller
     {
         $ds = ThongTin::find($id);
         $key = intval($key);
-        if (strtolower($ds['attachments'][$key]['type']) == 'doc' || strtolower($ds['attachments'][$key]['type']) == 'docx' || strtolower($ds['attachments'][$key]['type']) == 'xlsx') {
-            $path_file = 'https://www.agu.edu.vn/storage/files/' . $ds['attachments'][$key]['aliasname'];
-            $frame_path = 'https://view.officeapps.live.com/op/embed.aspx?src=' . $path_file;
-            echo '<iframe src="' . $frame_path . '" onload=\'javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));\' style="height:100%;width:100%;border:none;overflow:hidden;"></iframe>';
-        } else if (strtolower($ds['attachments'][$key]['type']) == 'pdf') {
-            echo '<embed src="' . env('APP_URL') . 'storage/files/' . $ds['attachments'][$key]['aliasname'] . '" style="width:100%;height:100% !important;" />';
-        } else {
-            echo 'Không thể xem, vui lòng download về xem. Cám ơn!';
+
+        if (!$ds || !isset($ds['attachments'][$key])) {
+            return 'Không tìm thấy tài liệu.';
         }
+
+        $attachment = $ds['attachments'][$key];
+        $type = strtolower($attachment['type'] ?? '');
+        $aliasname = $attachment['aliasname'] ?? '';
+
+        if (!Storage::disk('public')->exists('files/' . $aliasname)) {
+            return 'Tập tin không tồn tại trên hệ thống hoặc đã bị xóa.';
+        }
+
+        if (in_array($type, ['doc', 'docx', 'xlsx', 'xls', 'ppt', 'pptx'])) {
+            $path_file = asset('storage/files/' . $aliasname);
+            $frame_path = 'https://view.officeapps.live.com/op/embed.aspx?src=' . urlencode($path_file);
+            echo '<iframe src="' . $frame_path . '" onload=\'javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));\' style="height:100%;width:100%;border:none;overflow:hidden;"></iframe>';
+        } else if ($type == 'pdf') {
+            $pdfUrl = url($locale . '/xem-pdf-raw/' . $id . '/' . $key);
+            echo '<embed src="' . $pdfUrl . '" type="application/pdf" style="width:100%;height:100% !important;" />';
+        } else {
+            echo 'Không thể xem trực tiếp định dạng này, vui lòng tải về để xem.';
+        }
+    }
+
+    function xem_pdf_raw($locale = 'vi', $id = '', $key = 0)
+    {
+        $ds = ThongTin::find($id);
+        $key = intval($key);
+
+        if (!$ds || !isset($ds['attachments'][$key])) {
+            abort(404);
+        }
+
+        $aliasname = $ds['attachments'][$key]['aliasname'] ?? '';
+        $filePath = 'files/' . $aliasname;
+
+        if (!Storage::disk('public')->exists($filePath)) {
+            abort(404);
+        }
+
+        $path = storage_path('app/public/' . $filePath);
+        return response()->file($path, [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'inline; filename="' . Str::slug($ds['attachments'][$key]['title'], '_') . '.pdf"'
+        ]);
     }
 
     function tai_ve(Request $request, $locale = 'vi', $id = '', $key = 0)
     {
         $ds = ThongTin::find($id);
-        $filename = Str::slug($ds['attachments'][$key]['title'], '_') . "." . $ds['attachments'][$key]['type'];
-        $file_path = 'public/files/' . $ds['attachments'][$key]['aliasname'];
-        return Storage::download($file_path, $filename);
+        $key = intval($key);
+
+        if (!$ds || !isset($ds['attachments'][$key])) {
+            abort(404, 'Tập tin không tồn tại.');
+        }
+
+        $attachment = $ds['attachments'][$key];
+        $filename = Str::slug($attachment['title'], '_') . "." . $attachment['type'];
+        $filePath = 'files/' . $attachment['aliasname'];
+
+        if (!Storage::disk('public')->exists($filePath)) {
+            abort(404, 'Tập tin nguồn không tồn tại trên máy chủ.');
+        }
+
+        return Storage::disk('public')->download($filePath, $filename);
     }
 
     function thong_tin_chi_tiet(Request $request, $locale = 'vi', $slug = '')
@@ -275,7 +324,7 @@ class FrontendController extends Controller
         $dept = null;
         $nganhDaoTao = null;
 
-        if ($type == 'nhan-su') {
+        if (in_array($type, ['nhan-su', 'gioi-thieu'])) {
             $dept = Department::where('slug', $slug)->first();
             if ($dept) {
                 $deptId = (string) $dept->_id;
@@ -317,7 +366,7 @@ class FrontendController extends Controller
         $dept = null;
         $nganhDaoTao = null;
 
-        if ($dbType == 'nhan-su') {
+        if (in_array($dbType, ['nhan-su', 'gioi-thieu'])) {
             $dept = Department::where('slug_en', $slug)->orWhere('slug', $slug)->first();
             if ($dept) {
                 $deptId = (string) $dept->_id;
@@ -461,5 +510,94 @@ class FrontendController extends Controller
         } catch (\Throwable $e) {
             return response()->json(['status' => 'error', 'message' => 'Lỗi máy chủ: ' . $e->getMessage()], 500);
         }
+    }
+
+    public function xem_truc_tuyen_subinfo(Request $request, $locale = 'vi', $id = '', $key = 0)
+    {
+        $ds = SubInfo::find($id);
+        $key = intval($key);
+
+        if (!$ds || empty($ds['attachments']) || !isset($ds['attachments'][$key])) {
+            return 'Không tìm thấy tài liệu.';
+        }
+
+        $attachment = $ds['attachments'][$key];
+        $type = strtolower($attachment['type'] ?? '');
+        $aliasname = $attachment['aliasname'] ?? '';
+        $filePath = public_path('storage/files/' . $aliasname);
+
+        if (!file_exists($filePath)) {
+            return 'Tập tin không tồn tại trên hệ thống hoặc đã bị xóa.';
+        }
+
+        // Nếu là file PDF: Chuyển hướng trực tiếp mở tab xem PDF của trình duyệt (tránh lỗi nhúng embed)
+        if ($type == 'pdf') {
+            return redirect()->to(url($locale . '/xem-pdf-raw-subinfo/' . $id . '/' . $key));
+        }
+
+        // Nếu là Word, Excel, PowerPoint: Sử dụng Google Docs Viewer
+        if (in_array($type, ['doc', 'docx', 'xlsx', 'xls', 'ppt', 'pptx'])) {
+            $fileUrl = asset('storage/files/' . $aliasname);
+            $viewerUrl = 'https://docs.google.com/viewer?url=' . urlencode($fileUrl) . '&embedded=true';
+
+            return response("
+            <!DOCTYPE html>
+            <html>
+            <head><title>Xem tài liệu</title></head>
+            <body style='margin:0;padding:0;overflow:hidden;'>
+                <iframe src='{$viewerUrl}' style='width:100%;height:100vh;border:none;' frameborder='0'></iframe>
+            </body>
+            </html>
+        ")->header('Content-Type', 'text/html');
+        }
+
+        return 'Không thể xem trực tiếp định dạng này, vui lòng tải về để xem.';
+    }
+
+    public function xem_pdf_raw_subinfo($locale = 'vi', $id = '', $key = 0)
+    {
+        $ds = SubInfo::find($id);
+        $key = intval($key);
+
+        if (!$ds || empty($ds['attachments']) || !isset($ds['attachments'][$key])) {
+            abort(404);
+        }
+
+        $aliasname = $ds['attachments'][$key]['aliasname'] ?? '';
+        $filePath = public_path('storage/files/' . $aliasname);
+
+        if (!file_exists($filePath)) {
+            abort(404, 'File not found');
+        }
+
+        $filename = Str::slug($ds['attachments'][$key]['title'] ?? 'document', '_') . '.pdf';
+
+        // Trả về trực tiếp kèm header cho phép nhúng (tránh bị chặn X-Frame)
+        return response()->file($filePath, [
+            'Content-Type'        => 'application/pdf',
+            'Content-Disposition' => 'inline; filename="' . $filename . '"',
+            'X-Frame-Options'     => 'SAMEORIGIN'
+        ]);
+    }
+
+
+    public function tai_ve_subinfo(Request $request, $locale = 'vi', $id = '', $key = 0)
+    {
+        $ds = SubInfo::find($id);
+        $key = intval($key);
+
+        if (!$ds || empty($ds['attachments']) || !isset($ds['attachments'][$key])) {
+            abort(404, 'Tập tin không tồn tại.');
+        }
+
+        $attachment = $ds['attachments'][$key];
+        $filename = Str::slug($attachment['title'] ?? $attachment['filename'], '_') . "." . ($attachment['type'] ?? 'dat');
+        $filePath = public_path('storage/files/' . $attachment['aliasname']);
+
+        if (!file_exists($filePath)) {
+            abort(404, 'Tập tin nguồn không tồn tại trên máy chủ.');
+        }
+
+        return response()->download($filePath, $filename);
     }
 }

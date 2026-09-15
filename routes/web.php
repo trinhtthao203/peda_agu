@@ -19,6 +19,7 @@ use App\Http\Controllers\NganhDaoTaoController;
 use App\Http\Controllers\FeedbackController;
 use UniSharp\LaravelFilemanager\Lfm;
 
+Route::get('{locale}/xem-pdf-raw/{id}/{key}', [App\Http\Controllers\FrontendController::class, 'xem_pdf_raw'])->name('xem.pdf.raw');
 Route::get('/', function () {
     return redirect(app()->getLocale());
 });
@@ -86,6 +87,10 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}'], 'm
 
         abort(404);
     })->where('type', 'nhan-su|dao-tao|gioi-thieu|nckh|sinh-vien|dbcl|staff|academics|about|research|students|quality-assurance');
+
+    Route::get('tai-ve-subinfo/{id}/{key}', [FrontendController::class, 'tai_ve_subinfo'])->name('subinfo-download');
+    Route::get('xem-truc-tuyen-subinfo/{id}/{key}', [FrontendController::class, 'xem_truc_tuyen_subinfo'])->name('subinfo-view-online');
+    Route::get('xem-pdf-raw-subinfo/{id}/{key}', [FrontendController::class, 'xem_pdf_raw_subinfo'])->name('subinfo-pdf-raw');
 
     // Admin group
     Route::group(['prefix' => 'admin', 'middleware' => 'checkauth'], function () {
