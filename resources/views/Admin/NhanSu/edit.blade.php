@@ -87,10 +87,15 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-12 form-group mb-3">
+                        <div class="col-md-6 form-group mb-3">
                             <label class="font-weight-bold text-gray-700">Email công vụ AGU <span
                                     class="text-danger">*</span></label>
                             <input type="email" name="email" class="form-control" required value="{{ $ds->email }}">
+                        </div>
+                        <div class="col-md-6 form-group mb-3">
+                            <label class="font-weight-bold text-gray-700">Số điện thoại</label>
+                            <input type="text" name="so_dien_thoai" class="form-control" placeholder="Ví dụ: 0912345678"
+                                value="{{ $ds->so_dien_thoai }}">
                         </div>
                     </div>
 

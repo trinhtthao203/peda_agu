@@ -100,7 +100,6 @@
                     {!! $page['noi_dung'] !!}
                 </div>
 
-                {{-- Tệp đính kèm (Attachments) --}}
                 @if (!empty($page['attachments']) && count($page['attachments']) > 0)
                     <div class="pt-8 border-t border-gray-100">
                         <h3
@@ -151,11 +150,30 @@
 
                 @if (isset($danhSachNhanSu) && count($danhSachNhanSu) > 0)
                     <div class="pt-10 border-t border-gray-100">
-                        <h3
-                            class="font-heading font-bold text-gray-900 text-lg mb-6 uppercase tracking-wide flex items-center gap-2">
-                            👨‍🏫 {{ __('Đội ngũ Giảng viên - Cán bộ bộ môn') }}
-                        </h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-8">
+                            <div>
+                                <h3
+                                    class="font-heading font-extrabold text-gray-900 text-xl sm:text-2xl tracking-tight flex items-center gap-2.5">
+                                    <span
+                                        class="p-2 rounded-xl bg-blue-50 text-blue-600 inline-flex items-center justify-center">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span>{{ __('Đội ngũ Giảng viên - Cán bộ bộ môn') }}</span>
+                                </h3>
+                                <p class="text-sm text-gray-500 mt-1 pl-12">
+                                    {{ __('Cán bộ giảng dạy và nghiên cứu khoa học chuyên trách') }}</p>
+                            </div>
+                            <span
+                                class="self-start sm:self-auto px-3.5 py-1.5 rounded-full bg-gray-100 text-gray-700 text-xs font-semibold border border-gray-200">
+                                {{ count($danhSachNhanSu) }} {{ __('thành viên') }}
+                            </span>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                             @foreach ($danhSachNhanSu as $ns)
                                 @php
                                     $hoTen = $isEn && !empty($ns['ho_ten_en']) ? $ns['ho_ten_en'] : $ns['ho_ten'] ?? '';
@@ -163,6 +181,10 @@
                                         $isEn && !empty($ns['hoc_ham_hoc_vi_en'])
                                             ? $ns['hoc_ham_hoc_vi_en']
                                             : $ns['hoc_ham_hoc_vi'] ?? '';
+                                    $chuyenNganh =
+                                        $isEn && !empty($ns['chuyen_nganh_en'])
+                                            ? $ns['chuyen_nganh_en']
+                                            : $ns['chuyen_nganh'] ?? '';
 
                                     $currentRole = collect($ns['departments'] ?? [])->first();
                                     if (isset($dept)) {
@@ -178,38 +200,115 @@
                                                 ? $currentRole['chuc_vu_en']
                                                 : $currentRole['chuc_vu'] ?? '';
                                     }
+                                    $avatarUrl = !empty($ns['hinh_anh'])
+                                        ? asset('storage/avatars/' . $ns['hinh_anh'])
+                                        : asset('assets/frontend/images/default/avatar_placeholder.jpg');
                                 @endphp
+
                                 <div
-                                    class="bg-gray-50 rounded-xl border border-gray-200/60 p-5 flex gap-4 items-center hover:shadow-md transition duration-300">
+                                    class="group relative bg-white rounded-3xl p-6 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_35px_-8px_rgba(14,165,233,0.15)] hover:border-blue-200 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 overflow-hidden">
                                     <div
-                                        class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gray-200 overflow-hidden shrink-0 border-2 border-white shadow-sm">
-                                        @if (!empty($ns['hinh_anh']))
-                                            <img src="{{ env('APP_URL') }}storage/avatars/{{ $ns['hinh_anh'] }}"
-                                                class="w-full h-full object-cover" alt="{{ $hoTen }}">
-                                        @else
-                                            <img src="{{ env('APP_URL') }}assets/frontend/images/default/avatar_placeholder.jpg"
-                                                class="w-full h-full object-cover" alt="No avatar">
-                                        @endif
+                                        class="absolute -right-12 -top-12 w-32 h-32 bg-gradient-to-br from-blue-50 to-indigo-50/20 rounded-full blur-2xl group-hover:scale-150 group-hover:from-blue-100 group-hover:to-cyan-100 transition-all duration-500 pointer-events-none">
                                     </div>
-                                    <div class="space-y-1 min-w-0 flex-1">
-                                        <h4 class="text-sm font-heading font-bold text-gray-900 m-0 truncate">
-                                            {{ $hocHamHocVi ? $hocHamHocVi . '.' : '' }} {{ $hoTen }}
-                                        </h4>
-                                        @if (!empty($chucVu))
-                                            <p class="text-xs font-semibold text-agu-blue m-0 truncate">{{ $chucVu }}
-                                            </p>
-                                        @endif
-                                        <p class="text-[11px] text-gray-400 truncate m-0">✉️ {{ $ns['email'] }}</p>
-                                        @if (isset($ns['ly_lich_khoa_hoc']['aliasname']))
-                                            <div class="pt-1">
-                                                <a href="{{ env('APP_URL') }}storage/files/{{ $ns['ly_lich_khoa_hoc']['aliasname'] }}"
-                                                    target="_blank"
-                                                    class="inline-flex items-center text-[10px] font-bold text-white bg-agu-green px-2 py-1 rounded hover:bg-green-700 transition">
-                                                    📑 {{ __('Lý lịch khoa học') }}
-                                                </a>
+
+                                    <div>
+                                        <div class="flex items-start gap-4 sm:gap-5">
+                                            <div class="relative shrink-0">
+                                                <div
+                                                    class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden ring-4 ring-gray-50 group-hover:ring-blue-100 shadow-md group-hover:shadow-lg transition-all duration-300">
+                                                    <img src="{{ $avatarUrl }}"
+                                                        onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name={{ urlencode($hoTen) }}&background=0D8ABC&color=fff';"
+                                                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out"
+                                                        alt="{{ $hoTen }}">
+                                                </div>
+                                                @if (!empty($currentRole['is_primary']))
+                                                    <span
+                                                        class="absolute -bottom-1 -right-1 w-5 h-5 bg-amber-400 text-white rounded-full flex items-center justify-center text-[10px] shadow border-2 border-white"
+                                                        title="{{ __('Đơn vị chính') }}">★</span>
+                                                @endif
                                             </div>
-                                        @endif
+
+                                            <div class="min-w-0 flex-1 pt-1">
+                                                @if (!empty($chucVu))
+                                                    <div
+                                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-50 text-blue-700 border border-blue-100/60 mb-1.5 line-clamp-1">
+                                                        {{ $chucVu }}
+                                                    </div>
+                                                @endif
+                                                <h4
+                                                    class="text-base sm:text-lg font-heading font-extrabold text-gray-900 group-hover:text-blue-600 transition-colors leading-snug line-clamp-2">
+                                                    {{ $hocHamHocVi ? $hocHamHocVi . '.' : '' }} {{ $hoTen }}
+                                                </h4>
+                                                @if (!empty($chuyenNganh))
+                                                    <p
+                                                        class="text-xs text-gray-500 line-clamp-1 mt-1 font-medium flex items-center gap-1">
+                                                        <svg class="w-3.5 h-3.5 text-gray-400 shrink-0" fill="none"
+                                                            stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
+                                                            </path>
+                                                        </svg>
+                                                        <span>{{ $chuyenNganh }}</span>
+                                                    </p>
+                                                @endif
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-5 pt-4 border-t border-gray-100/80 space-y-2">
+                                            @if (!empty($ns['email']))
+                                                <a href="mailto:{{ $ns['email'] }}"
+                                                    class="flex items-center gap-2.5 text-xs text-gray-600 hover:text-blue-600 transition-colors group/item truncate">
+                                                    <div
+                                                        class="w-7 h-7 rounded-lg bg-gray-50 group-hover/item:bg-blue-50 flex items-center justify-center text-gray-400 group-hover/item:text-blue-600 shrink-0 transition-colors">
+                                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor"
+                                                            viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                                            </path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="truncate font-mono">{{ $ns['email'] }}</span>
+                                                </a>
+                                            @endif
+
+                                            @if (!empty($ns['so_dien_thoai']))
+                                                <a href="tel:{{ $ns['so_dien_thoai'] }}"
+                                                    class="flex items-center gap-2.5 text-xs text-gray-600 hover:text-green-600 transition-colors group/item truncate">
+                                                    <div
+                                                        class="w-7 h-7 rounded-lg bg-gray-50 group-hover/item:bg-green-50 flex items-center justify-center text-gray-400 group-hover/item:text-green-600 shrink-0 transition-colors">
+                                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor"
+                                                            viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                                            </path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="font-mono">{{ $ns['so_dien_thoai'] }}</span>
+                                                </a>
+                                            @endif
+                                        </div>
                                     </div>
+
+                                    @if (isset($ns['ly_lich_khoa_hoc']['aliasname']))
+                                        <div class="mt-5 pt-3">
+                                            <a href="{{ asset('storage/files/' . $ns['ly_lich_khoa_hoc']['aliasname']) }}"
+                                                target="_blank"
+                                                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-gray-700 bg-gray-50 hover:bg-blue-600 hover:text-white border border-gray-200/80 hover:border-transparent transition-all duration-200 shadow-sm">
+                                                <svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                                    </path>
+                                                </svg>
+                                                <span>{{ __('Xem Lý lịch khoa học') }}</span>
+                                            </a>
+                                        </div>
+                                    @endif
                                 </div>
                             @endforeach
                         </div>

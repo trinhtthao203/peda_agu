@@ -150,24 +150,55 @@
         </div>
     </li>
 
-    <!-- 5. RESEARCH (Dropdown 1 cột gọn gàng) -->
+    <!-- 5. RESEARCH (Dropdown 2 cột gọn gàng) -->
     <li class="relative group">
         <a href="#">{{ __('Research') }} <span class="text-[10px] ml-1">▼</span></a>
         <div
-            class="mega-menu-dropdown absolute left-0 top-full hidden group-hover:block w-72 bg-white shadow-lg p-5 z-50">
-            <div class="space-y-3">
-                <span
-                    class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">
-                    {{ __('Projects') }}
-                </span>
-                <ul class="space-y-2 text-xs text-gray-600">
-                    <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/research/provincial-research"
-                            class="hover:text-agu-blue transition">{{ __('Provincial Research') }}</a></li>
-                    <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/research/school-research"
-                            class="hover:text-agu-blue transition">{{ __('School Research') }}</a></li>
-                    <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/research/faculty-research"
-                            class="hover:text-agu-blue transition">{{ __('Faculty Research') }}</a></li>
-                </ul>
+            class="mega-menu-dropdown absolute left-0 top-full hidden group-hover:block w-[560px] bg-white shadow-lg p-6 z-50">
+            <div class="grid grid-cols-2 gap-6">
+                <!-- Cột 1: Projects -->
+                <div class="space-y-3">
+                    <span
+                        class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">
+                        {{ __('Projects') }}
+                    </span>
+                    <ul class="space-y-2 text-xs text-gray-600">
+                        <li>
+                            <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/research/provincial-research"
+                                class="hover:text-agu-blue transition">{{ __('Provincial Research') }}</a>
+                        </li>
+                        <li>
+                            <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/research/school-research"
+                                class="hover:text-agu-blue transition">{{ __('School Research') }}</a>
+                        </li>
+                        <li>
+                            <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/research/faculty-research"
+                                class="hover:text-agu-blue transition">{{ __('Faculty Research') }}</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cột 2: Scientific Publications / Scientific Works -->
+                <div class="space-y-3">
+                    <span
+                        class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">
+                        {{ __('Scientific Works') }}
+                    </span>
+                    <ul class="space-y-2 text-xs text-gray-600">
+                        <li>
+                            <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/research/scientific-articles"
+                                class="hover:text-agu-blue transition">{{ __('Scientific Articles') }}</a>
+                        </li>
+                        <li>
+                            <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/research/books-and-textbooks"
+                                class="hover:text-agu-blue transition">{{ __('Books & Textbooks') }}</a>
+                        </li>
+                        <li>
+                            <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/research/innovations-and-initiatives"
+                                class="hover:text-agu-blue transition">{{ __('Innovations & Initiatives') }}</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </li>

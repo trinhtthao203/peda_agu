@@ -17,7 +17,8 @@ class NhanSuController extends Controller
             $query->where(function ($q) use ($keyword) {
                 $q->where('ho_ten', 'regexp', "/{$keyword}/i")
                     ->orWhere('ho_ten_en', 'regexp', "/{$keyword}/i")
-                    ->orWhere('email', 'regexp', "/{$keyword}/i");
+                    ->orWhere('email', 'regexp', "/{$keyword}/i")
+                    ->orWhere('so_dien_thoai', 'regexp', "/{$keyword}/i");
             });
         }
         if ($request->filled('department_id')) {
@@ -45,6 +46,7 @@ class NhanSuController extends Controller
             'hoc_ham_hoc_vi_en'           => 'nullable|string|max:255',
             'chuyen_nganh_en'             => 'nullable|string|max:255',
             'email'                       => 'required|email',
+            'so_dien_thoai'               => 'nullable|string|max:20',
             'departments'                 => 'required|array|min:1|max:20',
             'departments.*.department_id' => 'required|string',
             'departments.*.chuc_vu'       => 'required|string|max:100',
@@ -87,6 +89,7 @@ class NhanSuController extends Controller
             'chuyen_nganh'      => $request->chuyen_nganh,
             'chuyen_nganh_en'   => $request->chuyen_nganh_en,
             'email'             => $request->email,
+            'so_dien_thoai'     => $request->so_dien_thoai,
             'hinh_anh'          => $hinh_anh,
             'ly_lich_khoa_hoc'  => $ly_lich,
             'departments'       => $deptEntries,
@@ -110,6 +113,8 @@ class NhanSuController extends Controller
             'ho_ten_en'                   => 'nullable|string|max:255',
             'hoc_ham_hoc_vi_en'           => 'nullable|string|max:255',
             'chuyen_nganh_en'             => 'nullable|string|max:255',
+            'email'                       => 'required|email',
+            'so_dien_thoai'               => 'nullable|string|max:20',
             'departments'                 => 'required|array|min:1|max:20',
             'departments.*.department_id' => 'required|string',
             'departments.*.chuc_vu'       => 'required|string|max:100',
@@ -153,6 +158,7 @@ class NhanSuController extends Controller
         $ns->chuyen_nganh      = $request->chuyen_nganh;
         $ns->chuyen_nganh_en   = $request->chuyen_nganh_en;
         $ns->email             = $request->email;
+        $ns->so_dien_thoai     = $request->so_dien_thoai;
         $ns->hinh_anh          = $hinh_anh;
         $ns->ly_lich_khoa_hoc  = $ly_lich;
         $ns->departments       = $deptEntries;

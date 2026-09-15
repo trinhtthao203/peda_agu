@@ -168,24 +168,55 @@
         </div>
     </li>
 
-    <!-- 5. NGHIÊN CỨU KHOA HỌC (Dropdown 1 cột gọn gàng) -->
+    <!-- 5. NGHIÊN CỨU KHOA HỌC (Dropdown 2 cột gọn gàng) -->
     <li class="relative group">
         <a href="#">{{ __('NCKH') }} <span class="text-[10px] ml-1">▼</span></a>
         <div
-            class="mega-menu-dropdown absolute left-0 top-full hidden group-hover:block w-72 bg-white shadow-lg p-5 z-50">
-            <div class="space-y-3">
-                <span
-                    class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">
-                    {{ __('Đề tài nghiên cứu') }}
-                </span>
-                <ul class="space-y-2 text-xs text-gray-600">
-                    <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/nckh/de-tai-cap-bo-tinh"
-                            class="hover:text-agu-blue transition">{{ __('Cấp Bộ / Cấp Tỉnh') }}</a></li>
-                    <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/nckh/de-tai-cap-truong"
-                            class="hover:text-agu-blue transition">{{ __('Cấp Trường') }}</a></li>
-                    <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/nckh/de-tai-cap-khoa"
-                            class="hover:text-agu-blue transition">{{ __('Cấp Khoa') }}</a></li>
-                </ul>
+            class="mega-menu-dropdown absolute left-0 top-full hidden group-hover:block w-[560px] bg-white shadow-lg p-6 z-50">
+            <div class="grid grid-cols-2 gap-6">
+                <!-- Cột 1: Đề tài nghiên cứu -->
+                <div class="space-y-3">
+                    <span
+                        class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">
+                        {{ __('Đề tài nghiên cứu') }}
+                    </span>
+                    <ul class="space-y-2 text-xs text-gray-600">
+                        <li>
+                            <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/nckh/de-tai-cap-bo-tinh"
+                                class="hover:text-agu-blue transition">{{ __('Cấp Bộ / Cấp Tỉnh') }}</a>
+                        </li>
+                        <li>
+                            <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/nckh/de-tai-cap-truong"
+                                class="hover:text-agu-blue transition">{{ __('Cấp Trường') }}</a>
+                        </li>
+                        <li>
+                            <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/nckh/de-tai-cap-khoa"
+                                class="hover:text-agu-blue transition">{{ __('Cấp Khoa') }}</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cột 2: Công trình khoa học -->
+                <div class="space-y-3">
+                    <span
+                        class="block font-heading font-bold text-agu-blue border-b border-gray-100 pb-2 text-sm uppercase">
+                        {{ __('Công trình khoa học') }}
+                    </span>
+                    <ul class="space-y-2 text-xs text-gray-600">
+                        <li>
+                            <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/nckh/bai-bao-khoa-hoc"
+                                class="hover:text-agu-blue transition">{{ __('Bài báo khoa học') }}</a>
+                        </li>
+                        <li>
+                            <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/nckh/sach-giao-trinh-tlgd"
+                                class="hover:text-agu-blue transition">{{ __('Sách/Giáo trình/TLGD') }}</a>
+                        </li>
+                        <li>
+                            <a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/nckh/sang-kien-kinh-nghiem"
+                                class="hover:text-agu-blue transition">{{ __('Sáng kiến kinh nghiệm') }}</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </li>

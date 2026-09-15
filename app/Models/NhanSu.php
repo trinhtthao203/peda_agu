@@ -17,6 +17,7 @@ class NhanSu extends Model
         'chuyen_nganh',
         'chuyen_nganh_en',
         'email',
+        'so_dien_thoai',
         'hinh_anh',
         'ly_lich_khoa_hoc',
         'departments',
