@@ -173,7 +173,7 @@
                             </span>
                         </div>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8">
                             @foreach ($danhSachNhanSu as $ns)
                                 @php
                                     $hoTen = $isEn && !empty($ns['ho_ten_en']) ? $ns['ho_ten_en'] : $ns['ho_ten'] ?? '';
@@ -206,42 +206,59 @@
                                 @endphp
 
                                 <div
-                                    class="group relative bg-white rounded-3xl p-6 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_35px_-8px_rgba(14,165,233,0.15)] hover:border-blue-200 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 overflow-hidden">
+                                    class="group relative bg-white rounded-3xl p-6 sm:p-7 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_35px_-8px_rgba(14,165,233,0.15)] hover:border-blue-200 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 overflow-hidden">
                                     <div
-                                        class="absolute -right-12 -top-12 w-32 h-32 bg-gradient-to-br from-blue-50 to-indigo-50/20 rounded-full blur-2xl group-hover:scale-150 group-hover:from-blue-100 group-hover:to-cyan-100 transition-all duration-500 pointer-events-none">
+                                        class="absolute -right-12 -top-12 w-40 h-40 bg-gradient-to-br from-blue-50 to-indigo-50/20 rounded-full blur-2xl group-hover:scale-150 group-hover:from-blue-100 group-hover:to-cyan-100 transition-all duration-500 pointer-events-none">
                                     </div>
 
                                     <div>
-                                        <div class="flex items-start gap-4 sm:gap-5">
+                                        <div class="flex items-start gap-5 sm:gap-6">
+                                            {{-- Avatar to, rõ nét và nổi bật --}}
                                             <div class="relative shrink-0">
                                                 <div
-                                                    class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden ring-4 ring-gray-50 group-hover:ring-blue-100 shadow-md group-hover:shadow-lg transition-all duration-300">
+                                                    class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden ring-4 ring-gray-50 group-hover:ring-blue-100 shadow-md group-hover:shadow-lg transition-all duration-300">
                                                     <img src="{{ $avatarUrl }}"
                                                         onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name={{ urlencode($hoTen) }}&background=0D8ABC&color=fff';"
-                                                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out"
+                                                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-out"
                                                         alt="{{ $hoTen }}">
                                                 </div>
                                                 @if (!empty($currentRole['is_primary']))
                                                     <span
-                                                        class="absolute -bottom-1 -right-1 w-5 h-5 bg-amber-400 text-white rounded-full flex items-center justify-center text-[10px] shadow border-2 border-white"
+                                                        class="absolute -bottom-1 -right-1 w-6 h-6 bg-amber-400 text-white rounded-full flex items-center justify-center text-xs shadow border-2 border-white"
                                                         title="{{ __('Đơn vị chính') }}">★</span>
                                                 @endif
                                             </div>
 
-                                            <div class="min-w-0 flex-1 pt-1">
+                                            {{-- Thông tin phân cấp từng dòng: Chức vụ -> Học hàm/học vị -> Họ tên --}}
+                                            <div class="min-w-0 flex-1 space-y-1.5 pt-0.5">
+                                                {{-- Dòng 1: Chức vụ --}}
                                                 @if (!empty($chucVu))
-                                                    <div
-                                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-50 text-blue-700 border border-blue-100/60 mb-1.5 line-clamp-1">
-                                                        {{ $chucVu }}
+                                                    <div>
+                                                        <span
+                                                            class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-bold bg-blue-50 text-blue-700 border border-blue-100/70 tracking-wide">
+                                                            {{ $chucVu }}
+                                                        </span>
                                                     </div>
                                                 @endif
+
+                                                {{-- Dòng 2: Học hàm / Học vị --}}
+                                                @if (!empty($hocHamHocVi))
+                                                    <div
+                                                        class="text-xs sm:text-sm font-semibold text-gray-500 tracking-wide">
+                                                        {{ $hocHamHocVi }}
+                                                    </div>
+                                                @endif
+
+                                                {{-- Dòng 3: Họ và Tên --}}
                                                 <h4
-                                                    class="text-base sm:text-lg font-heading font-extrabold text-gray-900 group-hover:text-blue-600 transition-colors leading-snug line-clamp-2">
-                                                    {{ $hocHamHocVi ? $hocHamHocVi . '.' : '' }} {{ $hoTen }}
+                                                    class="text-base sm:text-lg md:text-xl font-heading font-extrabold text-gray-900 group-hover:text-blue-600 transition-colors leading-snug [text-wrap:balance] break-words">
+                                                    {{ $hoTen }}
                                                 </h4>
+
+                                                {{-- Chuyên ngành --}}
                                                 @if (!empty($chuyenNganh))
                                                     <p
-                                                        class="text-xs text-gray-500 line-clamp-1 mt-1 font-medium flex items-center gap-1">
+                                                        class="text-xs sm:text-sm text-gray-500 line-clamp-1 pt-1 font-medium flex items-center gap-1.5">
                                                         <svg class="w-3.5 h-3.5 text-gray-400 shrink-0" fill="none"
                                                             stroke="currentColor" viewBox="0 0 24 24">
                                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -251,19 +268,20 @@
                                                                 d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
                                                             </path>
                                                         </svg>
-                                                        <span>{{ $chuyenNganh }}</span>
+                                                        <span class="truncate">{{ $chuyenNganh }}</span>
                                                     </p>
                                                 @endif
                                             </div>
                                         </div>
 
+                                        {{-- Thông tin liên hệ --}}
                                         <div class="mt-5 pt-4 border-t border-gray-100/80 space-y-2">
                                             @if (!empty($ns['email']))
                                                 <a href="mailto:{{ $ns['email'] }}"
-                                                    class="flex items-center gap-2.5 text-xs text-gray-600 hover:text-blue-600 transition-colors group/item truncate">
+                                                    class="flex items-center gap-2.5 text-xs sm:text-sm text-gray-600 hover:text-blue-600 transition-colors group/item truncate">
                                                     <div
                                                         class="w-7 h-7 rounded-lg bg-gray-50 group-hover/item:bg-blue-50 flex items-center justify-center text-gray-400 group-hover/item:text-blue-600 shrink-0 transition-colors">
-                                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor"
+                                                        <svg class="w-4 h-4" fill="none" stroke="currentColor"
                                                             viewBox="0 0 24 24">
                                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                                 stroke-width="2"
@@ -277,10 +295,10 @@
 
                                             @if (!empty($ns['so_dien_thoai']))
                                                 <a href="tel:{{ $ns['so_dien_thoai'] }}"
-                                                    class="flex items-center gap-2.5 text-xs text-gray-600 hover:text-green-600 transition-colors group/item truncate">
+                                                    class="flex items-center gap-2.5 text-xs sm:text-sm text-gray-600 hover:text-green-600 transition-colors group/item truncate">
                                                     <div
                                                         class="w-7 h-7 rounded-lg bg-gray-50 group-hover/item:bg-green-50 flex items-center justify-center text-gray-400 group-hover/item:text-green-600 shrink-0 transition-colors">
-                                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor"
+                                                        <svg class="w-4 h-4" fill="none" stroke="currentColor"
                                                             viewBox="0 0 24 24">
                                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                                 stroke-width="2"
@@ -298,7 +316,7 @@
                                         <div class="mt-5 pt-3">
                                             <a href="{{ asset('storage/files/' . $ns['ly_lich_khoa_hoc']['aliasname']) }}"
                                                 target="_blank"
-                                                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-gray-700 bg-gray-50 hover:bg-blue-600 hover:text-white border border-gray-200/80 hover:border-transparent transition-all duration-200 shadow-sm">
+                                                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-gray-700 bg-gray-50 hover:bg-blue-600 hover:text-white border border-gray-200/80 hover:border-transparent transition-all duration-200 shadow-sm">
                                                 <svg class="w-4 h-4" fill="none" stroke="currentColor"
                                                     viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
