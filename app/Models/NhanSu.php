@@ -22,7 +22,8 @@ class NhanSu extends Model
         'ly_lich_khoa_hoc',
         'departments',
         'chuc_vu',
-        'chuc_vu_en'
+        'chuc_vu_en',
+        'thu_tu',
     ];
 
     protected $casts = [

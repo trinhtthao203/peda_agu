@@ -18,6 +18,29 @@ use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\NganhDaoTaoController;
 use App\Http\Controllers\FeedbackController;
 use UniSharp\LaravelFilemanager\Lfm;
+use Illuminate\Support\Facades\Artisan;
+
+Route::get('/run-storage-link', function () {
+    $target = storage_path('app/public');
+    $shortcut = public_path('storage');
+
+    // Kiểm tra nếu thư mục đích tồn tại
+    if (!file_exists($target)) {
+        return "Thư mục đích không tồn tại: {$target}";
+    }
+
+    // Nếu shortcut cũ đã có hoặc bị hỏng, thử xóa trước
+    if (file_exists($shortcut) || is_link($shortcut)) {
+        @unlink($shortcut);
+    }
+
+    // Tạo liên kết symbolic link
+    if (@symlink($target, $shortcut)) {
+        return "Tạo liên kết Storage thành công!";
+    }
+
+    return "Không thể tạo Symlink tự động do máy chủ chặn hàm symlink(). Hãy thử giải pháp tạo thủ công.";
+});
 
 Route::get('{locale}/xem-pdf-raw/{id}/{key}', [App\Http\Controllers\FrontendController::class, 'xem_pdf_raw'])->name('xem.pdf.raw');
 Route::get('/', function () {

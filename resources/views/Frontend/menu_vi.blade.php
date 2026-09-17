@@ -65,7 +65,7 @@
                                 class="hover:text-agu-blue transition">{{ __('Văn phòng Khoa') }}</a></li>
                         <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/nhan-su/bo-mon-toan"
                                 class="hover:text-agu-blue transition">{{ __('Bộ môn Toán') }}</a></li>
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/nhan-su/bo-mon-vl-hh-sh"
+                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/nhan-su/bo-mon-vat-ly-hoa-hoc-sinh-hoc"
                                 class="hover:text-agu-blue transition">{{ __('Bộ môn VL - HH - SH') }}</a></li>
                     </ul>
                 </div>
@@ -77,8 +77,8 @@
                                 class="hover:text-agu-blue transition">{{ __('Bộ môn Ngữ văn') }}</a></li>
                         <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/nhan-su/bo-mon-lich-su-dia-ly"
                                 class="hover:text-agu-blue transition">{{ __('Bộ môn Lịch sử - Địa lý') }}</a></li>
-                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/nhan-su/tam-ly-giao-duc-mam-non-tieu-hoc"
-                                class="hover:text-agu-blue transition">{{ __('Tâm lý Giáo dục - Mầm non - Tiểu học') }}</a>
+                        <li><a href="{{ env('APP_URL') }}{{ app()->getLocale() }}/nhan-su/bo-mon-tam-ly-giao-duc-mam-non-tieu-hoc"
+                                class="hover:text-agu-blue transition">{{ __('Bộ môn Tâm lý Giáo dục - Mầm non - Tiểu học') }}</a>
                         </li>
                     </ul>
                 </div>
